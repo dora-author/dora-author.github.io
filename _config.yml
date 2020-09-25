@@ -9,7 +9,7 @@ background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 baseurl:            ""
-url:                https://ejkim-author.github.io
+#url:                https://ejkim-author.github.io
 
 # Jekyll
 permalink:          /:title/
@@ -27,7 +27,7 @@ sass:
   style:            compressed
 
 # Comments
-disqus_shortname:   ejkim
+#disqus_shortname:   ejkim
 
 # Social
 # if you don't have any of social below, comment the line.
@@ -38,7 +38,7 @@ disqus_shortname:   ejkim
   #ad-client:
   #ad-slot:
 #bing-verify:
-email:              zadora1004@naver.com
+#email:              zadora1004@naver.com
 #twitter:            username
 #facebook:           username
 github-url:         ejkim-author
