@@ -15,7 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Dora's Technical Writing
 email: zadora1004@naver.com
-description: "It is clear, concise and beautiful."
+bio:                'For Technical Writing and Knowledge Base'
+description:        "It is clear, concise, and beautiful"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/tw.png'
@@ -31,6 +32,7 @@ github_username:  ejkim-author
 permalink:          /:title/
 markdown: kramdown
 highlighter:        rouge
+encoding: 	    UTF-8
 kramdown:
   auto_ids:         true
   footnote_nr:      1
@@ -44,7 +46,9 @@ sass:
 
 # Comments
 disqus_shortname:   ejkim-author
-theme: moon
+# Social
+github-url:         ejkim-author
+
 plugins:
   - jekyll-mentions
   - jekyll-feed
