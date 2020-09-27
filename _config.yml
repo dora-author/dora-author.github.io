@@ -23,26 +23,34 @@ logo:               'assets/img/tw.png'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-baseurl: 	        "" # the subpath of your site, e.g. /blog
+baseurl: 	    "" # the subpath of your site, e.g. /blog
 url: 	            https://ejkim-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:    ejkim-author
+# github_username:    ejkim-author
 
 # Build settings
-permalink:          /:title/
-markdown: 	        kramdown
-highlighter:        rouge
-encoding: 	        UTF-8
+lsi: false
+safe: true
+# source: 
+incremental: false
+gist:
+  noscript: false
+permalink: /:title/
+markdown: kramdown
+highlighter: rouge
+encoding: UTF-8
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+mathjax: true
 sass:
-  sass_dir:         _sass
-  style:            compressed
+  sass_dir: _sass
+  style: compressed
 
 # Comments
 disqus_shortname:   ejkim-author
