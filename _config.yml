@@ -37,7 +37,7 @@ gist:
   noscript: false
 permalink: /:title/
 markdown: kramdown
-theme: moon
+# theme: moon
 highlighter: rouge
 encoding: UTF-8
 kramdown:
