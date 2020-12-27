@@ -26,7 +26,7 @@ locale: en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://ejkim-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-# github_username:    ejkim-author
+# github_username:    dora-author
 
 # Build settings
 lsi: false
@@ -54,9 +54,9 @@ sass:
   style: compressed
 
 # Comments
-disqus_shortname: ejkim-author
+disqus_shortname: dora-author
 # Social
-github-url: ejkim-author
+github-url: dora-author
 
 plugins:
   - jekyll-mentions
