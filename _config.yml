@@ -24,7 +24,7 @@ background: 'assets/img/placeholder-big.jpg'
 tiled_bg: false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale: en_US
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://ejkim-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: https://dora-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:    dora-author
 
