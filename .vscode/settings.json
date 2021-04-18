@@ -1,0 +1,5 @@
+{
+    "markdown.styles": [
+        "${workspaceFolder}\\_site\\assets\\css\\md\\markdownpad-github.css"
+    ]
+}

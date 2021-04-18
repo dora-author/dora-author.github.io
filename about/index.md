@@ -4,8 +4,24 @@ title: About Me
 permalink: /about/
 ---
     
-<center>Dora's Technical Writing</center>
+<center> Dora's Technical Writing</center>   
 
-테크니컬 라이팅에 대한 경험과 공부한 것들은 공유하고 싶습니다.
+ 테크니컬 라이팅에 대한 경험과 공부한 것들을 공유하고 싶습니다.
 
-소중한 조언과 도움 부탁드려요.
+ 소중한 조언 부탁드립니다.
+
+
+## 블로그 구성
+
+> **Technical Writing(TW)**   
+실무에 도움되는 TW 프로세스, 규칙, 에디팅, 스타일 이론 및 적용 사례
+
+> **Technology**   
+TW에 적용되는 기술 인사이트, 배경 지식, 툴, 언어, 개발 환경 등 
+
+> **English**   
+영문 테크니컬 라이팅(기술 번역)을 위한 문법, 표현법
+
+> **Training**   
+교육/세미나 정리 내용, 공유/출처 자료
+  
