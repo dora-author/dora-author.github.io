@@ -38,6 +38,7 @@ body {
 	position: relative;
 	width: 100%;
 	min-height: 300px;
+	max-width: 100%; //add
 	text-align: left;
 	color: $white;
 	@media #{$small} {
@@ -71,7 +72,9 @@ body {
 }
 .container {
 	width: 36rem;
-	max-width: 750px;
+	max-width: 550px;
+	//width: 100%;
+	//max-width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
 	@include center-block();
