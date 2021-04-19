@@ -1,5 +1,5 @@
----
-layout: compress
+--- 
+layout: compress 
 ---
 
 <!DOCTYPE html>
@@ -29,18 +29,18 @@ layout: compress
                 <div class="post-list">
                     {% if page.title == "All Posts" %}
                         {% for post in site.posts %} 
-                           <ul>
-                               <li class="wow fadeInLeft" data-wow-duration="0.5s">
-                                   <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                                   <p>{{ post.excerpt }}</p>
-                                   <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
+                            <ul>
+                                <li class="wow fadeInLeft" data-wow-duration="0.5s">
+                                    <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                                    <p>{{ post.excerpt }}</p>
+                                    <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
                                 </li>
-                           </ul>
+                            </ul>
                         {% endfor %}
                     {% else %}
                         {% for post in site.posts %} 
                             {% if post.category == page.title %}
-                             <ul>
+                            <ul>
                                 <li class="wow fadeInLeft" data-wow-duration="0.5s">
                                     <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                                     <p>{{ post.excerpt }}</p>
