@@ -35,10 +35,10 @@ body {
 }
 .header {
 	height: 100%;
-	position: absolute; //edit
+	position: relative; 
 	width: 100%; //edit
 	min-height: 300px;
-	max-width: 850px; //add
+	max-width: 1000px; //add
 	text-align: left;
 	color: $white;
 	@media #{$small} {
