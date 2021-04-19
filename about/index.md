@@ -1,10 +1,10 @@
 ---
 layout: page
 title: About Me
+tags: [About Me]
 date: 2021-04-18
 author: Dora
-published: true
-permalink: /about/
+comments: false
 ---
 
 # Dora's Technical Writing

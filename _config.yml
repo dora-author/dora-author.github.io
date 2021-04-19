@@ -26,22 +26,22 @@ locale: en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: https://dora-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
+permalink: /:title/
+markdown: kramdown
+highlighter: rouge
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+mathjax: true
 sass:
-  sass_dir:         _sass
-  style:            compressed
+  sass_dir: _sass
+  style: compressed
 
 # Comments
-disqus_shortname:   dora-author
+disqus_shortname: dora-author
 
 # github_username:    dora-author
 
