@@ -4,7 +4,7 @@ title: About Me
 tags: [About Me]
 date: 2021-04-18
 author: Dora
-comments: false
+comments: true
 ---
 
 # Dora's Technical Writing
