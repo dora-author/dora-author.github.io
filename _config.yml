@@ -41,7 +41,7 @@ sass:
   style: compressed
 
 # Comments
-discus-identifier: dora-author-github-io
+disqus_shortname: dora-author-github-io
 #disqus_shortname: 'Dora's Technical Writing'
 
 
