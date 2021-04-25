@@ -71,8 +71,8 @@ body {
 	align-items: center;
 }
 .container {
-	width: 100%; //eidt
-	max-width: 950px; //edit
+	width: 36rem; //eidt
+	max-width: 750px; //edit
 	//width: 100%; //add
 	//max-width: 100%;
 	padding-right: 15px;
@@ -107,7 +107,7 @@ body {
 }
 .wrapper {
 	width: 100%; //edit
-	max-width: 1050px; //edit
+	max-width: 950px; //edit
 	margin: 4rem auto;
 	background: $white;
 	color: $color_tuatara;
@@ -123,7 +123,7 @@ body {
 }
 #disqus_thread {
 	width: 100%; //edit
-	max-width: 1050px; //edit
+	max-width: 950px; //edit
 	margin: -3rem auto 4rem;
 	background: $white;
 	color: $color_tuatara;
