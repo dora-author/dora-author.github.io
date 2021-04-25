@@ -38,7 +38,7 @@ body {
 	height: 100%;
 	width: 100%; //edit
 	min-height: 300px;
-	max-width: 100%; //add
+	//max-width: 100%; //add
 	text-align: left;
 	color: $white;
 	@media #{$small} {
@@ -71,14 +71,14 @@ body {
 	align-items: center;
 }
 .container {
-	width: 36rem; //eidt
+	width: 100%; //eidt
 	max-width: 950px; //edit
 	//width: 100%; //add
 	//max-width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
-	margin-right: auto; //add
-	margin-left: auto; //add
+	//margin-right: auto; //add
+	//margin-left: auto; //add
 	@include center-block();
 	background-color: $white;
 	color: $color_shark;
@@ -116,7 +116,7 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 90%; //edit
+		width: 100%; //edit
 		padding: 2em 0;
 	    box-shadow: none;
 	}
@@ -132,7 +132,7 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 90%; //edit
+		width: 100%; //edit
 		padding: 2em 0;
 	    box-shadow: none;
 	}
