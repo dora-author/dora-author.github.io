@@ -91,7 +91,7 @@ body {
 	    box-shadow: none;
 	}
 	@media #{$medium} {
-		width: 100%; //edit
+		width: 80%; //edit
 	}
 }
 .row {
@@ -123,7 +123,7 @@ body {
 }
 #disqus_thread {
 	width: 100%; //edit
-	max-width: 950px; //edit
+	max-width: 1050px; //edit
 	margin: -3rem auto 4rem;
 	background: $white;
 	color: $color_tuatara;
