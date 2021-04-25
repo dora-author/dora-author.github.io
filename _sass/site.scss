@@ -106,7 +106,7 @@ body {
 	}
 }
 .wrapper {
-	width: 100%; //edit
+	width: 85%; //edit
 	max-width: 950px; //edit
 	margin: 4rem auto;
 	background: $white;
@@ -116,13 +116,13 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 90%; //edit
+		width: 100%; //edit
 		padding: 2em 0;
 	    box-shadow: none;
 	}
 }
 #disqus_thread {
-	width: 100%; //edit
+	width: 85%; //edit
 	max-width: 950px; //edit
 	margin: -3rem auto 4rem;
 	background: $white;
@@ -132,7 +132,7 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 90%; //edit
+		width: 100%; //edit
 		padding: 2em 0;
 	    box-shadow: none;
 	}
