@@ -91,7 +91,7 @@ body {
 	    box-shadow: none;
 	}
 	@media #{$medium} {
-		width: 70%; //edit
+		width: 80%; //edit
 	}
 }
 .row {
@@ -106,7 +106,7 @@ body {
 	}
 }
 .wrapper {
-	width: 75%; //edit
+	width: 100%; //edit
 	max-width: 1050px; //edit
 	margin: 4rem auto;
 	background: $white;
@@ -122,7 +122,7 @@ body {
 	}
 }
 #disqus_thread {
-	width: 75%; //edit
+	width: 100%; //edit
 	max-width: 1050px; //edit
 	margin: -3rem auto 4rem;
 	background: $white;
