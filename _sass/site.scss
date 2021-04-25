@@ -34,8 +34,8 @@ body {
 	box-sizing: border-box;
 }
 .header {
-	height: 100%;
 	position: relative; 
+	height: 100%;
 	width: 100%; //edit
 	min-height: 300px;
 	max-width: 100%; //add
@@ -72,11 +72,13 @@ body {
 }
 .container {
 	width: 36rem;
-	max-width: 550px; //edit
+	max-width: 850px; //edit
 	//width: 100%; //add
 	//max-width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
+	margin-right: auto; //add
+	margin-left: auto; //add
 	@include center-block();
 	background-color: $white;
 	color: $color_shark;
@@ -89,7 +91,7 @@ body {
 	    box-shadow: none;
 	}
 	@media #{$medium} {
-		width: 80%;
+		width: 100%; //edit
 	}
 }
 .row {
@@ -105,7 +107,7 @@ body {
 }
 .wrapper {
 	width: 75%;
-	max-width: 850px;
+	max-width: 950px; //edit
 	margin: 4rem auto;
 	background: $white;
 	color: $color_tuatara;
