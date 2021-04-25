@@ -116,7 +116,7 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 100%; //edit
+		width: 90%; //edit
 		padding: 2em 0;
 	    box-shadow: none;
 	}
@@ -132,7 +132,7 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 100%; //edit
+		width: 90%; //edit
 		padding: 2em 0;
 	    box-shadow: none;
 	}
