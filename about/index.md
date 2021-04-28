@@ -10,23 +10,23 @@ comments: true
 # Dora's Technical Writing
 
 테크니컬 라이팅에 대한 경험과 공부한 것들을 공유하고 싶습니다.   
-소중한 조언 부탁드립니다.
+소중한 조언 부탁드립니다. <br/><br/>
 
-
+  
 ## 블로그 구성
 
-> **Technical Writing(TW)**   
+> __Technical Writing(TW)__
 
-실무에 도움되는 TW 프로세스, 규칙, 에디팅, 스타일 이론 및 적용 사례
+실무에 도움되는 TW 프로세스, 규칙, 에디팅, 스타일 등에 관한 이론 및 적용 사례
 
-> **Technology**   
+> __Technology__
 
 TW에 적용되는 기술 인사이트, 배경 지식, 툴, 언어, 개발 환경 등 
 
-> **English**   
+> __English__   
 
 영문 테크니컬 라이팅(기술 번역)을 위한 문법, 표현법
 
-> **Training**   
+> __Training__   
 
 교육/세미나 내용 정리, 공유/출처 자료
