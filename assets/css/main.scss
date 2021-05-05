@@ -21,8 +21,8 @@ sitemap: false
 @import "elements";
 @import "syntax";
 @import "nav";
-@import "vendor/fonts";
-@import "vendor/font-awesome";
+//@import "vendor/fonts";
+//@import "vendor/font-awesome";
 @import "vendor/animate";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print"
@@ -40,10 +40,10 @@ $type-size-4-5: 1.12em !default; // Ubuntu Mono is a bit small
 
 // https://github.com/mmistakes/minimal-mistakes/issues/1219
 html {
-  font-size: 12px; // change to whatever
+  font-size: 16px; // change to whatever
   
   @include breakpoint($medium) {
-    font-size: 14px; // change to whatever
+    font-size: 16px; // change to whatever
   }
 
   @include breakpoint($large) {
