@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-28T13:43:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-12-28T12:57:30+09:00</published><updated>2020-12-28T12:57:30+09:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-07T03:26:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Technical Report Writing for Engineer - Week 1</title><link href="http://localhost:4000/training/2021/04/26/technical-report-writing-week1.html" rel="alternate" type="text/html" title="Technical Report Writing for Engineer - Week 1" /><published>2021-04-26T00:00:00+09:00</published><updated>2021-04-26T00:00:00+09:00</updated><id>http://localhost:4000/training/2021/04/26/technical-report-writing-week1</id><content type="html" xml:base="http://localhost:4000/training/2021/04/26/technical-report-writing-week1.html">&lt;h1&gt;&lt;img width=&quot;300px&quot; src=&quot;/img/training/tech_report_1w.png&quot; /&gt;&lt;/h1&gt;
+
+&lt;h2 id=&quot;what-exactly-is-a-technical-report&quot;&gt;what exactly is a technical report?&lt;/h2&gt;
+
+&lt;p&gt;A &lt;strong&gt;technical report&lt;/strong&gt; is one of the principal methods of communication used by practising engineers.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-anatomy-of-a-technical-report&quot;&gt;The anatomy of a technical report&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/training/tech_report_1w.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;title&quot;&gt;&lt;strong&gt;Title&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The title provides a name for the report.&lt;br /&gt;
+It should be a few words that &lt;span style=&quot;color:red&quot;&gt;describe the content of the document, which would typically involve the aim of what is trying to be achieved.&lt;/span&gt; &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;1-abstract&quot;&gt;1. Abstract&lt;/h3&gt;
+&lt;p&gt;An abstract, sometimes called &lt;span style=&quot;color:red&quot;&gt;a summary or an executive summary, is the first section to appear after the title,&lt;/span&gt; and is a succinct review of all the important information included in the report. The purpose of an abstract is for a reader to determine if they would like to read the report in more detail or to move on if it isn’t exactly what they’re looking for. &lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-introduction-&quot;&gt;2. Introduction ⭐&lt;/h3&gt;
+&lt;p&gt;An introduction is &lt;span style=&quot;color:red&quot;&gt;a review of the background and context of the work&lt;/span&gt; that is presented in the report, &lt;span style=&quot;color:red&quot;&gt;setting the reader up to understand why you have chosen to do the work&lt;/span&gt; you are discussing. It might include how the work fits into the wider world, how it adds to the current understanding of the field of study, and &lt;span style=&quot;color:red&quot;&gt;what you hope to achieve as aims and objectives&lt;/span&gt;.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/training/tech_report_1w_1.png&quot; alt=&quot;Abstract &amp;amp; Introduction&quot; /&gt; &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-theory&quot;&gt;3. Theory&lt;/h3&gt;
+&lt;p&gt;If required, a technical report may contain a theory section, which &lt;span style=&quot;color:red&quot;&gt;provides a reader with the necessary technical background&lt;/span&gt; to appreciate the work that is presented in the report. If it’s critical that the reader understands &lt;span style=&quot;color:red&quot;&gt;a particular concept&lt;/span&gt; in order to understand your work, then a theory section is the place to describe it.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-procedure-&quot;&gt;4. Procedure ⭐&lt;/h3&gt;
+&lt;p&gt;The procedure section describes &lt;span style=&quot;color:red&quot;&gt;the methods or equipment used to achieve the outcomes of the work&lt;/span&gt;. It is written as a chronological record of the steps that were performed to achieve the results, with &lt;span style=&quot;color:red&quot;&gt;enough detail to allow the reader to repeat what was done&lt;/span&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-result-&quot;&gt;5. Result ⭐&lt;/h3&gt;
+&lt;p&gt;The results section presents &lt;span style=&quot;color:red&quot;&gt;an impartial record of the outcomes of the work, describing what the results are and what facts or understanding can clearly be extracted from them&lt;/span&gt;. Data should be processed to convey the main findings of the work rather than the details of every result.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/training/tech_report_1w_2.png&quot; alt=&quot;image&quot; /&gt; &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;6-discussion-&quot;&gt;6. Discussion ⭐&lt;/h3&gt;
+&lt;p&gt;The discussion is perhaps the most important section of a technical engineering report.&lt;br /&gt;
+It is &lt;span style=&quot;color:red&quot;&gt;the opportunity for the writer to analyse results, express their opinions of the work, and provide an interpretation of the significance of the outcomes&lt;/span&gt;. It may include conjecture as to why trends in the results have occurred and limitations of the process that has been employed.&lt;br /&gt;
+A discussion can also include a description of the impact of the work and how it will make a change to the world, even if only in a small way.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-conclusion&quot;&gt;7. Conclusion&lt;/h3&gt;
+&lt;p&gt;A conclusion is a short review of the results that have been deduced and the impact of the work. &lt;span style=&quot;color:red&quot;&gt;It answers questions posed in the introduction and states if aims and objectives have been met&lt;/span&gt;.&lt;br /&gt;
+Readers will quite often skip to the conclusion section of a report to quickly determine what you found out and what it means to them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/training/tech_report_1w_4.png&quot; alt=&quot;image&quot; /&gt; &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;8-further-work&quot;&gt;8. Further Work&lt;/h3&gt;
+&lt;p&gt;A further work section is sometimes included when the writer wants to suggest things that haven’t been included in the report that can be done to advance the project.&lt;/p&gt;
+
+&lt;h3 id=&quot;9-references-&quot;&gt;9. References ⭐&lt;/h3&gt;
+&lt;p&gt;References are &lt;span style=&quot;color:red&quot;&gt;detailed lists of external resources that have been indicated and cited in the main body of the report that readers may want to track down&lt;/span&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;10-appendices&quot;&gt;10. Appendices&lt;/h3&gt;
+&lt;p&gt;Supplementary information that may be of interest to the reader is stored in appendices. These include any material that is worth the reader having access to, but &lt;span style=&quot;color:red&quot;&gt;not directly relevant to the main points raised in the report&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/training/tech_report_1w_5.png&quot; alt=&quot;image&quot; /&gt; &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;have-you-mastered-this-structure&quot;&gt;Have you mastered this structure?&lt;/h3&gt;
+
+&lt;p&gt;Go at structuring a report for yourself in &lt;a href=&quot;https://mooc-assets.shef.ac.uk/technical_reports/interactive_exercise/drag_and_drop/main.html&quot;&gt;drag and drop game&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You’ll be asked to put the title sections in order and then match them to the correct description. This works best on a laptop or desktop and may not work on mobiles and tablets.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;From [Technical Report Writing for Engineers The University of Sheffield]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.futurelearn.com/courses/technical-report-writing-for-engineers/10/steps/833609&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Training" /><category term="Training" /><summary type="html">Technical Report Writing for Engineers at the University of Sheffield - 1주차</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/technology/2020/09/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-09-26T22:11:49+09:00</published><updated>2020-09-26T22:11:49+09:00</updated><id>http://localhost:4000/technology/2020/09/26/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/technology/2020/09/26/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -10,16 +78,4 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-09-26T22:11:49+09:00</published><updated>2020-09-26T22:11:49+09:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Technology" /><category term="Jekyll" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
