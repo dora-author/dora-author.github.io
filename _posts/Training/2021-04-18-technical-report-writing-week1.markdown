@@ -9,7 +9,13 @@ date: 2021-04-26
 comments: true
 ---
 
-# <img width="300px" src="/img/training/tech_report_1w.png">
+
+## 내용 요약  
+엔지니어, 개발자들이 작성하는 기술 보고서 작성법에 관한 내용이다.  
+[1주차 내용]에서는 제목을 포함한 기술 보고서의 목차를 다루며,
+각 목차 별 주제와 포함되어야 하는 필수 요소들을 요약한다.  
+세부 내용에서 중요점을 정리하여 번역하고 싶었지만 시간 관계상
+<span style="color:red">빨간색 글씨</span>로 강조했다. <br/><br/>
 
 
 ## what exactly is a technical report?
