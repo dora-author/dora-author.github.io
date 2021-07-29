@@ -273,7 +273,7 @@ button {
   top: 0;
   right: 0;
   color: $mfp-controls-text-color;
-  font-size: 12px;
+  font-size: 16px; //edit
   line-height: 18px;
   white-space: nowrap;
 }
@@ -423,7 +423,7 @@ button {
     small {
       color: $mfp-caption-subtitle-color;
       display: block;
-      font-size: 12px;
+      font-size: 16px; //edit
       line-height: 14px;
     }
     figure {

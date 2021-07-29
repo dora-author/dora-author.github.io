@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('../assets/fonts/RIDIBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Fira Sans
 @font-face{
     font-family: 'Fira Sans';
@@ -7,7 +14,7 @@
          url("../fonts/FiraSans/woff/FiraSans-Light.woff") format("woff"),
          url("../fonts/FiraSans/woff2/FiraSans-Light.woff2") format("woff2"),
          url("../fonts/FiraSans/ttf/FiraSans-Light.ttf") format("truetype");
-    font-weight: 300;
+    font-weight: normal; //edit
     font-style: normal;
 }
 
@@ -19,7 +26,7 @@
          url("../fonts/FiraSans/woff/FiraSans-LightItalic.woff") format("woff"),
          url("../fonts/FiraSans/woff2/FiraSans-LightItalic.woff2") format("woff2"),
          url("../fonts/FiraSans/ttf/FiraSans-LightItalic.ttf") format("truetype");
-    font-weight: 300;
+    font-weight: normal; //edit
     font-style: italic;
 }
 
