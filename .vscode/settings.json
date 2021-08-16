@@ -1,2 +1,38 @@
 {
+    "javascript.format.enable": false,
+    "editor.formatOnSave": true,
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Dark+ Material",
+    "emojisense.languages": {
+        "markdown": true,
+        "git-commit": false,
+        "plaintext": false,
+        "json": true,
+        "javascript": true
+    },
+    "javascript.validate.enable": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".jsx",
+            ".md",
+            ".mdx",
+            ".ts",
+            ".tsx"
+        ]
+    },
+    "eslint.validate": [
+        "markdown",
+        "mdx",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "files.associations": {
+        "*.mdx": "markdown"
+    },
 }

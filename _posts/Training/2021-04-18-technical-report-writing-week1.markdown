@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Technical Report Writing for Engineer - Week 1"
-excerpt: Technical Report Writing for Engineers at the University of Sheffield - 1주차
+excerpt: Technical Report Writing for Engineers - The Executive summary
 tags:
   - Training
 category: Training
-date: 2021-04-26
+date: 2021-04-18
 comments: true
 ---
 
