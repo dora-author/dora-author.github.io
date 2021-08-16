@@ -158,11 +158,11 @@ comments: true
    
   ![이미지 이름](이미지 주소)
 
-   Ex) `!(markdown_logo)(https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)`
+   Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)`
 
   **How to look**
   
-  !(markdown_logo)(https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)
+  ![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)
 
 
 
@@ -178,6 +178,7 @@ comments: true
   ~~~ 
 
   **How to look**
+
   | First Header |           Second Header            | Third Header |
   | :----------- | :--------------------------------: | -----------: |
   | 왼쪽맞춤     |             가운데맞춤             |   오른쪽맞춤 |
@@ -190,13 +191,14 @@ comments: true
 같은 제목 내에서도 구분할 내용에 대하여
 내용 앞줄 혹은 뒷 줄에 \*\*\* or --- or \_\_\_ or --- 를 사용하여 수평선을 표현
 
-  - How to Use
+  **How to use**
+
   ```
   ***
   이 단락의 내용을 앞 내용과 구분
   ```
 
-  - How to look
+  **How to look**
 
   ***
   이 단락의 내용을 앞 내용과 구분
@@ -204,20 +206,21 @@ comments: true
 
 #### 접어두기 표시
 
- - **How to use**
+  **How to use**
+
   ```
     <details><summary>상세 내용 확인</summary>
-    <div markdown="1"> 
+    <div markdown="2"> 
     div 에 markdown attribute 를 1 로 
     하는 이유는 div 안에서
     markdown 을 사용하기 위해서 입니다.
     </div>
     </details>
   ```
- - **How to look**
+  **How to look**
   
     <details><summary>상세 내용 확인</summary>
-    <div markdown="1"> 
+    <div markdown="2"> 
     div 에 markdown attribute 를 1 로 
     하는 이유는 div 안에서
     markdown 을 사용하기 위해서 입니다.
@@ -227,33 +230,36 @@ comments: true
 
 #### 작업 목록
 
-  - **How to use**
-  ```
-  - [x] #739
-  - [ ] Add delight to the experience when all tasks are complete
-  - [ ] Open a followup issue
-  ```
-  - **How to look**
-  - [x] #739
-  - [ ] Add delight to the experience when all tasks are complete
-  - [ ] Open a followup issue
+  **How to use**
 
+  ```
+  - [x] #739
+  - [ ] Add delight to the experience when all tasks are complete
+  - [ ] Open a followup issue
+  ```
+  
+  **How to look**
+
+  - [x] #739
+  - [ ] Add delight to the experience when all tasks are complete
+  - [ ] Open a followup issue
 
 
 #### 컨벤션 규칙
 
 작성 내용 중 독자가 참고해야할 메모, 정보, 주의 사항에 대하여 다음과 같이 표기한다.
 
-  - **How to use**
+  **How to use**
+  
   ```
   > ℹ️ **_NOTE_** <br>
   This is note content.
 
   > ⚠️ **_Warning_** <br>
   This is a warning content.
-```
+  ```
 
-  - **How to look**
+  **How to look**
 
   > ℹ️ **_NOTE_** <br>
     This is note content.
