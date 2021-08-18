@@ -206,3 +206,10 @@ kbd {
     font-weight: 300;
     margin-bottom: 10px;
 }
+
+details summary::-webkit-details-marker { 
+  font-size: 20px; 
+  margin-right: 5px; 
+}
+
+

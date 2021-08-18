@@ -9,11 +9,13 @@ date: 2021-08-14
 comments: true
 ---
 
-### Markdown 사용법  👍
+## Markdown 사용법  👍
 
-**Markdown**은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어입니다. Markdown을 사용하면 일반 텍스트 편집기(예: vi 또는 Emacs)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입합니다. 예를 들어 다음 예는 Markdown 형식의 간단한 기술 문서를 보여줍니다.
+**Markdown**은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어입니다. Markdown을 사용하면 일반 텍스트 편집기(예: vi 또는 Emacs)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입합니다. 다음은 Markdown 형식의 간단한 사용법과 예에 관한 내용입니다. 
 
-#### 단어 표현
+<br>
+
+### 단어 표현
 
   | **How to use**                 | **How to look**  |
   | :----------------------------- | :--------------- |
@@ -28,13 +30,13 @@ comments: true
 <br> 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다.
 <br> Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
 
+<br>
 
-#### 인용구 및 블락
+### 인용구 및 블락
 
 - 인용구: 작성할 텍스트 앞에 `>`을 기입하면 해당 텍스트 전체가 회색으로 구분되는 인용구가 된다. <br>
   
   **How to use** <br>
-
   \> 안녕하세요
 
   **How to look**
@@ -57,14 +59,17 @@ comments: true
   안녕하세요
   ```
   
-  > ℹ️ **_NOTE_** <br> 코드 문법을 적용하기 위해 앞 줄에 ` ``` ` 와 해당 언어 종류를 같이 기입한다. <br> Ex)  앞 줄에 ` ``` c ` 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.
+  > ℹ️ **_NOTE_** <br> 코드 문법을 적용하기 위해 앞 줄에 ` ``` ` 와 해당 언어 종류를 같이 기입한다.<br> 
+  > Ex)  앞 줄에 ` ```c ` 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.
   >
   > ```c 
   > int val = 10; // C문법 적용함
   > printf(%s,"Hello, World!");
   > ```
 
-#### 제목 수준
+<br>
+
+### 제목 수준
 
 - 큰제목: 텍스트 밑에 `=====` 기입
   
@@ -78,7 +83,6 @@ comments: true
 
   큰제목
   ======
-<br>
 
 - 작은 제목: 텍스트 밑에 `-----` 기입
   
@@ -107,8 +111,9 @@ comments: true
 
   ##### 5단계 
 
+<br>
 
-#### 리스트
+### 리스트
 
 - Unordered
   
@@ -142,7 +147,9 @@ comments: true
      1. Item 3a
      3. Item 3b
 
-#### 링크 
+<br>
+
+### 링크 
 
   |             | **How to use**                                                               | **How to look**                   |
   | :---------- | :--------------------------------------------------------------------------- | :-------------------------------- |
@@ -151,8 +158,9 @@ comments: true
   | 인라인 링크 | [url 대신 표현 단어](url 주소) </br> Ex) `[Google](http://google.com"구글")` | [Google](http://google.com"구글") |
   | 내부 링크   | [표현할 단어](#작성한 본문 내 제목) </br> Ex) `[링크](#링크)`                | [링크](#링크)                     |
  
+<br>
 
-#### 이미지 삽입
+### 이미지 삽입
 
   **How to use**
    
@@ -165,8 +173,9 @@ comments: true
   ![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)
 
 
+<br>
 
-#### 테이블
+### 테이블
 
   **How to use**
   ~~~ 
@@ -185,8 +194,9 @@ comments: true
   | Second row   |              **Cell**              |       *Cell* |
   | Third row    | Cell that spans across two columns |              |
 
+<br>
 
-#### 단락 구분
+### 단락 구분
 
 같은 제목 내에서도 구분할 내용에 대하여
 내용 앞줄 혹은 뒷 줄에 \*\*\* or --- or \_\_\_ or --- 를 사용하여 수평선을 표현
@@ -203,32 +213,35 @@ comments: true
   ***
   이 단락의 내용을 앞 내용과 구분
 
+<br>
 
-#### 접어두기 표시
+### 접어두기 표시
 
   **How to use**
 
   ```
     <details><summary>상세 내용 확인</summary>
-    <div markdown="2"> 
+    <div markdown="1"> 
     div 에 markdown attribute 를 1 로 
     하는 이유는 div 안에서
     markdown 을 사용하기 위해서 입니다.
     </div>
     </details>
   ```
+  
   **How to look**
   
     <details><summary>상세 내용 확인</summary>
-    <div markdown="2"> 
+    <div markdown="1"> 
     div 에 markdown attribute 를 1 로 
     하는 이유는 div 안에서
     markdown 을 사용하기 위해서 입니다.
     </div>
-    </details>
+    </details>****
 
+<br>
 
-#### 작업 목록
+### 작업 목록
 
   **How to use**
 
@@ -244,8 +257,9 @@ comments: true
   - [ ] Add delight to the experience when all tasks are complete
   - [ ] Open a followup issue
 
+<br>
 
-#### 컨벤션 규칙
+### 컨벤션 규칙
 
 작성 내용 중 독자가 참고해야할 메모, 정보, 주의 사항에 대하여 다음과 같이 표기한다.
 
