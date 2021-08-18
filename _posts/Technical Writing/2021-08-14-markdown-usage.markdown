@@ -164,7 +164,7 @@ comments: true
 
   **How to use**
    
-  ![이미지 이름](이미지 주소)
+  `![이미지 이름](이미지 주소)`
 
    Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)`
 
@@ -228,7 +228,7 @@ comments: true
     </div>
     </details>
   ```
-  
+
   **How to look**
   
     <details><summary>상세 내용 확인</summary>
@@ -237,7 +237,7 @@ comments: true
     하는 이유는 div 안에서
     markdown 을 사용하기 위해서 입니다.
     </div>
-    </details>****
+    </details>
 
 <br>
 
