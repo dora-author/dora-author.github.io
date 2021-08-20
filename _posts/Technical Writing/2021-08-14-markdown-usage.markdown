@@ -11,7 +11,7 @@ comments: true
 
 ## Markdown 사용법  👍
 
-**Markdown**은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어입니다. Markdown을 사용하면 일반 텍스트 편집기(예: vi 또는 Emacs)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입합니다. 다음은 Markdown 형식의 간단한 사용법과 예에 관한 내용입니다. 
+다음은 웹 콘텐츠에서 주로 쓰이는 스타일에 대하여 Markdown을 적용하기 위한 사용법과 예에 관한 내용이다. 
 
 <br>
 
@@ -25,10 +25,11 @@ comments: true
   | \~\~취소선\~\~                 | ~~취소선~~       |
   | \`인라인코드\`                 | `인라인코드`     |
 
-> ℹ️ **_NOTE_** 
-<br> 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다.
-<br> Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
+<br>
 
+ℹ️ <span style="color:#247CFF"> **_NOTE_** 
+> 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다.
+<br> Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
 
 <br>
 
@@ -42,8 +43,11 @@ comments: true
   **How to look**
   > 안녕하세요
 
-> ℹ️ **_NOTE_** <br>
-  `>` 다음줄에 `>>`, 그 다음 줄에 `>>>`를 기입하면 여러 계층의 인용구로 작성할 수 있다. <br>
+<br>
+
+ℹ️ <span style="color:#247CFF"> **_NOTE_** 
+> `>` 다음줄에 `>>`, 그 다음 줄에 `>>>`를 기입하면 여러 계층의 인용구로 작성할 수 있다.
+
 
 - 코드 블락: 코드를 일반 문장과 구분하기 위해 블락으로 표현. 예시나 구분이 필요한 내용을 블락으로 묶을 때도 사용한다. <br>
   
@@ -59,10 +63,10 @@ comments: true
   안녕하세요
   ```
   
-  > ℹ️ **_NOTE_** 
-  <br> 코드 문법을 적용하기 위해 앞 줄에 ` ``` ` 와 해당 언어 종류를 같이 기입한다.
+  ℹ️ <span style="color:#247CFF"> **_NOTE_** 
+  > 코드 문법을 적용하기 위해 앞 줄에 ` ``` ` 와 해당 언어 종류를 같이 기입한다.
   <br> Ex)  앞 줄에 ` ```c ` 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.
-  > ```c 
+  >```c 
   > int val = 10; // C문법 적용함
   > printf(%s,"Hello, World!");
   > ```
@@ -172,7 +176,6 @@ comments: true
   
   ![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)
 
-
 <br>
 
 ### 테이블
@@ -264,19 +267,23 @@ comments: true
   **How to use**
   
   ```
-  > ℹ️ **_NOTE_** <br>
-  This is note content.
+  ℹ️ <span style="color:#247CFF"> **_NOTE_**
+  > This is note content.
 
-  > ⚠️ **_Warning_** <br>
-  This is a warning content.
+  ⚠️ <span style="color:#FFE423"> **_Warning_**
+  > This is a warning content.
   ```
 
   **How to look**
 
-  > ℹ️ **_NOTE_** <br>
-    This is note content.
+  ℹ️ <span style="color:#247CFF"> **_NOTE_**
+  > This is note content.
 
-  > ⚠️ **_Warning_** <br>
-    This is a warning content.
+<br>
+
+  ⚠️<span style="color:#FFE423"> **_Warning_**
+  > This is warning content.
+
+
 
 

@@ -250,18 +250,18 @@ The following table suggests **concise replacements** for a few wordy expression
 
 #### 멋진 시작 문장 쓰기
 
-시작 문장은 모든 단락애서 가장 중요합니다. 바쁜 독자는 첫 문장에는 집중하고 다음 문장을 건너뛰기도 합니다.
+시작 문장은 모든 단락애서 가장 중요하다. 바쁜 독자는 첫 문장에는 집중하고 다음 문장을 건너뛰기도 한다.
 
-- 좋은 시작 문장은 단락의 중심점을 만듭니다.
-- 결함이 있는 시작 문장은 독자를 잘못된 방향으로 보냅니다.
+- 좋은 시작 문장은 단락의 중심점을 만든다.
+- 결함이 있는 시작 문장은 독자를 잘못된 방향으로 보낸다.
 
   **Exercise**
-  다음의 시작 문장은 단락이 피타고라스 정리에 초점을 맞출 것을 암시하기 때문에 결함이 있습니다. 사실, 단락의 초점은 실제로 클러스터링 알고리즘입니다. 
+  다음의 시작 문장은 단락이 피타고라스 정리에 초점을 맞출 것을 암시하기 때문에 결함이 있다. 사실, 단락의 초점은 실제로 클러스터링 알고리즘이다. 
 
   ```
   The Pythagorean Theorem states that the sum of the squares of both legs of a right triangle is equal to the square of the hypotenuse. The k-means clustering algorithm relies on the Pythagorean Theorem to measure distances. By contrast, the k-median clustering algorithm relies on the Manhattan Distance.
   ```
-  다음의 시작 문장 더 효과적일 것입니다.
+  다음의 시작 문장 더 효과적일 것이다.
   ```
   Different clustering algorithms measure distances differently.
   ```
@@ -272,41 +272,43 @@ The following table suggests **concise replacements** for a few wordy expression
 
 #### 문서의 범위를 명시하기
  
-- 좋은 문서는 그의 범의를 정의하며 시작합니다.
+- 좋은 문서는 그의 범의를 정의하며 시작한다.
   ```
   Ex) This document describes the overall design of Project Frambus.
   ```
 
-- 더 좋은 문서는 독자가 문서에 다룰 것으로 예상할 수 있는 비범위 주제를 추가 정의합니다.
+- 더 좋은 문서는 독자가 문서에 다룰 것으로 예상할 수 있는 비범위 주제를 추가 정의한다.
   ```
   Ex) This document does not describe the design for the related technology, Project Froobus.
   ```
-- 범위 및 비범위 설명은 독자뿐만 아니라 작성자에게도 도움이 됩니다. 쓰는 동안 문서의 내용이 범위 설명에서 벗어나면 문서의 초점을 다 맞주거나 범위 설명을 수정해야 합니다. 
+- 범위 및 비범위 설명은 독자뿐만 아니라 작성자에게도 도움이 된다. 쓰는 동안 문서의 내용이 범위 설명에서 벗어나면 문서의 초점을 다 맞주거나 범위 설명을 수정해야 한다. 
 
-- 처음 초안을 검토할 때 범위 설명을 층족하는데 도움이 되지 않는 섹션을 삭제합니다.
+- 처음 초안을 검토할 때 범위 설명을 층족하는데 도움이 되지 않는 섹션을 삭제한다.
   
 
 #### 독자를 명시하기
  
-- 좋은 문서는 독자를 명시적으로 정의합니다.
+- 좋은 문서는 독자를 명시적으로 정의한다.
+  
   ```
   Ex) I wrote this document for the test engineers supporting Project Frambus.
   ```
-- 독자의 정의는 사전 조건 지식이나 경험을 지정할 수 있습니다.
+- 독자의 정의는 사전 조건 지식이나 경험을 지정할 수 있다.
+  
   ```
   Ex) This document assumes that you understand matrix multiplication and how to brew a really good cup of tea.
   ```
 
 #### 핵심 포인트를 미리 설정하기
 
-- 문서를 검토할 때 시작 부분에서 독자의 필수 질문에 답하는지 확인하십시오.
-- 전문 작가는 독자가 2 페이지를 읽을 확률을 높이기 위해 1 페이지에 상당한 에너지를 쏳습니다.
+- 문서를 검토할 때 시작 부분에서 독자의 필수 질문에 답하는지 확인해라.
+- 전문 작가는 독자가 2 페이지를 읽을 확률을 높이기 위해 1 페이지에 상당한 에너지를 쏳는다.
 
 #### 독자를 위해 작성하기
 
-문서를 구성하기 위한 방법으로 독자를 정의합니다.
+문서를 구성하기 위한 방법으로 독자를 정의한다.
 
-- 독자를 정의하기: 다음의 질문은 문서에서 포함해야 할 것이 무엇인지 결정하도록 돕습니다
+- 독자를 정의하기: 다음의 질문은 문서에서 포함해야 할 것이 무엇인지 결정하도록 돕는다.
   - 대상 독자는 누구인지
   - 문서를 읽기 전 독자가 알고 있어야 할 것은 무엇인지
   - 문서를 읽은 후 독자가 알아야 할 것 혹은 할 수 있는 것은 무엇인지
@@ -315,12 +317,12 @@ The following table suggests **concise replacements** for a few wordy expression
 
 #### 주제를 섹션으로 쪼개기
 
-모듈식 코드가 읽기, 이해, 유지 관리 및 재사용에 더 쉽듯이 문서를 모듈식으로 만드는 것도 동일한 이점을 제공합니다.
+모듈식 코드가 읽기, 이해, 유지 관리 및 재사용에 더 쉽듯이 문서를 모듈식으로 만드는 것도 동일한 이점을 제공한다.
 
 <br>
 
 ### Markdown  👍
 
-**Markdown**은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어입니다. Markdown을 사용하면 일반 텍스트 편집기(예: vi 또는 Emacs)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입합니다. 
-자세한 Markdown 문법은 별도로 정리한 [TW-Markdown 사용법](https://dora-author.github.io/markdown-usage)를 참조하세요.
+**Markdown**은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어이다. Markdown을 사용하면 일반 텍스트 편집기(예: vi 또는 Emacs)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입한다. 
+<br>자세한 Markdown 문법은 이 블로그에서 별도로 정리한 [[TW] 마크다운 사용법](https://dora-author.github.io/markdown-usage)를 참조.
 
