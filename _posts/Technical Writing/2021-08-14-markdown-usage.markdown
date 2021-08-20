@@ -28,8 +28,8 @@ comments: true
 <br>
 
 ℹ️ <span style="color:#247CFF"> **_NOTE_** 
-> 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다.
-<br> Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
+  > 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다.
+  <br> Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
 
 <br>
 
@@ -45,9 +45,8 @@ comments: true
 
 <br>
 
-ℹ️ <span style="color:#247CFF"> **_NOTE_** 
-> `>` 다음줄에 `>>`, 그 다음 줄에 `>>>`를 기입하면 여러 계층의 인용구로 작성할 수 있다.
-
+ℹ️ <span style="color:#247CFF"> **_NOTE_**
+  > `>` 다음줄에 `>>`, 그 다음 줄에 `>>>`를 기입하면 여러 계층의 인용구로 작성할 수 있다.
 
 - 코드 블락: 코드를 일반 문장과 구분하기 위해 블락으로 표현. 예시나 구분이 필요한 내용을 블락으로 묶을 때도 사용한다. <br>
   
@@ -63,7 +62,7 @@ comments: true
   안녕하세요
   ```
   
-  ℹ️ <span style="color:#247CFF"> **_NOTE_** 
+ℹ️ <span style="color:#247CFF"> **_NOTE_** 
   > 코드 문법을 적용하기 위해 앞 줄에 ` ``` ` 와 해당 언어 종류를 같이 기입한다.
   <br> Ex)  앞 줄에 ` ```c ` 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.
   >```c 
@@ -264,7 +263,7 @@ comments: true
 
 작성 내용 중 독자가 참고해야할 메모, 정보, 주의 사항에 대하여 다음과 같이 표기한다.
 
-  **How to use**
+**How to use**
   
   ```
   ℹ️ <span style="color:#247CFF"> **_NOTE_**
@@ -274,14 +273,13 @@ comments: true
   > This is a warning content.
   ```
 
-  **How to look**
+**How to look**
 
-  ℹ️ <span style="color:#247CFF"> **_NOTE_**
+ℹ️ <span style="color:#247CFF"> **_NOTE_**
   > This is note content.
 
-<br>
 
-  ⚠️<span style="color:#FFE423"> **_Warning_**
+⚠️<span style="color:#FFE423"> **_Warning_**
   > This is warning content.
 
 
