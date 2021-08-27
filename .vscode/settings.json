@@ -2,7 +2,7 @@
     "javascript.format.enable": false,
     "editor.formatOnSave": true,
     "explorer.confirmDelete": false,
-    "workbench.colorTheme": "Dark+ Material",
+    "workbench.colorTheme": "Dark + Material",
     "emojisense.languages": {
         "markdown": true,
         "git-commit": false,
@@ -34,5 +34,8 @@
     ],
     "files.associations": {
         "*.mdx": "markdown"
-    }
+    },
+    "markdown.sty/les": [
+        "C:\\Users\\82109\\AppData\\Roaming\\Code\\User\\markdownpad-github.css"
+      ]
 }
