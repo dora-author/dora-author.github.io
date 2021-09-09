@@ -32,7 +32,7 @@ comments: true
 
 ### 호스팅
 
-<br> 사용자는 GitHub에서 제공하는 `github.io` 도메인에 웹사이트를 호스팅하거나 혹은 사용자 자체 커스텀 도메인에서 사이트를 호스팅할 수 있다. 이에 대한 자세한 방법은 GitHub Docs에서 제공하는 [Using a custom domain with GitHub Pages](https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages)을 참고한다.
+사용자는 GitHub에서 제공하는 `github.io` 도메인에 웹사이트를 호스팅하거나 혹은 사용자 자체 커스텀 도메인에서 사이트를 호스팅할 수 있다. 이에 대한 자세한 방법은 GitHub Docs에서 제공하는 [Using a custom domain with GitHub Pages](https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages)을 참고한다.
 
 <br>
 
@@ -55,7 +55,7 @@ comments: true
 ### Jekyll Theme
 
 사이트에서 보여지는 스타일이나 디자인은 정적 파일 중 CSS, JS, HTML 파일이 결정하는데, **Jekyll Theme**를 적용하여 사용자 사이트의 Look & Feel을 커스터마이징할 수 있다. 
-[Jekyll Theme]((https://jekyllrb.com/docs/themes/)는 
+[Jekyll Theme](https://jekyllrb.com/docs/themes/)는 
 Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용할 Plugin을 정의하며, 사용자 콘텐츠로 재정의될 수 있도록 assets, layouts, includes, 그리고 stylesheets 구성의 패키지로 구성된다.
 **Jekyll Theme**를 적용하는 방법은 두 가지이다.
 
@@ -69,7 +69,7 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
 
 <br>
 
-## 실습 Tutorial - 설치부터 사이트 게시까지 <br> (feat [GitHub Doc's Setting up your GitHub Pages site locally with Jekyll](https://docs.github.com/en/enterprise/2.13/user/articles/setting-up-your-github-pages-site-locally-with-jekyll))
+## 실습 Tutorial - 설치부터 사이트 게시까지 <br> (feat. [GitHub Doc's Setting up your GitHub Pages site locally with Jekyll](https://docs.github.com/en/enterprise/2.13/user/articles/setting-up-your-github-pages-site-locally-with-jekyll))
 
 Github Pages, Jekyll를 활용하여 직접 사이트를 개설해보는 과정은 위에 설명한 [Jekyll theme를 수동으로 적용하는 과정](#Jekyll Theme)을 step-by-step으로 풀이한 내용이라고 볼 수 있다. 
 <br> 요약하자면 Jekyll theme를 적용하기에 앞서 Jekyll 실행을 위한 필요 환경을 설치 후 사용자의 Git repository에 Jekyll theme 설정 파일들을 생성하고 커스터마이징을 위한 파일 수정, 해당 사이트에 대한 파일 생성, 사이트 빌드 및 게시이다.
@@ -131,15 +131,13 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
         $ bundle install
       ``` 
 
+설치 후, `Gemfile.lock`이 동일 경로에 생성된다.
+
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > `jekyll-feed`, `jekyll-seo-tag` and `jekyll-archives`과 같은 Jekyll [plugins](https://jekyllrb.com/docs/plugins/)도 Gem이다. 
   <br> 사용자는 이러한 Jekyll plugins을 사용하여 사이트에 대한 Jekyll 기능을 확장할 수 있다. 
   --> [plugin 사용 방법](https://jekyllrb.com/docs/plugins/installation/)
   <br> GitHub Pages에서 기본적으로 사용하도록 되어있는 [plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins) 및 지원 가능한 [plugins 리스트](https://pages.github.com/versions/)를 참고한다.
-
-<Br> 
-
-설치 후, `Gemfile.lock`이 동일 경로에 생성된다.
 
 <br>
 
@@ -189,9 +187,11 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   > ⚠️ <span style="color:#FFE423"> **_Warning_** </span>
   > <br> 이미 파일들이 존재하는 상황에서 위 명령어를 수행하면 다음과 같은 에러가 발생한다.
-  <Br> `Conflict: ~ exists and is not empty.`
+  > <br> `Conflict: ~ exists and is not empty.`
 
-사이트 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 설정한다.
+<Br>
+
+Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
 
   2. `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
   
@@ -213,31 +213,27 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> GitHub Pages 사용자가 변경한 콘텐츠를 원격 repository에 `push`하면 Jekyll을 사용해서 사이트를 빌드 후 자동 게시하므로 테스트할 필요가 없다면 해당 단계도 생략할 수 있다.
 
-  해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 `Gemfile`내 명시된 `github-pages` gem 정보는 주석으로 되어있고, `jekyll` gem 정보는 주석이 해제되어 있는지 확인한다. 
+<br>
 
-      ``` ruby
-      gem "jekyll", "~> 3.9.0" #enable jekyll
-
-      # gem "github-pages", group: :jekyll_plugins #disable github-pages
-      ```
+해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 `Gemfile`내 명시된 `github-pages` gem 정보는 주석으로 되어있고, `jekyll` gem 정보는 주석이 해제되어 있는지 확인한다. 
 
   1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
 
       ``` bash
        $ bundle exec jekyll serve
+
       ```
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> `jekyll serve` 명령어는 Jekyll site 빌드 후 내부 서버에 게시한다는 의미이다. 
-    <br> 이외 다른 Jekyll 명령어는 [Jekyll Docs](https://jekyllrb.com/docs/usage/) 참고)
+    <br> (이외 다른 Jekyll 명령어는 [Jekyll Docs](https://jekyllrb.com/docs/usage/) 참고)
 
-<br>
 
-  이후 명령창에 `Server address: http://127.0.0.1:4000`가 표시된다.
+이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
 
-  2. 사용자 브라우저에서 `http://127.0.0.1:4000`로 접속 후 해당 사이트가 잘 게시되는지 확인한다.
+  2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
 
-   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
-   > <Br> `jekyll serve` 명령어 이후  `ctrl`+ `C` 키를 눌러 종료하지 않는다면 site 파일을 수정하면 자동으로 site에 자동 반영된다.
+  > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
+  > <Br> `jekyll serve` 명령어 이후  `ctrl`+ `C` 키를 눌러 종료하지 않는다면 site 파일을 수정하면 자동으로 site에 자동 반영된다.
 
 
