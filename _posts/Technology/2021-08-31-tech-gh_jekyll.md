@@ -166,6 +166,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
     - `post` 추가 및 변경하기 ->  `_posts` 폴더 수정 
       <br> 자세한 수정 방법은 [GitHub Docs > Adding a new post to your site](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-post-to-your-site) 및 [Jekyll Docs > Posts](https://jekyllrb.com/docs/posts/)를 참고한다.
 
+<Br>
 
 ### 4. Jekyll Site 파일 생성하기
 
@@ -191,7 +192,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
 <Br>
 
-Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
+  Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
 
   2. `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
   
@@ -229,7 +230,7 @@ Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할
     <br> (이외 다른 Jekyll 명령어는 [Jekyll Docs](https://jekyllrb.com/docs/usage/) 참고)
 
 
-이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
+  이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
 
   2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
 
