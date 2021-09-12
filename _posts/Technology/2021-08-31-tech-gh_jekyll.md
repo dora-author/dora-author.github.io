@@ -3,7 +3,8 @@ layout: post
 title: "[Tech] Jekyll을 사용한 나만의 Github Pages 만들기"
 excerpt: Github Pages, Jekyll를 활용한 정적 사이트 개설에 관하여
 tags:
-  - Github Pages, Jekyll
+  - Github Pages
+  - Jekyll
 category: Technology
 date: 2021-08-31
 comments: true
@@ -173,7 +174,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 이 단계는 사용자 로컬 환경에서 Jekyll site를 빌드하여 테스트해야하는데 사용자 로컬 PC에 GitHub Page에 게시할 Jekyll site 파일들이 존재하지 않는 경우 진행한다. 즉  site 파일들이 저장될 로컬 폴더가 빈 상태여야 한다. 
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
-  > <Br> 사용자가 특정 [Jekyll Theme](https://jekyllrb.com/docs/themes/)를 다운로드하거나 GitHub repository에 게시된 해당 소스를 `clone`한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 [다음 단계](#5. Jekyll Site 빌드 및 테스트하기)로 넘어간다.
+  > <Br> 사용자가 특정 [Jekyll Theme](https://jekyllrb.com/docs/themes/)를 다운로드하거나 GitHub repository에 게시된 해당 소스를 `clone`한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 [다음 단계](#5-jekyll-Site-빌드-및-테스트하기)로 넘어간다.
 
   <br>
 
@@ -203,7 +204,8 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
       ```
 
 이후 모든 변경 사항을 연결된 Git 원격 repository에 업로드하도록 `git add .` -> `git commit -m "commit message"` -> `git push origin {gh-pages branch}` 순서로 진행한다.
-<br> 해당 로컬 폴더가 Git 소스를 `clone`한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 [사전 조건](#사전 조건(Prequisite))]을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.
+<br> 해당 로컬 폴더가 Git 소스를 `clone`한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 [사전 조건](#사전-조건-(Prequisite))을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.
+
   
 <br>
 

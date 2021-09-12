@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-08T12:31:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] Jekyll을 사용한 나만의 Github Pages 만들기</title><link href="http://localhost:4000/tech-gh_jekyll/" rel="alternate" type="text/html" title="[Tech] Jekyll을 사용한 나만의 Github Pages 만들기" /><published>2021-08-31T00:00:00+09:00</published><updated>2021-08-31T00:00:00+09:00</updated><id>http://localhost:4000/tech-gh_jekyll</id><content type="html" xml:base="http://localhost:4000/tech-gh_jekyll/">&lt;h2 id=&quot;intro---나의-블로그는-어떻게-만들어졌을까&quot;&gt;Intro - 나의 블로그는 어떻게 만들어졌을까&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-10T21:22:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] UML과 다이어그램</title><link href="http://localhost:4000/tech-uml/" rel="alternate" type="text/html" title="[Tech] UML과 다이어그램" /><published>2021-09-10T00:00:00+09:00</published><updated>2021-09-10T00:00:00+09:00</updated><id>http://localhost:4000/tech-uml</id><content type="html" xml:base="http://localhost:4000/tech-uml/">&lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#toc&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#UML이란&quot;&gt;UML이란&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uml이란&quot;&gt;UML이란&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;UML&lt;/strong&gt;(Unified Modeling Language)은 시스템을 모델로 표현해주는 대표적인 모델링 언어이다.
+&lt;br /&gt;UML의 여러가지 그래픽 요소는 하나의 큰 그림, 즉 다이어그램을 그리는데 사용된다. UML은 언어이기 때문에, 이들 그래픽 요소들을 맞추는 데에는 규칙이 필요하다.
+&lt;br /&gt; 
+다이어그램의 목적은 시스템을 여러가지 시각에서 볼 수 있는 뷰(View)를 제공하는 것이며, 이러한 뷰의 집합을 모델(Model)이라고 한다.
+&lt;br /&gt; UML 모델은 시스템 자체의 “목적 행동”을 설명하는 언어이며, 시스템의 “구현 방법을 설명하는 수단”이 아니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;uml-다이어그램&quot;&gt;UML 다이어그램&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;UML 다이어그램&lt;/strong&gt;은 UML을 사용하여 시스템 상호작용, 업무흐름, 시스템 구조, 컴포넌트 관계 등 사물과 관계를 도형으로 표현한 도면이다.
+&lt;br /&gt; UML 다이어그램은 프로그래밍을 단순화하여 표현하므로 의사소통에 편하며 프로젝트 구조의 로드맵을 만들거나 시스템 구축에 기본을 마련한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;다이어그램-종류&quot;&gt;다이어그램 종류&lt;/h3&gt;
+&lt;p&gt;UML 다이어그램의 종류는 다음과 같다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;em&gt;다이어그램 종류&lt;/em&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;em&gt;설명&lt;/em&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;UseCase&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;요구 분석 과정에서 시스템과 외부와의 상호작용을 묘사함&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Activity&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;업무의 흐름을 모델링하거나 객체의 생명주기를 표현함&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Sequence&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;객체 간의 메시지 전달을 시간적 흐름에서 분석함&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Collaboration&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;객체와 객체가 주고받는 메시지 중심으로 작성함&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Class&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;시스템의 구조적인 모습을 그림&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Component&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;소프트웨어의 구조를 그림&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Deployment&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;기업 환경의 구성과 컴포넌트들 간의 관계를 그림&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sfeg.tistory.com/339&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;actor와-usecase&quot;&gt;Actor와 UseCase&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Actor는 일반적으로 시스템 외부에 존재하면서 시스템과 상호작용하는 개체이다. 액터는 사람이거나 기계 혹은 소프트웨어 등이 될 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;UseCase는 시스템의 행위(behavior)를 정의하기 위해 사용하는 요소이다. 
+ &lt;br /&gt; 일반적으로 UseCase는 Actor와 상호작용하므로 UseCase는 말그대로 시스템과 사용자가 상호작용을 하는 하나의 경우라고 볼 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;UseCase가 주로 적용된 문서로 요구사양서가 있으며 관련하여 &lt;a href=&quot;&quot;&gt;[TW] 사양서와 유즈케이스&lt;/a&gt;에서 자세히 다루겠다.&lt;/p&gt;</content><author><name></name></author><category term="Technology" /><category term="UML" /><category term="UseCase" /><category term="SRS" /><summary type="html">TW 산출물 중 요구사양서(SRS)에 쓰이는 유즈케이스(UseCase)에 관한 배경 지식</summary></entry><entry><title type="html">[Tech] Jekyll을 사용한 나만의 Github Pages 만들기</title><link href="http://localhost:4000/tech-gh_jekyll/" rel="alternate" type="text/html" title="[Tech] Jekyll을 사용한 나만의 Github Pages 만들기" /><published>2021-08-31T00:00:00+09:00</published><updated>2021-08-31T00:00:00+09:00</updated><id>http://localhost:4000/tech-gh_jekyll</id><content type="html" xml:base="http://localhost:4000/tech-gh_jekyll/">&lt;h2 id=&quot;intro---나의-블로그는-어떻게-만들어졌을까&quot;&gt;Intro - 나의 블로그는 어떻게 만들어졌을까&lt;/h2&gt;
 
 &lt;p&gt;현재 나의 블로그는 &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;에서 제공하는 웹사이트 호스팅 서비스인 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;과 정적 사이트 생성기인 &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;을 통하여 만들어졌다.
 &lt;br /&gt; &lt;strong&gt;GitHub Pages&lt;/strong&gt;가 사이트를 개설하기 위한 도메인과 퍼블리셔 기능을 제공한다면, &lt;strong&gt;Jekyll&lt;/strong&gt;은 이 블로그 전체 UI, 디자인 등을 포괄하는 사이트 생성 기능을 제공한다.
@@ -15,7 +94,7 @@
 
 &lt;h3 id=&quot;호스팅&quot;&gt;호스팅&lt;/h3&gt;
 
-&lt;p&gt;&lt;br /&gt; 사용자는 GitHub에서 제공하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt; 도메인에 웹사이트를 호스팅하거나 혹은 사용자 자체 커스텀 도메인에서 사이트를 호스팅할 수 있다. 이에 대한 자세한 방법은 GitHub Docs에서 제공하는 &lt;a href=&quot;https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages&quot;&gt;Using a custom domain with GitHub Pages&lt;/a&gt;을 참고한다.&lt;/p&gt;
+&lt;p&gt;사용자는 GitHub에서 제공하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt; 도메인에 웹사이트를 호스팅하거나 혹은 사용자 자체 커스텀 도메인에서 사이트를 호스팅할 수 있다. 이에 대한 자세한 방법은 GitHub Docs에서 제공하는 &lt;a href=&quot;https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages&quot;&gt;Using a custom domain with GitHub Pages&lt;/a&gt;을 참고한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -38,7 +117,7 @@
 &lt;h3 id=&quot;jekyll-theme&quot;&gt;Jekyll Theme&lt;/h3&gt;
 
 &lt;p&gt;사이트에서 보여지는 스타일이나 디자인은 정적 파일 중 CSS, JS, HTML 파일이 결정하는데, &lt;strong&gt;Jekyll Theme&lt;/strong&gt;를 적용하여 사용자 사이트의 Look &amp;amp; Feel을 커스터마이징할 수 있다. 
-[Jekyll Theme]((https://jekyllrb.com/docs/themes/)는 
+&lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;는 
 Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용할 Plugin을 정의하며, 사용자 콘텐츠로 재정의될 수 있도록 assets, layouts, includes, 그리고 stylesheets 구성의 패키지로 구성된다.
 &lt;strong&gt;Jekyll Theme&lt;/strong&gt;를 적용하는 방법은 두 가지이다.&lt;/p&gt;
 
@@ -57,7 +136,7 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;실습 Tutorial - 설치부터 사이트 게시까지 &lt;br /&gt; (feat &lt;a href=&quot;https://docs.github.com/en/enterprise/2.13/user/articles/setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;GitHub Doc’s Setting up your GitHub Pages site locally with Jekyll&lt;/a&gt;)&lt;/h2&gt;
+&lt;h2 id=&quot;실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;실습 Tutorial - 설치부터 사이트 게시까지 &lt;br /&gt; (feat. &lt;a href=&quot;https://docs.github.com/en/enterprise/2.13/user/articles/setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;GitHub Doc’s Setting up your GitHub Pages site locally with Jekyll&lt;/a&gt;)&lt;/h2&gt;
 
 &lt;p&gt;Github Pages, Jekyll를 활용하여 직접 사이트를 개설해보는 과정은 위에 설명한 &lt;a href=&quot;#Jekyll Theme&quot;&gt;Jekyll theme를 수동으로 적용하는 과정&lt;/a&gt;을 step-by-step으로 풀이한 내용이라고 볼 수 있다. 
 &lt;br /&gt; 요약하자면 Jekyll theme를 적용하기에 앞서 Jekyll 실행을 위한 필요 환경을 설치 후 사용자의 Git repository에 Jekyll theme 설정 파일들을 생성하고 커스터마이징을 위한 파일 수정, 해당 사이트에 대한 파일 생성, 사이트 빌드 및 게시이다.&lt;/p&gt;
@@ -72,7 +151,7 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
 
 &lt;h3 id=&quot;1-필요-환경-설치&quot;&gt;1. 필요 환경 설치&lt;/h3&gt;
 
-&lt;p&gt;GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지원하지 않으므로, Jekyll을 설치하고 실행하기 위해 사용자 로컬 PC 환경에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bundler&lt;/code&gt;가 설치되어 있어야 한다.&lt;/p&gt;
+&lt;p&gt;GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지원하지 않으므로, Jekyll을 설치하고 실행하기 위해 사용자 로컬 PC 환경에 Ruby와 Bundler가 설치되어 있어야 한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
@@ -80,8 +159,8 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bundler&lt;/code&gt;를 설치하려면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;가 설치되어 있어야 한다.&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; Bundler를 설치하려면, Ruby가 설치되어 있어야 한다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -92,24 +171,23 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://bundler.io/&quot;&gt;Bundler&lt;/a&gt; 설치
-    &lt;br /&gt;CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 아래와 같이 실행&lt;/p&gt;
+    &lt;br /&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 아래와 같이 실행&lt;/p&gt;
 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2-gemfile을-통한-jekyll-및-plugin-설치&quot;&gt;2. Gemfile을 통한 Jekyll 및 Plugin 설치&lt;/h3&gt;
 
-&lt;p&gt;Jekyll 사이트 빌드에 앞서, 사이트에서 사용할 필요 파일을 설치해야 한다.
-설치할 파일 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot;&gt;Gemfile&lt;/a&gt;에 Jekyll 및 Plugin 정보로 구성되는 Gems로 정의되어 있으며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;은 Jekyll 사이트 파일들이 저장되는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt; repository 폴더 루트에 존재한다.&lt;/p&gt;
+&lt;p&gt;Jekyll 사이트 빌드에 필요한 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Gems&lt;/a&gt;을 설치해야 한다.
+Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot;&gt;Gemfile&lt;/a&gt;에 Jekyll 및 Plugin 리스트로 정의되어 있으며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;은 Jekyll 사이트 파일들이 저장되는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt; repository 폴더 루트에 존재한다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfil&lt;/code&gt;이 없으면 아래와 같은 내용의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 새로 만들어 루트 경로에 저장한다. 
-  &lt;br /&gt; Jekyll theme git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;하거나 다운로드해서 이미 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;이 존재하다면 아래 내용을 확인하고 없으면 추가한다.&lt;/p&gt;
+  &lt;br /&gt; Jekyll theme에 대한 Git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;하거나 다운로드해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;이 존재하다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; 내 아래 내용이 있는지 확인하고 없으면 추가한다.&lt;/p&gt;
 
     &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://rubygems.org'&lt;/span&gt;
    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'github-pages'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;group: :jekyll_plugins&lt;/span&gt;
@@ -117,30 +195,31 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ℹ️ &amp;lt;span style=&quot;color:#247CFF&quot;&amp;gt; **_NOTE_**
-&amp;gt; 필자는 사용하고자 하는 [Jekyll theme](http://jekyllthemes.org/themes/moon/)를 다운로드 후 로컬 PC상의 Git repository 폴더에 복사했기 때문에 이미 Gemfile이 존재해있었다. 따라서 `Gemfile` 내 해당 내용을 추가하는 방식으로 진행했다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; 필자는 사용하고자 하는 &lt;a href=&quot;http://jekyllthemes.org/themes/moon/&quot;&gt;Jekyll theme&lt;/a&gt;를 다운로드 후 로컬 Git repository 폴더에 복사했기 때문에 이미 Gemfile이 존재해있었다. 따라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; 내 해당 내용을 추가하는 방식으로 진행했다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfil&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem&lt;/code&gt;으로 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll_plugins&lt;/code&gt;을 아래 명령어와 같이 설치한다.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfil&lt;/code&gt;에 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; Gem 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-feed&lt;/code&gt; 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.&lt;/p&gt;
 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ℹ️ &amp;lt;span style=&quot;color:#247CFF&quot;&amp;gt; **_NOTE_**
-&amp;gt; Many Jekyll [plugins](https://jekyllrb.com/docs/plugins/) are also Gems, including `jekyll-feed`, `jekyll-seo-tag` and `jekyll-archives`.
+&lt;p&gt;설치 후, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt;이 동일 경로에 생성된다.&lt;/p&gt;
 
-사용자는 이러한 Jekyll plugins을 사용하여 사이트에 대한 Jekyll 기능을 확장할 수 있다. 
---&amp;gt; [plugin 사용 방법](https://jekyllrb.com/docs/plugins/installation/)
-&amp;lt;br&amp;gt; GitHub Pages에서 기본적으로 사용하도록 되어있는 [plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins) 및 지원 가능한 [plugins 리스트](https://pages.github.com/versions/)를 참고한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;설치 결과, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt;이 동일 경로에 생성된다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-feed&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-seo-tag&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-archives&lt;/code&gt;과 같은 Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;plugins&lt;/a&gt;도 Gem이다. 
+  &lt;br /&gt; 사용자는 이러한 Jekyll plugins을 사용하여 사이트에 대한 Jekyll 기능을 확장할 수 있다. 
+  –&amp;gt; &lt;a href=&quot;https://jekyllrb.com/docs/plugins/installation/&quot;&gt;plugin 사용 방법&lt;/a&gt;
+  &lt;br /&gt; GitHub Pages에서 기본적으로 사용하도록 되어있는 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins&quot;&gt;plugins&lt;/a&gt; 및 지원 가능한 &lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;plugins 리스트&lt;/a&gt;를 참고한다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -157,37 +236,38 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;사용자 정보(사이트명, 이메일, 로고, SNS 등) –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 수정 
- &lt;br /&gt; 파일 내용만 보면 어느 부분을 수정할지 인지할 수 있으므로 구체적인 설명은 생략하겠다. 단 사이트 로고에 대한 이미지 파일 수정 방법은 &lt;a href=&quot;https://jekyllrb.com/docs/static-files/#add-front-matter-to-static-files&quot;&gt;Jekyll Docs&lt;/a&gt;를 참조한다.&lt;/p&gt;
+    &lt;p&gt;사용자 정보(사이트명, 이메일, 로고, SNS 등) –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 수정 (&lt;a href=&quot;https://jekyllrb.com/docs/configuration/&quot;&gt;Jekyll Docs 참고&lt;/a&gt;)
+&lt;br /&gt; 다운로드한 site theme에 존재하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 내용을 보면 본인 개인 정보와 다른 부분이 보이기 때문에 어느 부분을 수정할지 인지할 수 있을 것이다. 예를 들어 사이트 로고에 대한 이미지 파일 수정 방법은 &lt;a href=&quot;https://jekyllrb.com/docs/static-files/#add-front-matter-to-static-files&quot;&gt;Jekyll Docs&lt;/a&gt;를 참조한다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;사이트 내용(구조 및 레이아웃, 페이지 및 포스트 내용)&lt;/p&gt;
+    &lt;p&gt;사이트 구조 및 레이아웃, 콘텐츠&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;사이트 템플릿 구조 변경하기 –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 폴더 내용 수정 
-&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://jekyllrb.com/docs/layouts/&quot;&gt;Jekyll Docs&lt;/a&gt;를 참조한다.&lt;/p&gt;
+        &lt;p&gt;템플릿 구조 -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 폴더 내용 수정 (&lt;a href=&quot;https://jekyllrb.com/docs/layouts/&quot;&gt;Jekyll Docs 참고&lt;/a&gt;)&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;사이트에 내용 추가 혹은 변경하기&lt;/p&gt;
+        &lt;p&gt;콘텐츠
+&lt;br /&gt; 사용자가 사이트에 업데이트하는 콘텐츠 유형은 레이아웃에 따라 크게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt;가 있으며 모두 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Markdown&lt;/code&gt; 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt;형태로 작성한다. 또한 콘텐츠 가장 첫부분에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML&lt;/code&gt;형식의 &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;Front Matter&lt;/a&gt; 블락을 추가하여 현재 작성하는 내용에 대한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;date&lt;/code&gt;와 같은 meta data 정보를 명시한다.&lt;/p&gt;
         &lt;ul&gt;
-          &lt;li&gt;사용자가 사이트에 업데이트하는 유형은 레이아웃에 따라 크게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt;가 있으며 모두 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Markdown&lt;/code&gt; 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt;형태로 작성한다. 또한 내용 가장 첫부분에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML&lt;/code&gt;형식의 &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;Front Matter&lt;/a&gt; 블락을 추가하여 현재 작성하는 내용에 대한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;date&lt;/code&gt;와 같은 meta data 정보를 명시한다.&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt;내용 추가하기 –&amp;gt; 루트 경로에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt;파일 추가
-&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-page-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new page to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/pages/&quot;&gt;Jekyll Docs &amp;gt; Pages&lt;/a&gt;를 참조한다.&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 내용 추가하기 –&amp;gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 폴더 내용 수정 
-&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-post-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new post to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/posts/&quot;&gt;Jekyll Docs &amp;gt; Posts&lt;/a&gt;를 참조한다.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt; 추가하기 -&amp;gt; 루트 경로에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt; 파일 추가
+&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-page-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new page to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/pages/&quot;&gt;Jekyll Docs &amp;gt; Pages&lt;/a&gt;를 참고한다.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 추가 및 변경하기 -&amp;gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 폴더 수정 
+&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-post-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new post to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/posts/&quot;&gt;Jekyll Docs &amp;gt; Posts&lt;/a&gt;를 참고한다.&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;4-jekyll-site-파일-생성하기&quot;&gt;4. Jekyll Site 파일 생성하기&lt;/h3&gt;
 
 &lt;p&gt;이 단계는 사용자 로컬 환경에서 Jekyll site를 빌드하여 테스트해야하는데 사용자 로컬 PC에 GitHub Page에 게시할 Jekyll site 파일들이 존재하지 않는 경우 진행한다. 즉  site 파일들이 저장될 로컬 폴더가 빈 상태여야 한다.&lt;/p&gt;
 
-&lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;사용자가 특정 &lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;를 다운로드하거나 GitHub repository에 게시된 해당 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 &lt;a href=&quot;#5. Jekyll Site 빌드 및 테스트하기&quot;&gt;다음 단계&lt;/a&gt;로 넘어간다.&lt;/p&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; 사용자가 특정 &lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;를 다운로드하거나 GitHub repository에 게시된 해당 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 &lt;a href=&quot;#5-jekyll-Site-빌드-및-테스트하기&quot;&gt;다음 단계&lt;/a&gt;로 넘어간다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -205,63 +285,70 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt;
-    &amp;gt; 이미 파일들이 존재하는 상황에서 위 명령어를 수행하면 다음과 같은 에러가 발생한다
-    &lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Conflict: ~ exists and is not empty.&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; 이미 파일들이 존재하는 상황에서 위 명령어를 수행하면 다음과 같은 에러가 발생한다.
+&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Conflict: ~ exists and is not empty.&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;사이트 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 설정한다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;에 정의된 gem 리스트 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem을 사용하도록 아래와 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 수정한다.&lt;/p&gt;
 
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   #gem &quot;jekyll&quot;, &quot;~&amp;gt; 3.9.0&quot; #diable jekyll
+    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# gem &quot;jekyll&quot;, &quot;~&amp;gt; 3.9.0&quot; #diable jekyll&lt;/span&gt;
 
-   gem &quot;github-pages&quot;, group: :jekyll_plugins #using github-pages
+ &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;github-pages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;group: :jekyll_plugins&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#using github-pages&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;이후 모든 변경 사항을 연결된 Git 원격 repository에 업로드하도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add .&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;commit message&quot;&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin {gh-pages branch}&lt;/code&gt; 순서로 진행한다.
-&lt;br /&gt; 해당 로컬 폴더가 Git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 &lt;a href=&quot;#사전 조건(Prequisite)&quot;&gt;사전 조건&lt;/a&gt;]을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.&lt;/p&gt;
+&lt;br /&gt; 해당 로컬 폴더가 Git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 &lt;a href=&quot;#사전-조건-(Prequisite)&quot;&gt;사전 조건&lt;/a&gt;을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;5-jekyll-site-빌드-및-테스트하기&quot;&gt;5. Jekyll Site 빌드 및 테스트하기&lt;/h3&gt;
 
-&lt;p&gt;사용자가 사이트 파일 내용을 변경(&lt;a href=&quot;#3. 사이트 콘텐츠 커스터마이징&quot;&gt;참고&lt;/a&gt;)했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;사용자가 사이트 파일 내용을 위 &lt;a href=&quot;#3. 사이트 콘텐츠 커스터마이징&quot;&gt;3번 사항&lt;/a&gt;처럼 변경 했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.&lt;/p&gt;
 
-&lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;GitHub Pages 사용자가 변경한 콘텐츠를 원격 repository에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt;하면 Jekyll을 사용해서 사이트를 빌드 후 자동 게시하므로 테스트할 필요가 없다면 해당 단계도 생략할 수 있다.&lt;/p&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; GitHub Pages 사용자가 변경한 콘텐츠를 원격 repository에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt;하면 Jekyll을 사용해서 사이트를 빌드 후 자동 게시하므로 테스트할 필요가 없다면 해당 단계도 생략할 수 있다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;내 명시된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem 정보는 주석으로 되어있고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem 정보는 주석이 해제되어 있는지 확인한다.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ``` ruby
-  gem &quot;jekyll&quot;, &quot;~&amp;gt; 3.9.0&quot;
-
-  # gem &quot;github-pages&quot;, group: :jekyll_plugins
-  ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.&lt;/p&gt;
 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;이후 명령창에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Server address: http://127.0.0.1:4000&lt;/code&gt;가 표시된다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 명령어는 Jekyll site 빌드 후 내부 서버에 게시한다는 의미이다. 
+    &lt;br /&gt; (이외 다른 Jekyll 명령어는 &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;Jekyll Docs&lt;/a&gt; 참고)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이후 명령 실행창에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Server address: http://127.0.0.1:4000&lt;/code&gt;가 표시된다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;사용자 브라우저에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://127.0.0.1:4000&lt;/code&gt;로 접속 후 해당 사이트가 잘 게시되는지 확인한다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Technology" /><category term="Github Pages, Jekyll" /><summary type="html">Github Pages, Jekyll를 활용한 정적 사이트 개설에 관하여</summary></entry><entry><title type="html">[EN] 관사의 쓰임</title><link href="http://localhost:4000/Eg-art/" rel="alternate" type="text/html" title="[EN] 관사의 쓰임" /><published>2021-08-28T00:00:00+09:00</published><updated>2021-08-28T00:00:00+09:00</updated><id>http://localhost:4000/Eg-art</id><content type="html" xml:base="http://localhost:4000/Eg-art/">&lt;h2 id=&quot;intro---골치아픈-관사&quot;&gt;Intro - 골치아픈 관사&lt;/h2&gt;
+  &lt;li&gt;사용자 브라우저에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://127.0.0.1:4000&lt;/code&gt; 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 명령어 이후  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl&lt;/code&gt;+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; 키를 눌러 종료하지 않는다면 site 파일을 수정하면 자동으로 site에 자동 반영된다.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Technology" /><category term="Github Pages" /><category term="Jekyll" /><summary type="html">Github Pages, Jekyll를 활용한 정적 사이트 개설에 관하여</summary></entry><entry><title type="html">[EN] 관사의 쓰임</title><link href="http://localhost:4000/Eg-art/" rel="alternate" type="text/html" title="[EN] 관사의 쓰임" /><published>2021-08-28T00:00:00+09:00</published><updated>2021-08-28T00:00:00+09:00</updated><id>http://localhost:4000/Eg-art</id><content type="html" xml:base="http://localhost:4000/Eg-art/">&lt;h2 id=&quot;intro---골치아픈-관사&quot;&gt;Intro - 골치아픈 관사&lt;/h2&gt;
 
 &lt;p&gt;명사 앞에 붙는 관사는 크게 부정관사 a(an), 정관사 the 가 있다.
 &lt;br /&gt; 영문 작성을 하다보면 여러 종류의 명사를 쓰기 마련인데, 명사 앞에 a(an)를 써야 할지, the를 써야 할지, 아예 쓰지 말아야 할지 헷갈릴 때가 있다.
@@ -1042,7 +1129,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;blockquote&gt;
   &lt;p&gt;This is warning content.&lt;/p&gt;
 &lt;/blockquote&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Markdown" /><summary type="html">Markdown 사용법 👍</summary></entry><entry><title type="html">Google Technical Writing Pe-Class One</title><link href="http://localhost:4000/google-tw-one-preclass/" rel="alternate" type="text/html" title="Google Technical Writing Pe-Class One" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>http://localhost:4000/google-tw-one-preclass</id><content type="html" xml:base="http://localhost:4000/google-tw-one-preclass/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
-&lt;p&gt;Google Developers Site에 &lt;a href=&quot;https://developers.google.com/tech-writing?hl=en&quot;&gt;Technical Writing Course for Engineers&lt;/a&gt; 가 개설되어 있다. 
+&lt;p&gt;Google Developers site에 &lt;a href=&quot;https://developers.google.com/tech-writing?hl=en&quot;&gt;Technical Writing Course for Engineers&lt;/a&gt; 가 개설되어 있다. 
 영문으로 기술 문서를 작성할 때 실제로 도움될만한 팁이 많아 공유하고자 한다. 
 크게 Pre-Class(이론), In-Class(실습) 두가지 세션이 있는데 &lt;a href=&quot;https://developers.google.com/tech-writing/overview?hl=en&quot;&gt;Pre-Class for Students&lt;/a&gt;의 One, Two 주요 내용을 요약했다.
 (번역 유)&lt;/p&gt;
@@ -1074,15 +1161,12 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;ul&gt;
   &lt;li&gt;형용사는 명사를 수식&lt;/li&gt;
   &lt;li&gt;부사는 동사를 수식&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;전치사는 두 가지 사이의 관계를 지정&lt;/p&gt;
-
-    &lt;p&gt;e.g. The C Programming Language &lt;strong&gt;by&lt;/strong&gt; Kernighan and Richie remains popular&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;전치사는 두 가지 사이의 관계를 지정 
+&lt;br /&gt; Ex) The C Programming Language &lt;strong&gt;by&lt;/strong&gt; Kernighan and Richie remains popular.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;⭐ Note: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;under&lt;/code&gt; is usually a preposition, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;under&lt;/code&gt; can also serve as an adverb or adjective depending on context&lt;/p&gt;
+  &lt;p&gt;⭐ Note: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;under&lt;/code&gt; is usually a preposition, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;under&lt;/code&gt; can also serve as an adverb or adjective depending on context.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1092,22 +1176,34 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;새롭거나 생소한 용어&lt;/strong&gt;에 대하여
     &lt;ul&gt;
-      &lt;li&gt;이미 그 용어가 존재한다면 정의가 잘되어 있는 설명으로 &lt;a href=&quot;https~&quot;&gt;링크&lt;/a&gt;한다.&lt;/li&gt;
-      &lt;li&gt;문서에서 처음 소개하는 용어라면 그 용어를 정의한다. 문서에서 정의할 용어가 많다면 &lt;strong&gt;용어집&lt;/strong&gt;으로 분류하여 작성한다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;이미 그 용어가 존재한다면 정의가 잘되어 있는 설명으로 &lt;a href=&quot;https~&quot;&gt;링크&lt;/a&gt;한다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;문서에서 처음 소개하는 용어라면 그 용어를 정의한다. 문서에서 정의할 용어가 많다면 &lt;strong&gt;용어집&lt;/strong&gt;으로 분류하여 작성한다.&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;일관성&lt;/strong&gt;있는 용어 사용
     &lt;ul&gt;
-      &lt;li&gt;함수 중간에 변수 이름을 변경하면 코드가 컴파일되지 않듯이, 문서 중간에 용어를 변경하면 사용자의 머리에서 저자의 개념이 정립되지 않는다. 따라서 한번 용어 이름을 정했으면 변경하면 안된다.&lt;/li&gt;
-      &lt;li&gt;용어명이 길다면 해당 용어의 축약명을 같이 지정한다. 이후 문서 전체에서 해당 축약명을 사용할 수 있다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;함수 중간에 변수 이름을 변경하면 코드가 컴파일되지 않듯이, 문서 중간에 용어를 변경하면 사용자의 머리에서 저자의 개념이 정립되지 않는다. 따라서 한번 용어 이름을 정했으면 변경하면 안된다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;용어명이 길다면 해당 용어의 축약명을 같이 지정한다. 이후 문서 전체에서 해당 축약명을 사용할 수 있다.&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;약어&lt;/strong&gt;의 적절한 사용
     &lt;ul&gt;
-      &lt;li&gt;전체 용어를 굵게 표시 후 두문자(약어)를 괄호안에 기입하여 굵게 표시.
+      &lt;li&gt;
+        &lt;p&gt;전체 용어를 굵게 표시 후 두문자(약어)를 괄호안에 기입하여 굵게 표시.
 이후 해당 약어를 계속 사용할 수 있다.
-&lt;br /&gt; Ex) ~ &lt;strong&gt;Telekinetic Tactile Network&lt;/strong&gt;(&lt;strong&gt;TTN&lt;/strong&gt;) ~ how to order &lt;strong&gt;TTN&lt;/strong&gt; replacement parts &amp;lt;/br&amp;gt;&lt;/li&gt;
-      &lt;li&gt;전체 용어와 해당 약어를 동일 문서에서 순환하면 안된다.&lt;/li&gt;
+&lt;br /&gt; Ex) ~ &lt;strong&gt;Telekinetic Tactile Network&lt;/strong&gt;(&lt;strong&gt;TTN&lt;/strong&gt;) ~ how to order &lt;strong&gt;TTN&lt;/strong&gt; replacement parts.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;전체 용어와 해당 약어를 동일 문서에서 순환하면 안된다.&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -1119,7 +1215,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;명사를 소개한 후&lt;/strong&gt;에만 대명사를 사용하기&lt;/li&gt;
-  &lt;li&gt;대명사는 가능한 해당 명사와 가깝게 배치하기- &lt;strong&gt;5 단어 이상&lt;/strong&gt; 명사로부터 떨어진 경우, 대명사 대신 명사를 반복하는게 좋다.&lt;/li&gt;
+  &lt;li&gt;대명사는 가능한 해당 명사와 가깝게 배치하기: &lt;strong&gt;5 단어 이상&lt;/strong&gt; 명사로부터 떨어진 경우, 대명사 대신 명사를 반복하는게 좋다.&lt;/li&gt;
   &lt;li&gt;명사와 대명사 사이 두 번째 명사를 사용하면 대명사 대신 명사를 재사용하기&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1159,8 +1255,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;효과적인 동사&lt;/strong&gt;를 선택: 테크니컬 라이팅에서 효과적인 동사란 그 문장을 잘 표현하기에 가장 적합한 동사라 할 수 &lt;br /&gt;
-있다.동사는 문장에서 가장 중요한 부분이므로 적합한 동사를 선택한다면, 나머지 문장은 그 자체로 전달될 수 있다.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;효과적인 동사&lt;/strong&gt;를 선택: 테크니컬 라이팅에서 효과적인 동사란 그 문장을 잘 표현하기에 가장 적합한 동사라 할 수 있다. 동사는 문장에서 가장 중요한 부분이므로 적합한 동사를 선택한다면, 나머지 문장은 그 자체로 전달될 수 있다.&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;독자의 참여를 유도하고 교육시키기 위해, 정확하고 강력하며 구체적인 동사를 선택하고 다음과 같이 부정확하거나, 약하거나, 일반적인 동사는 지양해라.&lt;/li&gt;
@@ -1190,18 +1285,18 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
     &lt;/table&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt;를 지양해라.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt;를 지양해라.&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt; 대신 문장 끝에 있는 실제 의미있는 주어와 동사를 앞으로 옮기면 문장이 더 명확해진다.
+        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt; 대신 문장 끝에 있는 실제 의미있는 주어와 동사를 앞으로 옮기면 문장이 더 명확해진다.
   &lt;br /&gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;There are&lt;/code&gt; two disturbing facts about Perl you should know.
   –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;You should know&lt;/code&gt; two disturbing facts about Perl.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;새로운 주어와 동사를 만드는게 번거로워서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt;를 쓰는 경우가 많다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt; 대신 의미있는 주어를 만들면 넣으면 문장이 더 명확해진다.
   &lt;br /&gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;There is&lt;/code&gt; no guarantee that the updates will be received in sequential order.
-   –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Clients&lt;/code&gt; might not receive the updates in sequential order.``&lt;/p&gt;
+   –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Clients&lt;/code&gt; might not receive the updates in sequential order.&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -1219,18 +1314,18 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
   &lt;li&gt;추가적인 코드/문장은 실패 포인트를 제공한다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;한-문장에는-하나의-아이디어&quot;&gt;한 문장에는 하나의 아이디어&lt;/h4&gt;
+&lt;h4 id=&quot;한-문장에는-하나의-주제&quot;&gt;한 문장에는 하나의 주제&lt;/h4&gt;
 
-&lt;p&gt;프로그램애서 하나의 statement(명령문)가 단일 작업을 처리하듯이, TW에서 하나의 문장은 단일 아이디어를 수행해야 한다.&lt;/p&gt;
+&lt;p&gt;프로그램에서 하나의 statement(명령문)가 단일 작업을 처리하듯이, TW에서는 하나의 문장은 하나의 주제만 포함해야 한다.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;하나의 긴 문장은 일련의 단일 아이디어 문장으로 나눈다.&lt;/li&gt;
+  &lt;li&gt;하나의 긴 문장은 일련의 단일 주제 문장으로 나눈다.&lt;/li&gt;
   &lt;li&gt;지나치게 긴 문장은 짧은 문장으로 변환하나, 너무 많이 수정하지 않는다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;긴-문장을-목록으로-변환&quot;&gt;긴 문장을 목록으로 변환&lt;/h4&gt;
 
-&lt;p&gt;접속사로 이어지나 긴 문장은 글머리 기호(불릿 or 숫자)의 리스트로 재구조화합니다.&lt;/p&gt;
+&lt;p&gt;접속사로 이어지나 긴 문장은 글머리 기호(불릿 or 숫자)의 리스트로 재구조화한다.&lt;/p&gt;
 
 &lt;h4 id=&quot;불필요한-단어를-제거하나거나-줄인다&quot;&gt;불필요한 단어를 제거하나거나 줄인다.&lt;/h4&gt;
 
@@ -1267,7 +1362,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;h4 id=&quot;종속절-줄이기&quot;&gt;종속절 줄이기&lt;/h4&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;한 문장 = 한 주제&lt;/code&gt; 공식을 염두하여 종속절이 하나의 주제를 확장한 내용이 아닌 별도의 주제를 다룬다면 별도의 문장으로 나누어라.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;한 문장 = 한 주제&lt;/code&gt; 공식을 염두하여 종속절이 하나의 주제를 확장한 내용이 아닌 별도의 주제를 다룬다면 별도의 문장으로 나누기.&lt;/p&gt;
 
 &lt;h4 id=&quot;that과-which의-구별&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt;의 구별&lt;/h4&gt;
 
@@ -1277,31 +1372,33 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
   &lt;br /&gt; Ex) Python is an interpreted language, &lt;strong&gt;which&lt;/strong&gt; Guido van Rossum invented(nonessential)
   &lt;br /&gt; Ex) Fortran is perfect for mathematical calculations &lt;strong&gt;that&lt;/strong&gt; don’t involve linear algebra(essential).&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;종속절 시작하기에 앞서 멈춤이 필요하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt;를 사용하고, 멈춤이 필요 없이 이어지는 절에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt;을 사용해라&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt; 앞에 쉼표(,)를 넣고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt; 앞에 쉼표를 넣지 마십시오.&lt;/li&gt;
+  &lt;li&gt;종속절 시작하기에 앞서 멈춤이 필요하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt;를 사용하고, 멈춤이 필요 없이 이어지는 절에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt;을 사용하기&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt; 앞에 쉼표(,)를 넣고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt; 앞에 쉼표를 넣지 않기.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;리스트와-표&quot;&gt;리스트와 표&lt;/h3&gt;
 
-&lt;p&gt;좋은 리스트는 기술적 혼란을 질서있게 바꿀 수 있다.&lt;/p&gt;
+&lt;p&gt;좋은 리스트는 기술적 복잡한 내용을 질서있게 정렬할 수 있다.&lt;/p&gt;
 
 &lt;p&gt;다음은 테크니컬 라이팅에서 주로 쓰이는 리스트 타입이다.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;bulleted lists&lt;/li&gt;
-  &lt;li&gt;embedded listsI have been to Vetnam&lt;/li&gt;
+  &lt;li&gt;Bulleted lists&lt;/li&gt;
+  &lt;li&gt;Embedded lists&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;올바른-타입의-리스트-선택하기&quot;&gt;올바른 타입의 리스트 선택하기&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;bulleted lists vs. numbered lists
-&lt;br /&gt; 순서가 없는(순서를 바꿔도 내용 변경이 없는) 항목에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bulleted list&lt;/code&gt;, 순서가 있는(순서를 바꾸면 내용 변경이 있는) 항목에는&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numbered list&lt;/code&gt;를 사용한다.&lt;/p&gt;
+    &lt;p&gt;Bulleted lists vs. Numbered lists
+&lt;br /&gt; 순서가 없는(순서를 바꿔도 내용 변경이 없는) 항목에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bulleted list&lt;/code&gt;, 순서가 있는(순서를 바꾸면 내용 변경이 있는) 항목에는&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Numbered list&lt;/code&gt;를 사용한다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;embedded lists:&lt;/p&gt;
+    &lt;p&gt;Embedded lists:&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;
         &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run-in list&lt;/code&gt;라 부르는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;embedded list&lt;/code&gt;는 문장 내 열거형 항목으로 존재한다.&lt;br /&gt;
@@ -1322,10 +1419,12 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h4 id=&quot;리스트-항목을-병렬로-유지하기&quot;&gt;리스트 항목을 병렬로 유지하기&lt;/h4&gt;
 
-&lt;p&gt;효과적인 목록은 병렬입니다. 병렬 목록의 모든 항목은 ‘함께 속해있는 것’처럼 보인다.
-&lt;br /&gt; 즉 병렬 목록 항목은 다음 조건에 대하여 모두 공통성을 갖는다.&lt;/p&gt;
+&lt;p&gt;효과적인 목록은 병렬형 리스트이다. 병렬형 리스트의 모든 항목은 ‘연관되어 있는 것’처럼 보인다.
+&lt;br /&gt; 즉 병렬형 리스트 항목은 다음 조건에 대하여 모두 공통성을 갖는다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;문법&lt;/li&gt;
@@ -1357,6 +1456,8 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
   &lt;li&gt;potatoes&lt;/li&gt;
   &lt;li&gt;The summer light obscures all memories of winter.(문법, 범주, 대/소문자, 구두점)&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;명령형-동사로-numbered-list-시작하기&quot;&gt;명령형 동사로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numbered list&lt;/code&gt; 시작하기&lt;/h4&gt;
 
@@ -1398,7 +1499,7 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
 
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The Pythagorean Theorem states that the sum of the squares of both legs of a right triangle is equal to the square of the hypotenuse. The k-means clustering algorithm relies on the Pythagorean Theorem to measure distances. By contrast, the k-median clustering algorithm relies on the Manhattan Distance.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;다음의 시작 문장 더 효과적일 것이다.&lt;/p&gt;
+    &lt;p&gt;다음의 시작 문장dl 더 효과적일 것이다.&lt;/p&gt;
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Different clustering algorithms measure distances differently.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
@@ -1425,6 +1526,8 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
   &lt;li&gt;처음 초안을 검토할 때 범위 설명을 층족하는데 도움이 되지 않는 섹션을 삭제한다.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h4 id=&quot;독자를-명시하기&quot;&gt;독자를 명시하기&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -1439,6 +1542,7 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
 
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ex) This document assumes that you understand matrix multiplication and how to brew a really good cup of tea.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1448,6 +1552,8 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
   &lt;li&gt;문서를 검토할 때 시작 부분에서 독자의 필수 질문에 답하는지 확인해라.&lt;/li&gt;
   &lt;li&gt;전문 작가는 독자가 2 페이지를 읽을 확률을 높이기 위해 1 페이지에 상당한 에너지를 쏳는다.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;독자를-위해-작성하기&quot;&gt;독자를 위해 작성하기&lt;/h4&gt;
 
@@ -1464,6 +1570,8 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
   &lt;li&gt;독자의 필요 사항에 대하여 구성하기: 독자가 문서를 읽고 알아야 할 것, 할 수 있는 것을 문서에서 제공할 수 있도록 구성&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h4 id=&quot;주제를-섹션으로-쪼개기&quot;&gt;주제를 섹션으로 쪼개기&lt;/h4&gt;
 
 &lt;p&gt;모듈식 코드가 읽기, 이해, 유지 관리 및 재사용에 더 쉽듯이 문서를 모듈식으로 만드는 것도 동일한 이점을 제공한다.&lt;/p&gt;
@@ -1472,8 +1580,8 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
 
 &lt;h3 id=&quot;markdown--&quot;&gt;Markdown  👍&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어이다. Markdown을 사용하면 일반 텍스트 편집기(예: vi 또는 Emacs)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입한다. 
-&lt;br /&gt;자세한 Markdown 문법은 이 블로그에서 별도로 정리한 &lt;a href=&quot;https://dora-author.github.io/markdown-usage&quot;&gt;[TW] 마크다운 사용법&lt;/a&gt;를 참조.&lt;/p&gt;</content><author><name></name></author><category term="Training" /><category term="Google Technical Writing" /><summary type="html">내용 요약 Google Developers Site에 Technical Writing Course for Engineers 가 개설되어 있다. 영문으로 기술 문서를 작성할 때 실제로 도움될만한 팁이 많아 공유하고자 한다. 크게 Pre-Class(이론), In-Class(실습) 두가지 세션이 있는데 Pre-Class for Students의 One, Two 주요 내용을 요약했다. (번역 유)</summary></entry><entry><title type="html">Technical Report Writing for Engineer - Week 2</title><link href="http://localhost:4000/technical-report-writing-week2/" rel="alternate" type="text/html" title="Technical Report Writing for Engineer - Week 2" /><published>2021-04-25T00:00:00+09:00</published><updated>2021-04-25T00:00:00+09:00</updated><id>http://localhost:4000/technical-report-writing-week2</id><content type="html" xml:base="http://localhost:4000/technical-report-writing-week2/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어이다. Markdown을 사용하면 일반 텍스트 편집기(Vi 또는 Emacs 등)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입한다. 
+&lt;br /&gt;자세한 Markdown 문법은 이 블로그에서 별도로 정리한 &lt;a href=&quot;https://dora-author.github.io/markdown-usage&quot;&gt;[TW] 마크다운 사용법&lt;/a&gt;를 참조한다.&lt;/p&gt;</content><author><name></name></author><category term="Training" /><category term="Google Technical Writing" /><summary type="html">Google Developers의 [Technical Writing Course for Engineers] 스터디 내용</summary></entry><entry><title type="html">Technical Report Writing for Engineer - Week 2</title><link href="http://localhost:4000/technical-report-writing-week2/" rel="alternate" type="text/html" title="Technical Report Writing for Engineer - Week 2" /><published>2021-04-25T00:00:00+09:00</published><updated>2021-04-25T00:00:00+09:00</updated><id>http://localhost:4000/technical-report-writing-week2</id><content type="html" xml:base="http://localhost:4000/technical-report-writing-week2/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
 &lt;p&gt;지난 주 다루었던 &lt;a href=&quot;https://dora-author.github.io/technical-report-writing-week1/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Technical Report Writing for Engineers - Summary&lt;/code&gt;&lt;/a&gt; 전체 챕터 중 &lt;strong&gt;Intoduction section&lt;/strong&gt; 에 관하여 설명한다.&lt;br /&gt;
  Intoduction section에서 포함되어야 할 내용 및 세부 작성법, 규칙 등에 관하여 중요하다 싶은 부분은
 &lt;span style=&quot;color:red&quot;&gt;빨간색 글씨&lt;/span&gt;로 강조했다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1596,16 +1704,4 @@ Readers will quite often skip to the conclusion section of a report to quickly d
 
 &lt;p&gt;From [Technical Report Writing for Engineers The University of Sheffield]&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.futurelearn.com/courses/technical-report-writing-for-engineers/10/steps/833609&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Training" /><category term="Training" /><summary type="html">Technical Report Writing for Engineers - The Executive summary</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-09-26T22:11:49+09:00</published><updated>2020-09-26T22:11:49+09:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Technology" /><category term="Jekyll" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://www.futurelearn.com/courses/technical-report-writing-for-engineers/10/steps/833609&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Training" /><category term="Training" /><summary type="html">Technical Report Writing for Engineers - The Executive summary</summary></entry></feed>

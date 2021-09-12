@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Technical Writing Pe-Class One"
-excerpt: 
+excerpt: Google Developers의 [Technical Writing Course for Engineers] 스터디 내용
 tags:
   - Google Technical Writing
 category: Training
@@ -11,7 +11,7 @@ comments: true
 
 
 ## 내용 요약  
-Google Developers Site에 [Technical Writing Course for Engineers](https://developers.google.com/tech-writing?hl=en) 가 개설되어 있다. 
+Google Developers site에 [Technical Writing Course for Engineers](https://developers.google.com/tech-writing?hl=en) 가 개설되어 있다. 
 영문으로 기술 문서를 작성할 때 실제로 도움될만한 팁이 많아 공유하고자 한다. 
 크게 Pre-Class(이론), In-Class(실습) 두가지 세션이 있는데 [Pre-Class for Students](https://developers.google.com/tech-writing/overview?hl=en)의 One, Two 주요 내용을 요약했다.
 (번역 유)
@@ -41,11 +41,10 @@ Google Developers Site에 [Technical Writing Course for Engineers](https://devel
   - 형용사는 명사를 수식
   - 부사는 동사를 수식
   - 전치사는 두 가지 사이의 관계를 지정 
-  
-    e.g. The C Programming Language **by** Kernighan and Richie remains popular
+    <br> Ex) The C Programming Language **by** Kernighan and Richie remains popular.
   
 
-  > ⭐ Note: `under` is usually a preposition, `under` can also serve as an adverb or adjective depending on context
+  > ⭐ Note: `under` is usually a preposition, `under` can also serve as an adverb or adjective depending on context.
 
 <br>
 
@@ -53,16 +52,19 @@ Google Developers Site에 [Technical Writing Course for Engineers](https://devel
   
   - **새롭거나 생소한 용어**에 대하여
     - 이미 그 용어가 존재한다면 정의가 잘되어 있는 설명으로 [링크](https~)한다.
+
     - 문서에서 처음 소개하는 용어라면 그 용어를 정의한다. 문서에서 정의할 용어가 많다면 **용어집**으로 분류하여 작성한다.
   
   - **일관성**있는 용어 사용
     - 함수 중간에 변수 이름을 변경하면 코드가 컴파일되지 않듯이, 문서 중간에 용어를 변경하면 사용자의 머리에서 저자의 개념이 정립되지 않는다. 따라서 한번 용어 이름을 정했으면 변경하면 안된다.
+
     - 용어명이 길다면 해당 용어의 축약명을 같이 지정한다. 이후 문서 전체에서 해당 축약명을 사용할 수 있다.
   
   - **약어**의 적절한 사용
     - 전체 용어를 굵게 표시 후 두문자(약어)를 괄호안에 기입하여 굵게 표시.
     이후 해당 약어를 계속 사용할 수 있다.
-    <br> Ex) ~ **Telekinetic Tactile Network**(**TTN**) ~ how to order **TTN** replacement parts </br>
+    <br> Ex) ~ **Telekinetic Tactile Network**(**TTN**) ~ how to order **TTN** replacement parts.
+  
     - 전체 용어와 해당 약어를 동일 문서에서 순환하면 안된다.
 
 <br>
@@ -71,7 +73,7 @@ Google Developers Site에 [Technical Writing Course for Engineers](https://devel
 대부분 대명사를 피하고 명사를 재사용해야 하나, 다음의 가이드대로 대명사를 사용하면 유용할 수 있다.
 
   - **명사를 소개한 후**에만 대명사를 사용하기
-  - 대명사는 가능한 해당 명사와 가깝게 배치하기- **5 단어 이상** 명사로부터 떨어진 경우, 대명사 대신 명사를 반복하는게 좋다.
+  - 대명사는 가능한 해당 명사와 가깝게 배치하기: **5 단어 이상** 명사로부터 떨어진 경우, 대명사 대신 명사를 반복하는게 좋다.
   - 명사와 대명사 사이 두 번째 명사를 사용하면 대명사 대신 명사를 재사용하기
 
 <br>
@@ -99,8 +101,7 @@ Google Developers Site에 [Technical Writing Course for Engineers](https://devel
 테크니컬 라이터는 명확성을 추구해야 하며, 명확성은 다른 규칙보다 가장 우선한다. 
 <br> 명확한 문장을 만들기 위한 몇가지 방법은 다음과 같다.
 
-  -  **효과적인 동사**를 선택: 테크니컬 라이팅에서 효과적인 동사란 그 문장을 잘 표현하기에 가장 적합한 동사라 할 수   
-     있다.동사는 문장에서 가장 중요한 부분이므로 적합한 동사를 선택한다면, 나머지 문장은 그 자체로 전달될 수 있다.
+  -  **효과적인 동사**를 선택: 테크니컬 라이팅에서 효과적인 동사란 그 문장을 잘 표현하기에 가장 적합한 동사라 할 수 있다. 동사는 문장에서 가장 중요한 부분이므로 적합한 동사를 선택한다면, 나머지 문장은 그 자체로 전달될 수 있다.
     
       - 독자의 참여를 유도하고 교육시키기 위해, 정확하고 강력하며 구체적인 동사를 선택하고 다음과 같이 부정확하거나, 약하거나, 일반적인 동사는 지양해라.
 
@@ -110,15 +111,15 @@ Google Developers Site에 [Technical Writing Course for Engineers](https://devel
       | This error message **happens** when ~                 | The system generates this error message when ~     |
       | We **are** very careful to ensure ~                   | We carefully **ensure** ~                          |
 
-  - `there is`나 `there are`를 지양해라.
+  - `there is` 혹은 `there are`를 지양해라.
     
-      - `there is`나 `there are` 대신 문장 끝에 있는 실제 의미있는 주어와 동사를 앞으로 옮기면 문장이 더 명확해진다.
+      - `there is` 혹은 `there are` 대신 문장 끝에 있는 실제 의미있는 주어와 동사를 앞으로 옮기면 문장이 더 명확해진다.
       <br> Ex) ``There are`` two disturbing facts about Perl you should know.
           --> ``You should know`` two disturbing facts about Perl.
       
       - 새로운 주어와 동사를 만드는게 번거로워서 `there is`나 `there are`를 쓰는 경우가 많다. `there is`나 `there are` 대신 의미있는 주어를 만들면 넣으면 문장이 더 명확해진다.
       <br> Ex) ``There is`` no guarantee that the updates will be received in sequential order.
-           --> ``Clients`` might not receive the updates in sequential order.``
+           --> ``Clients`` might not receive the updates in sequential order.
    
 <br>
 
@@ -130,16 +131,16 @@ Google Developers Site에 [Technical Writing Course for Engineers](https://devel
   - 짧은 코드/문서는 유지보수 하기 쉽다
   - 추가적인 코드/문장은 실패 포인트를 제공한다.
 
-#### 한 문장에는 하나의 아이디어
+#### 한 문장에는 하나의 주제
 
-프로그램애서 하나의 statement(명령문)가 단일 작업을 처리하듯이, TW에서 하나의 문장은 단일 아이디어를 수행해야 한다.
+프로그램에서 하나의 statement(명령문)가 단일 작업을 처리하듯이, TW에서는 하나의 문장은 하나의 주제만 포함해야 한다.
 
-  - 하나의 긴 문장은 일련의 단일 아이디어 문장으로 나눈다.
+  - 하나의 긴 문장은 일련의 단일 주제 문장으로 나눈다.
   - 지나치게 긴 문장은 짧은 문장으로 변환하나, 너무 많이 수정하지 않는다.
 
 #### 긴 문장을 목록으로 변환
 
-접속사로 이어지나 긴 문장은 글머리 기호(불릿 or 숫자)의 리스트로 재구조화합니다. 
+접속사로 이어지나 긴 문장은 글머리 기호(불릿 or 숫자)의 리스트로 재구조화한다. 
 
 #### 불필요한 단어를 제거하나거나 줄인다.
 
@@ -159,7 +160,7 @@ The following table suggests **concise replacements** for a few wordy expression
 
 #### 종속절 줄이기
 
-`한 문장 = 한 주제` 공식을 염두하여 종속절이 하나의 주제를 확장한 내용이 아닌 별도의 주제를 다룬다면 별도의 문장으로 나누어라.
+`한 문장 = 한 주제` 공식을 염두하여 종속절이 하나의 주제를 확장한 내용이 아닌 별도의 주제를 다룬다면 별도의 문장으로 나누기.
 
 #### `that`과 `which`의 구별
 
@@ -167,25 +168,27 @@ The following table suggests **concise replacements** for a few wordy expression
   <br> Ex) Python is an interpreted language, **which** Guido van Rossum invented(nonessential)
   <br> Ex) Fortran is perfect for mathematical calculations **that** don't involve linear algebra(essential).
 
-  - 종속절 시작하기에 앞서 멈춤이 필요하면 `which`를 사용하고, 멈춤이 필요 없이 이어지는 절에서는 `that`을 사용해라
-  - `which` 앞에 쉼표(,)를 넣고, `that` 앞에 쉼표를 넣지 마십시오.
+  - 종속절 시작하기에 앞서 멈춤이 필요하면 `which`를 사용하고, 멈춤이 필요 없이 이어지는 절에서는 `that`을 사용하기
+  - `which` 앞에 쉼표(,)를 넣고, `that` 앞에 쉼표를 넣지 않기.
 
 <br>
 
 ### 리스트와 표
 
-좋은 리스트는 기술적 혼란을 질서있게 바꿀 수 있다.
+좋은 리스트는 기술적 복잡한 내용을 질서있게 정렬할 수 있다.
 
 다음은 테크니컬 라이팅에서 주로 쓰이는 리스트 타입이다.
-  - bulleted lists
-  - embedded listsI have been to Vetnam 
+  - Bulleted lists
+  - Embedded lists
+
+<Br>
 
 #### 올바른 타입의 리스트 선택하기
 
-  - bulleted lists vs. numbered lists
-    <br> 순서가 없는(순서를 바꿔도 내용 변경이 없는) 항목에는 `bulleted list`, 순서가 있는(순서를 바꾸면 내용 변경이 있는) 항목에는`numbered list`를 사용한다.
+  - Bulleted lists vs. Numbered lists
+    <br> 순서가 없는(순서를 바꿔도 내용 변경이 없는) 항목에는 `Bulleted list`, 순서가 있는(순서를 바꾸면 내용 변경이 있는) 항목에는`Numbered list`를 사용한다.
 
-  - embedded lists: 
+  - Embedded lists: 
     - `run-in list`라 부르는 `embedded list`는 문장 내 열거형 항목으로 존재한다.<br>
     Ex) The llamacatcher API enables callers to **create and query llamas, analyze alpacas, delete vicugnas, and track dromedaries**. (4개 항목의 `embedded list`)
 
@@ -193,14 +196,16 @@ The following table suggests **concise replacements** for a few wordy expression
     <br> Ex) The llamacatcher API enables callers to do the following:
     
       - Create and query llamas.
-      -  Analyze alpacas.
+      - Analyze alpacas.
       - Delete vicugnas.
       - Track dromedaries.
 
+<br>
+
 #### 리스트 항목을 병렬로 유지하기
 
-효과적인 목록은 병렬입니다. 병렬 목록의 모든 항목은 '함께 속해있는 것'처럼 보인다.
-<br> 즉 병렬 목록 항목은 다음 조건에 대하여 모두 공통성을 갖는다.
+효과적인 목록은 병렬형 리스트이다. 병렬형 리스트의 모든 항목은 '연관되어 있는 것'처럼 보인다.
+<br> 즉 병렬형 리스트 항목은 다음 조건에 대하여 모두 공통성을 갖는다.
 
  - 문법
  - 범주
@@ -225,6 +230,7 @@ The following table suggests **concise replacements** for a few wordy expression
   - potatoes
   - The summer light obscures all memories of winter.(문법, 범주, 대/소문자, 구두점)
 
+<Br>
 
 #### 명령형 동사로 `numbered list` 시작하기
 
@@ -261,7 +267,7 @@ The following table suggests **concise replacements** for a few wordy expression
   ```
   The Pythagorean Theorem states that the sum of the squares of both legs of a right triangle is equal to the square of the hypotenuse. The k-means clustering algorithm relies on the Pythagorean Theorem to measure distances. By contrast, the k-median clustering algorithm relies on the Manhattan Distance.
   ```
-  다음의 시작 문장 더 효과적일 것이다.
+  다음의 시작 문장dl 더 효과적일 것이다.
   ```
   Different clustering algorithms measure distances differently.
   ```
@@ -285,6 +291,7 @@ The following table suggests **concise replacements** for a few wordy expression
 
 - 처음 초안을 검토할 때 범위 설명을 층족하는데 도움이 되지 않는 섹션을 삭제한다.
   
+<br>
 
 #### 독자를 명시하기
  
@@ -298,11 +305,14 @@ The following table suggests **concise replacements** for a few wordy expression
   ```
   Ex) This document assumes that you understand matrix multiplication and how to brew a really good cup of tea.
   ```
+<br>
 
 #### 핵심 포인트를 미리 설정하기
 
 - 문서를 검토할 때 시작 부분에서 독자의 필수 질문에 답하는지 확인해라.
 - 전문 작가는 독자가 2 페이지를 읽을 확률을 높이기 위해 1 페이지에 상당한 에너지를 쏳는다.
+
+<br>
 
 #### 독자를 위해 작성하기
 
@@ -315,6 +325,8 @@ The following table suggests **concise replacements** for a few wordy expression
 
 - 독자의 필요 사항에 대하여 구성하기: 독자가 문서를 읽고 알아야 할 것, 할 수 있는 것을 문서에서 제공할 수 있도록 구성
 
+<br>
+
 #### 주제를 섹션으로 쪼개기
 
 모듈식 코드가 읽기, 이해, 유지 관리 및 재사용에 더 쉽듯이 문서를 모듈식으로 만드는 것도 동일한 이점을 제공한다.
@@ -323,6 +335,6 @@ The following table suggests **concise replacements** for a few wordy expression
 
 ### Markdown  👍
 
-**Markdown**은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어이다. Markdown을 사용하면 일반 텍스트 편집기(예: vi 또는 Emacs)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입한다. 
-<br>자세한 Markdown 문법은 이 블로그에서 별도로 정리한 [[TW] 마크다운 사용법](https://dora-author.github.io/markdown-usage)를 참조.
+**Markdown**은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어이다. Markdown을 사용하면 일반 텍스트 편집기(Vi 또는 Emacs 등)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입한다. 
+<br>자세한 Markdown 문법은 이 블로그에서 별도로 정리한 [[TW] 마크다운 사용법](https://dora-author.github.io/markdown-usage)를 참조한다.
 
