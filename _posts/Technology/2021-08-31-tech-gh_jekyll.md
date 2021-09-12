@@ -113,8 +113,8 @@ GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지�
 Jekyll 사이트 빌드에 필요한 [Gems](https://jekyllrb.com/docs/ruby-101/#gems)을 설치해야 한다.
 Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 및 Plugin 리스트로 정의되어 있으며 `Gemfile`은 Jekyll 사이트 파일들이 저장되는 `username.github.io` repository 폴더 루트에 존재한다.
 
-  1. Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 `Gemfil`이 없으면 아래와 같은 내용의 `Gemfile`을 새로 만들어 루트 경로에 저장한다. 
-  <br> Jekyll theme에 대한 Git 소스를 `clone`하거나 다운로드해서 `Gemfile`이 존재하다면 `Gemfile` 내 아래 내용이 있는지 확인하고 없으면 추가한다.
+1. Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 `Gemfil`이 없으면 아래와 같은 내용의 `Gemfile`을 새로 만들어 루트 경로에 저장한다. 
+<br> Jekyll theme에 대한 Git 소스를 `clone`하거나 다운로드해서 `Gemfile`이 존재하다면 `Gemfile` 내 아래 내용이 있는지 확인하고 없으면 추가한다.
 
       ```ruby
         source 'https://rubygems.org'
@@ -126,7 +126,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
 <br>
 
-  2. `Gemfil`에 정의된 `jekyll` Gem 및 `jekyll-feed` 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.
+2. `Gemfil`에 정의된 `jekyll` Gem 및 `jekyll-feed` 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.
 
       ```bash
         $ bundle install
@@ -178,7 +178,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   <br>
 
-  1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
+1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
 
       ``` bash
       $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
@@ -193,9 +193,9 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
 <Br>
 
-  Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
+Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
 
-  2. `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
+2. `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
   
       ``` ruby
       # gem "jekyll", "~> 3.9.0" #diable jekyll
@@ -220,7 +220,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
 해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 `Gemfile`내 명시된 `github-pages` gem 정보는 주석으로 되어있고, `jekyll` gem 정보는 주석이 해제되어 있는지 확인한다. 
 
-  1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
+1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
 
       ``` bash
        $ bundle exec jekyll serve
@@ -233,9 +233,9 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
   
   <br>
   
-  이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
+이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
 
-  2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
+2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> `jekyll serve` 명령어 이후  `ctrl`+ `C` 키를 눌러 종료하지 않는다면 site 파일을 수정하면 자동으로 site에 자동 반영된다.
