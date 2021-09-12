@@ -12,7 +12,6 @@ source "https://rubygems.org"
 gem "jekyll-sitemap"
 gem "jekyll-gist"
 gem 'jekyll-mentions'
-gem 'jekyll-toc' #210910 added
 
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
@@ -25,6 +24,7 @@ gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-toc' #210910 added
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

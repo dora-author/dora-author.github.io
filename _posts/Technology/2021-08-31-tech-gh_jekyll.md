@@ -230,8 +230,9 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> `jekyll serve` 명령어는 Jekyll site 빌드 후 내부 서버에 게시한다는 의미이다. 
     <br> (이외 다른 Jekyll 명령어는 [Jekyll Docs](https://jekyllrb.com/docs/usage/) 참고)
-
-
+  
+  <br>
+  
   이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
 
   2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
