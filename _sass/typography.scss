@@ -68,7 +68,7 @@ h3.title a {
 
 // quotes
 blockquote {
-	font-family:$font1;
+	font-family:$alt-font; //edit
 	font-style:normal;
 	border-left:8px solid #151412;
 	padding-left:20px;
@@ -91,11 +91,14 @@ figcaption {
 a {
   transition: color .4s;
   color: $color_shark;
+  text-decoration: none;
   &:link {
-  	color: $color_shark;
+  	//color: $color_shark;
+	color: rgb(122, 175, 255);
   }
   &:visited {
-  	color: $color_tuatara;
+  	//color: $color_tuatara;
+	  color: rgb(122, 175, 255);
   }
   &:hover {
   	color: $red;
