@@ -77,7 +77,7 @@ Github Pages, Jekyll를 활용하여 직접 사이트를 개설해보는 과정�
 <br> 요약하자면 Jekyll theme를 적용하기에 앞서 Jekyll 실행을 위한 필요 환경을 설치 후 사용자의 Git repository에 Jekyll theme 설정 파일들을 생성하고 커스터마이징을 위한 파일 수정, 해당 사이트에 대한 파일 생성, 사이트 빌드 및 게시이다.
 
 
-### 사전 조건 (Prequisite)
+### 사전 조건(Prequisite)
 사용자 [GitHub 계정](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)에 `username.github.io`이름의 원격 repository가 존재해야 한다.([참고](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites
 ))
 <br> 없다면 GitHub에서 해당 이름의 repository를 만든 후 로컬에서 `git clone <remote origin 주소>` 하거나 로컬 특정 폴더에서 `git init` -> `git checkout -b <브랜치명>` -> `git remote add origin <remote origin 주소>` 로 진행한다.
@@ -175,7 +175,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 이 단계는 사용자 로컬 환경에서 Jekyll site를 빌드하여 테스트해야하는데 사용자 로컬 PC에 GitHub Page에 게시할 Jekyll site 파일들이 존재하지 않는 경우 진행한다. 즉  site 파일들이 저장될 로컬 폴더가 빈 상태여야 한다.
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
-  > <Br> 사용자가 특정 [Jekyll Theme](https://jekyllrb.com/docs/themes/)를 다운로드하거나 GitHub repository에 게시된 해당 소스를 `clone`한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 [다음 단계](#5.-jekyll-Site-빌드-및-테스트하기)로 넘어간다.
+  > <Br> 사용자가 특정 [Jekyll Theme](https://jekyllrb.com/docs/themes/)를 다운로드하거나 GitHub repository에 게시된 해당 소스를 `clone`한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 [5. Jekyll Site 빌드 및 테스트하기](#5-jekyll-site-----------)로 넘어간다.
 
   <br>
 
@@ -205,14 +205,14 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
   ```
 
 이후 모든 변경 사항을 연결된 Git 원격 repository에 업로드하도록 `git add .` -> `git commit -m "commit message"` -> `git push origin {gh-pages branch}` 순서로 진행한다.
-<br> 해당 로컬 폴더가 Git 소스를 `clone`한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 [사전 조건](#사전-조건-(Prequisite))을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.
+<br> 해당 로컬 폴더가 Git 소스를 `clone`한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 [사전 조건(Prequisite)](#------prequisite-)을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.
 
   
 <br>
 
 ### 5. Jekyll Site 빌드 및 테스트하기
 
-사용자가 사이트 파일 내용을 위 [3번 사항](#3.-사이트-콘텐츠-커스터마이징)처럼 변경했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.
+사용자가 사이트 파일 내용을 위 [3. 사이트 콘텐츠 커스터마이징](#3---------------)처럼 변경했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> GitHub Pages 사용자가 변경한 콘텐츠를 원격 repository에 `push`하면 Jekyll을 사용해서 사이트를 빌드 후 자동 게시하므로 테스트할 필요가 없다면 해당 단계도 생략할 수 있다.
