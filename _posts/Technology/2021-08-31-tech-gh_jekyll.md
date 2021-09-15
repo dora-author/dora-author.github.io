@@ -24,6 +24,7 @@ comments: true
 [jekyll]: https://jekyllrb.com/
 
 ---
+<Br>
 
 ## GitHub Pages에 관하여
 
@@ -98,9 +99,9 @@ GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지�
 
 <br>
 
-  Step1. Ruby 2.1.0 or higher [설치](https://rubyinstaller.org/downloads/)
+  **Step1.** Ruby 2.1.0 or higher [설치](https://rubyinstaller.org/downloads/)
 
-  Step2. [Bundler](https://bundler.io/) 설치
+  **Step2.** [Bundler](https://bundler.io/) 설치
     <br> CMD window 혹은 `Git Bash`에서 아래와 같이 실행
 
   ```bash 
@@ -113,7 +114,7 @@ GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지�
 Jekyll 사이트 빌드에 필요한 [Gems](https://jekyllrb.com/docs/ruby-101/#gems)을 설치해야 한다.
 Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 및 Plugin 리스트로 정의되어 있으며 `Gemfile`은 Jekyll 사이트 파일들이 저장되는 `username.github.io` repository 폴더 루트에 존재한다.
 
-  Step1. Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 `Gemfil`이 없으면 아래와 같은 내용의 `Gemfile`을 새로 만들어 루트 경로에 저장한다. 
+  **Step1.** Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 `Gemfil`이 없으면 아래와 같은 내용의 `Gemfile`을 새로 만들어 루트 경로에 저장한다. 
   <br> Jekyll theme에 대한 Git 소스를 `clone`하거나 다운로드해서 `Gemfile`이 존재하다면 `Gemfile` 내 아래 내용이 있는지 확인하고 없으면 추가한다.
 
   ```ruby
@@ -126,7 +127,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   <br>
 
-  Step 2. `Gemfil`에 정의된 `jekyll` Gem 및 `jekyll-feed` 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.
+  **Step 2.** `Gemfil`에 정의된 `jekyll` Gem 및 `jekyll-feed` 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.
 
   ```bash
           $ bundle install
@@ -174,11 +175,11 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 이 단계는 사용자 로컬 환경에서 Jekyll site를 빌드하여 테스트해야하는데 사용자 로컬 PC에 GitHub Page에 게시할 Jekyll site 파일들이 존재하지 않는 경우 진행한다. 즉  site 파일들이 저장될 로컬 폴더가 빈 상태여야 한다.
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
-  > <Br> 사용자가 특정 [Jekyll Theme](https://jekyllrb.com/docs/themes/)를 다운로드하거나 GitHub repository에 게시된 해당 소스를 `clone`한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 [다음 단계](#5-jekyll-Site-빌드-및-테스트하기)로 넘어간다.
+  > <Br> 사용자가 특정 [Jekyll Theme](https://jekyllrb.com/docs/themes/)를 다운로드하거나 GitHub repository에 게시된 해당 소스를 `clone`한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 [다음 단계](#5.-jekyll-Site-빌드-및-테스트하기)로 넘어간다.
 
   <br>
 
-  Step 1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
+  **Step 1.** CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
   <br>
   ``` bash
     $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
@@ -195,7 +196,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
 
-  Step 2. `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
+  **Step 2.** `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
   
   ``` ruby
     # gem "jekyll", "~> 3.9.0" #diable jekyll
@@ -211,7 +212,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
 ### 5. Jekyll Site 빌드 및 테스트하기
 
-사용자가 사이트 파일 내용을 위 [3번 사항](#3. 사이트 콘텐츠 커스터마이징)처럼 변경 했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.
+사용자가 사이트 파일 내용을 위 [3번 사항](#3.-사이트-콘텐츠-커스터마이징)처럼 변경했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> GitHub Pages 사용자가 변경한 콘텐츠를 원격 repository에 `push`하면 Jekyll을 사용해서 사이트를 빌드 후 자동 게시하므로 테스트할 필요가 없다면 해당 단계도 생략할 수 있다.
@@ -220,7 +221,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
 해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 `Gemfile`내 명시된 `github-pages` gem 정보는 주석으로 되어있고, `jekyll` gem 정보는 주석이 해제되어 있는지 확인한다. 
 
-  Step 1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
+  **Step 1.** CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
   <Br>
    ```
          $ bundle exec jekyll serve
@@ -235,7 +236,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
   
   이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
 
-  Step 2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
+  **Step 2.** 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> 사용자 site가 내부 로컬 서버에 게시되는 동안  site 파일을 수정하는 경우,  `ctrl`+ `C` 키를 눌러 종료하지 않는 이상, 자동으로 site에 반영된다.
