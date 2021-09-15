@@ -98,14 +98,14 @@ GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지�
 
 <br>
 
-  1. Ruby 2.1.0 or higher [설치](https://rubyinstaller.org/downloads/)
+  Step1. Ruby 2.1.0 or higher [설치](https://rubyinstaller.org/downloads/)
 
-  2. [Bundler](https://bundler.io/) 설치
+  Step2. [Bundler](https://bundler.io/) 설치
     <br> CMD window 혹은 `Git Bash`에서 아래와 같이 실행
 
-      ```bash 
+  ```bash 
         $ gem install bundler
-      ```
+  ```
 <Br>
 
 ### 2. Gemfile을 통한 Jekyll 및 Plugin 설치
@@ -113,24 +113,24 @@ GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지�
 Jekyll 사이트 빌드에 필요한 [Gems](https://jekyllrb.com/docs/ruby-101/#gems)을 설치해야 한다.
 Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 및 Plugin 리스트로 정의되어 있으며 `Gemfile`은 Jekyll 사이트 파일들이 저장되는 `username.github.io` repository 폴더 루트에 존재한다.
 
-  1. Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 `Gemfil`이 없으면 아래와 같은 내용의 `Gemfile`을 새로 만들어 루트 경로에 저장한다. 
+  Step1. Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 `Gemfil`이 없으면 아래와 같은 내용의 `Gemfile`을 새로 만들어 루트 경로에 저장한다. 
   <br> Jekyll theme에 대한 Git 소스를 `clone`하거나 다운로드해서 `Gemfile`이 존재하다면 `Gemfile` 내 아래 내용이 있는지 확인하고 없으면 추가한다.
 
-      ```ruby
+  ```ruby
         source 'https://rubygems.org'
         gem 'github-pages', group: :jekyll_plugins
-      ```  
+  ```  
     
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <br> 필자는 사용하고자 하는 [Jekyll theme](http://jekyllthemes.org/themes/moon/)를 다운로드 후 로컬 Git repository 폴더에 복사했기 때문에 이미 Gemfile이 존재해있었다. 따라서 `Gemfile` 내 해당 내용을 추가하는 방식으로 진행했다.
 
   <br>
 
-  2. `Gemfil`에 정의된 `jekyll` Gem 및 `jekyll-feed` 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.
+  Step 2. `Gemfil`에 정의된 `jekyll` Gem 및 `jekyll-feed` 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.
 
-      ```bash
+  ```bash
           $ bundle install
-      ``` 
+  ``` 
 
 설치 후, `Gemfile.lock`이 동일 경로에 생성된다.
 
@@ -178,30 +178,30 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   <br>
 
-  1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
-
-        ``` bash
-        $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
-        ```
-        Ex) `$ bundle exec jekyll _3.3.0_ new NEW-JEKYLL-SITE-REPOSITORY-NAME`
+  Step 1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
+  <br>
+  ``` bash
+    $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
+  ```
+  Ex) `$ bundle exec jekyll _3.3.0_ new NEW-JEKYLL-SITE-REPOSITORY-NAME`
       
-        위 명령어 대신 `Gemfile`내 정의된 `gem "jekyll", "~> {버전명}"`를 주석 처리 후 `bundle exec jekyll new .`를 실행하거나 `bundle exec jekyll new {my-project}`를 실행한다.
+  위 명령어 대신 `Gemfile`내 정의된 `gem "jekyll", "~> {버전명}"`를 주석 처리 후 `bundle exec jekyll new .`를 실행하거나 `bundle exec jekyll new {my-project}`를 실행한다.
 
   > ⚠️ <span style="color:#FFE423"> **_Warning_** </span>
   > <br> 이미 파일들이 존재하는 상황에서 위 명령어를 수행하면 다음과 같은 에러가 발생한다.
   > <br> `Conflict: ~ exists and is not empty.`
 
-  <Br>
+  <br>
 
   Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
 
-  2. `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
+  Step 2. `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
   
-      ``` ruby
-      # gem "jekyll", "~> 3.9.0" #diable jekyll
+  ``` ruby
+    # gem "jekyll", "~> 3.9.0" #diable jekyll
 
-      gem "github-pages", group: :jekyll_plugins #using github-pages
-      ```
+    gem "github-pages", group: :jekyll_plugins #using github-pages
+  ```
 
 이후 모든 변경 사항을 연결된 Git 원격 repository에 업로드하도록 `git add .` -> `git commit -m "commit message"` -> `git push origin {gh-pages branch}` 순서로 진행한다.
 <br> 해당 로컬 폴더가 Git 소스를 `clone`한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 [사전 조건](#사전-조건-(Prequisite))을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.
@@ -220,12 +220,12 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
 해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 `Gemfile`내 명시된 `github-pages` gem 정보는 주석으로 되어있고, `jekyll` gem 정보는 주석이 해제되어 있는지 확인한다. 
 
-  1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
+  Step 1. CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
+  <Br>
+   ```
+         $ bundle exec jekyll serve
 
-        ``` bash
-        $ bundle exec jekyll serve
-
-        ```
+  ```
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
   > <Br> `jekyll serve` 명령어는 Jekyll site 빌드 후 내부 서버에 게시한다는 의미이다. 
@@ -235,9 +235,9 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
   
   이후 명령 실행창에 `Server address: http://127.0.0.1:4000`가 표시된다.
 
-  2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
+  Step 2. 사용자 브라우저에서 `http://127.0.0.1:4000` 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.
 
   > ℹ️ <span style="color:#247CFF"> **_NOTE_** </span>
-  > <Br> `jekyll serve` 명령어 이후  `ctrl`+ `C` 키를 눌러 종료하지 않는다면 site 파일을 수정하면 자동으로 site에 자동 반영된다.
+  > <Br> 사용자 site가 내부 로컬 서버에 게시되는 동안  site 파일을 수정하는 경우,  `ctrl`+ `C` 키를 눌러 종료하지 않는 이상, 자동으로 site에 반영된다.
 
 
