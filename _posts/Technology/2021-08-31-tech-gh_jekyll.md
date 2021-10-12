@@ -78,6 +78,8 @@ Github Pages, Jekyll를 활용하여 직접 사이트를 개설해보는 과정�
 
 
 ### 사전 조건(Prequisite)
+{:toc}
+
 사용자 [GitHub 계정](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)에 `username.github.io`이름의 원격 repository가 존재해야 한다.([참고](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites
 ))
 <br> 없다면 GitHub에서 해당 이름의 repository를 만든 후 로컬에서 `git clone <remote origin 주소>` 하거나 로컬 특정 폴더에서 `git init` -> `git checkout -b <브랜치명>` -> `git remote add origin <remote origin 주소>` 로 진행한다.
