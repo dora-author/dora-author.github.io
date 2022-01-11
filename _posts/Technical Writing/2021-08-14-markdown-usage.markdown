@@ -11,7 +11,7 @@ comments: true
 
 ## Markdown 사용법  👍
 
-다음은 웹 콘텐츠에서 주로 쓰이는 스타일에 대하여 Markdown을 적용하기 위한 사용법과 예에 관한 내용이다. 
+다음은 웹 콘텐츠에서 주로 쓰이는 스타일에 대하여 Markdown을 적용하기 위한 사용법과 예에 관한 내용이다.
 
 <br>
 
@@ -28,7 +28,7 @@ comments: true
 
 <br>
 
-ℹ️ <span style="color:#247CFF"> **_NOTE_** 
+ℹ️ <span style="color:#247CFF"> **_NOTE_**
   > 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다.
   <br> Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
 
@@ -78,7 +78,7 @@ comments: true
 ### 제목 수준
 
 - 큰제목: 텍스트 밑에 `=====` 기입
-  
+
   **How to use**
   ```
   큰제목
@@ -103,7 +103,7 @@ comments: true
   --------
 
 - `#`을 사용하여 다양한 수준으로 표현: 1단계부터 6단계까지 지원
-  
+
   **How to use**
   ```
   # 1단계 //가장 큰제목
@@ -115,14 +115,14 @@ comments: true
 
   # 1단계
 
-  ##### 5단계 
+  ##### 5단계
 
 <br>
 
 ### 리스트
 
 - Unordered
-  
+
   **How to use**
   ```
   * Item 1
@@ -137,7 +137,7 @@ comments: true
     * Item 2b
 
 - Ordered
-  
+
   **How to use**
   ```
   1. Item 1 //첫 줄은 무조건 1부터 시작
@@ -163,19 +163,19 @@ comments: true
   | 참조 링크   | 검색엔진은 [Google][1] 이 있다. </br> [1]: http://google.com “구글”          | 검색엔진은 google이 있다.         |
   | 인라인 링크 | [url 대신 표현 단어](url 주소) </br> Ex) `[Google](http://google.com"구글")` | [Google](http://google.com"구글") |
   | 내부 링크   | [표현할 단어](#작성한 본문 내 제목) </br> Ex) `[링크](#링크)`                | [링크](#링크)                     |
- 
+
 <br>
 
 ### 이미지 삽입
 
   **How to use**
-   
+
   `![이미지 이름](이미지 주소)`
 
    Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)`
 
   **How to look**
-  
+
   ![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)
 
 <br>
@@ -183,13 +183,13 @@ comments: true
 ### 테이블
 
   **How to use**
-  ~~~ 
+  ~~~
   | First Header | Second Header  |       Third Header |
   | :----------- | :------------: | -----------------: |
   | 왼쪽맞춤     |   가운데맞춤   |         오른쪽맞춤 |
   | Second row   |    **Cell**    |             *Cell* |
   | Third row    | Cell that span | across two columns |
-  ~~~ 
+  ~~~
 
   **How to look**
 
@@ -226,18 +226,18 @@ comments: true
 
   ```
   <details markdown="1">
-  <summary>상세 내용 확인</summary> 
-  div 에 markdown attribute를 1 로 
+  <summary>상세 내용 확인</summary>
+  div 에 markdown attribute를 1 로
   하는 이유는 div 안에서
   markdown 을 사용하기 위해서입니다.
   </details>
   ```
 
   **How to look**
-  
+
   <details markdown="1">
-  <summary>상세 내용 확인</summary> 
-  div 에 markdown attribute를 1 로 
+  <summary>상세 내용 확인</summary>
+  div 에 markdown attribute를 1 로
   하는 이유는 div 안에서
   markdown 을 사용하기 위해서입니다.
   </details>
@@ -253,7 +253,7 @@ comments: true
   - [ ] Add delight to the experience when all tasks are complete
   - [ ] Open a followup issue
   ```
-  
+
   **How to look**
 
   - [x] #739
@@ -264,7 +264,7 @@ comments: true
 
 ### 컨벤션 규칙
 
-작성 내용 중 독자가 참고해야할 메모, 정보, 주의 사항에 대하여 다음과 같이 표기한다.
+작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.
 
 **How to use**
 
