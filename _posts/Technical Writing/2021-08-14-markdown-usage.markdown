@@ -267,24 +267,26 @@ comments: true
 작성 내용 중 독자가 참고해야할 메모, 정보, 주의 사항에 대하여 다음과 같이 표기한다.
 
 **How to use**
-  
+
   ```
   ℹ️ <span style="color:#247CFF"> **_NOTE_**
   > This is note content.
 
   ⚠️ <span style="color:#FFE423"> **_Warning_**
   > This is a warning content.
+
+  ✅ <span style="color:#2BA855"> **_Tips_**
+  > This is warning content.
   ```
 
 **How to look**
 
 ℹ️ <span style="color:#247CFF"> **_NOTE_**
-  > This is note content.
+> This is note content.
 
 
 ⚠️<span style="color:#FFE423"> **_Warning_**
-  > This is warning content.
+> This is warning content.
 
-
-
-
+✅ <span style="color:#2BA855"> **_Tips_**
+> This is warning content.
