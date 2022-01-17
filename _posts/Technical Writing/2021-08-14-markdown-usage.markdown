@@ -73,7 +73,7 @@ Markdown 사용법
     **- How to look**
 
     ```
-    안녕하세요
+    안녕하세요.
     ```
     
     <br>
