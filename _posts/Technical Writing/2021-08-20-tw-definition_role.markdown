@@ -9,7 +9,7 @@ date: 2021-08-20
 comments: true
 ---
 
-## Technical Writer(TWer)란
+# Technical Writer(TWer)란
 
 ### 정의
 - '기술과 기술, 사람과 기술을 잇는 사람'
