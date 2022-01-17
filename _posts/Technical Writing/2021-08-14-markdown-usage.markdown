@@ -275,11 +275,14 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
   markdown 을 사용하기 위해서입니다.
   </details>
 ```
+
 <br>
 
 **- How to look**
 
-<details markdown="1"> <summary>상세 내용 확인</summary> div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown 을 사용하기 위해서입니다. </details>
+<details markdown="1"> 
+  <summary>상세 내용 확인</summary> 
+div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown 을 사용하기 위해서입니다.</details>
 
 <br>
 
