@@ -1,18 +1,23 @@
 ---
-layout: post 
+layout: post
 title: "[TW] 마크다운 사용법"
 excerpt: 마크다운 문법과 사용법에 관하여
-tags: 
-  - Markdown 
+tags:
+  - Markdown
 category: Technical Writing
 date: 2021-08-14
 comments: true
 ---
 
-Markdown 사용법
-==================
+**<Table of Contents>**  
+* TOC 
+{:toc}
 
-웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다. 
+<Br>
+
+## Markdown 사용법
+
+웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.
 
 <br>
 
@@ -30,9 +35,11 @@ Markdown 사용법
 
 <br>
 
-ℹ️ <span style="color:#247CFF"> ***NOTE*** 
+ℹ️ <span style="color:#247CFF"> ***NOTE***
 > 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다. <br>
   Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
+
+
 
 <br>
 
@@ -40,31 +47,31 @@ Markdown 사용법
 
 -	인용구: 작성할 텍스트 앞에 `>`을 기입하면 해당 텍스트 전체가 회색으로 구분되는 인용구가 된다.<br>
 
-    **- How to use** 
+    **- How to use**
 
     \> 안녕하세요
 
     <br>
 
-    **- How to look** 
+    **- How to look**
 
     > 안녕하세요
 
 <br>
 
-ℹ️ <span style="color:#247CFF"> ***NOTE*** 
+ℹ️ <span style="color:#247CFF"> ***NOTE***
 > `>` 다음줄에 `>>`, 그 다음 줄에 `>>>`를 기입하면 여러 계층의 인용구로 작성할 수 있다.
 
 <br>
 
 -	코드 블락: 코드를 일반 문장과 구분하기 위해 블락으로 표현. 예시나 구분이 필요한 내용을 블락으로 묶을 때도 사용한다.<br>
 
-    **- How to use** 
-    
-    해당 문장의 앞 줄과 다음 줄에 \`\`\` 혹은 `~~~`을 기입한다. 
+    **- How to use**
+
+    해당 문장의 앞 줄과 다음 줄에 \`\`\` 혹은 `~~~`을 기입한다.
     <Br>
 
-    \`\`\` 
+    \`\`\`
     <br> 안녕하세요.
 
     \`\`\`
@@ -76,19 +83,19 @@ Markdown 사용법
     ```
     안녕하세요.
     ```
-    
+
     <br>
 
 ℹ️ <span style="color:#247CFF"> ***NOTE***
 > 코드 문법을 적용하기 위해 첫 줄에 `와 해당 언어 종류를 같이 기입한다.
 >  
-> Ex) 첫줄을 \`\`\`c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다. 
-> 
-> ```c 
-> 
->  int val = 10; // C문법 적용함 
+> Ex) 첫줄을 \`\`\`c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.
 >
->  printf(%s,"Hello, World!"); 
+> ```c
+>
+>  int val = 10; // C문법 적용함
+>
+>  printf(%s,"Hello, World!");
 >
 >  ```
 
@@ -98,7 +105,7 @@ Markdown 사용법
 
 -	큰제목: 텍스트 밑에 `=====` 기입<br>
 
-    **- How to use** 
+    **- How to use**
 
     ```
     큰제목
@@ -111,13 +118,14 @@ Markdown 사용법
 
     큰제목
     ======
+    {:.no_toc}
 
 <Br>
 
 - 작은 제목: 텍스트 밑에 `-----` 기입 <Br>
 
-    **- How to use** 
-    
+    **- How to use**
+
     ```
      작은제목
      -------
@@ -126,13 +134,14 @@ Markdown 사용법
 
     **- How to look**
 
-    작은제목
-    --------
+  작은 제목
+  ---------
+  {:.no_toc}
 
 <br>
 
 - `#`을 사용하여 다양한 수준으로 표현: 1단계부터 6단계까지 지원
-  
+
     **- How to use**
     ```
     # 1단계 //가장 큰제목
@@ -141,7 +150,7 @@ Markdown 사용법
 
     <br>
 
-    **- How to look** 
+    **- How to look**
 
     # 1단계
     ##### 5단계
@@ -158,16 +167,16 @@ Markdown 사용법
 	  -	Item 2
 	    -	Item 2a
 	    -	Item 2b
-    ``` 
+    ```
     <Br>
 
     **- How to look**
-    
-    * Item 1 
-    * Item 2 
-      * Item 2a 
+
+    * Item 1
+    * Item 2
+      * Item 2a
       * Item 2b
-   
+
 <Br>
 
 -	Ordered <br>
@@ -182,12 +191,12 @@ Markdown 사용법
     ```
     <Br>
 
-    **- How to look** 
+    **- How to look**
 
-    1. Item 1 
-    2. Item 2 
-    3. Item 3 
-       1. Item 3a 
+    1. Item 1
+    2. Item 2
+    3. Item 3
+       1. Item 3a
        2. Item 3b
 
 <br>
@@ -221,7 +230,7 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 ### 테이블
 
-**- How to use** 
+**- How to use**
 
 ```
 | First Header | Second Header  |       Third Header |
@@ -280,9 +289,9 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 **- How to look**
 
-<details markdown="1"> 
-  <summary>상세 내용 확인</summary> 
-div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown 을 사용하기 위해서입니다.</details>
+<details markdown="1">
+  <summary>상세 내용 확인</summary>
+div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 사용하기 위해서입니다.</details>
 
 <br>
 
@@ -327,15 +336,15 @@ div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown 을 
 
 **- How to look**
 
-ℹ️ <span style="color:#247CFF"> ***NOTE*** 
+ℹ️ <span style="color:#247CFF"> ***NOTE***
 > This is note content.
 
 <br>
 
-⚠️<span style="color:#FFE423"> ***Warning*** 
+⚠️<span style="color:#FFE423"> ***Warning***
 > This is warning content.
 
 <br>
 
-✅ <span style="color:#2BA855"> ***Tips*** 
+✅ <span style="color:#2BA855"> ***Tips***
 > This is tips content1.
