@@ -1,0 +1,352 @@
+openapi: 3.0.0
+info:
+  version: '0.11.12'
+  title: 'OpenAPI Spec 생성하기'
+  description: |
+    [NuriFlex](https://nuriflex.co.kr)에서 관리하는 OpenAPI를 관리할 수 있도록
+    API를 제공한다.
+
+    __History__
+
+      * _2021-11-15_ deprecated AuthRequest.redirect_url
+      * _2021-11-12_ /auth API 추가 (POST, DELTE)
+      * _2021-11-10_ API 최초 Release
+
+servers:
+  - url: https://api.nuriflex.co.kr/api-server/v1
+    description: NuriFlex API Server
+  - url: https://search.nuriflex.co.kr/elastic
+    description: Elasticsearch API Server
+
+tags:
+  - name: API Samples
+    description: Open API 예시에 대한 설명
+
+#
+# Paths
+paths:
+  /groups:
+    get:
+      summary: API Group 정보 조회
+      tags:
+        - API Samples
+      description:  |
+        등록된 OpenAPI Group 정보를 조회한다.
+      responses:
+        '200':
+          description: APIGroup object array
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/APIGroup'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        default:
+          description: Unexpected error
+  /auth:
+    post:
+      summary: Get User Authentication
+      tags:
+        - API Samples
+      security: []
+      description: |
+        NuriFlex Directory Serivce에 등록된 사용자 Authentication을 검사한다.
+        사용자 인증 정보 확인은 다음 두단계를 거처 진행된다.
+
+          1. 사용자 인증 정보 확인
+              1. uid, password 정보를 이용하여 NuriFlex Directory Serivce에 등록된
+               사용자 정보를 확인한다.
+          1. 그룹 확인
+              1. group 정보를 이용하여 지정된 Group에 사용자가 memberUid로 등록되어
+               있는지 확인한다.
+              1. 만약 group 정보를 지정하지 않고 요청할 경우 Service에 __LDAP_GROUP__
+               환경 변수로 등록된 Group 정보를 이용하여 해당 group에 속해 있는지 확인한다.
+              1. 만약 서버에 __FORCE_LDAP_GROUP__ 환경 변수가 설정되어 있을 경우
+               이 요청에서 지정한 group 정보는 무시되고 __FORCE_LDAP_GROUP__ 환경 변수로
+               지정된 Group에 속했는지 확인한다.
+
+        사용자 인증이 성공되면 [JWT](https://ko.wikipedia.org/wiki/JSON_%EC%9B%B9_%ED%86%A0%ED%81%B0)
+        가  생성되어 Cookie에 [httpOnly](https://developer.mozilla.org/ko/docs/Web/HTTP/Cookies)
+        로 설정된다. 이렇게 설정된 JWT는 다음 환경 변수에 의해 유효 시간이 결정된다.
+
+          1. __JWT_EXPIRE__
+              * 인증 정보의 유효 시간을 설정한다. 이 환경 변수를 설정하지 않을 경우
+                기본 '1h'로 설정 되어 동작한다. 지정된 시간 동안 발행된 JWT가 유효하다.
+              * JWT를 Cookie에 설정할 때 Max-Age 값은 __JWT_EXPIRE__ 값으 두배를
+                설정한다. 이는 이어서 나올 __JWT_REFRESH_EXPIRE__ 를 이용하여
+                JWT를 재발행 하기 위해서 이다.
+          1. __JWT_REFRESH_EXPIRE__
+              * 발행한 JWT를 재발행 할 수 있는 유효 시간을 설정한다. 이 환경 변수를
+                설정하지 않은 경우 기본 '7d'로 설정 되어 동작한다.
+              * __JWT_EXPIRE__에 의해 만료된 JWT에 대해 Cookie Max-Age 이내에 인증
+                요청을 할 경우 __JWT_REFRESH_EXPIRE__ 이내일 경우 신규로 JWT를 발행
+                한다.
+              * 이렇게 JWT를 재발행 하여 동일한 JWT를 계속 사용하지 않고 주기적으로
+                refresh 할 수 있게 한다. 또한 한번 발행된 JWT를 제어하지 못하는 문제를
+                방지하기 위해 짧은 __JWT_EXPIRE__ 설정을 하는 경우 빈번한 인증 절차
+                수행 문제가 발생하지 않게 한다.
+              * 예를 들어 __JWT_EXPIRE__ '1d', __JWT_REPRESH_EXPIRE__ '7d' 일 경우
+                발행 첫날 '24h' 동안은 최초 발행 JWT 사용이 가능하고 '24h'가 지난 후
+                Cookie 에 설정된 Max-Age 인 '48h' 이내에('24h' ~ '48h') JWT 검증
+                요청이 발생하면 새로운 JWT가 발행되며 이 시점부더 다시 '24h' 유효하게
+                된다.
+
+      requestBody:
+        description: User authentication informations
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequest'
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                uid:
+                  type: string
+                  example: nuri-test-user
+                password:
+                  type: string
+                  example: password
+                role:
+                  type: string
+                  example: manager
+                group:
+                  type: array
+                  items:
+                    type: string
+                  example:
+                    - nuri-rnd-all
+                    - nuri-rnd-es
+                    - nuri-qc
+              required:
+                - uid
+                - password
+            encoding:
+              group:
+                style: form
+                explode: true
+      responses:
+        '200':
+          description: Login success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthInfo'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        default:
+          description: Unexpected error
+    delete:
+      summary: Delete User Authentication
+      tags:
+        - API Samples
+      security: []
+      description: 사용자 인증 정보 삭제.
+      responses:
+        '200':
+          description: 정상 처리
+        default:
+          description: Unexpected error
+
+  /{index}/_search:
+    get:
+      summary: Get Index Information
+      tags:
+        - API Samples
+      description: 
+       등록된 인덱스의 정보를 조회한다.
+      parameters:
+        - in: path
+          name: index
+          description: 타겟 인덱스명
+          required: true
+          schema:
+            type: string
+            example: my_index
+                              
+      responses:
+        '200':
+          description: Get Index Success
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        default:
+          description: Unexpected erro    
+#
+# Components
+components:
+  schemas:
+    APIGroup:
+      type: object
+      description: API Group 정보
+      properties:
+        label:
+          type: string
+          description: API Group 명칭
+        path:
+          type: string
+          description: Swagger Configuration이 저장되어 있는 Path 정보
+        parent:
+          type: string
+          nullable: true
+          description: APIGroup을 묶는 상위 Group이 있을 경우 Parent Group name
+        depth:
+          type: integer
+          description: Group depth
+          enum: [1, 2]
+      required:
+        - label
+        - path
+        - depth
+      example:
+        label: nuriflex
+        path: /nuriflex
+        depth: 1
+    AuthRequest:
+      type: object
+      description: 인증에 필요한 정보
+      properties:
+        uid:
+          type: string
+          description: 사용자 ID
+        password:
+          type: string
+          description: 사용자 Password
+        role:
+          type: string
+          description: 사용자 Role
+        group:
+          type: array
+          items:
+            type: string
+          description: 사용자 Group
+        redirect_url:
+          type: string
+          description: |
+            Auth 성공시 redirect 할 URL.
+
+            __2021-11-15__ _/auth_ call에서 직접 URL redirect를 하지 않도록 기능이 수정되었다.
+            _/auth_ call의 결과로 반환되는 response code를 이용해서 client가 적절한 동작을
+            수행해야 한다.
+          deprecated: true
+      required:
+        - uid
+        - password
+      example:
+        uid: nuri-test-user
+        password: password
+        role: manager
+        group:
+          - nuri-rnd-all
+          - nuri-rnd-es
+          - nuri-qc
+    UserInfo:
+      type: object
+      description: 사용자 정보
+      properties:
+        dn:
+          type: string
+          description: 사용자 DN (Distinguished Name)
+        cn:
+          type: string
+          description: 사용자 CN (Common Name)
+        display:
+          type: string
+          description: 사용자 Display Name
+        mail:
+          type: string
+          description: 사용자 Email address
+        uid:
+          type: string
+          description: 사용자 ID
+      required:
+        - dn
+        - cn
+        - uid
+      example:
+        dn: uid=nuri-test-user,ou=people,dc=nuriflex,dc=co,dc=kr
+        cn: 시험사용자
+        display: 누리 시험 사용자 (임시)
+        mail: noreply@nuriflex.co.kr
+        uid: nuri-test-user
+    GroupInfo:
+      type: object
+      description: 그룹 정보
+      properties:
+        dn:
+          type: string
+          description: 그룹 DN (Distinguished Name)
+        desc:
+          type: string
+          description: 그룹 설명
+      required:
+        - dn
+      example:
+        dn: cn=nuri-rnd-all,ou=rnd,ou=groups,dc=nuriflex,dc=co,dc=kr
+        desc: NuriFlex 기술 연구소
+    AuthInfo:
+      type: object
+      description: 인증 결과
+      properties:
+        user:
+          description: 사용자 정보
+          $ref: '#/components/schemas/UserInfo'
+        group:
+          type: array
+          items:
+            $ref: '#/components/schemas/GroupInfo'
+          description: 그룹 정보
+        iat:
+          type: integer
+          description: AuthInfo 생성 시간
+          example: 1636811548
+        exp:
+          type: integer
+          description: AuthInfo 만료 시간
+          example: 1636811563
+        iss:
+          type: string
+          description: AuthInfo issuer
+          example: urn:NuriFlex
+      required:
+        - user
+        - group
+        - iat
+        - exp
+        - iss
+  securitySchemes:
+
+    # NuriFlexAuth:
+      # type: http
+      # scheme: basic
+      # bearerFormat: JWT
+
+    ElasticAuth:
+      type: http
+      scheme: basic
+
+  responses:
+    BadRequest:
+      description: 잘못된 요청.
+    UnauthorizedError:
+      description: 인증 받지 못한 상태이거나 잘못된 인증 요청. '/auth'를 먼저 호출해 주세요.
+    Forbidden:
+      description: 권한 없음.
+    NotFound:
+      description: 찾지 못함.
+
+#
+# security
+security:
+  - NuriFlexAuth: []
+  - ElasticAuth: []

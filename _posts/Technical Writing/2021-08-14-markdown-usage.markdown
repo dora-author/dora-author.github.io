@@ -20,6 +20,16 @@ comments: true
 웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.
 
 <br>
+{% include note.html content="This is my note. All the content I type here is treated as a single paragraph." %}
+<br>
+{% include callout.html title=" **Note**" content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. " type="primary" %}
+
+{% include callout_tip.html title=" **Tip**" content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. " type="success" %} 
+
+{% include callout_warning.html title= " **Warning**" content="This is my **danger** type." type="danger" level=3 %}
+
+{% include callout.html type="danger" content="This is my **danger** type callout" %}
+<br>
 
 ### 단어 표현
 
@@ -36,7 +46,8 @@ comments: true
 <br>
 
 ℹ️ <span style="color:#247CFF"> ***NOTE***
-> 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다. <br>
+> 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 
+> 작성한다. <br>
   Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
 
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-07T21:54:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/tw-srs/" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/tw-srs</id><content type="html" xml:base="http://localhost:4000/tw-srs/">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-17T20:57:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/tw-srs/" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/tw-srs</id><content type="html" xml:base="http://localhost:4000/tw-srs/">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
 
 &lt;p&gt;요구사양서는 시스템이나 소프트웨어에서 구현되어야 할 것에 대하여 공식적인 문장으로 명세화*한 산출물로 요구사항 명세서(Requirements Specification)와 같은 의미이다.
 &lt;br /&gt; 요구사항 명세서는 일반적으로 소프트웨어 요구사항 명세서(SRS; Software Requirements  Specification Document)를 말하며 하드웨어까지 다룬다면 시스템 사양서(System Specification)가 된다.&lt;/p&gt;
@@ -546,7 +546,7 @@ Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot
 
 &lt;p&gt;Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;에 정의된 gem 리스트 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem을 사용하도록 아래와 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 수정한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;에 정의된 gem 리스트 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem을 사용하도록 아래와 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 수정한다.&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c1&quot;&gt;# gem &quot;jekyll&quot;, &quot;~&amp;gt; 3.9.0&quot; #diable jekyll&lt;/span&gt;
 
@@ -1145,6 +1145,26 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;p&gt;웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;
+    &lt;b&gt;Note:&lt;/b&gt;This is my note. All the content I type here is treated as a single paragraph.
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;&lt;/p&gt;
+&lt;div class=&quot;bs-callout bs-callout-primary&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Note&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-success&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-success&quot;&gt;&lt;i class=&quot;fa fa-check-square-o&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Tip&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type.&lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Warning&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type callout&lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type callout&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;단어-표현&quot;&gt;단어 표현&lt;/h3&gt;
 
@@ -1187,7 +1207,8 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;테이블 칸 안에서 줄바꿈을 할 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/br&amp;gt;&lt;/code&gt;을 줄바꿈할 단어 앞에 기입하여 한 줄로 작성한다. &lt;br /&gt;
+  &lt;p&gt;테이블 칸 안에서 줄바꿈을 할 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/br&amp;gt;&lt;/code&gt;을 줄바꿈할 단어 앞에 기입하여 한 줄로 
+작성한다. &lt;br /&gt;
   Ex) b를 a 다음줄에 오도록 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a &amp;lt;/br&amp;gt; b&lt;/code&gt; 를 한 칸에 한 줄로 작성한다.&lt;/p&gt;
 &lt;/blockquote&gt;
 

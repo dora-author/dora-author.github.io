@@ -198,7 +198,7 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.
 
-  **Step 2.** `Gemfile`에 정의된 gem 리스트 중 `github-pages` gem 대신 `jekyll` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
+  **Step 2.** `Gemfile`에 정의된 gem 리스트 중 `jekyll` gem 대신 `github-pages` gem을 사용하도록 아래와 같이 `Gemfile`을 수정한다.
   
   ``` ruby
     # gem "jekyll", "~> 3.9.0" #diable jekyll
