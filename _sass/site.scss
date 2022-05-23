@@ -22,8 +22,11 @@ body {
 	@media #{$small} {
 	    background-image: none !important;
 		background: $white;
+		width: 100%; //
+		max-width: 1200px; //
 	}
 }
+
 * {
 	box-sizing: border-box;
 }

@@ -8,6 +8,8 @@ body {
     border: 1px solid #eee;
     border-left-width: 5px;
     border-radius: 3px;
+    line-height: 1.5em;
+    font-size: 18px;
 }
 .bs-callout h4 {
     margin-top: 0;

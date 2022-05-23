@@ -20,8 +20,14 @@ comments: true
 웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.
 
 <br>
-{% include note.html content="This is my note. All the content I type here is treated as a single paragraph." %}
+
+***
+
+## Callout  연습
+
+{% include note.html content="This is my note. All the content I type here is treated as a single  paragraph." %}
 <br>
+
 {% include callout.html title=" **Note**" content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. " type="primary" %}
 
 {% include callout_tip.html title=" **Tip**" content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. " type="success" %} 
@@ -30,6 +36,40 @@ comments: true
 
 {% include callout.html type="danger" content="This is my **danger** type callout" %}
 <br>
+
+## 강조 블록 표기 규칙
+
+### 단락형 강조 구문 (alert외 별도로)
+
+> <div style= "background-color:#ededed; padding:10px"><span class="highlight">
+> 이건 어때요? <br>
+> 색상태그를 적용했습니다. </span></div>
+
+
+### 문장형 강조 구문
+
+`이건 어때요? 문장을 backquote로 감싼 my code입니다.`
+
+## 코드 블록
+
+```c
+  int val = 10; // ```C 적용함  
+  printf(%s,"Hello, World!"); 
+```
+
+```curl
+  $ git clone https://github.com/swagger-api/swagger-ui.git 
+```
+
+```c
+  <div style= "background-color:#444; padding:10px">
+    int val = 10; // ```C 안에 <div> 블랙 바탕 색상 태크 적용 안됨  
+    printf(%s,"Hello, World!"); 
+  </div>
+```
+
+
+***
 
 ### 단어 표현
 
@@ -56,7 +96,7 @@ comments: true
 
 ### 인용구 및 블락
 
--	인용구: 작성할 텍스트 앞에 `>`을 기입하면 해당 텍스트 전체가 회색으로 구분되는 인용구가 된다.<br>
+-	인용구: 작성할 텍스트 앞에 `>`을 기입하면 해당 텍스트가 구분되는 인용구가 된다.<br>
 
     **- How to use**
 
@@ -98,17 +138,13 @@ comments: true
     <br>
 
 ℹ️ <span style="color:#247CFF"> ***NOTE***
-> 코드 문법을 적용하기 위해 첫 줄에 `와 해당 언어 종류를 같이 기입한다.
->  
+> 코드 문법을 적용하기 위해 첫 줄에 \`\`\`와 해당 언어 종류를 같이 기입한다.<br>
 > Ex) 첫줄을 \`\`\`c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.
->
-> ```c
->
->  int val = 10; // C문법 적용함
->
->  printf(%s,"Hello, World!");
->
->  ```
+> 
+>   ```c 
+>    int val = 10; // C문법 적용함
+>    printf(%s,"Hello, World!");
+>  ```  
 
 <br>
 
@@ -242,14 +278,15 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 ### 테이블
 
 **- How to use**
-
-```
-| First Header | Second Header  |       Third Header |
-| :----------- | :------------: | -----------------: |
-| 왼쪽맞춤     |   가운데맞춤   |         오른쪽맞춤 |
-| Second row   |    **Cell**    |             *Cell* |
-| Third row    | Cell that span | across two columns |
-```
+<pre> 
+    | First Header | Second Header  |       Third Header |
+    | :----------- | :------------: | -----------------: |
+    | 왼쪽맞춤     |   가운데맞춤   |         오른쪽맞춤 |
+    | Second row   |    **Cell**    |             *Cell* |
+    | Third row    | Cell that span | across two columns |
+    
+</pre>
+  
 
 <br>
 
@@ -265,14 +302,16 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 ### 단락 구분
 
-같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 \*\*\* or --- or \_\_\_ or --- 를 사용하여 수평선을 표현
+같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 `***` or `---` or `___` or `---` 를 사용하여 수평선을 표현
 
 **- How to use**
 
-```
+<pre>
+
   ***
   이 단락의 내용을 앞 내용과 구분
-```
+
+</pre>
 
 <Br>
 
@@ -287,22 +326,20 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 **- How to use**
 
-```
-  <details markdown="1">
-  <summary>상세 내용 확인</summary>
-  div 에 markdown attribute를 1 로
-  하는 이유는 div 안에서
-  markdown 을 사용하기 위해서입니다.
-  </details>
-```
+<pre>
+  <summary\>상세 내용 확인</summary>
+    <details markdown="1"
+      div 에 markdown attribute를 1 로
+      하는 이유는 div 안에서 markdown 을 사용하기 위해서입니다.
+</pre>
 
 <br>
 
 **- How to look**
 
+<summary>상세 내용 확인</summary>
 <details markdown="1">
-  <summary>상세 내용 확인</summary>
-div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 사용하기 위해서입니다.</details>
+ <pre> div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 사용하기 위해서입니다.</pre></details>
 
 <br>
 
@@ -310,11 +347,11 @@ div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 �
 
 **- How to use**
 
-```
+<pre>
   - [x] #739
   - [ ] Add delight to the experience when all tasks are complete
   - [ ] Open a followup issue
-```
+</pre>
 
 <br>
 
@@ -325,37 +362,3 @@ div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 �
 -	[ ] Open a followup issue
 
 <br>
-
-### 컨벤션 규칙
-
-작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.
-
-**- How to use**
-
-```
-  ℹ️ <span style="color:#247CFF"> **_NOTE_**
-  > This is note content.
-
-  ⚠️ <span style="color:#FFE423"> **_Warning_**
-  > This is a warning content.
-
-  ✅ <span style="color:#2BA855"> **_Tips_**
-  > This is tips content.
-```
-
-<Br>
-
-**- How to look**
-
-ℹ️ <span style="color:#247CFF"> ***NOTE***
-> This is note content.
-
-<br>
-
-⚠️<span style="color:#FFE423"> ***Warning***
-> This is warning content.
-
-<br>
-
-✅ <span style="color:#2BA855"> ***Tips***
-> This is tips content1.

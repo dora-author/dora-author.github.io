@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-17T20:57:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/tw-srs/" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/tw-srs</id><content type="html" xml:base="http://localhost:4000/tw-srs/">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-23T20:51:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/tw-srs/" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/tw-srs</id><content type="html" xml:base="http://localhost:4000/tw-srs/">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
 
 &lt;p&gt;요구사양서는 시스템이나 소프트웨어에서 구현되어야 할 것에 대하여 공식적인 문장으로 명세화*한 산출물로 요구사항 명세서(Requirements Specification)와 같은 의미이다.
 &lt;br /&gt; 요구사항 명세서는 일반적으로 소프트웨어 요구사항 명세서(SRS; Software Requirements  Specification Document)를 말하며 하드웨어까지 다룬다면 시스템 사양서(System Specification)가 된다.&lt;/p&gt;
@@ -1122,7 +1122,14 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
   &lt;li&gt;책임감 및 성실함, 지속력&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Technical Writer" /><summary type="html">Technical Writer의 정의 및 주요 역할, 현재 그리고 향후 산업에 있어 Technical Writer로써 나아가야할 방향, 갖추어야 할 역량에 관하여</summary></entry><entry><title type="html">[TW] 마크다운 사용법</title><link href="http://localhost:4000/markdown-usage/" rel="alternate" type="text/html" title="[TW] 마크다운 사용법" /><published>2021-08-14T00:00:00+09:00</published><updated>2021-08-14T00:00:00+09:00</updated><id>http://localhost:4000/markdown-usage</id><content type="html" xml:base="http://localhost:4000/markdown-usage/">&lt;p&gt;&lt;strong&gt;&amp;lt;Table of Contents&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#markdown-사용법&quot; id=&quot;markdown-toc-markdown-사용법&quot;&gt;Markdown 사용법&lt;/a&gt;    &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#markdown-사용법&quot; id=&quot;markdown-toc-markdown-사용법&quot;&gt;Markdown 사용법&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#callout--연습&quot; id=&quot;markdown-toc-callout--연습&quot;&gt;Callout  연습&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#강조-블록-표기-규칙&quot; id=&quot;markdown-toc-강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#단락형-강조-구문-alert외-별도로&quot; id=&quot;markdown-toc-단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#문장형-강조-구문&quot; id=&quot;markdown-toc-문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#코드-블록&quot; id=&quot;markdown-toc-코드-블록&quot;&gt;코드 블록&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#인용구-및-블락&quot; id=&quot;markdown-toc-인용구-및-블락&quot;&gt;인용구 및 블락&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
@@ -1132,8 +1139,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
       &lt;li&gt;&lt;a href=&quot;#테이블&quot; id=&quot;markdown-toc-테이블&quot;&gt;테이블&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -1145,11 +1151,17 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;p&gt;웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;
-    &lt;b&gt;Note:&lt;/b&gt;This is my note. All the content I type here is treated as a single paragraph.
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;callout--연습&quot;&gt;Callout  연습&lt;/h2&gt;
+
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;
+        &lt;b&gt;Note:&lt;/b&gt;This is my note. All the content I type here is treated as a single  paragraph.&lt;/span&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
 &lt;div class=&quot;bs-callout bs-callout-primary&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Note&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
 &lt;/div&gt;
 
@@ -1165,6 +1177,37 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type callout&lt;/span&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/h2&gt;
+
+&lt;h3 id=&quot;단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;div style=&quot;background-color:#ededed; padding:10px&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;
+이건 어때요? &lt;br /&gt;
+색상태그를 적용했습니다. &lt;/span&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이건 어때요? 문장을 backquote로 감싼 my code입니다.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;코드-블록&quot;&gt;코드 블록&lt;/h2&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ```C 적용함  &lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-curl&quot;&gt;  $ git clone https://github.com/swagger-api/swagger-ui.git 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;background-color:#444; padding:10px&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ```C 안에 &amp;lt;div&amp;gt; 블랙 바탕 색상 태크 적용 안됨  &lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;단어-표현&quot;&gt;단어 표현&lt;/h3&gt;
 
@@ -1218,7 +1261,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;인용구: 작성할 텍스트 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;을 기입하면 해당 텍스트 전체가 회색으로 구분되는 인용구가 된다.&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;인용구: 작성할 텍스트 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;을 기입하면 해당 텍스트가 구분되는 인용구가 된다.&lt;br /&gt;&lt;/p&gt;
 
     &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
@@ -1270,15 +1313,11 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;코드 문법을 적용하기 위해 첫 줄에 `와 해당 언어 종류를 같이 기입한다.&lt;/p&gt;
+  &lt;p&gt;코드 문법을 적용하기 위해 첫 줄에 ```와 해당 언어 종류를 같이 기입한다.&lt;br /&gt;
+Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.&lt;/p&gt;
 
-  &lt;p&gt;Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.&lt;/p&gt;
-
-  &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
- &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// C문법 적용함&lt;/span&gt;
-
- &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
+  &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// C문법 적용함&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/blockquote&gt;
 
@@ -1460,13 +1499,14 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;h3 id=&quot;테이블&quot;&gt;테이블&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| First Header | Second Header  |       Third Header |
-| :----------- | :------------: | -----------------: |
-| 왼쪽맞춤     |   가운데맞춤   |         오른쪽맞춤 |
-| Second row   |    **Cell**    |             *Cell* |
-| Third row    | Cell that span | across two columns |
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt; 
+    | First Header | Second Header  |       Third Header |
+    | :----------- | :------------: | -----------------: |
+    | 왼쪽맞춤     |   가운데맞춤   |         오른쪽맞춤 |
+    | Second row   |    **Cell**    |             *Cell* |
+    | Third row    | Cell that span | across two columns |
+    
+&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1503,13 +1543,16 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;h3 id=&quot;단락-구분&quot;&gt;단락 구분&lt;/h3&gt;
 
-&lt;p&gt;같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 *** or — or ___ or — 를 사용하여 수평선을 표현&lt;/p&gt;
+&lt;p&gt;같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;***&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;___&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; 를 사용하여 수평선을 표현&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ***
+&lt;pre&gt;
+
+  ***
   이 단락의 내용을 앞 내용과 구분
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1524,84 +1567,45 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &amp;lt;details markdown=&quot;1&quot;&amp;gt;
-  &amp;lt;summary&amp;gt;상세 내용 확인&amp;lt;/summary&amp;gt;
-  div 에 markdown attribute를 1 로
-  하는 이유는 div 안에서
-  markdown 을 사용하기 위해서입니다.
-  &amp;lt;/details&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;
+  &amp;lt;summary\&amp;gt;상세 내용 확인&amp;lt;/summary&amp;gt;
+    &amp;lt;details markdown=&quot;1&quot;
+      div 에 markdown attribute를 1 로
+      하는 이유는 div 안에서 markdown 을 사용하기 위해서입니다.
+&lt;/pre&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
 
+&lt;summary&gt;상세 내용 확인&lt;/summary&gt;
 &lt;details&gt;
-  &lt;summary&gt;상세 내용 확인&lt;/summary&gt;
-  &lt;p&gt;div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 사용하기 위해서입니다.&amp;lt;/details&amp;gt;&lt;/p&gt;
+  &lt;pre&gt; div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 사용하기 위해서입니다.&lt;/pre&gt;
+&lt;/details&gt;
 
-  &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-  &lt;h3 id=&quot;section&quot;&gt;작업 목록&lt;/h3&gt;
+&lt;h3 id=&quot;작업-목록&quot;&gt;작업 목록&lt;/h3&gt;
 
-  &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - [x] #739
+&lt;pre&gt;
+  - [x] #739
   - [ ] Add delight to the experience when all tasks are complete
   - [ ] Open a followup issue
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/pre&gt;
 
-  &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
 
-  &lt;ul class=&quot;task-list&quot;&gt;
-    &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;#739&lt;/li&gt;
-    &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Add delight to the experience when all tasks are complete&lt;/li&gt;
-    &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Open a followup issue&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;#739&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Add delight to the experience when all tasks are complete&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Open a followup issue&lt;/li&gt;
+&lt;/ul&gt;
 
-  &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-  &lt;h3 id=&quot;section-1&quot;&gt;컨벤션 규칙&lt;/h3&gt;
-
-  &lt;p&gt;작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ℹ️ &amp;lt;span style=&quot;color:#247CFF&quot;&amp;gt; **_NOTE_**
-  &amp;gt; This is note content.
-
-  ⚠️ &amp;lt;span style=&quot;color:#FFE423&quot;&amp;gt; **_Warning_**
-  &amp;gt; This is a warning content.
-
-  ✅ &amp;lt;span style=&quot;color:#2BA855&quot;&amp;gt; **_Tips_**
-  &amp;gt; This is tips content.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-
-  &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;This is note content.&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-  &lt;p&gt;⚠️&lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;This is warning content.&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-  &lt;p&gt;✅ &lt;span style=&quot;color:#2BA855&quot;&gt; &lt;strong&gt;&lt;em&gt;Tips&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;This is tips content1.&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/details&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Markdown" /><summary type="html">마크다운 문법과 사용법에 관하여</summary></entry><entry><title type="html">Google Technical Writing Pe-Class One</title><link href="http://localhost:4000/google-tw-one-preclass/" rel="alternate" type="text/html" title="Google Technical Writing Pe-Class One" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>http://localhost:4000/google-tw-one-preclass</id><content type="html" xml:base="http://localhost:4000/google-tw-one-preclass/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Markdown" /><summary type="html">마크다운 문법과 사용법에 관하여</summary></entry><entry><title type="html">Google Technical Writing Pe-Class One</title><link href="http://localhost:4000/google-tw-one-preclass/" rel="alternate" type="text/html" title="Google Technical Writing Pe-Class One" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>http://localhost:4000/google-tw-one-preclass</id><content type="html" xml:base="http://localhost:4000/google-tw-one-preclass/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
 &lt;p&gt;Google Developers site에 &lt;a href=&quot;https://developers.google.com/tech-writing?hl=en&quot;&gt;Technical Writing Course for Engineers&lt;/a&gt; 가 개설되어 있다. 
 영문으로 기술 문서를 작성할 때 실제로 도움될만한 팁이 많아 공유하고자 한다. 
 크게 Pre-Class(이론), In-Class(실습) 두가지 세션이 있는데 &lt;a href=&quot;https://developers.google.com/tech-writing/overview?hl=en&quot;&gt;Pre-Class for Students&lt;/a&gt;의 One, Two 주요 내용을 요약했다.

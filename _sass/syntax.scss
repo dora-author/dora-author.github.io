@@ -1,18 +1,34 @@
+$white: #F9F3E4;
+$pink: #F29DAB;
+$rose: #DD899E;
+$tan: #F2CDC1;
+$taupe: #D0B2AF;
+$ornage1: #ffab91;
+$ornage2: #ffccbc;
+$ornage3: #fbe9e7; //ligter than light-pink
+$light-pink: #ffe9e0;
+$light-grey: #ededed;
+$best-pink: #e96060;
+$fale-pink: #fdf7f4;
+
+
 pre.highlight {
 	padding: 1em;
 }
 
 .highlight {
-	background-color: #49483e;
+	//background-color: #fbe9e7;//#ffe9e0;//#49483e;
 	font-family: $font2;
-	@include font-size(18);
-	color: #f8f8f2;
-	border-radius: 4px;
-	pre {
+	@include font-size(16);
+	//color: #f8f8f2;
+	border-radius: 10px;
+	pre { //code 제외,  list를 제외한 ```로 묶인 pre&코드 블록
 		position: relative;
 		margin: 0;
 		padding: 1em;
+		background-color: #383838; //#ededed; //transparent; 
 	}
+	
 	.lineno            { padding-right: 24px; color: lighten(#49483e,50);}
 	.hll               { background-color: #49483e}
 	.c                 { color: #75715e }                            /* Comment                     */

@@ -64,8 +64,26 @@ remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
 <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/assets/img/favicons/apple-icon-144x144.png">
 <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png" />
 <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" />
+
 <!-- Background Image -->
-{% if site.background %}
+
+<style type="text/css">
+    /*body {
+		background-color: #e78e52;
+		background-image: url(butterfly.ico);
+	}*/
+    body {
+        background-image:
+            /*linear-gradient(rgb(89, 28, 255), rgb(255, 255, 255));*/
+            /*linear-gradient(#F29DAB, #DD899E, #F2CDC1);*/
+            /*linear-gradient(#ff8a65, #ffab91, #fbe9e7);*/
+            /*linear-gradient(217deg, rgba(#F29DAB, .9), rgba(#F29DAB, 0) 50%),
+        linear-gradient(107deg, rgba(#DD899E, .9), rgba(#DD899E, 0) 70%),
+        linear-gradient(336deg, rgba(#F2CDC1, .9), rgba(#F2CDC1, 0) 60%);*/
+    }
+</style>
+
+<!--{% if site.background %}
 {% capture background %}{{ site.background }}{% endcapture %}
 {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/{{
 background }}{% endcapture %}{% endunless %}
@@ -86,6 +104,7 @@ background }}{% endcapture %}{% endunless %}
     }
 </style>
 {% endif %}
+-->
 <!-- Post Feature Image -->
 {% if page.feature %}
 {% capture feature %}{{ page.feature }}{% endcapture %}

@@ -96,7 +96,7 @@
 		}
 		&.dl-back > a {
 			padding-left: 30px;
-			background: rgba(0,0,0,0.2);
+			background: #e96060;//rgba(0,0,0,0.2);
 		}
 		&.dl-back:after,
 		> a:not(:only-child):after {
@@ -316,7 +316,7 @@ All this is done for any sub-level being entered.
 }
 /* No Touch Fallback */
 .no-touchevents .dl-menuwrapper li a:hover {
-	background: rgba(255,248,213,0.1);
+	background: #e96060;//rgba(255,248,213,0.1);
 }
 /* No JS Fallback */
 .no-js {
@@ -344,7 +344,7 @@ All this is done for any sub-level being entered.
 		display: none;
 	}
 	.dl-menuwrapper li > a:not(:only-child) {
-		background: rgba(0,0,0,0.1);
+		background: #ff8a65//rgba(0,0,0,0.1);
 	}
 	.dl-menuwrapper li > a:not(:only-child):after {
 		content: '';

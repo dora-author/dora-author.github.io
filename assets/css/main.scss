@@ -13,6 +13,53 @@ sitemap: false
 
 // Partials
 
+$white: #F9F3E4;
+$pink: #F29DAB;
+$rose: #DD899E;
+$tan: #F2CDC1;
+$taupe: #D0B2AF;
+$ornage1: #ffab91;
+$ornage2: #ffccbc;
+$ornage3: #fbe9e7;
+
+
+$font: 'Questrial', sans-serif;
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background:
+    linear-gradient(217deg, rgba($ornage1, .9), rgba($ornage1,0) 50%),
+    linear-gradient(107deg, rgba($ornage2,.9), rgba($ornage2,0) 70%),
+    linear-gradient(336deg, rgba($ornage3,.9), rgba($ornage3,0) 60%);
+}
+
+.box {
+  width: 800px;  
+  margin: 10% auto;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #EA7996;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+      color: #7d7d7d;
+    }
+  }
+}
+
+
 @import "variables";
 @import "mixins";
 @import "normalize";
