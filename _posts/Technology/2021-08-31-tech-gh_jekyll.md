@@ -106,8 +106,10 @@ GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지�
   **Step2.** [Bundler](https://bundler.io/) 설치
     <br> CMD window 혹은 `Git Bash`에서 아래와 같이 실행
 
-  ```bash 
-        $ gem install bundler
+  ``` Bash 
+    
+    $ gem install bundler
+ 
   ```
 <Br>
 
@@ -183,9 +185,12 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   **Step 1.** CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
   <br>
-  ``` bash
+  ``` Bash
+    
     $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
+  
   ```
+
   Ex) `$ bundle exec jekyll _3.3.0_ new NEW-JEKYLL-SITE-REPOSITORY-NAME`
       
   위 명령어 대신 `Gemfile`내 정의된 `gem "jekyll", "~> {버전명}"`를 주석 처리 후 `bundle exec jekyll new .`를 실행하거나 `bundle exec jekyll new {my-project}`를 실행한다.
@@ -225,8 +230,9 @@ Gems 정보는 [Gemfile](https://jekyllrb.com/docs/ruby-101/#gemfile)에 Jekyll 
 
   **Step 1.** CMD window 혹은 `Git Bash`에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다. 
   <Br>
-   ```
-         $ bundle exec jekyll serve
+   ``` Bash
+    
+    $ bundle exec jekyll serve
 
   ```
 

@@ -19,7 +19,7 @@ bio: 'For Technical Writing and Knowledge Base'
 description: "It is clear, concise, and beautiful"
 reading_time: true
 words_per_minute: 200
-logo: 'assets/img/tw.png'
+logo: 'assets/img/dora3.png'
 background: 'assets/img/placeholder-big.jpg'
 tiled_bg: false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale: en_US

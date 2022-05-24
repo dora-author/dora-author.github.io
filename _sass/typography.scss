@@ -1,6 +1,7 @@
 // content area
 .content {
-	@include font-size(18); //edit
+	@include font-size(16); //edit
+	font-family: $font1; //edit
 	padding: 0 2rem;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased !important;
@@ -133,8 +134,10 @@ code {
  font-family: $font2;
 	@include font(16);
 	overflow-x: auto;
+	font-weight: 200;
 	border-radius: 10px; //add 220523
 }
+
 pre {
 	font-family: $font2;
 	@include font(16);

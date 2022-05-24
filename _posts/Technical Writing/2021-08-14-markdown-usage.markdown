@@ -85,7 +85,7 @@ comments: true
 
 <br>
 
-ℹ️ <span style="color:#247CFF"> ***NOTE***
+> ℹ️ <span style="color:#247CFF"> ***NOTE*** </span> <br>
 > 테이블 칸 안에서 줄바꿈을 할 경우, `</br>`을 줄바꿈할 단어 앞에 기입하여 한 줄로 
 > 작성한다. <br>
   Ex) b를 a 다음줄에 오도록 하려면 `a </br> b` 를 한 칸에 한 줄로 작성한다.
@@ -110,7 +110,7 @@ comments: true
 
 <br>
 
-ℹ️ <span style="color:#247CFF"> ***NOTE***
+> ℹ️ <span style="color:#247CFF"> ***NOTE*** </span> <br>
 > `>` 다음줄에 `>>`, 그 다음 줄에 `>>>`를 기입하면 여러 계층의 인용구로 작성할 수 있다.
 
 <br>
@@ -137,7 +137,7 @@ comments: true
 
     <br>
 
-ℹ️ <span style="color:#247CFF"> ***NOTE***
+> ℹ️ <span style="color:#247CFF"> ***NOTE*** </span> <br>
 > 코드 문법을 적용하기 위해 첫 줄에 \`\`\`와 해당 언어 종류를 같이 기입한다.<br>
 > Ex) 첫줄을 \`\`\`c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.
 > 
@@ -362,3 +362,13 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 -	[ ] Open a followup issue
 
 <br>
+
+### 컨벤션 규칙
+작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.
+
+**- How to use**
+
+<pre>
+  > ℹ️ `<span style="color:#247CFF">` ***NOTE*** `</span>`
+  > This is note content.
+</pre>

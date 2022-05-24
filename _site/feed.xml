@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-23T20:51:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/tw-srs/" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/tw-srs</id><content type="html" xml:base="http://localhost:4000/tw-srs/">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-24T19:38:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/tw-srs/" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/tw-srs</id><content type="html" xml:base="http://localhost:4000/tw-srs/">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
 
 &lt;p&gt;요구사양서는 시스템이나 소프트웨어에서 구현되어야 할 것에 대하여 공식적인 문장으로 명세화*한 산출물로 요구사항 명세서(Requirements Specification)와 같은 의미이다.
 &lt;br /&gt; 요구사항 명세서는 일반적으로 소프트웨어 요구사항 명세서(SRS; Software Requirements  Specification Document)를 말하며 하드웨어까지 다룬다면 시스템 사양서(System Specification)가 된다.&lt;/p&gt;
@@ -439,8 +439,10 @@ Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용�
 &lt;p&gt;&lt;strong&gt;Step2.&lt;/strong&gt; &lt;a href=&quot;https://bundler.io/&quot;&gt;Bundler&lt;/a&gt; 설치
     &lt;br /&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 아래와 같이 실행&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
+    $ gem install bundler
+ 
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2-gemfile을-통한-jekyll-및-plugin-설치&quot;&gt;2. Gemfile을 통한 Jekyll 및 Plugin 설치&lt;/h3&gt;
@@ -530,8 +532,11 @@ Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
   &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll _&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;jekyll버전명&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;_ new &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;repo명&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
+    $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
+  
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ bundle exec jekyll _3.3.0_ new NEW-JEKYLL-SITE-REPOSITORY-NAME&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;위 명령어 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;내 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;jekyll&quot;, &quot;~&amp;gt; {버전명}&quot;&lt;/code&gt;를 주석 처리 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll new .&lt;/code&gt;를 실행하거나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll new {my-project}&lt;/code&gt;를 실행한다.&lt;/p&gt;
@@ -573,9 +578,10 @@ Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
   &lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         $ bundle exec jekyll serve
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
+    $ bundle exec jekyll serve
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
@@ -1140,6 +1146,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
       &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#컨벤션-규칙&quot; id=&quot;markdown-toc-컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -1248,9 +1255,9 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;테이블 칸 안에서 줄바꿈을 할 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/br&amp;gt;&lt;/code&gt;을 줄바꿈할 단어 앞에 기입하여 한 줄로 
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+테이블 칸 안에서 줄바꿈을 할 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/br&amp;gt;&lt;/code&gt;을 줄바꿈할 단어 앞에 기입하여 한 줄로 
 작성한다. &lt;br /&gt;
   Ex) b를 a 다음줄에 오도록 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a &amp;lt;/br&amp;gt; b&lt;/code&gt; 를 한 칸에 한 줄로 작성한다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1279,9 +1286,9 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; 다음줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;, 그 다음 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;를 기입하면 여러 계층의 인용구로 작성할 수 있다.&lt;/p&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; 다음줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;, 그 다음 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;를 기입하면 여러 계층의 인용구로 작성할 수 있다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1311,9 +1318,9 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;코드 문법을 적용하기 위해 첫 줄에 ```와 해당 언어 종류를 같이 기입한다.&lt;br /&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+코드 문법을 적용하기 위해 첫 줄에 ```와 해당 언어 종류를 같이 기입한다.&lt;br /&gt;
 Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.&lt;/p&gt;
 
   &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// C문법 적용함&lt;/span&gt;
@@ -1605,7 +1612,17 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Open a followup issue&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Markdown" /><summary type="html">마크다운 문법과 사용법에 관하여</summary></entry><entry><title type="html">Google Technical Writing Pe-Class One</title><link href="http://localhost:4000/google-tw-one-preclass/" rel="alternate" type="text/html" title="Google Technical Writing Pe-Class One" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>http://localhost:4000/google-tw-one-preclass</id><content type="html" xml:base="http://localhost:4000/google-tw-one-preclass/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/h3&gt;
+&lt;p&gt;작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+  &amp;gt; ℹ️ `&lt;span style=&quot;color:#247CFF&quot;&gt;` ***NOTE*** `&lt;/span&gt;`
+  &amp;gt; This is note content.
+&lt;/pre&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Markdown" /><summary type="html">마크다운 문법과 사용법에 관하여</summary></entry><entry><title type="html">Google Technical Writing Pe-Class One</title><link href="http://localhost:4000/google-tw-one-preclass/" rel="alternate" type="text/html" title="Google Technical Writing Pe-Class One" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>http://localhost:4000/google-tw-one-preclass</id><content type="html" xml:base="http://localhost:4000/google-tw-one-preclass/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
 &lt;p&gt;Google Developers site에 &lt;a href=&quot;https://developers.google.com/tech-writing?hl=en&quot;&gt;Technical Writing Course for Engineers&lt;/a&gt; 가 개설되어 있다. 
 영문으로 기술 문서를 작성할 때 실제로 도움될만한 팁이 많아 공유하고자 한다. 
 크게 Pre-Class(이론), In-Class(실습) 두가지 세션이 있는데 &lt;a href=&quot;https://developers.google.com/tech-writing/overview?hl=en&quot;&gt;Pre-Class for Students&lt;/a&gt;의 One, Two 주요 내용을 요약했다.
