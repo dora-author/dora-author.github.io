@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Dora's Technical Writing
-email: zadora1004@naver.com
+email: dora-author10044@gmail.com
 bio: 'For Technical Writing and Knowledge Base'
 description: "It is clear, concise, and beautiful"
 reading_time: true
@@ -25,8 +25,9 @@ tiled_bg: false   # Set this true if you want to tile your background image, oth
 locale: en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: https://dora-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: https:/dora-author.me
 # twitter_username: jekyllrb
-permalink: /:title/
+permalink: /:categories/:title/
 markdown: kramdown
 highlighter: rouge
 kramdown:
