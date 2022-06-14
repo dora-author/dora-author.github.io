@@ -25,7 +25,7 @@ tiled_bg: false   # Set this true if you want to tile your background image, oth
 locale: en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: https://dora-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
-url: https:/dora-author.me
+# url: https:/dora-author.me
 # twitter_username: jekyllrb
 permalink: /:categories/:title/
 markdown: kramdown
