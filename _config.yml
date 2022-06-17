@@ -15,19 +15,19 @@
 # in the templates via {{ site.myvariable }}.
 title: Dora's Technical Writing
 email: dora-author10044@gmail.com
-bio: 'For Technical Writing and Knowledge Base'
+bio: "For Technical Writing and Knowledge Base"
 description: "It is clear, concise, and beautiful"
 reading_time: true
 words_per_minute: 200
-logo: 'assets/img/dora1.png'
-background: 'assets/img/placeholder-big.jpg'
-tiled_bg: false   # Set this true if you want to tile your background image, otherwise it will be covered
+logo: "assets/img/dora1.png"
+background: "assets/img/placeholder-big.jpg"
+tiled_bg: false # Set this true if you want to tile your background image, otherwise it will be covered
 locale: en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: https://dora-author.github.io # the base hostname & protocol for your site, e.g. http://example.com
 # url: https:/dora-author.me
 # twitter_username: jekyllrb
-permalink: /:categories/:title/
+permalink: /:categories/:title
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -45,13 +45,12 @@ sass:
 disqus_shortname: dora-author-github-io
 #disqus_shortname: 'Dora's Technical Writing'
 
-
 # github_username:    dora-author
 
 # Build settings
 # lsi: false
 # safe: true
-# source: 
+# source:
 # incremental: false
 # gist:
 # noscript: false
@@ -72,8 +71,7 @@ plugins:
   - jekyll-toc #210910
 
 jekyll-mentions:
-    base_url: https://github.com
-
+  base_url: https://github.com
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

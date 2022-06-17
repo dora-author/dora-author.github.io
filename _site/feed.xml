@@ -1,1158 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-14T13:13:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/technical%20writing/tw-srs/" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-srs</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-srs/">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-17T20:09:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Network] 커스텀 도메인 적용기</title><link href="http://localhost:4000/tech%20journey/network-customdomain" rel="alternate" type="text/html" title="[Network] 커스텀 도메인 적용기" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/network-customdomain</id><content type="html" xml:base="http://localhost:4000/tech%20journey/network-customdomain">&lt;h2 style=&quot;color: #308cbc&quot;&gt;  | 기술 용어 |  &lt;/h2&gt;
 
-&lt;p&gt;요구사양서는 시스템이나 소프트웨어에서 구현되어야 할 것에 대하여 공식적인 문장으로 명세화*한 산출물로 요구사항 명세서(Requirements Specification)와 같은 의미이다.
-&lt;br /&gt; 요구사항 명세서는 일반적으로 소프트웨어 요구사항 명세서(SRS; Software Requirements  Specification Document)를 말하며 하드웨어까지 다룬다면 시스템 사양서(System Specification)가 된다.&lt;/p&gt;
-
-&lt;p&gt;※ 명세화: 체계적으로 검토, 평가, 승인될 수 있는 문서를 작성하는 것&lt;/p&gt;
-
-&lt;p&gt;요구사양서 분석을 하려면 기본적인 시스템을 이해해야 한다.
-&lt;br /&gt; 시스템 구성 및 내부 구조, 동작, 기능, 기술 용어 등은 미리 숙지해야 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;국제-표준-및-구성-요소&quot;&gt;국제 표준 및 구성 요소&lt;/h2&gt;
-
-&lt;p&gt;요구사항 명세서는 기본적으로 국제 표준(IEEE Std. 830-1998) 양식에 따라 구성된다.&lt;/p&gt;
-
-&lt;h3 id=&quot;국제-표준ieee-std-830-1998&quot;&gt;국제 표준(IEEE Std. 830-1998)&lt;/h3&gt;
-
-&lt;p&gt;소프트웨어 요구사항 명세서의 표준 양식을 제시&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_01.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Introduction: 문서의 목적와 범위, 용어(두문자어, 약어) 정의, 참고&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Overall Description: 제품 관점에서의 소프트웨어 동작 및 기능, 사용자의 일반적인 특정(경험 및 지식), 소프트웨어 제약사항과 가정 및 의존성 -&amp;gt; ‘3. Specific requirement’의 이해를 돕기 위한 배경 및 요구사항에 대한 전잔적인 내용 기술&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Specific Requirement: 소프트웨어의 모든 세부적인 요구사항을 명확하게 기술, 명시되어야 할 주요 요구사항은 다음과 같다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;기능 요구사항: 소프트웨어의 입력 및 출력 처리 과정에서 발생할 수 있는 기본적인 동작에 대하여 기술, 
-  &lt;br /&gt; 다음과 같은 항목들이 포함된다.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_02.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;외부 인터페이스 요구 사항: 모든 소프트웨어 시스템으로의 입력과 출력에 대한 요구사항 기술
-  &lt;br /&gt; 하드웨어, 소프트웨어, 통신 인터페이스 등으로 분류되며 다음의 내용이 포함된다.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_03.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;성능 요구사항: 소프트웨어 전체적으로 사람과의 상호작용 혹은 소프트웨어에서 확인할 수 있는 수치적 요구사항 기술&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_04.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;논리적 데이터베이스 요구사항: 데이터베이스(DB)에서 사용될 정보를 위한 논리적 요구사항 기술&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_05.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;설계 제약사항: 다른 표준이나 제한으로 인해 적용되는 설계적 제약사항&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;소프트웨어 시스템 속성: 신뢰도, 사용가능성, 보안, 유지보수, 이식성 등의 속성을 기술&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;‘3. Specific Requirement’ 작성에는 정해진 양식이 없으며 위 명시된 사항들이 요구사항으로 기술되면 어떠한 구성으로 표현되어도 무방하다.&lt;/p&gt;
+&lt;div&gt;
+ &lt;table class=&quot;&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th width=&quot;200&quot;&gt;용어&lt;/th&gt;
+          &lt;th&gt;설명&lt;/th&gt;
+          &lt;th width=&quot;150&quot;&gt;연관 콘텐츠&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;th&gt;도메인(Domain)&lt;/th&gt;
+          &lt;td&gt;인터넷에서 특정 사이트를 찾아가기 위한 의미있는 문자열로 구성된 주소. 숫자로 구성된 IP 주소 대신하여 사람이 인식하고 기억하기 쉬워 도메인 주소를 이용함.&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;#링크&quot;&gt;Label&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;TLD (Top-Level Domain)&lt;/th&gt;
+          &lt;td&gt;도메인 계층 정보 중 루트 다음의 최상위 도메인으로 IANA(Internet Assigned Numbers Authority)에서 정의한 6가지 유형이 있다.&lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;TLD (Top-Level Domain)&lt;/th&gt;
+          &lt;td&gt;도메인 계층 정보 중 루트 다음의 최상위 도메인으로 IANA(Internet Assigned Numbers Authority)에서 정의한 6가지 유형이 있다.&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+ &lt;/table&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;요구사항-명세서-구성-요소&quot;&gt;요구사항 명세서 구성 요소&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;서문: 대상 독자, 버전 이력, 동기 등을 요약&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;개요: 기능 및 다른 시스템과의 연계 방법 등을 설명&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;용어: 문서에 사용되는 기술 용어집&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;사용자 요구사항 정의: 제공되는 서비스 및 비기능적 요구사항 기술&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;시스템 아키텍처: 기능의 분포를 보여주는 시스템 구조에 대한 개괄적 표현&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;시스템 사용자 명세: 기능적, 비기능적 요구사항을 상세하게 기술&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;시스템 모델: 시스템 컴포넌트와 환경 간의 관계를 나타내는 하나 또는 그 이상의 시스템 모델 기술&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;부록&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;색인&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;요구사양서-평가하기&quot;&gt;요구사양서 평가하기&lt;/h2&gt;
-
-&lt;p&gt;요구사항 명세서를 평가하기 위한 절대적인 기준은 존재하지 않는다. 하지만 소프트웨어 검증 및 확인 절차에 대한 표준인 IEEE Std. 1012에서 제시하는 요구사항 평가 항목 및 IEEE Std. 830에서 제시하는 명세서의 원리을 근거로 평가 기준이 될 수 있는 항목이 존재한다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;IEEE Std. 1012 명세서 체크 항목&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;정확성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;일관성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;완전성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;판독성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;시험성&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_06.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;IEEE Std. 830 요구사항 원리&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;정확성(무결성) 및 완벽성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;명확성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;일관성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;기능성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;중요도/안정 우선순위&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;검증 가능성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;수정 가능성&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;추적성&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_07.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;요구사항 명세서가 피해야 할 것&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;모호성을 피하라&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;다중 요구사항을 만들지 말라&lt;/li&gt;
-      &lt;li&gt;회피용 문구를 만들지 말라&lt;/li&gt;
-      &lt;li&gt;문장을 너무 길게 쓰지 말라&lt;/li&gt;
-      &lt;li&gt;시스템을 설계 하지 말라&lt;/li&gt;
-      &lt;li&gt;요구사항을 뒤섞고 설계하지 말라&lt;/li&gt;
-      &lt;li&gt;요구사항과 계획을 뒤섞지 말라&lt;/li&gt;
-      &lt;li&gt;추측하는 문장을 포함하지 않도록 하라&lt;/li&gt;
-      &lt;li&gt;분명치 않은 요구사항에 매달리지 말라&lt;/li&gt;
-      &lt;li&gt;막연한, 정의되지 않은 용어를 사용하지 말라&lt;/li&gt;
-      &lt;li&gt;가능성을 표현하지 말라&lt;/li&gt;
-      &lt;li&gt;희망사항을 작성하지 말라&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;유즈케이스란&quot;&gt;유즈케이스란&lt;/h2&gt;
-
-&lt;p&gt;사양서에 말하는 유즈케이스란 ‘동작 시나리오’를 말한다. 
-(유즈케이스는 주로 소프트웨어 요구사항에 들어감)
-&lt;br /&gt; 요구 사양서 목차 중 ‘기능 요구사항’ 항목에서 기술하며 시스템 기능이 바뀔 때 사양서 내용 중 가장 많이 바뀌게 되는 부분이다.&lt;/p&gt;
-
-&lt;p&gt;기능 요구 사항은 기능을 개발하기 위한 동작 이외 상세 요구 사항으로 사양서의 메인이자 핵심이다. 또한 ‘동작 시나리오’에서는 케이스와 예외 사항을 찾는 것이 가장 중요하다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;요구-사양서-실무&quot;&gt;요구 사양서 실무&lt;/h2&gt;
-
-&lt;p&gt;실무에서 요구 사양서에 유즈케이스를 적용하는데 있어 주요 검토 사항, 템플릿 등에 대하여 정리한 내용이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;유즈케이스-주요-검토-사항&quot;&gt;유즈케이스 주요 검토 사항&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;스텝마다 주어, 동사, 목적어를 명확하게 작성&lt;/li&gt;
-  &lt;li&gt;케이스 상의 동작 순서가 정확한지 확인&lt;/li&gt;
-  &lt;li&gt;스텝마다 예외사항 적었는지 확인 (예외 항은 각 스텝마다 있어야 함) 
-&lt;br /&gt; e.g. 에러가 나서 요청을 못할 경우&lt;/li&gt;
-  &lt;li&gt;케이스 상의 주어와 주어가 1:1 매칭되어야 함
-    &lt;ul&gt;
-      &lt;li&gt;사용자가 액터일때 시스템이 여러 개일 경우, 시스템을 합쳐서 하나의 시나리오로 만들거나, 어쩔 수 없으면 단계를 여러 개 두어 표시&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;단계 별 예외사항은 무엇이고 어떻게 처리하는지 표시
-&lt;br /&gt; e.g. 수신만 하고 성공은 안한 상황일 때&lt;/li&gt;
-  &lt;li&gt;그림과 글의 일치화 (그림만 있으면 관련 내용은 필요 없다는 편견 버리기), 그림 대한 글은 그림 위에서 상세화&lt;/li&gt;
-  &lt;li&gt;그림은 빼는게 나을 수도 있음(변경 관리상)&lt;/li&gt;
-  &lt;li&gt;용어의 일치&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;유즈케이스-템플릿화&quot;&gt;유즈케이스 템플릿화&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;화면 단위가 아닌 기능 단위로 작성&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;전제 조건, 동작 방법 이해&lt;/li&gt;
-  &lt;li&gt;한스텝에는 한 동작&lt;/li&gt;
-  &lt;li&gt;시나리오 작성 시 방법 여러 가지면 케이스로 나누기&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;동작 시나리오는 마지막 사용성 테스트를 위한 테스트 케이스 만들때 필요한 정보 
-&lt;br /&gt; (각 상황별 케이스별로 테스트해야 하므로 어떤 동작이 일어나는지, 누가 하는지, 어디로 하는지, 요청은 하는지, 전달은 하는지 테스트) 
-&lt;br /&gt; –&amp;gt; 주로 유즈케이스는 시스템보단 소프트웨어 요구사항 작성에 적용
-E.g. 카테고리 변경 시 날씨 어떻게 업데이트 하는지에 대한 동작 시나리오&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;POI(Point of Interest): 중요한 정보들 카테고리화&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;공통-적용-및-예외-사항&quot;&gt;공통 적용 및 예외 사항&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;공통 적용 사항: 모든 동작 시나리오에 적용된 경우(앤드 조건) &lt;br /&gt; * 공통 적용 사항이 아닌 경우, 특정 시나리에만 종속된 경우 상세 요구사항으로 별도 표시&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;상세 요구 사항은 많이 변경 안함, 서술어를 맞추거나, 비문을 개선하는 정도&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;공통 예외 사항: 모든 시나리오에 대해 다 실패하는 경우&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;공통 전제 조건,  e.g. 공통 적용되는 전원 조건&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;관련-업무-팁&quot;&gt;관련 업무 팁&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;독자는 주로 요구 사양서를 보고 개발하는 개발자/엔지니어&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;요구 사양서 작성의 목적: 개발을 위해 작성하나, 일정 상 개발 단계까지 작성이 안될 경우 일단 구두 등으로 변경 사항, 기능 추가 요구를 하고 개발 완료 후 결과 기준으로 사양서를 작성&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br /&gt;–&amp;gt; 요구 사양서를 남기는 이유는 이대로 개발해왔다는 증거와 개발 요구사항으로 요청했다는 증거가 됨, 책임 소재를 따지기 위한 문서이기도 하다&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SRS에는 요구 사항(고객과의 협의 사항)만 작성, 코드 관련 내용 없음&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="국제 표준" /><category term="UseCase" /><category term="SRS" /><summary type="html">요구사양서 국제 표준 및 유즈케이스(UseCase) 적용에 관하여</summary></entry><entry><title type="html">[Tech] UML과 다이어그램</title><link href="http://localhost:4000/tech%20journey/tech-uml/" rel="alternate" type="text/html" title="[Tech] UML과 다이어그램" /><published>2021-09-10T00:00:00+09:00</published><updated>2021-09-10T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/tech-uml</id><content type="html" xml:base="http://localhost:4000/tech%20journey/tech-uml/">&lt;h2 id=&quot;uml이란&quot;&gt;UML이란&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;UML&lt;/strong&gt;(Unified Modeling Language)은 시스템을 모델로 표현해주는 대표적인 모델링 언어이다.
-&lt;br /&gt;UML의 여러가지 그래픽 요소는 하나의 큰 그림, 즉 다이어그램을 그리는데 사용된다. UML은 언어이기 때문에, 이들 그래픽 요소들을 맞추는 데에는 규칙이 필요하다.
-&lt;br /&gt; 
-다이어그램의 목적은 시스템을 여러가지 시각에서 볼 수 있는 뷰(View)를 제공하는 것이며, 이러한 뷰의 집합을 모델(Model)이라고 한다.
-&lt;br /&gt; UML 모델은 시스템 자체의 “목적 행동”을 설명하는 언어이며, 시스템의 “구현 방법을 설명하는 수단”이 아니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;uml-다이어그램&quot;&gt;UML 다이어그램&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;UML 다이어그램&lt;/strong&gt;은 UML을 사용하여 시스템 상호작용, 업무흐름, 시스템 구조, 컴포넌트 관계 등 사물과 관계를 도형으로 표현한 도면이다.
-&lt;br /&gt; UML 다이어그램은 프로그래밍을 단순화하여 표현하므로 의사소통에 편하며 프로젝트 구조의 로드맵을 만들거나 시스템 구축에 기본을 마련한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;다이어그램-종류&quot;&gt;다이어그램 종류&lt;/h3&gt;
-&lt;p&gt;UML 다이어그램의 종류는 다음과 같다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;em&gt;다이어그램 종류&lt;/em&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;em&gt;설명&lt;/em&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;UseCase&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;요구 분석 과정에서 시스템과 외부와의 상호작용을 묘사함&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Activity&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;업무의 흐름을 모델링하거나 객체의 생명주기를 표현함&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Sequence&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;객체 간의 메시지 전달을 시간적 흐름에서 분석함&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Collaboration&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;객체와 객체가 주고받는 메시지 중심으로 작성함&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Class&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;시스템의 구조적인 모습을 그림&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Component&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;소프트웨어의 구조를 그림&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Deployment&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;기업 환경의 구성과 컴포넌트들 간의 관계를 그림&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://sfeg.tistory.com/339&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;actor와-usecase&quot;&gt;Actor와 UseCase&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Actor는 일반적으로 시스템 외부에 존재하면서 시스템과 상호작용하는 개체이다. 액터는 사람이거나 기계 혹은 소프트웨어 등이 될 수 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;UseCase는 시스템의 행위(behavior)를 정의하기 위해 사용하는 요소이다. 
- &lt;br /&gt; 일반적으로 UseCase는 Actor와 상호작용하므로 UseCase는 말그대로 시스템과 사용자가 상호작용을 하는 하나의 경우라고 볼 수 있다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;UseCase가 주로 적용된 문서로 요구사양서가 있으며 관련하여 &lt;a href=&quot;/technical%20writing/tw-srs/&quot;&gt;[TW] 사양서와 유즈케이스&lt;/a&gt;에서 자세히 다루겠다.&lt;/p&gt;</content><author><name></name></author><category term="Tech Journey" /><category term="UML" /><category term="UseCase" /><category term="SRS" /><summary type="html">TW 산출물 중 요구사양서(SRS)에 쓰이는 유즈케이스(UseCase)에 관한 배경 지식</summary></entry><entry><title type="html">[Tech] Jekyll을 사용한 나만의 Github Pages 만들기</title><link href="http://localhost:4000/docs%20as%20code/tech-gh_jekyll/" rel="alternate" type="text/html" title="[Tech] Jekyll을 사용한 나만의 Github Pages 만들기" /><published>2021-08-31T00:00:00+09:00</published><updated>2021-08-31T00:00:00+09:00</updated><id>http://localhost:4000/docs%20as%20code/tech-gh_jekyll</id><content type="html" xml:base="http://localhost:4000/docs%20as%20code/tech-gh_jekyll/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#intro---나의-블로그는-어떻게-만들어졌을까&quot; id=&quot;markdown-toc-intro---나의-블로그는-어떻게-만들어졌을까&quot;&gt;Intro - 나의 블로그는 어떻게 만들어졌을까&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#github-pages에-관하여&quot; id=&quot;markdown-toc-github-pages에-관하여&quot;&gt;GitHub Pages에 관하여&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#호스팅&quot; id=&quot;markdown-toc-호스팅&quot;&gt;호스팅&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#빌드-및-게시&quot; id=&quot;markdown-toc-빌드-및-게시&quot;&gt;빌드 및 게시&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#jekyll에-관하여&quot; id=&quot;markdown-toc-jekyll에-관하여&quot;&gt;Jekyll에 관하여&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#jekyll-theme&quot; id=&quot;markdown-toc-jekyll-theme&quot;&gt;Jekyll Theme&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot; id=&quot;markdown-toc-실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;실습 Tutorial - 설치부터 사이트 게시까지 &lt;br /&gt; (feat. GitHub Doc’s Setting up your GitHub Pages site locally with Jekyll)&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#사전-조건prequisite&quot; id=&quot;markdown-toc-사전-조건prequisite&quot;&gt;사전 조건(Prequisite)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#1-필요-환경-설치&quot; id=&quot;markdown-toc-1-필요-환경-설치&quot;&gt;1. 필요 환경 설치&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#2-gemfile을-통한-jekyll-및-plugin-설치&quot; id=&quot;markdown-toc-2-gemfile을-통한-jekyll-및-plugin-설치&quot;&gt;2. Gemfile을 통한 Jekyll 및 Plugin 설치&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#3-사이트-콘텐츠-커스터마이징&quot; id=&quot;markdown-toc-3-사이트-콘텐츠-커스터마이징&quot;&gt;3. 사이트 콘텐츠 커스터마이징&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#4-jekyll-site-파일-생성하기&quot; id=&quot;markdown-toc-4-jekyll-site-파일-생성하기&quot;&gt;4. Jekyll Site 파일 생성하기&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#5-jekyll-site-빌드-및-테스트하기&quot; id=&quot;markdown-toc-5-jekyll-site-빌드-및-테스트하기&quot;&gt;5. Jekyll Site 빌드 및 테스트하기&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;intro---나의-블로그는-어떻게-만들어졌을까&quot;&gt;Intro - 나의 블로그는 어떻게 만들어졌을까&lt;/h2&gt;
-
-&lt;p&gt;현재 나의 블로그는 &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;에서 제공하는 웹사이트 호스팅 서비스인 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;과 정적 사이트 생성기인 &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;을 통하여 만들어졌다.
-&lt;br /&gt; &lt;strong&gt;GitHub Pages&lt;/strong&gt;가 사이트를 개설하기 위한 도메인과 퍼블리셔 기능을 제공한다면, &lt;strong&gt;Jekyll&lt;/strong&gt;은 이 블로그 전체 UI, 디자인 등을 포괄하는 사이트 생성 기능을 제공한다.
-&lt;br /&gt; 책이 웹사이트라면 그 책을 작성하는 작가를 &lt;strong&gt;Jekyll&lt;/strong&gt;, 그 책을 출판하는 출판사를 &lt;strong&gt;GitHub Pages&lt;/strong&gt;로 비유하고 싶다.
-&lt;br /&gt; 단, 이를 가능하게 하는 사전 조건은 사용자 계정의 GitHub에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; 이름의 repository가 존재해야 하며, 이 repository에 사이트 생성에 필요한 ‘HTML’, ‘CSS’, ‘JavaScript’, ‘Markdown’ 형태의 정적 파일들이 업로드(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;)되어야 한다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;github-pages에-관하여&quot;&gt;GitHub Pages에 관하여&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;는 GitHub의 repository에 있는 HTML, CSS 및 JavaScript 등의 정적 사이트 파일들을 빌드 프로세스를 통해 실행하고, 해당 사이트를 게시하는 static site 호스팅 서비스이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;호스팅&quot;&gt;호스팅&lt;/h3&gt;
-
-&lt;p&gt;사용자는 GitHub에서 제공하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt; 도메인에 웹사이트를 호스팅하거나 혹은 사용자 자체 커스텀 도메인에서 사이트를 호스팅할 수 있다. 이에 대한 자세한 방법은 GitHub Docs에서 제공하는 &lt;a href=&quot;https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages&quot;&gt;Using a custom domain with GitHub Pages&lt;/a&gt;을 참고한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;빌드-및-게시&quot;&gt;빌드 및 게시&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;는 사용자 GitHub repository의 사이트 파일들을 정적 사이트로 자동 게시한다. 
-&lt;br /&gt; 사용자는 자체적으로 사이트용 static 파일들을 생성하거나 내부적인 빌드 프로세스를 활용해도 된다. 혹은 사용자 사이트를 빌드하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;static site generator&lt;/code&gt;를 사용할 수 있다.
-&lt;br /&gt; &lt;strong&gt;GitHub Pages&lt;/strong&gt;는 사이트를 생성하고 빌드하기 위하여 기본적으로 &lt;strong&gt;Jekyll&lt;/strong&gt;을 사용한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;jekyll에-관하여&quot;&gt;Jekyll에 관하여&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;은 &lt;strong&gt;GitHub Pages&lt;/strong&gt;에 대한 빌트인 기능이 있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;static site generator&lt;/code&gt;이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;은 Markdown, HTML, CSS 형태의 파일들을 가지고 사용자가 선택한 레이아웃 기반의 정적 웹사이트를 생성하기까지 매우 간단한 빌드 프로세스를 지원한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;jekyll-theme&quot;&gt;Jekyll Theme&lt;/h3&gt;
-
-&lt;p&gt;사이트에서 보여지는 스타일이나 디자인은 정적 파일 중 CSS, JS, HTML 파일이 결정하는데, &lt;strong&gt;Jekyll Theme&lt;/strong&gt;를 적용하여 사용자 사이트의 Look &amp;amp; Feel을 커스터마이징할 수 있다. 
-&lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;는 
-Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용할 Plugin을 정의하며, 사용자 콘텐츠로 재정의될 수 있도록 assets, layouts, includes, 그리고 stylesheets 구성의 패키지로 구성된다.
-&lt;strong&gt;Jekyll Theme&lt;/strong&gt;를 적용하는 방법은 두 가지이다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;GitHub에서 지원해주는 &lt;a href=&quot;https://pages.github.com/themes/&quot;&gt;Supported Themes&lt;/a&gt; 적용하기&lt;/strong&gt;
-  &lt;br /&gt; -&amp;gt; &lt;a href=&quot;https://docs.github.com/en/pages/getting-started-with-github-pages/adding-a-theme-to-your-github-pages-site-with-the-theme-chooser&quot;&gt;“Adding a theme to your GitHub Pages site with the theme chooser.”&lt;/a&gt; 참고&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;GitHub에 올라온 오픈소스 형태의 Jekyll theme를 수동으로 적용하기&lt;/strong&gt;
-&lt;br /&gt; -&amp;gt; &lt;a href=&quot;https://docs.github.com/en/articles/adding-a-theme-to-your-github-pages-site-using-jekyll&quot;&gt;“Adding a theme to your GitHub Pages site using Jekyll.”&lt;/a&gt; 참고
-&lt;br /&gt; 현재 나의 GitHub Page site도 이 방법으로 진행하였으며 보다 다양한 스타일의 &lt;a href=&quot;https://jekyllrb.com/docs/themes/#pick-up-a-theme&quot;&gt;theme&lt;/a&gt;를 선택하고, 디자인이나 레이아웃 등을 사용자 취향에 맞게 커스터마이징할 수 있다.
-다만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.css&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.html&lt;/code&gt;과 같은 theme와 관련한 파일들을 사용자 로컬 환경에서 수정하고 &lt;strong&gt;Jekyll&lt;/strong&gt;을 통하여 사이트를 빌드해야하므로 GitHub의 Supported Themes 기능을 사용하는 방법보다 복잡할 수 있다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;실습 Tutorial - 설치부터 사이트 게시까지 &lt;br /&gt; (feat. &lt;a href=&quot;https://docs.github.com/en/enterprise/2.13/user/articles/setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;GitHub Doc’s Setting up your GitHub Pages site locally with Jekyll&lt;/a&gt;)&lt;/h2&gt;
-
-&lt;p&gt;Github Pages, Jekyll를 활용하여 직접 사이트를 개설해보는 과정은 위에 설명한 &lt;a href=&quot;#Jekyll Theme&quot;&gt;Jekyll theme를 수동으로 적용하는 과정&lt;/a&gt;을 step-by-step으로 풀이한 내용이라고 볼 수 있다. 
-&lt;br /&gt; 요약하자면 Jekyll theme를 적용하기에 앞서 Jekyll 실행을 위한 필요 환경을 설치 후 사용자의 Git repository에 Jekyll theme 설정 파일들을 생성하고 커스터마이징을 위한 파일 수정, 해당 사이트에 대한 파일 생성, 사이트 빌드 및 게시이다.&lt;/p&gt;
-
-&lt;h3 id=&quot;사전-조건prequisite&quot;&gt;사전 조건(Prequisite)&lt;/h3&gt;
-
-&lt;p&gt;사용자 &lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot;&gt;GitHub 계정&lt;/a&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt;이름의 원격 repository가 존재해야 한다.(&lt;a href=&quot;https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites&quot;&gt;참고&lt;/a&gt;)
-&lt;br /&gt; 없다면 GitHub에서 해당 이름의 repository를 만든 후 로컬에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone &amp;lt;remote origin 주소&amp;gt;&lt;/code&gt; 하거나 로컬 특정 폴더에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout -b &amp;lt;브랜치명&amp;gt;&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git remote add origin &amp;lt;remote origin 주소&amp;gt;&lt;/code&gt; 로 진행한다.
-&lt;br /&gt; 이 repository 및 특정 브랜치에 사용자 사이트를 빌드하기 위한 필요 파일들이 저장되어야 하며 해당 repository 접근 설정은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt;으로 해야 한다. 
-사이트에 대한 소스 파일이 민감한 내용을 포함한다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;private&lt;/code&gt;설정도 가능하나 유료이다. 자세한 내용은 &lt;a href=&quot;https://github.com/pricing#compare-features&quot;&gt;GitHub’s products의 가격 정책&lt;/a&gt;을 참고한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;1-필요-환경-설치&quot;&gt;1. 필요 환경 설치&lt;/h3&gt;
-
-&lt;p&gt;GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지원하지 않으므로, Jekyll을 설치하고 실행하기 위해 사용자 로컬 PC 환경에 Ruby와 Bundler가 설치되어 있어야 한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; Jekyll은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;라는 언어로 만들어진 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt; &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Gem&lt;/a&gt;이며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bundler&lt;/code&gt;는 Ruby Gems 간의 의존성, 빌드 에러 등을 관리하는 프로그램이다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; Bundler를 설치하려면, Ruby가 설치되어 있어야 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step1.&lt;/strong&gt; Ruby 2.1.0 or higher &lt;a href=&quot;https://rubyinstaller.org/downloads/&quot;&gt;설치&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step2.&lt;/strong&gt; &lt;a href=&quot;https://bundler.io/&quot;&gt;Bundler&lt;/a&gt; 설치
-    &lt;br /&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 아래와 같이 실행&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
-    $ gem install bundler
- 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2-gemfile을-통한-jekyll-및-plugin-설치&quot;&gt;2. Gemfile을 통한 Jekyll 및 Plugin 설치&lt;/h3&gt;
-
-&lt;p&gt;Jekyll 사이트 빌드에 필요한 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Gems&lt;/a&gt;을 설치해야 한다.
-Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot;&gt;Gemfile&lt;/a&gt;에 Jekyll 및 Plugin 리스트로 정의되어 있으며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;은 Jekyll 사이트 파일들이 저장되는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt; repository 폴더 루트에 존재한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step1.&lt;/strong&gt; Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfil&lt;/code&gt;이 없으면 아래와 같은 내용의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 새로 만들어 루트 경로에 저장한다. 
-  &lt;br /&gt; Jekyll theme에 대한 Git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;하거나 다운로드해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;이 존재하다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; 내 아래 내용이 있는지 확인하고 없으면 추가한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://rubygems.org'&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'github-pages'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;group: :jekyll_plugins&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; 필자는 사용하고자 하는 &lt;a href=&quot;http://jekyllthemes.org/themes/moon/&quot;&gt;Jekyll theme&lt;/a&gt;를 다운로드 후 로컬 Git repository 폴더에 복사했기 때문에 이미 Gemfile이 존재해있었다. 따라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; 내 해당 내용을 추가하는 방식으로 진행했다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfil&lt;/code&gt;에 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; Gem 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-feed&lt;/code&gt; 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;
-    $ bundle install
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;설치 후, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt;이 동일 경로에 생성된다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-feed&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-seo-tag&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-archives&lt;/code&gt;과 같은 Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;plugins&lt;/a&gt;도 Gem이다. 
-  &lt;br /&gt; 사용자는 이러한 Jekyll plugins을 사용하여 사이트에 대한 Jekyll 기능을 확장할 수 있다. 
-  –&amp;gt; &lt;a href=&quot;https://jekyllrb.com/docs/plugins/installation/&quot;&gt;plugin 사용 방법&lt;/a&gt;
-  &lt;br /&gt; GitHub Pages에서 기본적으로 사용하도록 되어있는 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins&quot;&gt;plugins&lt;/a&gt; 및 지원 가능한 &lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;plugins 리스트&lt;/a&gt;를 참고한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;3-사이트-콘텐츠-커스터마이징&quot;&gt;3. 사이트 콘텐츠 커스터마이징&lt;/h3&gt;
-
-&lt;p&gt;사용자 로컬 Git repository 폴더에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 포함하여 Jekyll site 구축을 위한 모든 파일들이 존재한다면 이제 Jekyll site를 빌드하여 게시하면 된다. 하지만 해당 파일들이 최초 Jekyll theme를 복사해온 상태 그대로라면 사이트에 보여질 내용은 사용자 정보를 담고 있지 않을 것이다. 따라서 사이트명, 이메일, SNS 주소를 포함하여 사이트 구조 및 내용은 직접 관련 파일을 수정하거나 추가하는 방식으로 커스터마이징해야 한다.
-&lt;br /&gt; 커스터마이징할 파일을 포함한 Jekyll site를 구성하는 전체 폴더의 기본 구조는 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/tech/0831_gh_jekyll_01.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;[출처: &lt;a href=&quot;https://jekyllrb.com/docs/structure&quot;&gt;Jekyll Docs &amp;gt; Site Structure&lt;/a&gt;]&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt; 이 중 일부 파일을 수정하여 사이트 콘텐츠을 커스터마이징하는 방법은 다음과 같다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;사용자 정보(사이트명, 이메일, 로고, SNS 등) –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 수정 (&lt;a href=&quot;https://jekyllrb.com/docs/configuration/&quot;&gt;Jekyll Docs 참고&lt;/a&gt;)
-&lt;br /&gt; 다운로드한 site theme에 존재하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 내용을 보면 본인 개인 정보와 다른 부분이 보이기 때문에 어느 부분을 수정할지 인지할 수 있을 것이다. 예를 들어 사이트 로고에 대한 이미지 파일 수정 방법은 &lt;a href=&quot;https://jekyllrb.com/docs/static-files/#add-front-matter-to-static-files&quot;&gt;Jekyll Docs&lt;/a&gt;를 참조한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;사이트 구조 및 레이아웃, 콘텐츠&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;템플릿 구조 -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 폴더 내용 수정 (&lt;a href=&quot;https://jekyllrb.com/docs/layouts/&quot;&gt;Jekyll Docs 참고&lt;/a&gt;)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;콘텐츠
-&lt;br /&gt; 사용자가 사이트에 업데이트하는 콘텐츠 유형은 레이아웃에 따라 크게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt;가 있으며 모두 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Markdown&lt;/code&gt; 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt;형태로 작성한다. 또한 콘텐츠 가장 첫부분에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML&lt;/code&gt;형식의 &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;Front Matter&lt;/a&gt; 블락을 추가하여 현재 작성하는 내용에 대한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;date&lt;/code&gt;와 같은 meta data 정보를 명시한다.&lt;/p&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt; 추가하기 -&amp;gt; 루트 경로에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt; 파일 추가
-&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-page-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new page to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/pages/&quot;&gt;Jekyll Docs &amp;gt; Pages&lt;/a&gt;를 참고한다.&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 추가 및 변경하기 -&amp;gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 폴더 수정 
-&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-post-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new post to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/posts/&quot;&gt;Jekyll Docs &amp;gt; Posts&lt;/a&gt;를 참고한다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;4-jekyll-site-파일-생성하기&quot;&gt;4. Jekyll Site 파일 생성하기&lt;/h3&gt;
-
-&lt;p&gt;이 단계는 사용자 로컬 환경에서 Jekyll site를 빌드하여 테스트해야하는데 사용자 로컬 PC에 GitHub Page에 게시할 Jekyll site 파일들이 존재하지 않는 경우 진행한다. 즉  site 파일들이 저장될 로컬 폴더가 빈 상태여야 한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; 사용자가 특정 &lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;를 다운로드하거나 GitHub repository에 게시된 해당 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 &lt;a href=&quot;#5-jekyll-site-----------&quot;&gt;5. Jekyll Site 빌드 및 테스트하기&lt;/a&gt;로 넘어간다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
-  &lt;br /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
-    $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
-  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ bundle exec jekyll _3.3.0_ new NEW-JEKYLL-SITE-REPOSITORY-NAME&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;위 명령어 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;내 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;jekyll&quot;, &quot;~&amp;gt; {버전명}&quot;&lt;/code&gt;를 주석 처리 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll new .&lt;/code&gt;를 실행하거나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll new {my-project}&lt;/code&gt;를 실행한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; 이미 파일들이 존재하는 상황에서 위 명령어를 수행하면 다음과 같은 에러가 발생한다.
-&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Conflict: ~ exists and is not empty.&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;에 정의된 gem 리스트 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem을 사용하도록 아래와 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 수정한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c1&quot;&gt;# gem &quot;jekyll&quot;, &quot;~&amp;gt; 3.9.0&quot; #diable jekyll&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;github-pages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;group: :jekyll_plugins&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#using github-pages&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이후 모든 변경 사항을 연결된 Git 원격 repository에 업로드하도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add .&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;commit message&quot;&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin {gh-pages branch}&lt;/code&gt; 순서로 진행한다.
-&lt;br /&gt; 해당 로컬 폴더가 Git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 &lt;a href=&quot;#------prequisite-&quot;&gt;사전 조건(Prequisite)&lt;/a&gt;을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;5-jekyll-site-빌드-및-테스트하기&quot;&gt;5. Jekyll Site 빌드 및 테스트하기&lt;/h3&gt;
-
-&lt;p&gt;사용자가 사이트 파일 내용을 위 &lt;a href=&quot;#3---------------&quot;&gt;3. 사이트 콘텐츠 커스터마이징&lt;/a&gt;처럼 변경했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; GitHub Pages 사용자가 변경한 콘텐츠를 원격 repository에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt;하면 Jekyll을 사용해서 사이트를 빌드 후 자동 게시하므로 테스트할 필요가 없다면 해당 단계도 생략할 수 있다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;내 명시된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem 정보는 주석으로 되어있고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem 정보는 주석이 해제되어 있는지 확인한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
-  &lt;br /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
-    $ bundle exec jekyll serve
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 명령어는 Jekyll site 빌드 후 내부 서버에 게시한다는 의미이다. 
-    &lt;br /&gt; (이외 다른 Jekyll 명령어는 &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;Jekyll Docs&lt;/a&gt; 참고)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;이후 명령 실행창에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Server address: http://127.0.0.1:4000&lt;/code&gt;가 표시된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; 사용자 브라우저에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://127.0.0.1:4000&lt;/code&gt; 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
-&lt;br /&gt; 사용자 site가 내부 로컬 서버에 게시되는 동안  site 파일을 수정하는 경우,  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl&lt;/code&gt;+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; 키를 눌러 종료하지 않는 이상, 자동으로 site에 반영된다.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Docs as Code" /><category term="Github Pages" /><category term="Jekyll" /><summary type="html">Github Pages, Jekyll를 활용한 정적 사이트 개설에 관하여</summary></entry><entry><title type="html">[EN] 명사의 쓰임</title><link href="http://localhost:4000/english%20writing/Eg-art-copy/" rel="alternate" type="text/html" title="[EN] 명사의 쓰임" /><published>2021-08-28T00:00:00+09:00</published><updated>2021-08-28T00:00:00+09:00</updated><id>http://localhost:4000/english%20writing/Eg-art%20copy</id><content type="html" xml:base="http://localhost:4000/english%20writing/Eg-art-copy/">&lt;h2 id=&quot;하이픈--연결형&quot;&gt;하이픈(-) 연결형&lt;/h2&gt;
-
-&lt;p&gt;상황에 따라 적절하게 하이픈(-)으로 연결하여 하나의 명사 역할을 한다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;a &lt;strong&gt;five-star&lt;/strong&gt; hotel&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;a-world-class-schcool&quot;&gt;a world-class schcool&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;기본적인-관사-사용의-규칙&quot;&gt;기본적인 관사 사용의 규칙&lt;/h2&gt;
-
-&lt;h3 id=&quot;부정관사-aan&quot;&gt;부정관사 a(an)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사(가산 명사 단수형)
-&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; interface, &lt;strong&gt;a&lt;/strong&gt; book&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해지지 않는 명사(불특정 명사)
-&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; boy&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 대표성을 띄는 명사
-&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; good jpb&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;기간 부사(every, once, per) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; a
-&lt;br /&gt; Ex) once &lt;strong&gt;a&lt;/strong&gt; week&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;정관사-the&quot;&gt;정관사 The&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사 or 셀 수 없는 명사&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해진 범위의 명사
-&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; economic development of Korea&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 유일무이한 존재의 명사 
-&lt;br /&gt; Ex) in &lt;strong&gt;the&lt;/strong&gt; air, in &lt;strong&gt;the&lt;/strong&gt; world&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 특정 고유 명사&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;특정 바다, 강, 산맥 이름 
-&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; Han river, &lt;strong&gt;the&lt;/strong&gt; Rockey&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;(정부 관련) 공공 건물 이름&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;’s’로 끝나는 나라명
-&lt;br /&gt; the U.S, the Philipines&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;관사가-필요-없는-명사&quot;&gt;관사가 필요 없는 명사&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;질병, 일반적 목적지
-&lt;br /&gt; Ex) go to school&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;고유 명사 중 역 이름, 지역 이름, 공원 이름, 공항 이름, 민간 건물명&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ℹ️&lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;일반적으로 고유 명사 앞에는 관사가 올 수 없다.
-  &lt;br /&gt; 고유 명사 중 하나인 사람 이름, 회사 이름 앞에는 a/an/the 가 오지 않는다. 다만 회사 이름, 브랜드인 경우 세상에 유일하다는 의미로 그의 가치를 높이기 위해 쓰기도 한다.
-  &lt;br /&gt; Ex) The Times, The bank of America&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;자주-쓰이는-관사-사용법&quot;&gt;자주 쓰이는 관사 사용법&lt;/h2&gt;
-
-&lt;p&gt;부정관사 a(an)은 정관사 the 보다 사용하기 수월하다. 우리가 흔히 아는 셀수 있는 일반 명사 앞에는 무조건 부정 관사가 오기 때문이다.
-&lt;br /&gt; 정관사 the 경우, 뒤에 오는 명사에 따라 쓰이기도, 쓰이지 않기도 해서, 그에 관한 사용법 위주로 알아보기로 한다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;작성자, 독자 모두 이미 인지하고 있는 명사를 가리킬 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;로 사용한다.
-&lt;br /&gt; (바로 직전에 해당 명사를 소개해서 그 명사를 알 수 있는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt; 이후 해당 명사에 대한 내용이 오는 경우)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;뒤에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Of&lt;/code&gt;가 오는 한정형 명사 앞에는 99% the를 사용한다.
-&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; modeling of ~, &lt;strong&gt;the&lt;/strong&gt; OOO of &lt;strong&gt;the&lt;/strong&gt; N(앞에 내용에서 N에 대해 언급했을 경우)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;복수 명사 앞에는 일반적으로 the를 쓰지 않는다. Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The services ~ &lt;/code&gt;는 틀린 표현이나, 예외적으로 복수 일반 명사 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services&lt;/code&gt;를 앞에서 언급했고, 이를 다시 지칭할 때는 한시적으로 사용.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;º&lt;/code&gt; 으로 시작하는 List-up에 포함되는 명사 앞에는 the를 사용한다. (스타일 가이드)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;제목에 포함되는 명사는 복수명사라 할지라도 앞에 the를 사용한다. (스타일 가이드)
-&lt;br /&gt; Ex) &lt;strong&gt;The&lt;/strong&gt; roles of ABC&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;문장에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;가 열거형으로 이어지는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the&lt;/code&gt;를 첫번째 명사 앞에만 사용하고 쉼표로 구분 후 마지막 명사 앞에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;, and&lt;/code&gt;를 사용한다.
-&lt;br /&gt; Ex) the A, B, C, and D&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="English Writing" /><category term="noun" /><summary type="html">복합 명사, 헷갈리는 단/복수형</summary></entry><entry><title type="html">[EN] 관사의 쓰임</title><link href="http://localhost:4000/english%20writing/Eg-art/" rel="alternate" type="text/html" title="[EN] 관사의 쓰임" /><published>2021-08-28T00:00:00+09:00</published><updated>2021-08-28T00:00:00+09:00</updated><id>http://localhost:4000/english%20writing/Eg-art</id><content type="html" xml:base="http://localhost:4000/english%20writing/Eg-art/">&lt;h2 id=&quot;intro---골치아픈-관사&quot;&gt;Intro - 골치아픈 관사&lt;/h2&gt;
-
-&lt;p&gt;명사 앞에 붙는 관사는 크게 부정관사 a(an), 정관사 the 가 있다.
-&lt;br /&gt; 영문 작성을 하다보면 여러 종류의 명사를 쓰기 마련인데, 명사 앞에 a(an)를 써야 할지, the를 써야 할지, 아예 쓰지 말아야 할지 헷갈릴 때가 있다.
-우선 기본적인 관사의 사용 규칙을 익힌 후, 실제 문서 작성에서 자주 쓰이는 사용법을 알아보기로 한다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;기본적인-관사-사용의-규칙&quot;&gt;기본적인 관사 사용의 규칙&lt;/h2&gt;
-
-&lt;h3 id=&quot;부정관사-aan&quot;&gt;부정관사 a(an)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사(가산 명사 단수형)
-&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; interface, &lt;strong&gt;a&lt;/strong&gt; book&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해지지 않는 명사(불특정 명사)
-&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; boy&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 대표성을 띄는 명사
-&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; good jpb&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;기간 부사(every, once, per) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; a
-&lt;br /&gt; Ex) once &lt;strong&gt;a&lt;/strong&gt; week&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;정관사-the&quot;&gt;정관사 The&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사 or 셀 수 없는 명사&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해진 범위의 명사
-&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; economic development of Korea&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 유일무이한 존재의 명사 
-&lt;br /&gt; Ex) in &lt;strong&gt;the&lt;/strong&gt; air, in &lt;strong&gt;the&lt;/strong&gt; world&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 특정 고유 명사&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;특정 바다, 강, 산맥 이름 
-&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; Han river, &lt;strong&gt;the&lt;/strong&gt; Rockey&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;(정부 관련) 공공 건물 이름&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;’s’로 끝나는 나라명
-&lt;br /&gt; the U.S, the Philipines&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;관사가-필요-없는-명사&quot;&gt;관사가 필요 없는 명사&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;질병, 일반적 목적지
-&lt;br /&gt; Ex) go to school&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;고유 명사 중 역 이름, 지역 이름, 공원 이름, 공항 이름, 민간 건물명&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ℹ️&lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;일반적으로 고유 명사 앞에는 관사가 올 수 없다.
-  &lt;br /&gt; 고유 명사 중 하나인 사람 이름, 회사 이름 앞에는 a/an/the 가 오지 않는다. 다만 회사 이름, 브랜드인 경우 세상에 유일하다는 의미로 그의 가치를 높이기 위해 쓰기도 한다.
-  &lt;br /&gt; Ex) The Times, The bank of America&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;자주-쓰이는-관사-사용법&quot;&gt;자주 쓰이는 관사 사용법&lt;/h2&gt;
-
-&lt;p&gt;부정관사 a(an)은 정관사 the 보다 사용하기 수월하다. 우리가 흔히 아는 셀수 있는 일반 명사 앞에는 무조건 부정 관사가 오기 때문이다.
-&lt;br /&gt; 정관사 the 경우, 뒤에 오는 명사에 따라 쓰이기도, 쓰이지 않기도 해서, 그에 관한 사용법 위주로 알아보기로 한다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;작성자, 독자 모두 이미 인지하고 있는 명사를 가리킬 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;로 사용한다.
-&lt;br /&gt; (바로 직전에 해당 명사를 소개해서 그 명사를 알 수 있는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt; 이후 해당 명사에 대한 내용이 오는 경우)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;뒤에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Of&lt;/code&gt;가 오는 한정형 명사 앞에는 99% the를 사용한다.
-&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; modeling of ~, &lt;strong&gt;the&lt;/strong&gt; OOO of &lt;strong&gt;the&lt;/strong&gt; N(앞에 내용에서 N에 대해 언급했을 경우)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;복수 명사 앞에는 일반적으로 the를 쓰지 않는다. Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The services ~ &lt;/code&gt;는 틀린 표현이나, 예외적으로 복수 일반 명사 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services&lt;/code&gt;를 앞에서 언급했고, 이를 다시 지칭할 때는 한시적으로 사용.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;º&lt;/code&gt; 으로 시작하는 List-up에 포함되는 명사 앞에는 the를 사용한다. (스타일 가이드)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;제목에 포함되는 명사는 복수명사라 할지라도 앞에 the를 사용한다. (스타일 가이드)
-&lt;br /&gt; Ex) &lt;strong&gt;The&lt;/strong&gt; roles of ABC&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;문장에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;가 열거형으로 이어지는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the&lt;/code&gt;를 첫번째 명사 앞에만 사용하고 쉼표로 구분 후 마지막 명사 앞에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;, and&lt;/code&gt;를 사용한다.
-&lt;br /&gt; Ex) the A, B, C, and D&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="English Writing" /><category term="Article" /><summary type="html">기본적인 관사의 규칙 및 자주 쓰이는 사용법에 관하여</summary></entry><entry><title type="html">[EN] 장소 앞 전치사</title><link href="http://localhost:4000/english%20writing/Eg-pre/" rel="alternate" type="text/html" title="[EN] 장소 앞 전치사" /><published>2021-08-27T00:00:00+09:00</published><updated>2021-08-27T00:00:00+09:00</updated><id>http://localhost:4000/english%20writing/Eg-pre</id><content type="html" xml:base="http://localhost:4000/english%20writing/Eg-pre/">&lt;h2 id=&quot;장소에-따라-구분&quot;&gt;장소에 따라 구분&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;At&lt;/strong&gt; + 비교적 작은 장소
-&lt;br /&gt; Ex) I arrived &lt;strong&gt;at&lt;/strong&gt; my office.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;In&lt;/strong&gt; + 비교적 넓은 장소
-&lt;br /&gt; Ex) My cousin is living &lt;strong&gt;in&lt;/strong&gt; Hanoi.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;의미에-따라-구분&quot;&gt;의미에 따라 구분&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;I have been &lt;strong&gt;to&lt;/strong&gt; Vetnam serveral times.
-  &lt;br /&gt; (=) I visited Vetnam.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I go &lt;strong&gt;on&lt;/strong&gt; a business trip.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Many expert &lt;strong&gt;from&lt;/strong&gt; diverse fields.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;I go &lt;strong&gt;to&lt;/strong&gt; a company.
-&lt;br /&gt; (=) I enter a company.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="English Writing" /><category term="Preposition" /><summary type="html">헷갈리는 전치사 쓰임에 관하여</summary></entry><entry><title type="html">[TW] Technical Writing 기본</title><link href="http://localhost:4000/technical%20writing/tw-base/" rel="alternate" type="text/html" title="[TW] Technical Writing 기본" /><published>2021-08-23T00:00:00+09:00</published><updated>2021-08-23T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-base</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-base/">&lt;h2 id=&quot;기술-내용-종류&quot;&gt;기술 내용 종류&lt;/h2&gt;
-
-&lt;h3 id=&quot;정의definition&quot;&gt;정의(Definition)&lt;/h3&gt;
-
-&lt;p&gt;작성하려는 기술이 무엇인지 그 개념에 대하여 반드시 정의해야 한다. 보통 해당 문서의 목차 중 개요(Introduction)에 작성한다&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;기본 정의: 특징 + 카테고리 &lt;br /&gt;
-Ex) ABC는 &lt;u&gt;A 사양에 맞추어 애플리케이션 모델링을 지원하는&lt;/u&gt; &lt;strong&gt;[특징]&lt;/strong&gt; &lt;u&gt;도구&lt;/u&gt; &lt;strong&gt;[카테고리]&lt;/strong&gt; 입니다.&lt;/li&gt;
-  &lt;li&gt;확장 정의: 기본 정의 + 해당 기술의 기능 / 동작 원리 / 사용 목적 / 강점 / 제약사항&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;프로시저-vs-프로세스&quot;&gt;프로시저 vs. 프로세스&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;프로시저(Procedure)&lt;/strong&gt;:
-&lt;br /&gt; 해당 기술과 관련하여 독자가 어떠한 행위를 하도록 설명하는 지침으로써, 특정 순서 혹은 플로우에 따라 동작을 하여 관련 이벤트가 발생하도록 하는 것이 목적이다.
-    &lt;ul&gt;
-      &lt;li&gt;동작을 수행하기에 앞서 사전 조건을 반드시 작성한다.
-        &lt;ul&gt;
-          &lt;li&gt;누가, 언제, 왜, 이 동작을 수행해야 하는가&lt;/li&gt;
-          &lt;li&gt;동작을 수행하는 독자가 고려해야 할 사항이 있는가 (가정 및 제약사항)&lt;/li&gt;
-          &lt;li&gt;독자가 이 동작을 수행하기 전에 반드시 수행하거나 필요한 환경이 있는가 (요구사항)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;독자가 동작을 완료하기 위한 지침 및 지시 사항을 작성한다.
-        &lt;ul&gt;
-          &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;명령형&lt;/span&gt;으로 작성한다.&lt;/li&gt;
-          &lt;li&gt;글머리 기호가 아닌 &lt;span style=&quot;color:red&quot;&gt;번호를 사용&lt;/span&gt;하여 동작의 특정 순서대로 작성한다.&lt;/li&gt;
-          &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;각 번호에는 하나의 동작만 작성&lt;/span&gt;한다.&lt;/li&gt;
-          &lt;li&gt;행동을 하는 주체가 누구인지 명확하게 작성한다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;프로세스(Process)&lt;/strong&gt;:
-&lt;br /&gt; 어떤 일이 일어나는 일련의 단계를 설명하는 것이 목적으로, 독자에게 그 단계를 수행하도록 하는 지침이 아님.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;설명형&lt;/span&gt;으로 ‘누가’, ‘언제’, ‘무엇을’, ‘어디에’ 해당하는 내용을 작성한다.&lt;/li&gt;
-      &lt;li&gt;어떤 일이 발생한 순서대로 설명하고, 그 결과를 작성한다.&lt;/li&gt;
-      &lt;li&gt;어떤 일이 발생한 하나의 단계가 다른 단계의 결과라면, 그 두 단계간의 인과 관계를 설명한다.&lt;/li&gt;
-      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;현재시제&lt;/span&gt;를 사용한다.&lt;/li&gt;
-      &lt;li&gt;부가적으로 표, 목록, 다이어그램을 작성한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;end-to-end-절차-&quot;&gt;End-to-End 절차 ⭐&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;End-to-End 절차는 사용자가 특정 절차를 완료하기 위해 필요한 정의, 요구사항, 절차 등과 같은 모든 기술 정보를 포함한다.&lt;/li&gt;
-  &lt;li&gt;End-to-End 절차를 정확하고 명확하게 작성하기 위해서는 어떤 종류의 기술 정보가 있으며, 그러한 정보가 어디에 기술되어야 하는지 인지해야 한다.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;End-to-End 절차를 작성하기에 앞서, 독자가 해당 기술 정보를 필요로 하는지에 대한 조사거 선행되어야 한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;End-to-End 절차 예시
-    &lt;ol&gt;
-      &lt;li&gt;정의&lt;/li&gt;
-      &lt;li&gt;시스템 요구사항(Requirements) or 사전 조건(Prequisite)&lt;/li&gt;
-      &lt;li&gt;소프트웨어 구성&lt;/li&gt;
-      &lt;li&gt;소트웨어 설치 방법&lt;/li&gt;
-      &lt;li&gt;소프트웨어 사용 방법&lt;/li&gt;
-      &lt;li&gt;소프트웨어 기능&lt;/li&gt;
-      &lt;li&gt;사용 예시&lt;/li&gt;
-      &lt;li&gt;문제 해결 방법&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;기술-정보-다루기&quot;&gt;기술 정보 다루기&lt;/h2&gt;
-
-&lt;h3 id=&quot;분류classification&quot;&gt;분류(Classification)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;각 항목을 공통되는 성질에 따라 종류별로 나눈다.
-&lt;br /&gt; -&amp;gt; 표, 목록, 다이어그램 등을 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;구조structure&quot;&gt;구조(Structure)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;각 항목의 전체가 어떻게 구성되어 있는지 설명한다.
-&lt;br /&gt; -&amp;gt; 다이어그램 또는 테이블을 사용하여 각 파트 간의 관계를 설명한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;기술-정보-작성-가이드라인-&quot;&gt;기술 정보 작성 가이드라인 ⭐&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;기술 정보에 해당하는 글을 중심으로 작성하되, 글로 설명하기 힘들 경우 그림, 표, 그래프를 작성하여 보완한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;글이 없이 그림, 표, 그래프만 단독으로 작성하지 않는다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;글은 아래 사항을 고려하여 그림, 표, 그래프 위에 작성한다.&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;그림, 표, 그래프는 무엇에 대해서 설명하는가&lt;/li&gt;
-      &lt;li&gt;그림, 표, 그래프에서 독자에게 알려주고 싶은 내용은 어떤 부분인가&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;논리적인-기술-정보-작성-가이드라인-&quot;&gt;논리적인 기술 정보 작성 가이드라인 ⭐&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;단락 작성
-    &lt;ul&gt;
-      &lt;li&gt;단락 주제와 관련한 내용, 독자 관점에서 필요한 단어, 용어, 문장만을 작성한다.&lt;/li&gt;
-      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;하나의 단락에는 하나의 주제만 작성&lt;/span&gt;한다.&lt;/li&gt;
-      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;주제문을 단락의 맨 처음에 작성&lt;/span&gt;한다.&lt;/li&gt;
-      &lt;li&gt;주제문을 뒷받침해주는 보충 문장을 작성한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;문장 작성
-    &lt;ul&gt;
-      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;하나의 문장에는 하나의 주제만 작성&lt;/span&gt;한다.&lt;/li&gt;
-      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;육하원칙(누가, 언제, 어디서, 무엇을, 어떻게, 왜)에 맞게 작성&lt;/span&gt;한다.&lt;/li&gt;
-      &lt;li&gt;미사어구 및 불필요한 단어를 사용하여 문장을 장황하게 작성하지 않는다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;테크니컬-커뮤니케이션-&quot;&gt;테크니컬 커뮤니케이션 ⭐&lt;/h2&gt;
-
-&lt;h3 id=&quot;개발자엔지니어와의-기술-인터뷰&quot;&gt;개발자(엔지니어)와의 기술 인터뷰&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;인터뷰 전 개발자의 특성(성향, 업무 스타일, 소속 팀 분위기 등)을 파악한다.&lt;/li&gt;
-  &lt;li&gt;관련 기술에 대한 사전 조사를 하여 기본 배경, 지식, 이론 등을 숙지한다.&lt;/li&gt;
-  &lt;li&gt;필요한 질문 리스트를 준비하여 인터뷰 시 구체적으로 질문한다. (질문 수준이 반영할 기술 내용을 결정)&lt;/li&gt;
-  &lt;li&gt;상대방의 얘기에 경청하고 모두 들은 후 필요한 질문을 한다.&lt;/li&gt;
-  &lt;li&gt;인터뷰 동안 상대방의 질문에 모두 답하지 않아도 된다. -&amp;gt; 조사가 더 필요하거나, 다른 TWer와의 합일이 필요한 부분은 확인 후 알려주겠다고 답변한다.&lt;/li&gt;
-  &lt;li&gt;상대방와 반대되는 의견에 절대 반박하거나 논쟁하지 않되, 조건 및 방안을 제시하여 우회적으로 협의해나간다.&lt;/li&gt;
-  &lt;li&gt;본인의 경험과 경력에 입각해서 함부로 발설하지 않는다. 전문 분야가 아니라면 세부적으로 파고들기 보단 넓은 범주에서 말한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;개발자엔지니어와-협업하기&quot;&gt;개발자(엔지니어)와 협업하기&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;업무 시작 전 각자의 R&amp;amp;R을 명확하게 정한다. 서로의 업무 영역을 침범하여 벌어지는 업무 혼선을 막을 수 있고, 본인 업무의 주도권을 잡을 수 있다.&lt;/li&gt;
-  &lt;li&gt;상대방의 문제점 및 요구사항을 파악 후 해결 방안, 무엇을 줄 수 있는지 제시하여 상대방이 확신과 신뢰를 갖도록 한다.&lt;/li&gt;
-  &lt;li&gt;목표에 맞는 일정을 정하고 일정 별 진행 사항을 공유하고 공유되었는지 반드시 확인하고 진행한다.&lt;/li&gt;
-  &lt;li&gt;개발자가 작성한 초안을 수정하는 단계에서
-    &lt;ul&gt;
-      &lt;li&gt;상대방의 오점보단 칭찬할 점을 부각하여 원활하게 진행한다.&lt;/li&gt;
-      &lt;li&gt;수정해야할 경우 절대 초안 본문을 상대방의 컨펌없이 수정하지 않는다. 반드시 주석 기능(e.g. MS 메모장 기능)을 사용하여 수정할 내용과 그에 대한 논리적인 이유를 적는다.&lt;/li&gt;
-      &lt;li&gt;주석 작성 시에도 공손하고 존중하는 형태의 어법을 사용한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;이메일로 소통하는 경우
-    &lt;ul&gt;
-      &lt;li&gt;수신인, 참조인을 구분하여 정확하게 발송하도록 한다.&lt;/li&gt;
-      &lt;li&gt;메일 내용도 기승전결에 맞추어 목적, 일정, 할 일 등을 명확하게 작성한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Technical Writing Base" /><summary type="html">Technical Writing (기술 문서 작성) 시 기본적으로 알아야 할 주요 이론 및 규칙 등에 관하여</summary></entry><entry><title type="html">[TW] Technical Writer 개념 및 역할</title><link href="http://localhost:4000/technical%20writing/tw-definition_role/" rel="alternate" type="text/html" title="[TW] Technical Writer 개념 및 역할" /><published>2021-08-20T00:00:00+09:00</published><updated>2021-08-20T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-definition_role</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-definition_role/">&lt;h1 id=&quot;technical-writertwer란&quot;&gt;Technical Writer(TWer)란&lt;/h1&gt;
-
-&lt;h3 id=&quot;정의&quot;&gt;정의&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;‘기술과 기술, 사람과 기술을 잇는 사람’&lt;/li&gt;
-  &lt;li&gt;‘개발자와 개발자 간 혹은 개발자와 사용자 간의 정보를 연결해주는 역할을 하는 사람’&lt;/li&gt;
-  &lt;li&gt;TWer는 소설 같은 창작 글쓰기를 제외한 모든 기술 유형의 글쓰기에서 그 뜻을 분명하고 쉽게 전달하는 것을 목표로 함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;저자는 쓰기 편의를 위해 &lt;strong&gt;Technical Writing&lt;/strong&gt;을 &lt;strong&gt;TW&lt;/strong&gt;, &lt;strong&gt;Technical Writer&lt;/strong&gt;를 &lt;strong&gt;TWer&lt;/strong&gt;로 간략 표기하였다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;역할&quot;&gt;역할&lt;/h3&gt;
-&lt;p&gt;예전에 TWer는 휴대폰, TV, 자동차 등의 제품 소비자를 위한 설명서 혹은 가이드를 작성하는데 머물렀지만, 제4차 산업혁명 이래 TWer 역할의 범주와 위상이 달라졌다.&lt;/p&gt;
-
-&lt;p&gt;제4 차 산업 혁명이 도래하면서, 새로운 기술이 빠르게 생겨나고 있으며, 기술이 접목되거나 융합되는 사례가 빈번해졌다. 이러한 가운데 사람들의 지식 수준과 관점의 차이가 커지면서, 각 분야 간의 연결과 효과적인 정보의 전달이 중요해지고 있다. &lt;br /&gt;
-TWer는 글이라는 매체로, 새롭고 생소한 정보을 전달함으로써  다른 분야 간의 기술이나 관점을 효율적으로 연결하는 역할을 한다. &lt;br /&gt;
-즉, 제 4차 산업 혁명의 핵심은 각 분야 간의 연결이며, TWer는 이를 효과적으로 하여 산업적 기술적 생태계를 형성하는데 반드시 필요한 인력이다.  따라서 기술이 발전할수록 TWer 수요는 계속 증가할 것이며, TW의 범위는 소비자(엔드 유저)를 위한 제품 사용 설명서에만 국한되지 않고, 새로운 기술을 접해서 적용하려는 개발, 엔지니어, 기획, 디자인 영역으로 확대될 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;주요-하는-일&quot;&gt;주요 하는 일&lt;/h3&gt;
-&lt;p&gt;사실 업무와 관련된 대부분의 글쓰기는 TW(기술 문서 작성)라고 볼수 있다. &lt;br /&gt;
-기승전결로 잘 짜여진 이메일, 부서 내/외간 오고가는 각종 보고서, 파급력 있는 공고문, 공유 형태의 게시글 등 업무에서는 대부분 문서로 소통하기 때문에 TWer가 아니더라도, 해당 업무 담당자라면 기술 문서 작성을 한다. &lt;br /&gt;
-하지만 기술 문서의 내용 및 수준, 포맷은 부서/팀/담당자의 관점, 성격, 취향 등에 따라 다르기 때문에, 기술 문서가 유관 부서와 같은 사내에서 쓰이는 것이 아닌 사외로 배포되는 공식 문서인 경우, 
-특정 독자 수준에 맞춘 목차 구성 및 내용, 일관된 언어 및 포맷으로 작성될 필요가 있다. &lt;br /&gt;
-이 때 TWer는 TW 프로세스와 규칙에 맞추어 문서화 기획부터 목차 구성, 개발자와 커뮤니케이션을 통한 초안 재작성, 편집, 검수, 용어집 작성, 퍼블리싱까지의 일정 스케줄에 맞추어 문서 산출물을 책임지고 완성해나가는 역할을 담당한다. &lt;br /&gt;
-근래에는 보다 편리하고 파급력 있는 방법으로 웹 사이트를 통해 콘텐츠를 배포하는 사례가 늘고 있기 때문에 TWer는 여러가지 저작 도구나 프로그램 등을 통해 기술 내용을 효율적으로 작성 및 변환하여 웹 사이트에 게시하고 관리하는 문서화 엔지니어링 프로젝트를 담당하기도 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;업무-요약&quot;&gt;업무 요약&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;사전 기술 조사(해당 기술에 대한 스터디, 자료 수집 등)&lt;/li&gt;
-  &lt;li&gt;개발자 및 담당 엔지니어와의 기술 인터뷰&lt;/li&gt;
-  &lt;li&gt;기술 문서 작성(매뉴얼/가이드/사양서/설계서 등의 개발 산출물, 절차서 품질 보고서, 제안서, 화이퍼 등) 및 검토&lt;/li&gt;
-  &lt;li&gt;기술 문서 개선을 위한 사용성 평가&lt;/li&gt;
-  &lt;li&gt;스타일 가이드, 용어집 작성 및 배포&lt;/li&gt;
-  &lt;li&gt;템플릿 작성 및 배포&lt;/li&gt;
-  &lt;li&gt;기술 문서 편집 및 교정/교열&lt;/li&gt;
-  &lt;li&gt;다국어 번역(주로 영문) 및 번역문 검토&lt;/li&gt;
-  &lt;li&gt;품질 향상을 위한 사용성 체크 리스트 작성 및 테스트 주관&lt;/li&gt;
-  &lt;li&gt;다양한 저작 도구(Frame Maker, Help&amp;amp;Manual 등), 프로그램(Confluence, Git, Sphinx, JavaDoc, Doxygen), 언어(MarkDown, reSt, XML, HTML) 등을 사용한 기술 정보 변경 관리&lt;/li&gt;
-  &lt;li&gt;TW 교육 및 세미나 주최&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;나아가야-할-방향&quot;&gt;나아가야 할 방향&lt;/h3&gt;
-&lt;p&gt;기술문서 작성가, TWer는 앞으로 ‘Technical Communicator(TC)’로 그의 역할이 확대되고 성장할 것이다. &lt;br /&gt;
-TW는 말 그대로 글을 쓰는 작업이지만, 그에 앞서 기획, 관련 기술 조사와 연구 등을 비롯하여 개발자와의 인터뷰까지 글을 쓰기 위한 선작업이 많은 부분을 차지한다. 특히 개발자 및 관련 분야 전문가들과 긴밀하게 소통하고 협업하는 일은 해당 기술 내용을 정확하고 명확하게 작성하여 결과적으로 독자에게 이해하기 쉽게 전달하는데 있어 매우 중요하다. &lt;br /&gt;
-따라서 앞으로는 Technical Communicator로써, 빠르게 변화하는 기술 환경에 맞추어, 개발자 및 유관 부서와 커뮤니케이션하며 콘텐츠를 기획, 작성, 편집, 검수하는 것과 더불어 디자인, 퍼블리싱, 산출물 관리에서부터 TW 교육까지 다양한 분야의 주체가 되어 역할을 해야 할 것이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;technical-writertwer가-되려면&quot;&gt;Technical Writer(TWer)가 되려면&lt;/h2&gt;
-
-&lt;p&gt;앞서 설명한 것처럼 TWer는 기술 문서 작성에 대한 기획부터 공식 배포하기까지 다양한 역할을 한다. 그러한 역할을 모두 소화하는데 있어 TWer로써 가장 필요한 역량은 개인적으로 커뮤니케이션(소통) 능력이라고 생각한다. &lt;br /&gt; 
-커뮤니케이션 방법은 크게 듣기, 말하기, 쓰기로 나뉘는데 TWer는 
-말을 잘 하는 것보다 잘 듣고, 그에 대한 필요한 질문을 해서 중요한 정보를 포착할 수 있어야 한다. &lt;br /&gt;
-TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 문서의 주요 내용이면서 TW의 정확성 원칙과 매우 밀접하게  연관되기 때문이다. &lt;br /&gt;
-이어서 해당 기술에 대한 관심과 이해가 선행되어야 상대방이 말하는 내용 중 핵심은 무엇이고 더 자세하게 알기 위해서는 무엇을 질문해야 하는지 보다 수월하게 파악할 수 있다. 즉 개발자 및 제품 담당자와의 기술 인터뷰가 보다 원활하게 이루어질 수 있다. &lt;br /&gt; 
-관련 개발자 및 엔지니어와의 호흡도 중요하다.&lt;br /&gt;
-호흡을 잘 맞춘다는 것은 커뮤니케이션과 상충되는 부분이기도 하지만 보다 넓은 관점에서 개발자와 협업하기 위한 자세 혹은 마인드를 갖춘다는 의미로 보면 되겠다. &lt;br /&gt; 
-예를 들어, 개발자가 작성한 초안을 검토하고 개선하는데 있어, 내용 수정에 관한 것이라면 상대방의 입장과 견해를 존중하여 보다 신중하게 접근해야 할 것이다. 결과적으로 개발자와의 호흡을 잘 맞춰야 기술적 측면에서 필요한 정보를 문서에 정확하게 반영할 수 있다. &lt;br /&gt;
-또한 TWer는 독자의 입장의 수준을 파악해서 문서에 반영해야하므로 개발자가 초안 작성 중 놓쳤거나 독자의 입장에서 미처 예상하지 못한 부분까지 고려해서 문서에 담으려는 노력도 따라야 하겠다. &lt;br /&gt;
-실제 글쓰기에 있어서는 기술에 대한 정확한 내용과 동작 과정을 쉽고 명확하게, 논리적으로 전달해야 한다. TW는 예술적인 창작 글쓰기가 아니기 때문에 화려하고 멋있게 글을 쓴다는 개념과는 거리가 있다. &lt;br /&gt;
-기술 문서는 글 외에도 그림이나 도식화를 포함하기도 하며, 웹을 비롯한 다양한 포맷으로 배포될 수 있기 때문에 TWer는 기본적인 OA 외 저작 도구나 편집기, 그래픽 도구 등 다양한 프로그램 및 환경에 적응하여 결과를 산출해낼 수 있는 능력이 필요하다.
-또한 IT 및 SW 회사의 경우 SDK 및 API 등의 코드 라이브러리를 그에 대한 가이드와 함께 배포할 수 있기 때문에 가이드에 담기는 소스 코드를 이해할 수 있는 프로그래밍/언어 지식이 필요할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/tw/0820_tw_def_01.png&quot; alt=&quot;참고&quot; /&gt;
-&lt;img src=&quot;/img/tw/0820_tw_def_02.png&quot; alt=&quot;참고&quot; /&gt;
-&lt;em&gt;참고- 저자가 참여한 한국고용정보원 인터뷰 중에서&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;필요-역량경험-jd-발췌&quot;&gt;필요 역량/경험 (JD 발췌)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;명확하고 논리적인 글쓰기&lt;/li&gt;
-  &lt;li&gt;능동적/원활한 커뮤니케이션&lt;/li&gt;
-  &lt;li&gt;영어 Writing/Speaking&lt;/li&gt;
-  &lt;li&gt;다양한 IT/개발 분야 경험, 기술 지식 보유&lt;/li&gt;
-  &lt;li&gt;다양한 툴, 저작 도구 사용에 능숙&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;마인드-셋자세&quot;&gt;마인드 셋/자세&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;다양한 변화와 의견을 수용하고 아우를 수 있는 유연성/추진력있고 적극적인 자세&lt;/li&gt;
-  &lt;li&gt;스케쥴 관리 능력&lt;/li&gt;
-  &lt;li&gt;꼼꼼하고 섬세함&lt;/li&gt;
-  &lt;li&gt;겸손함, 항상 배우려는 자세&lt;/li&gt;
-  &lt;li&gt;책임감 및 성실함, 지속력&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Technical Writer" /><summary type="html">Technical Writer의 정의 및 주요 역할, 현재 그리고 향후 산업에 있어 Technical Writer로써 나아가야할 방향, 갖추어야 할 역량에 관하여</summary></entry><entry><title type="html">[TW] 마크다운 사용법</title><link href="http://localhost:4000/docs%20as%20code/markdown-usage/" rel="alternate" type="text/html" title="[TW] 마크다운 사용법" /><published>2021-08-14T00:00:00+09:00</published><updated>2021-08-14T00:00:00+09:00</updated><id>http://localhost:4000/docs%20as%20code/markdown-usage</id><content type="html" xml:base="http://localhost:4000/docs%20as%20code/markdown-usage/">&lt;p&gt;&lt;strong&gt;&amp;lt;Table of Contents&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;Table of Contents&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#markdown-사용법&quot; id=&quot;markdown-toc-markdown-사용법&quot;&gt;Markdown 사용법&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#callout--연습&quot; id=&quot;markdown-toc-callout--연습&quot;&gt;Callout  연습&lt;/a&gt;&lt;/li&gt;
@@ -1247,8 +128,8 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;How to use&lt;/strong&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;How to look&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;How to use&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;How to look&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -1648,291 +529,545 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 &lt;pre&gt;
   &amp;gt; ℹ️ `&lt;span style=&quot;color:#247CFF&quot;&gt;` ***NOTE*** `&lt;/span&gt;`
   &amp;gt; This is note content.
-&lt;/pre&gt;</content><author><name></name></author><category term="Docs as Code" /><category term="Markdown" /><summary type="html">마크다운 문법과 사용법에 관하여</summary></entry><entry><title type="html">Google Technical Writing Pe-Class One</title><link href="http://localhost:4000/technical%20writing/google-tw-one-preclass/" rel="alternate" type="text/html" title="Google Technical Writing Pe-Class One" /><published>2021-06-24T00:00:00+09:00</published><updated>2021-06-24T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/google-tw-one-preclass</id><content type="html" xml:base="http://localhost:4000/technical%20writing/google-tw-one-preclass/">&lt;h2 id=&quot;내용-요약&quot;&gt;내용 요약&lt;/h2&gt;
-&lt;p&gt;Google Developers site에 &lt;a href=&quot;https://developers.google.com/tech-writing?hl=en&quot;&gt;Technical Writing Course for Engineers&lt;/a&gt; 가 개설되어 있다. 
-영문으로 기술 문서를 작성할 때 실제로 도움될만한 팁이 많아 공유하고자 한다. 
-크게 Pre-Class(이론), In-Class(실습) 두가지 세션이 있는데 &lt;a href=&quot;https://developers.google.com/tech-writing/overview?hl=en&quot;&gt;Pre-Class for Students&lt;/a&gt;의 One, Two 주요 내용을 요약했다.
-(번역 유)&lt;/p&gt;
-&lt;hr /&gt;
+&lt;/pre&gt;</content><author><name></name></author><category term="Tech Journey" /><category term="network" /><category term="domain" /><summary type="html">커스텀 도메인 적용을 위한 기술 스터디</summary></entry><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/technical%20writing/tw-srs" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-srs</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-srs">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
 
-&lt;h2 id=&quot;pre-class-one&quot;&gt;Pre-Class One&lt;/h2&gt;
+&lt;p&gt;요구사양서는 시스템이나 소프트웨어에서 구현되어야 할 것에 대하여 공식적인 문장으로 명세화*한 산출물로 요구사항 명세서(Requirements Specification)와 같은 의미이다.
+&lt;br /&gt; 요구사항 명세서는 일반적으로 소프트웨어 요구사항 명세서(SRS; Software Requirements  Specification Document)를 말하며 하드웨어까지 다룬다면 시스템 사양서(System Specification)가 된다.&lt;/p&gt;
 
-&lt;h3 id=&quot;주요-알아야-할-것&quot;&gt;주요 알아야 할 것&lt;/h3&gt;
+&lt;p&gt;※ 명세화: 체계적으로 검토, 평가, 승인될 수 있는 문서를 작성하는 것&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;주요 영문법&lt;/li&gt;
-  &lt;li&gt;용어(Terminology) 사용&lt;/li&gt;
-  &lt;li&gt;대명사를 명확화&lt;/li&gt;
-  &lt;li&gt;수동태를 능동태로 변환&lt;/li&gt;
-  &lt;li&gt;문장을 명확하고 간결하게 작성하기&lt;/li&gt;
-  &lt;li&gt;불릿 리스트와 숫자 리스트의 차이 이해하기&lt;/li&gt;
-  &lt;li&gt;단락 작성법&lt;/li&gt;
-  &lt;li&gt;문서 시작의 Key Point&lt;/li&gt;
-  &lt;li&gt;독자가 이미 아는것과 알아야 할것을 결정&lt;/li&gt;
-  &lt;li&gt;마크다운 역량 개발&lt;/li&gt;
-  &lt;li&gt;쉼표, 괄호, 콜론, 대시 및 세미콜론의 적절한 사용&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;요구사양서 분석을 하려면 기본적인 시스템을 이해해야 한다.
+&lt;br /&gt; 시스템 구성 및 내부 구조, 동작, 기능, 기술 용어 등은 미리 숙지해야 한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;영문법&quot;&gt;영문법&lt;/h3&gt;
-&lt;p&gt;문법은 이 과정에서 설명하는 것보다 훨씬 더 복잡하지만, 간략히 품사를 중점적으로 설명한다.&lt;/p&gt;
+&lt;h2 id=&quot;국제-표준-및-구성-요소&quot;&gt;국제 표준 및 구성 요소&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;형용사는 명사를 수식&lt;/li&gt;
-  &lt;li&gt;부사는 동사를 수식&lt;/li&gt;
-  &lt;li&gt;전치사는 두 가지 사이의 관계를 지정 
-&lt;br /&gt; Ex) The C Programming Language &lt;strong&gt;by&lt;/strong&gt; Kernighan and Richie remains popular.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;요구사항 명세서는 기본적으로 국제 표준(IEEE Std. 830-1998) 양식에 따라 구성된다.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;⭐ Note: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;under&lt;/code&gt; is usually a preposition, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;under&lt;/code&gt; can also serve as an adverb or adjective depending on context.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;국제-표준ieee-std-830-1998&quot;&gt;국제 표준(IEEE Std. 830-1998)&lt;/h3&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;소프트웨어 요구사항 명세서의 표준 양식을 제시&lt;/p&gt;
 
-&lt;h3 id=&quot;용어의-사용-&quot;&gt;용어의 사용 👍&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_01.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;새롭거나 생소한 용어&lt;/strong&gt;에 대하여
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;이미 그 용어가 존재한다면 정의가 잘되어 있는 설명으로 &lt;a href=&quot;https~&quot;&gt;링크&lt;/a&gt;한다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;문서에서 처음 소개하는 용어라면 그 용어를 정의한다. 문서에서 정의할 용어가 많다면 &lt;strong&gt;용어집&lt;/strong&gt;으로 분류하여 작성한다.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;일관성&lt;/strong&gt;있는 용어 사용
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;함수 중간에 변수 이름을 변경하면 코드가 컴파일되지 않듯이, 문서 중간에 용어를 변경하면 사용자의 머리에서 저자의 개념이 정립되지 않는다. 따라서 한번 용어 이름을 정했으면 변경하면 안된다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;용어명이 길다면 해당 용어의 축약명을 같이 지정한다. 이후 문서 전체에서 해당 축약명을 사용할 수 있다.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;약어&lt;/strong&gt;의 적절한 사용
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;전체 용어를 굵게 표시 후 두문자(약어)를 괄호안에 기입하여 굵게 표시.
-이후 해당 약어를 계속 사용할 수 있다.
-&lt;br /&gt; Ex) ~ &lt;strong&gt;Telekinetic Tactile Network&lt;/strong&gt;(&lt;strong&gt;TTN&lt;/strong&gt;) ~ how to order &lt;strong&gt;TTN&lt;/strong&gt; replacement parts.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;전체 용어와 해당 약어를 동일 문서에서 순환하면 안된다.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;대명사의-명확화&quot;&gt;대명사의 명확화&lt;/h3&gt;
-&lt;p&gt;대부분 대명사를 피하고 명사를 재사용해야 하나, 다음의 가이드대로 대명사를 사용하면 유용할 수 있다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;명사를 소개한 후&lt;/strong&gt;에만 대명사를 사용하기&lt;/li&gt;
-  &lt;li&gt;대명사는 가능한 해당 명사와 가깝게 배치하기: &lt;strong&gt;5 단어 이상&lt;/strong&gt; 명사로부터 떨어진 경우, 대명사 대신 명사를 반복하는게 좋다.&lt;/li&gt;
-  &lt;li&gt;명사와 대명사 사이 두 번째 명사를 사용하면 대명사 대신 명사를 재사용하기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;능동태-vs-수동태&quot;&gt;능동태 vs. 수동태&lt;/h3&gt;
-&lt;p&gt;테크니컬 라이팅에서 대부분의 문장은 &lt;strong&gt;능동태&lt;/strong&gt;로 작성되어야 한다고 한다.
-&lt;br /&gt;일반적으로 능동태 문장이 더 명확하게 전달되므로 수동태로 작성된 문장도 능동태로 바꾸는게 좋다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;능동태와 수동태의 공식 차이
-    &lt;ul&gt;
-      &lt;li&gt;능동태: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;주어 + 동사 + 목적어&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;수동태: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;목적어 + 동사 + 주어&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;ol&gt;
+  &lt;li&gt;Introduction: 문서의 목적와 범위, 용어(두문자어, 약어) 정의, 참고&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;수동태 문장은 가끔식 주어가 생략되기도 한다. 이렇게 되면 독자를 주어를 추측해야 하므로 명확성이 낮아진다. 기술 문서에서 좋은 문장은 독자가 ‘누가 누구에게 무엇을 하는지’를 파악하도록 해야 한다.&lt;/p&gt;
+    &lt;p&gt;Overall Description: 제품 관점에서의 소프트웨어 동작 및 기능, 사용자의 일반적인 특정(경험 및 지식), 소프트웨어 제약사항과 가정 및 의존성 -&amp;gt; ‘3. Specific requirement’의 이해를 돕기 위한 배경 및 요구사항에 대한 전잔적인 내용 기술&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;명령형 동사로 시작되는 명령문은 일반적으로 능동태이다. 명령문은 주어(you)를 함축하므로, 주어 생략이 가능한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;능동태의 이점
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;직관적&lt;/strong&gt;이다. 독자는 수동태도 능동태로 변환해서 해석하므로 바로 능동태를 쓰는 것이 독자가 받아들이는데 더 효율적이다.&lt;/li&gt;
-      &lt;li&gt;능동태 문장이 일반적으로 수동태 문장보다 짧다. 이는 저자 관점에서도 효울적이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;명확한-문장&quot;&gt;명확한 문장&lt;/h3&gt;
-
-&lt;p&gt;테크니컬 라이터는 명확성을 추구해야 하며, 명확성은 다른 규칙보다 가장 우선한다. 
-&lt;br /&gt; 명확한 문장을 만들기 위한 몇가지 방법은 다음과 같다.&lt;/p&gt;
+  &lt;li&gt;Specific Requirement: 소프트웨어의 모든 세부적인 요구사항을 명확하게 기술, 명시되어야 할 주요 요구사항은 다음과 같다.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;효과적인 동사&lt;/strong&gt;를 선택: 테크니컬 라이팅에서 효과적인 동사란 그 문장을 잘 표현하기에 가장 적합한 동사라 할 수 있다. 동사는 문장에서 가장 중요한 부분이므로 적합한 동사를 선택한다면, 나머지 문장은 그 자체로 전달될 수 있다.&lt;/p&gt;
+    &lt;p&gt;기능 요구사항: 소프트웨어의 입력 및 출력 처리 과정에서 발생할 수 있는 기본적인 동작에 대하여 기술, 
+  &lt;br /&gt; 다음과 같은 항목들이 포함된다.&lt;/p&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;독자의 참여를 유도하고 교육시키기 위해, 정확하고 강력하며 구체적인 동사를 선택하고 다음과 같이 부정확하거나, 약하거나, 일반적인 동사는 지양해라.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Weak Verb&lt;/strong&gt;&lt;/th&gt;
-          &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Strong Verb&lt;/strong&gt;&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;The error &lt;strong&gt;occurs&lt;/strong&gt; when clicking the Submit button.&lt;/td&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;Clicking the Submit button &lt;strong&gt;triggers&lt;/strong&gt; the error.&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;This error message &lt;strong&gt;happens&lt;/strong&gt; when ~&lt;/td&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;The system generates this error message when ~&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;We &lt;strong&gt;are&lt;/strong&gt; very careful to ensure ~&lt;/td&gt;
-          &lt;td style=&quot;text-align: left&quot;&gt;We carefully &lt;strong&gt;ensure&lt;/strong&gt; ~&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
+    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_02.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt;를 지양해라.&lt;/p&gt;
+    &lt;p&gt;외부 인터페이스 요구 사항: 모든 소프트웨어 시스템으로의 입력과 출력에 대한 요구사항 기술
+  &lt;br /&gt; 하드웨어, 소프트웨어, 통신 인터페이스 등으로 분류되며 다음의 내용이 포함된다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_03.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;성능 요구사항: 소프트웨어 전체적으로 사람과의 상호작용 혹은 소프트웨어에서 확인할 수 있는 수치적 요구사항 기술&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_04.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;논리적 데이터베이스 요구사항: 데이터베이스(DB)에서 사용될 정보를 위한 논리적 요구사항 기술&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_05.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;설계 제약사항: 다른 표준이나 제한으로 인해 적용되는 설계적 제약사항&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;소프트웨어 시스템 속성: 신뢰도, 사용가능성, 보안, 유지보수, 이식성 등의 속성을 기술&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;‘3. Specific Requirement’ 작성에는 정해진 양식이 없으며 위 명시된 사항들이 요구사항으로 기술되면 어떠한 구성으로 표현되어도 무방하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;요구사항-명세서-구성-요소&quot;&gt;요구사항 명세서 구성 요소&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;서문: 대상 독자, 버전 이력, 동기 등을 요약&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;개요: 기능 및 다른 시스템과의 연계 방법 등을 설명&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;용어: 문서에 사용되는 기술 용어집&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;사용자 요구사항 정의: 제공되는 서비스 및 비기능적 요구사항 기술&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;시스템 아키텍처: 기능의 분포를 보여주는 시스템 구조에 대한 개괄적 표현&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;시스템 사용자 명세: 기능적, 비기능적 요구사항을 상세하게 기술&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;시스템 모델: 시스템 컴포넌트와 환경 간의 관계를 나타내는 하나 또는 그 이상의 시스템 모델 기술&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;부록&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;색인&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;요구사양서-평가하기&quot;&gt;요구사양서 평가하기&lt;/h2&gt;
+
+&lt;p&gt;요구사항 명세서를 평가하기 위한 절대적인 기준은 존재하지 않는다. 하지만 소프트웨어 검증 및 확인 절차에 대한 표준인 IEEE Std. 1012에서 제시하는 요구사항 평가 항목 및 IEEE Std. 830에서 제시하는 명세서의 원리을 근거로 평가 기준이 될 수 있는 항목이 존재한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;IEEE Std. 1012 명세서 체크 항목&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt; 대신 문장 끝에 있는 실제 의미있는 주어와 동사를 앞으로 옮기면 문장이 더 명확해진다.
-  &lt;br /&gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;There are&lt;/code&gt; two disturbing facts about Perl you should know.
-  –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;You should know&lt;/code&gt; two disturbing facts about Perl.&lt;/p&gt;
+        &lt;p&gt;정확성&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;새로운 주어와 동사를 만드는게 번거로워서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt;를 쓰는 경우가 많다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there is&lt;/code&gt;나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are&lt;/code&gt; 대신 의미있는 주어를 만들면 넣으면 문장이 더 명확해진다.
-  &lt;br /&gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;There is&lt;/code&gt; no guarantee that the updates will be received in sequential order.
-   –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Clients&lt;/code&gt; might not receive the updates in sequential order.&lt;/p&gt;
+        &lt;p&gt;일관성&lt;/p&gt;
       &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;완전성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;판독성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;시험성&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_06.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;IEEE Std. 830 요구사항 원리&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;정확성(무결성) 및 완벽성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;명확성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;일관성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;기능성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;중요도/안정 우선순위&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;검증 가능성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;수정 가능성&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;추적성&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/img/tw/1011_tw_srs_07.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;요구사항 명세서가 피해야 할 것&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;모호성을 피하라&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;다중 요구사항을 만들지 말라&lt;/li&gt;
+      &lt;li&gt;회피용 문구를 만들지 말라&lt;/li&gt;
+      &lt;li&gt;문장을 너무 길게 쓰지 말라&lt;/li&gt;
+      &lt;li&gt;시스템을 설계 하지 말라&lt;/li&gt;
+      &lt;li&gt;요구사항을 뒤섞고 설계하지 말라&lt;/li&gt;
+      &lt;li&gt;요구사항과 계획을 뒤섞지 말라&lt;/li&gt;
+      &lt;li&gt;추측하는 문장을 포함하지 않도록 하라&lt;/li&gt;
+      &lt;li&gt;분명치 않은 요구사항에 매달리지 말라&lt;/li&gt;
+      &lt;li&gt;막연한, 정의되지 않은 용어를 사용하지 말라&lt;/li&gt;
+      &lt;li&gt;가능성을 표현하지 말라&lt;/li&gt;
+      &lt;li&gt;희망사항을 작성하지 말라&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;간결한-문장&quot;&gt;간결한 문장&lt;/h3&gt;
+&lt;h2 id=&quot;유즈케이스란&quot;&gt;유즈케이스란&lt;/h2&gt;
 
-&lt;p&gt;프로그래밍과 테크니컬 라이팅은 다음과 같은 이유로 간결성을 추구한다.&lt;/p&gt;
+&lt;p&gt;사양서에 말하는 유즈케이스란 ‘동작 시나리오’를 말한다. 
+(유즈케이스는 주로 소프트웨어 요구사항에 들어감)
+&lt;br /&gt; 요구 사양서 목차 중 ‘기능 요구사항’ 항목에서 기술하며 시스템 기능이 바뀔 때 사양서 내용 중 가장 많이 바뀌게 되는 부분이다.&lt;/p&gt;
+
+&lt;p&gt;기능 요구 사항은 기능을 개발하기 위한 동작 이외 상세 요구 사항으로 사양서의 메인이자 핵심이다. 또한 ‘동작 시나리오’에서는 케이스와 예외 사항을 찾는 것이 가장 중요하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;요구-사양서-실무&quot;&gt;요구 사양서 실무&lt;/h2&gt;
+
+&lt;p&gt;실무에서 요구 사양서에 유즈케이스를 적용하는데 있어 주요 검토 사항, 템플릿 등에 대하여 정리한 내용이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;유즈케이스-주요-검토-사항&quot;&gt;유즈케이스 주요 검토 사항&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;짧은 코드/문서는 해석하기 쉽다. 빨리 읽을 수 있다.&lt;/li&gt;
-  &lt;li&gt;짧은 코드/문서는 유지보수 하기 쉽다&lt;/li&gt;
-  &lt;li&gt;추가적인 코드/문장은 실패 포인트를 제공한다.&lt;/li&gt;
+  &lt;li&gt;스텝마다 주어, 동사, 목적어를 명확하게 작성&lt;/li&gt;
+  &lt;li&gt;케이스 상의 동작 순서가 정확한지 확인&lt;/li&gt;
+  &lt;li&gt;스텝마다 예외사항 적었는지 확인 (예외 항은 각 스텝마다 있어야 함) 
+&lt;br /&gt; e.g. 에러가 나서 요청을 못할 경우&lt;/li&gt;
+  &lt;li&gt;케이스 상의 주어와 주어가 1:1 매칭되어야 함
+    &lt;ul&gt;
+      &lt;li&gt;사용자가 액터일때 시스템이 여러 개일 경우, 시스템을 합쳐서 하나의 시나리오로 만들거나, 어쩔 수 없으면 단계를 여러 개 두어 표시&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;단계 별 예외사항은 무엇이고 어떻게 처리하는지 표시
+&lt;br /&gt; e.g. 수신만 하고 성공은 안한 상황일 때&lt;/li&gt;
+  &lt;li&gt;그림과 글의 일치화 (그림만 있으면 관련 내용은 필요 없다는 편견 버리기), 그림 대한 글은 그림 위에서 상세화&lt;/li&gt;
+  &lt;li&gt;그림은 빼는게 나을 수도 있음(변경 관리상)&lt;/li&gt;
+  &lt;li&gt;용어의 일치&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;한-문장에는-하나의-주제&quot;&gt;한 문장에는 하나의 주제&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;프로그램에서 하나의 statement(명령문)가 단일 작업을 처리하듯이, TW에서는 하나의 문장은 하나의 주제만 포함해야 한다.&lt;/p&gt;
+&lt;h3 id=&quot;유즈케이스-템플릿화&quot;&gt;유즈케이스 템플릿화&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;하나의 긴 문장은 일련의 단일 주제 문장으로 나눈다.&lt;/li&gt;
-  &lt;li&gt;지나치게 긴 문장은 짧은 문장으로 변환하나, 너무 많이 수정하지 않는다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;화면 단위가 아닌 기능 단위로 작성&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;전제 조건, 동작 방법 이해&lt;/li&gt;
+  &lt;li&gt;한스텝에는 한 동작&lt;/li&gt;
+  &lt;li&gt;시나리오 작성 시 방법 여러 가지면 케이스로 나누기&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;동작 시나리오는 마지막 사용성 테스트를 위한 테스트 케이스 만들때 필요한 정보 
+&lt;br /&gt; (각 상황별 케이스별로 테스트해야 하므로 어떤 동작이 일어나는지, 누가 하는지, 어디로 하는지, 요청은 하는지, 전달은 하는지 테스트) 
+&lt;br /&gt; –&amp;gt; 주로 유즈케이스는 시스템보단 소프트웨어 요구사항 작성에 적용
+E.g. 카테고리 변경 시 날씨 어떻게 업데이트 하는지에 대한 동작 시나리오&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;POI(Point of Interest): 중요한 정보들 카테고리화&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;긴-문장을-목록으로-변환&quot;&gt;긴 문장을 목록으로 변환&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;접속사로 이어지나 긴 문장은 글머리 기호(불릿 or 숫자)의 리스트로 재구조화한다.&lt;/p&gt;
+&lt;h3 id=&quot;공통-적용-및-예외-사항&quot;&gt;공통 적용 및 예외 사항&lt;/h3&gt;
 
-&lt;h4 id=&quot;불필요한-단어를-제거하나거나-줄인다&quot;&gt;불필요한 단어를 제거하나거나 줄인다.&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;공통 적용 사항: 모든 동작 시나리오에 적용된 경우(앤드 조건) &lt;br /&gt; * 공통 적용 사항이 아닌 경우, 특정 시나리에만 종속된 경우 상세 요구사항으로 별도 표시&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;상세 요구 사항은 많이 변경 안함, 서술어를 맞추거나, 비문을 개선하는 정도&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;공통 예외 사항: 모든 시나리오에 대해 다 실패하는 경우&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;공통 전제 조건,  e.g. 공통 적용되는 전원 조건&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Ex) An input value greater than 100 &lt;strong&gt;causes the triggering of&lt;/strong&gt; logging.
-  &lt;br /&gt; –&amp;gt; An input value greater than 100 &lt;strong&gt;triggers&lt;/strong&gt; logging.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ex) This design document &lt;strong&gt;provides a detailed description of&lt;/strong&gt; Project Frambus.
-  &lt;br /&gt; –&amp;gt; This design document &lt;strong&gt;describes&lt;/strong&gt; Project Frambus.&lt;/p&gt;
+&lt;h3 id=&quot;관련-업무-팁&quot;&gt;관련 업무 팁&lt;/h3&gt;
 
-&lt;p&gt;The following table suggests &lt;strong&gt;concise replacements&lt;/strong&gt; for a few wordy expression&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;독자는 주로 요구 사양서를 보고 개발하는 개발자/엔지니어&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;요구 사양서 작성의 목적: 개발을 위해 작성하나, 일정 상 개발 단계까지 작성이 안될 경우 일단 구두 등으로 변경 사항, 기능 추가 요구를 하고 개발 완료 후 결과 기준으로 사양서를 작성&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;–&amp;gt; 요구 사양서를 남기는 이유는 이대로 개발해왔다는 증거와 개발 요구사항으로 요청했다는 증거가 됨, 책임 소재를 따지기 위한 문서이기도 하다&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SRS에는 요구 사항(고객과의 협의 사항)만 작성, 코드 관련 내용 없음&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="국제 표준" /><category term="UseCase" /><category term="SRS" /><summary type="html">요구사양서 국제 표준 및 유즈케이스(UseCase) 적용에 관하여</summary></entry><entry><title type="html">[Tech] UML과 다이어그램</title><link href="http://localhost:4000/tech%20journey/tech-uml" rel="alternate" type="text/html" title="[Tech] UML과 다이어그램" /><published>2021-09-10T00:00:00+09:00</published><updated>2021-09-10T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/tech-uml</id><content type="html" xml:base="http://localhost:4000/tech%20journey/tech-uml">&lt;h2 id=&quot;uml이란&quot;&gt;UML이란&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;UML&lt;/strong&gt;(Unified Modeling Language)은 시스템을 모델로 표현해주는 대표적인 모델링 언어이다.
+&lt;br /&gt;UML의 여러가지 그래픽 요소는 하나의 큰 그림, 즉 다이어그램을 그리는데 사용된다. UML은 언어이기 때문에, 이들 그래픽 요소들을 맞추는 데에는 규칙이 필요하다.
+&lt;br /&gt; 
+다이어그램의 목적은 시스템을 여러가지 시각에서 볼 수 있는 뷰(View)를 제공하는 것이며, 이러한 뷰의 집합을 모델(Model)이라고 한다.
+&lt;br /&gt; UML 모델은 시스템 자체의 “목적 행동”을 설명하는 언어이며, 시스템의 “구현 방법을 설명하는 수단”이 아니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;uml-다이어그램&quot;&gt;UML 다이어그램&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;UML 다이어그램&lt;/strong&gt;은 UML을 사용하여 시스템 상호작용, 업무흐름, 시스템 구조, 컴포넌트 관계 등 사물과 관계를 도형으로 표현한 도면이다.
+&lt;br /&gt; UML 다이어그램은 프로그래밍을 단순화하여 표현하므로 의사소통에 편하며 프로젝트 구조의 로드맵을 만들거나 시스템 구축에 기본을 마련한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;다이어그램-종류&quot;&gt;다이어그램 종류&lt;/h3&gt;
+&lt;p&gt;UML 다이어그램의 종류는 다음과 같다.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Wordy&lt;/strong&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Concise&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;em&gt;다이어그램 종류&lt;/em&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;em&gt;설명&lt;/em&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;at this point in time&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;now&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;UseCase&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;요구 분석 과정에서 시스템과 외부와의 상호작용을 묘사함&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;determine the location of&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;find&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Activity&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;업무의 흐름을 모델링하거나 객체의 생명주기를 표현함&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;is able to&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;can&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Sequence&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;객체 간의 메시지 전달을 시간적 흐름에서 분석함&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Collaboration&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;객체와 객체가 주고받는 메시지 중심으로 작성함&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Class&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;시스템의 구조적인 모습을 그림&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Component&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;소프트웨어의 구조를 그림&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Deployment&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;기업 환경의 구성과 컴포넌트들 간의 관계를 그림&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&quot;종속절-줄이기&quot;&gt;종속절 줄이기&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://sfeg.tistory.com/339&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;한 문장 = 한 주제&lt;/code&gt; 공식을 염두하여 종속절이 하나의 주제를 확장한 내용이 아닌 별도의 주제를 다룬다면 별도의 문장으로 나누기.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;that과-which의-구별&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt;의 구별&lt;/h4&gt;
+&lt;h2 id=&quot;actor와-usecase&quot;&gt;Actor와 UseCase&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;미국에서는 문장에서 필수적이지 않은 절에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt;, 필수적인 절에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt;을 사용한다.
-  &lt;br /&gt; Ex) Python is an interpreted language, &lt;strong&gt;which&lt;/strong&gt; Guido van Rossum invented(nonessential)
-  &lt;br /&gt; Ex) Fortran is perfect for mathematical calculations &lt;strong&gt;that&lt;/strong&gt; don’t involve linear algebra(essential).&lt;/p&gt;
+    &lt;p&gt;Actor는 일반적으로 시스템 외부에 존재하면서 시스템과 상호작용하는 개체이다. 액터는 사람이거나 기계 혹은 소프트웨어 등이 될 수 있다.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;종속절 시작하기에 앞서 멈춤이 필요하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt;를 사용하고, 멈춤이 필요 없이 이어지는 절에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt;을 사용하기&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt; 앞에 쉼표(,)를 넣고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;that&lt;/code&gt; 앞에 쉼표를 넣지 않기.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;UseCase는 시스템의 행위(behavior)를 정의하기 위해 사용하는 요소이다. 
+ &lt;br /&gt; 일반적으로 UseCase는 Actor와 상호작용하므로 UseCase는 말그대로 시스템과 사용자가 상호작용을 하는 하나의 경우라고 볼 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;UseCase가 주로 적용된 문서로 요구사양서가 있으며 관련하여 &lt;a href=&quot;/technical%20writing/tw-srs&quot;&gt;[TW] 사양서와 유즈케이스&lt;/a&gt;에서 자세히 다루겠다.&lt;/p&gt;</content><author><name></name></author><category term="Tech Journey" /><category term="UML" /><category term="UseCase" /><category term="SRS" /><summary type="html">TW 산출물 중 요구사양서(SRS)에 쓰이는 유즈케이스(UseCase)에 관한 배경 지식</summary></entry><entry><title type="html">[Tech] Jekyll을 사용한 나만의 Github Pages 만들기</title><link href="http://localhost:4000/docs%20as%20code/tech-gh_jekyll" rel="alternate" type="text/html" title="[Tech] Jekyll을 사용한 나만의 Github Pages 만들기" /><published>2021-08-31T00:00:00+09:00</published><updated>2021-08-31T00:00:00+09:00</updated><id>http://localhost:4000/docs%20as%20code/tech-gh_jekyll</id><content type="html" xml:base="http://localhost:4000/docs%20as%20code/tech-gh_jekyll">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro---나의-블로그는-어떻게-만들어졌을까&quot; id=&quot;markdown-toc-intro---나의-블로그는-어떻게-만들어졌을까&quot;&gt;Intro - 나의 블로그는 어떻게 만들어졌을까&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#github-pages에-관하여&quot; id=&quot;markdown-toc-github-pages에-관하여&quot;&gt;GitHub Pages에 관하여&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#호스팅&quot; id=&quot;markdown-toc-호스팅&quot;&gt;호스팅&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#빌드-및-게시&quot; id=&quot;markdown-toc-빌드-및-게시&quot;&gt;빌드 및 게시&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#jekyll에-관하여&quot; id=&quot;markdown-toc-jekyll에-관하여&quot;&gt;Jekyll에 관하여&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#jekyll-theme&quot; id=&quot;markdown-toc-jekyll-theme&quot;&gt;Jekyll Theme&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot; id=&quot;markdown-toc-실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;실습 Tutorial - 설치부터 사이트 게시까지 &lt;br /&gt; (feat. GitHub Doc’s Setting up your GitHub Pages site locally with Jekyll)&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#사전-조건prequisite&quot; id=&quot;markdown-toc-사전-조건prequisite&quot;&gt;사전 조건(Prequisite)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#1-필요-환경-설치&quot; id=&quot;markdown-toc-1-필요-환경-설치&quot;&gt;1. 필요 환경 설치&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-gemfile을-통한-jekyll-및-plugin-설치&quot; id=&quot;markdown-toc-2-gemfile을-통한-jekyll-및-plugin-설치&quot;&gt;2. Gemfile을 통한 Jekyll 및 Plugin 설치&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#3-사이트-콘텐츠-커스터마이징&quot; id=&quot;markdown-toc-3-사이트-콘텐츠-커스터마이징&quot;&gt;3. 사이트 콘텐츠 커스터마이징&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#4-jekyll-site-파일-생성하기&quot; id=&quot;markdown-toc-4-jekyll-site-파일-생성하기&quot;&gt;4. Jekyll Site 파일 생성하기&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#5-jekyll-site-빌드-및-테스트하기&quot; id=&quot;markdown-toc-5-jekyll-site-빌드-및-테스트하기&quot;&gt;5. Jekyll Site 빌드 및 테스트하기&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;리스트와-표&quot;&gt;리스트와 표&lt;/h3&gt;
+&lt;h2 id=&quot;intro---나의-블로그는-어떻게-만들어졌을까&quot;&gt;Intro - 나의 블로그는 어떻게 만들어졌을까&lt;/h2&gt;
 
-&lt;p&gt;좋은 리스트는 기술적 복잡한 내용을 질서있게 정렬할 수 있다.&lt;/p&gt;
+&lt;p&gt;현재 나의 블로그는 &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;에서 제공하는 웹사이트 호스팅 서비스인 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;과 정적 사이트 생성기인 &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;을 통하여 만들어졌다.
+&lt;br /&gt; &lt;strong&gt;GitHub Pages&lt;/strong&gt;가 사이트를 개설하기 위한 도메인과 퍼블리셔 기능을 제공한다면, &lt;strong&gt;Jekyll&lt;/strong&gt;은 이 블로그 전체 UI, 디자인 등을 포괄하는 사이트 생성 기능을 제공한다.
+&lt;br /&gt; 책이 웹사이트라면 그 책을 작성하는 작가를 &lt;strong&gt;Jekyll&lt;/strong&gt;, 그 책을 출판하는 출판사를 &lt;strong&gt;GitHub Pages&lt;/strong&gt;로 비유하고 싶다.
+&lt;br /&gt; 단, 이를 가능하게 하는 사전 조건은 사용자 계정의 GitHub에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; 이름의 repository가 존재해야 하며, 이 repository에 사이트 생성에 필요한 ‘HTML’, ‘CSS’, ‘JavaScript’, ‘Markdown’ 형태의 정적 파일들이 업로드(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;)되어야 한다.&lt;/p&gt;
 
-&lt;p&gt;다음은 테크니컬 라이팅에서 주로 쓰이는 리스트 타입이다.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;github-pages에-관하여&quot;&gt;GitHub Pages에 관하여&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;는 GitHub의 repository에 있는 HTML, CSS 및 JavaScript 등의 정적 사이트 파일들을 빌드 프로세스를 통해 실행하고, 해당 사이트를 게시하는 static site 호스팅 서비스이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;호스팅&quot;&gt;호스팅&lt;/h3&gt;
+
+&lt;p&gt;사용자는 GitHub에서 제공하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt; 도메인에 웹사이트를 호스팅하거나 혹은 사용자 자체 커스텀 도메인에서 사이트를 호스팅할 수 있다. 이에 대한 자세한 방법은 GitHub Docs에서 제공하는 &lt;a href=&quot;https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages&quot;&gt;Using a custom domain with GitHub Pages&lt;/a&gt;을 참고한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;빌드-및-게시&quot;&gt;빌드 및 게시&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;는 사용자 GitHub repository의 사이트 파일들을 정적 사이트로 자동 게시한다. 
+&lt;br /&gt; 사용자는 자체적으로 사이트용 static 파일들을 생성하거나 내부적인 빌드 프로세스를 활용해도 된다. 혹은 사용자 사이트를 빌드하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;static site generator&lt;/code&gt;를 사용할 수 있다.
+&lt;br /&gt; &lt;strong&gt;GitHub Pages&lt;/strong&gt;는 사이트를 생성하고 빌드하기 위하여 기본적으로 &lt;strong&gt;Jekyll&lt;/strong&gt;을 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll에-관하여&quot;&gt;Jekyll에 관하여&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;은 &lt;strong&gt;GitHub Pages&lt;/strong&gt;에 대한 빌트인 기능이 있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;static site generator&lt;/code&gt;이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;은 Markdown, HTML, CSS 형태의 파일들을 가지고 사용자가 선택한 레이아웃 기반의 정적 웹사이트를 생성하기까지 매우 간단한 빌드 프로세스를 지원한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll-theme&quot;&gt;Jekyll Theme&lt;/h3&gt;
+
+&lt;p&gt;사이트에서 보여지는 스타일이나 디자인은 정적 파일 중 CSS, JS, HTML 파일이 결정하는데, &lt;strong&gt;Jekyll Theme&lt;/strong&gt;를 적용하여 사용자 사이트의 Look &amp;amp; Feel을 커스터마이징할 수 있다. 
+&lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;는 
+Jekyll 커뮤니티에서 유지 관리하는 템플릿과 스타일로 사용할 Plugin을 정의하며, 사용자 콘텐츠로 재정의될 수 있도록 assets, layouts, includes, 그리고 stylesheets 구성의 패키지로 구성된다.
+&lt;strong&gt;Jekyll Theme&lt;/strong&gt;를 적용하는 방법은 두 가지이다.&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Bulleted lists&lt;/li&gt;
-  &lt;li&gt;Embedded lists&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;GitHub에서 지원해주는 &lt;a href=&quot;https://pages.github.com/themes/&quot;&gt;Supported Themes&lt;/a&gt; 적용하기&lt;/strong&gt;
+  &lt;br /&gt; -&amp;gt; &lt;a href=&quot;https://docs.github.com/en/pages/getting-started-with-github-pages/adding-a-theme-to-your-github-pages-site-with-the-theme-chooser&quot;&gt;“Adding a theme to your GitHub Pages site with the theme chooser.”&lt;/a&gt; 참고&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;GitHub에 올라온 오픈소스 형태의 Jekyll theme를 수동으로 적용하기&lt;/strong&gt;
+&lt;br /&gt; -&amp;gt; &lt;a href=&quot;https://docs.github.com/en/articles/adding-a-theme-to-your-github-pages-site-using-jekyll&quot;&gt;“Adding a theme to your GitHub Pages site using Jekyll.”&lt;/a&gt; 참고
+&lt;br /&gt; 현재 나의 GitHub Page site도 이 방법으로 진행하였으며 보다 다양한 스타일의 &lt;a href=&quot;https://jekyllrb.com/docs/themes/#pick-up-a-theme&quot;&gt;theme&lt;/a&gt;를 선택하고, 디자인이나 레이아웃 등을 사용자 취향에 맞게 커스터마이징할 수 있다.
+다만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.css&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.html&lt;/code&gt;과 같은 theme와 관련한 파일들을 사용자 로컬 환경에서 수정하고 &lt;strong&gt;Jekyll&lt;/strong&gt;을 통하여 사이트를 빌드해야하므로 GitHub의 Supported Themes 기능을 사용하는 방법보다 복잡할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;올바른-타입의-리스트-선택하기&quot;&gt;올바른 타입의 리스트 선택하기&lt;/h4&gt;
+&lt;h2 id=&quot;실습-tutorial---설치부터-사이트-게시까지--feat-github-docs-setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;실습 Tutorial - 설치부터 사이트 게시까지 &lt;br /&gt; (feat. &lt;a href=&quot;https://docs.github.com/en/enterprise/2.13/user/articles/setting-up-your-github-pages-site-locally-with-jekyll&quot;&gt;GitHub Doc’s Setting up your GitHub Pages site locally with Jekyll&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;Github Pages, Jekyll를 활용하여 직접 사이트를 개설해보는 과정은 위에 설명한 &lt;a href=&quot;#Jekyll Theme&quot;&gt;Jekyll theme를 수동으로 적용하는 과정&lt;/a&gt;을 step-by-step으로 풀이한 내용이라고 볼 수 있다. 
+&lt;br /&gt; 요약하자면 Jekyll theme를 적용하기에 앞서 Jekyll 실행을 위한 필요 환경을 설치 후 사용자의 Git repository에 Jekyll theme 설정 파일들을 생성하고 커스터마이징을 위한 파일 수정, 해당 사이트에 대한 파일 생성, 사이트 빌드 및 게시이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;사전-조건prequisite&quot;&gt;사전 조건(Prequisite)&lt;/h3&gt;
+
+&lt;p&gt;사용자 &lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot;&gt;GitHub 계정&lt;/a&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt;이름의 원격 repository가 존재해야 한다.(&lt;a href=&quot;https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites&quot;&gt;참고&lt;/a&gt;)
+&lt;br /&gt; 없다면 GitHub에서 해당 이름의 repository를 만든 후 로컬에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone &amp;lt;remote origin 주소&amp;gt;&lt;/code&gt; 하거나 로컬 특정 폴더에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout -b &amp;lt;브랜치명&amp;gt;&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git remote add origin &amp;lt;remote origin 주소&amp;gt;&lt;/code&gt; 로 진행한다.
+&lt;br /&gt; 이 repository 및 특정 브랜치에 사용자 사이트를 빌드하기 위한 필요 파일들이 저장되어야 하며 해당 repository 접근 설정은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt;으로 해야 한다. 
+사이트에 대한 소스 파일이 민감한 내용을 포함한다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;private&lt;/code&gt;설정도 가능하나 유료이다. 자세한 내용은 &lt;a href=&quot;https://github.com/pricing#compare-features&quot;&gt;GitHub’s products의 가격 정책&lt;/a&gt;을 참고한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;1-필요-환경-설치&quot;&gt;1. 필요 환경 설치&lt;/h3&gt;
+
+&lt;p&gt;GitHub Pages는 PHP, Ruby, Python과 같은 사용자 서버 쪽 언어을 지원하지 않으므로, Jekyll을 설치하고 실행하기 위해 사용자 로컬 PC 환경에 Ruby와 Bundler가 설치되어 있어야 한다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; Jekyll은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;라는 언어로 만들어진 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt; &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Gem&lt;/a&gt;이며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bundler&lt;/code&gt;는 Ruby Gems 간의 의존성, 빌드 에러 등을 관리하는 프로그램이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; Bundler를 설치하려면, Ruby가 설치되어 있어야 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step1.&lt;/strong&gt; Ruby 2.1.0 or higher &lt;a href=&quot;https://rubyinstaller.org/downloads/&quot;&gt;설치&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step2.&lt;/strong&gt; &lt;a href=&quot;https://bundler.io/&quot;&gt;Bundler&lt;/a&gt; 설치
+    &lt;br /&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 아래와 같이 실행&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
+    $ gem install bundler
+ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-gemfile을-통한-jekyll-및-plugin-설치&quot;&gt;2. Gemfile을 통한 Jekyll 및 Plugin 설치&lt;/h3&gt;
+
+&lt;p&gt;Jekyll 사이트 빌드에 필요한 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Gems&lt;/a&gt;을 설치해야 한다.
+Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot;&gt;Gemfile&lt;/a&gt;에 Jekyll 및 Plugin 리스트로 정의되어 있으며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;은 Jekyll 사이트 파일들이 저장되는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt; repository 폴더 루트에 존재한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step1.&lt;/strong&gt; Jekyll 사이트 파일들이 저장된 로컬 repository 폴더에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfil&lt;/code&gt;이 없으면 아래와 같은 내용의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 새로 만들어 루트 경로에 저장한다. 
+  &lt;br /&gt; Jekyll theme에 대한 Git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;하거나 다운로드해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;이 존재하다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; 내 아래 내용이 있는지 확인하고 없으면 추가한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://rubygems.org'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'github-pages'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;group: :jekyll_plugins&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; 필자는 사용하고자 하는 &lt;a href=&quot;http://jekyllthemes.org/themes/moon/&quot;&gt;Jekyll theme&lt;/a&gt;를 다운로드 후 로컬 Git repository 폴더에 복사했기 때문에 이미 Gemfile이 존재해있었다. 따라서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; 내 해당 내용을 추가하는 방식으로 진행했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfil&lt;/code&gt;에 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; Gem 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-feed&lt;/code&gt; 등과 같은 plugin Gem을 아래 명령어를 실행하여 설치한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;
+    $ bundle install
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;설치 후, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt;이 동일 경로에 생성된다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-feed&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-seo-tag&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-archives&lt;/code&gt;과 같은 Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;plugins&lt;/a&gt;도 Gem이다. 
+  &lt;br /&gt; 사용자는 이러한 Jekyll plugins을 사용하여 사이트에 대한 Jekyll 기능을 확장할 수 있다. 
+  –&amp;gt; &lt;a href=&quot;https://jekyllrb.com/docs/plugins/installation/&quot;&gt;plugin 사용 방법&lt;/a&gt;
+  &lt;br /&gt; GitHub Pages에서 기본적으로 사용하도록 되어있는 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins&quot;&gt;plugins&lt;/a&gt; 및 지원 가능한 &lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;plugins 리스트&lt;/a&gt;를 참고한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-사이트-콘텐츠-커스터마이징&quot;&gt;3. 사이트 콘텐츠 커스터마이징&lt;/h3&gt;
+
+&lt;p&gt;사용자 로컬 Git repository 폴더에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 포함하여 Jekyll site 구축을 위한 모든 파일들이 존재한다면 이제 Jekyll site를 빌드하여 게시하면 된다. 하지만 해당 파일들이 최초 Jekyll theme를 복사해온 상태 그대로라면 사이트에 보여질 내용은 사용자 정보를 담고 있지 않을 것이다. 따라서 사이트명, 이메일, SNS 주소를 포함하여 사이트 구조 및 내용은 직접 관련 파일을 수정하거나 추가하는 방식으로 커스터마이징해야 한다.
+&lt;br /&gt; 커스터마이징할 파일을 포함한 Jekyll site를 구성하는 전체 폴더의 기본 구조는 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tech/0831_gh_jekyll_01.png&quot; alt=&quot;참고&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[출처: &lt;a href=&quot;https://jekyllrb.com/docs/structure&quot;&gt;Jekyll Docs &amp;gt; Site Structure&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt; 이 중 일부 파일을 수정하여 사이트 콘텐츠을 커스터마이징하는 방법은 다음과 같다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Bulleted lists vs. Numbered lists
-&lt;br /&gt; 순서가 없는(순서를 바꿔도 내용 변경이 없는) 항목에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bulleted list&lt;/code&gt;, 순서가 있는(순서를 바꾸면 내용 변경이 있는) 항목에는&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Numbered list&lt;/code&gt;를 사용한다.&lt;/p&gt;
+    &lt;p&gt;사용자 정보(사이트명, 이메일, 로고, SNS 등) –&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 수정 (&lt;a href=&quot;https://jekyllrb.com/docs/configuration/&quot;&gt;Jekyll Docs 참고&lt;/a&gt;)
+&lt;br /&gt; 다운로드한 site theme에 존재하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 내용을 보면 본인 개인 정보와 다른 부분이 보이기 때문에 어느 부분을 수정할지 인지할 수 있을 것이다. 예를 들어 사이트 로고에 대한 이미지 파일 수정 방법은 &lt;a href=&quot;https://jekyllrb.com/docs/static-files/#add-front-matter-to-static-files&quot;&gt;Jekyll Docs&lt;/a&gt;를 참조한다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Embedded lists:&lt;/p&gt;
+    &lt;p&gt;사이트 구조 및 레이아웃, 콘텐츠&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run-in list&lt;/code&gt;라 부르는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;embedded list&lt;/code&gt;는 문장 내 열거형 항목으로 존재한다.&lt;br /&gt;
-Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llamas, analyze alpacas, delete vicugnas, and track dromedaries&lt;/strong&gt;. (4개 항목의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;embedded list&lt;/code&gt;)&lt;/p&gt;
+        &lt;p&gt;템플릿 구조 -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; 폴더 내용 수정 (&lt;a href=&quot;https://jekyllrb.com/docs/layouts/&quot;&gt;Jekyll Docs 참고&lt;/a&gt;)&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;일반적으로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;embedded list&lt;/code&gt;는 기술 정보를 표시하는 데 좋은 방법은 아니므로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bulleted list&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numbered list&lt;/code&gt;로 변환한다. 
-&lt;br /&gt; Ex) The llamacatcher API enables callers to do the following:&lt;/p&gt;
-
+        &lt;p&gt;콘텐츠
+&lt;br /&gt; 사용자가 사이트에 업데이트하는 콘텐츠 유형은 레이아웃에 따라 크게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt;가 있으며 모두 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Markdown&lt;/code&gt; 및 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt;형태로 작성한다. 또한 콘텐츠 가장 첫부분에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YAML&lt;/code&gt;형식의 &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;Front Matter&lt;/a&gt; 블락을 추가하여 현재 작성하는 내용에 대한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;date&lt;/code&gt;와 같은 meta data 정보를 명시한다.&lt;/p&gt;
         &lt;ul&gt;
-          &lt;li&gt;Create and query llamas.&lt;/li&gt;
-          &lt;li&gt;Analyze alpacas.&lt;/li&gt;
-          &lt;li&gt;Delete vicugnas.&lt;/li&gt;
-          &lt;li&gt;Track dromedaries.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;page&lt;/code&gt; 추가하기 -&amp;gt; 루트 경로에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt; 파일 추가
+&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-page-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new page to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/pages/&quot;&gt;Jekyll Docs &amp;gt; Pages&lt;/a&gt;를 참고한다.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 추가 및 변경하기 -&amp;gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 폴더 수정 
+&lt;br /&gt; 자세한 수정 방법은 &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-content-to-your-github-pages-site-using-jekyll#adding-a-new-post-to-your-site&quot;&gt;GitHub Docs &amp;gt; Adding a new post to your site&lt;/a&gt; 및 &lt;a href=&quot;https://jekyllrb.com/docs/posts/&quot;&gt;Jekyll Docs &amp;gt; Posts&lt;/a&gt;를 참고한다.&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -1941,164 +1076,1107 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;리스트-항목을-병렬로-유지하기&quot;&gt;리스트 항목을 병렬로 유지하기&lt;/h4&gt;
+&lt;h3 id=&quot;4-jekyll-site-파일-생성하기&quot;&gt;4. Jekyll Site 파일 생성하기&lt;/h3&gt;
 
-&lt;p&gt;효과적인 목록은 병렬형 리스트이다. 병렬형 리스트의 모든 항목은 ‘연관되어 있는 것’처럼 보인다.
-&lt;br /&gt; 즉 병렬형 리스트 항목은 다음 조건에 대하여 모두 공통성을 갖는다.&lt;/p&gt;
+&lt;p&gt;이 단계는 사용자 로컬 환경에서 Jekyll site를 빌드하여 테스트해야하는데 사용자 로컬 PC에 GitHub Page에 게시할 Jekyll site 파일들이 존재하지 않는 경우 진행한다. 즉  site 파일들이 저장될 로컬 폴더가 빈 상태여야 한다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; 사용자가 특정 &lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Jekyll Theme&lt;/a&gt;를 다운로드하거나 GitHub repository에 게시된 해당 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태라면 이미 사용자 로컬 폴더에는 관련 사이트 파일들이 존재해있으므로 이 단계를 생략하고 바로 &lt;a href=&quot;#5-jekyll-site-----------&quot;&gt;5. Jekyll Site 빌드 및 테스트하기&lt;/a&gt;로 넘어간다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
+  &lt;br /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
+    $ bundle exec jekyll _{jekyll버전명}_ new {local repo명}
+  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ bundle exec jekyll _3.3.0_ new NEW-JEKYLL-SITE-REPOSITORY-NAME&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;위 명령어 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;내 정의된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;jekyll&quot;, &quot;~&amp;gt; {버전명}&quot;&lt;/code&gt;를 주석 처리 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll new .&lt;/code&gt;를 실행하거나 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll new {my-project}&lt;/code&gt;를 실행한다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⚠️ &lt;span style=&quot;color:#FFE423&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; 이미 파일들이 존재하는 상황에서 위 명령어를 수행하면 다음과 같은 에러가 발생한다.
+&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Conflict: ~ exists and is not empty.&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Site 파일들을 생성하였으면 GitHub Pages를 통하여 site를 게시할 수 있도록 다음 단계를 진행한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;에 정의된 gem 리스트 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem을 사용하도록 아래와 같이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 수정한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c1&quot;&gt;# gem &quot;jekyll&quot;, &quot;~&amp;gt; 3.9.0&quot; #diable jekyll&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;github-pages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;group: :jekyll_plugins&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#using github-pages&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이후 모든 변경 사항을 연결된 Git 원격 repository에 업로드하도록 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add .&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;commit message&quot;&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin {gh-pages branch}&lt;/code&gt; 순서로 진행한다.
+&lt;br /&gt; 해당 로컬 폴더가 Git 소스를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clone&lt;/code&gt;한 상태가 아니거나, Git repository로 초기화되지 않은 상태라면 위의 &lt;a href=&quot;#------prequisite-&quot;&gt;사전 조건(Prequisite)&lt;/a&gt;을 참고하여 사용자 로컬 상의 Git 환경부터 설정한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5-jekyll-site-빌드-및-테스트하기&quot;&gt;5. Jekyll Site 빌드 및 테스트하기&lt;/h3&gt;
+
+&lt;p&gt;사용자가 사이트 파일 내용을 위 &lt;a href=&quot;#3---------------&quot;&gt;3. 사이트 콘텐츠 커스터마이징&lt;/a&gt;처럼 변경했다면 GitHub Pages를 통하여 게시되는 웹사이트 상에서 보기 전에 사용자 로컬 환경에서 확인할 수 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; GitHub Pages 사용자가 변경한 콘텐츠를 원격 repository에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt;하면 Jekyll을 사용해서 사이트를 빌드 후 자동 게시하므로 테스트할 필요가 없다면 해당 단계도 생략할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;해당 과정은 GitHub Pages로 호스팅하는 것이 아닌 Jekyll을 사용하여 사용자 로컬의 서버 환경에서 테스트하는 것이기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;내 명시된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-pages&lt;/code&gt; gem 정보는 주석으로 되어있고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; gem 정보는 주석이 해제되어 있는지 확인한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; CMD window 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git Bash&lt;/code&gt;에서 해당 로컬 폴더 경로로 이동 후 아래 명령어를 실행한다.
+  &lt;br /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;    
+    $ bundle exec jekyll serve
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; 명령어는 Jekyll site 빌드 후 내부 서버에 게시한다는 의미이다. 
+    &lt;br /&gt; (이외 다른 Jekyll 명령어는 &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;Jekyll Docs&lt;/a&gt; 참고)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이후 명령 실행창에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Server address: http://127.0.0.1:4000&lt;/code&gt;가 표시된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; 사용자 브라우저에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://127.0.0.1:4000&lt;/code&gt; 주소에 접속 후 해당 사이트가 잘 게시되는지 확인한다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt;
+&lt;br /&gt; 사용자 site가 내부 로컬 서버에 게시되는 동안  site 파일을 수정하는 경우,  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl&lt;/code&gt;+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; 키를 눌러 종료하지 않는 이상, 자동으로 site에 반영된다.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Docs as Code" /><category term="Github Pages" /><category term="Jekyll" /><summary type="html">Github Pages, Jekyll를 활용한 정적 사이트 개설에 관하여</summary></entry><entry><title type="html">[EN] 명사의 쓰임</title><link href="http://localhost:4000/english%20writing/Eg-art-copy" rel="alternate" type="text/html" title="[EN] 명사의 쓰임" /><published>2021-08-28T00:00:00+09:00</published><updated>2021-08-28T00:00:00+09:00</updated><id>http://localhost:4000/english%20writing/Eg-art%20copy</id><content type="html" xml:base="http://localhost:4000/english%20writing/Eg-art-copy">&lt;h2 id=&quot;하이픈--연결형&quot;&gt;하이픈(-) 연결형&lt;/h2&gt;
+
+&lt;p&gt;상황에 따라 적절하게 하이픈(-)으로 연결하여 하나의 명사 역할을 한다.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;문법&lt;/li&gt;
-  &lt;li&gt;범주&lt;/li&gt;
-  &lt;li&gt;대/소문자&lt;/li&gt;
-  &lt;li&gt;구두점&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;a &lt;strong&gt;five-star&lt;/strong&gt; hotel&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;a-world-class-schcool&quot;&gt;a world-class schcool&lt;/h2&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;다음 리스트는 모든 항목이 복수 명사(문법),먹을 수 있는(범주), 소문자(대/소문자, 마침표가 없음(구두점)에서 모두 공통적이므로 병렬이다.&lt;/p&gt;
+&lt;h2 id=&quot;기본적인-관사-사용의-규칙&quot;&gt;기본적인 관사 사용의 규칙&lt;/h2&gt;
+
+&lt;h3 id=&quot;부정관사-aan&quot;&gt;부정관사 a(an)&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;carrots&lt;/li&gt;
-  &lt;li&gt;potatoes&lt;/li&gt;
-  &lt;li&gt;cabbages&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;다음 리스트는 모든 항목이 대문자로 시작하고 구두점이 있는 문장이므로 병렬이다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Carrots contain lots of Vitamin A.&lt;/li&gt;
-  &lt;li&gt;Potatoes taste delicious.&lt;/li&gt;
-  &lt;li&gt;Cabbages provide oodles of Vitamin K.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;반대로, 비병렬 리스트는 최소한 한 개 항목이라도 위 조건 중 최소한 한 개 이상 공통성을 갖지 않는다.&lt;/p&gt;
-
-&lt;p&gt;다음 리스트는 최소 한 개 항목이 네 가지 조건에 대해 모두 비병렬적이다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;carrots&lt;/li&gt;
-  &lt;li&gt;potatoes&lt;/li&gt;
-  &lt;li&gt;The summer light obscures all memories of winter.(문법, 범주, 대/소문자, 구두점)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사(가산 명사 단수형)
+&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; interface, &lt;strong&gt;a&lt;/strong&gt; book&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해지지 않는 명사(불특정 명사)
+&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; boy&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 대표성을 띄는 명사
+&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; good jpb&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;기간 부사(every, once, per) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; a
+&lt;br /&gt; Ex) once &lt;strong&gt;a&lt;/strong&gt; week&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;명령형-동사로-numbered-list-시작하기&quot;&gt;명령형 동사로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numbered list&lt;/code&gt; 시작하기&lt;/h4&gt;
-
-&lt;p&gt;명령형 동사는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;open&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;start&lt;/code&gt;와 같이 명령형이다.&lt;/p&gt;
-
-&lt;p&gt;병렬 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numbered list&lt;/code&gt;의 모든 항목은 다음과 명령형 동사로 시작한다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Download the Frambus app from Google Play or iTunes.&lt;/li&gt;
-  &lt;li&gt;Configure the Frambus app’s settings.&lt;/li&gt;
-  &lt;li&gt;Start the Frambus app.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;다음 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numbered list&lt;/code&gt; 중 두 개는 명령형 동사로 시작하지만 하나는 그렇지 않으므로 비병렬형이다. 병렬형으로 유지해야 한다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Instantiate the Froobus class.&lt;/li&gt;
-  &lt;li&gt;Invoke the Froobus.Salmonella() method.&lt;/li&gt;
-  &lt;li&gt;The process stalls.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;단락-작성법&quot;&gt;단락 작성법&lt;/h3&gt;
-
-&lt;p&gt;결합력 있는 단락은 만드는 몇 가지 지침 사항&lt;/p&gt;
-
-&lt;h4 id=&quot;멋진-시작-문장-쓰기&quot;&gt;멋진 시작 문장 쓰기&lt;/h4&gt;
-
-&lt;p&gt;시작 문장은 모든 단락애서 가장 중요하다. 바쁜 독자는 첫 문장에는 집중하고 다음 문장을 건너뛰기도 한다.&lt;/p&gt;
+&lt;h3 id=&quot;정관사-the&quot;&gt;정관사 The&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;좋은 시작 문장은 단락의 중심점을 만든다.&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;결함이 있는 시작 문장은 독자를 잘못된 방향으로 보낸다.&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Exercise&lt;/strong&gt;
-다음의 시작 문장은 단락이 피타고라스 정리에 초점을 맞출 것을 암시하기 때문에 결함이 있다. 사실, 단락의 초점은 실제로 클러스터링 알고리즘이다.&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The Pythagorean Theorem states that the sum of the squares of both legs of a right triangle is equal to the square of the hypotenuse. The k-means clustering algorithm relies on the Pythagorean Theorem to measure distances. By contrast, the k-median clustering algorithm relies on the Manhattan Distance.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;다음의 시작 문장dl 더 효과적일 것이다.&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Different clustering algorithms measure distances differently.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사 or 셀 수 없는 명사&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해진 범위의 명사
+&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; economic development of Korea&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 유일무이한 존재의 명사 
+&lt;br /&gt; Ex) in &lt;strong&gt;the&lt;/strong&gt; air, in &lt;strong&gt;the&lt;/strong&gt; world&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 특정 고유 명사&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;특정 바다, 강, 산맥 이름 
+&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; Han river, &lt;strong&gt;the&lt;/strong&gt; Rockey&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;(정부 관련) 공공 건물 이름&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;’s’로 끝나는 나라명
+&lt;br /&gt; the U.S, the Philipines&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;문서-구성의-key-point&quot;&gt;문서 구성의 Key Point&lt;/h3&gt;
-
-&lt;h4 id=&quot;문서의-범위를-명시하기&quot;&gt;문서의 범위를 명시하기&lt;/h4&gt;
+&lt;h3 id=&quot;관사가-필요-없는-명사&quot;&gt;관사가 필요 없는 명사&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;좋은 문서는 그의 범의를 정의하며 시작한다.
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ex) This document describes the overall design of Project Frambus.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;더 좋은 문서는 독자가 문서에 다룰 것으로 예상할 수 있는 비범위 주제를 추가 정의한다.
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ex) This document does not describe the design for the related technology, Project Froobus.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;li&gt;
+    &lt;p&gt;질병, 일반적 목적지
+&lt;br /&gt; Ex) go to school&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;범위 및 비범위 설명은 독자뿐만 아니라 작성자에게도 도움이 된다. 쓰는 동안 문서의 내용이 범위 설명에서 벗어나면 문서의 초점을 다 맞주거나 범위 설명을 수정해야 한다.&lt;/p&gt;
+    &lt;p&gt;고유 명사 중 역 이름, 지역 이름, 공원 이름, 공항 이름, 민간 건물명&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;처음 초안을 검토할 때 범위 설명을 층족하는데 도움이 되지 않는 섹션을 삭제한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ℹ️&lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;일반적으로 고유 명사 앞에는 관사가 올 수 없다.
+  &lt;br /&gt; 고유 명사 중 하나인 사람 이름, 회사 이름 앞에는 a/an/the 가 오지 않는다. 다만 회사 이름, 브랜드인 경우 세상에 유일하다는 의미로 그의 가치를 높이기 위해 쓰기도 한다.
+  &lt;br /&gt; Ex) The Times, The bank of America&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;자주-쓰이는-관사-사용법&quot;&gt;자주 쓰이는 관사 사용법&lt;/h2&gt;
+
+&lt;p&gt;부정관사 a(an)은 정관사 the 보다 사용하기 수월하다. 우리가 흔히 아는 셀수 있는 일반 명사 앞에는 무조건 부정 관사가 오기 때문이다.
+&lt;br /&gt; 정관사 the 경우, 뒤에 오는 명사에 따라 쓰이기도, 쓰이지 않기도 해서, 그에 관한 사용법 위주로 알아보기로 한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;작성자, 독자 모두 이미 인지하고 있는 명사를 가리킬 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;로 사용한다.
+&lt;br /&gt; (바로 직전에 해당 명사를 소개해서 그 명사를 알 수 있는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt; 이후 해당 명사에 대한 내용이 오는 경우)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;뒤에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Of&lt;/code&gt;가 오는 한정형 명사 앞에는 99% the를 사용한다.
+&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; modeling of ~, &lt;strong&gt;the&lt;/strong&gt; OOO of &lt;strong&gt;the&lt;/strong&gt; N(앞에 내용에서 N에 대해 언급했을 경우)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;복수 명사 앞에는 일반적으로 the를 쓰지 않는다. Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The services ~ &lt;/code&gt;는 틀린 표현이나, 예외적으로 복수 일반 명사 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services&lt;/code&gt;를 앞에서 언급했고, 이를 다시 지칭할 때는 한시적으로 사용.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;º&lt;/code&gt; 으로 시작하는 List-up에 포함되는 명사 앞에는 the를 사용한다. (스타일 가이드)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;제목에 포함되는 명사는 복수명사라 할지라도 앞에 the를 사용한다. (스타일 가이드)
+&lt;br /&gt; Ex) &lt;strong&gt;The&lt;/strong&gt; roles of ABC&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;문장에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;가 열거형으로 이어지는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the&lt;/code&gt;를 첫번째 명사 앞에만 사용하고 쉼표로 구분 후 마지막 명사 앞에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;, and&lt;/code&gt;를 사용한다.
+&lt;br /&gt; Ex) the A, B, C, and D&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="English Writing" /><category term="noun" /><summary type="html">복합 명사, 헷갈리는 단/복수형</summary></entry><entry><title type="html">[EN] 관사의 쓰임</title><link href="http://localhost:4000/english%20writing/Eg-art" rel="alternate" type="text/html" title="[EN] 관사의 쓰임" /><published>2021-08-28T00:00:00+09:00</published><updated>2021-08-28T00:00:00+09:00</updated><id>http://localhost:4000/english%20writing/Eg-art</id><content type="html" xml:base="http://localhost:4000/english%20writing/Eg-art">&lt;h2 id=&quot;intro---골치아픈-관사&quot;&gt;Intro - 골치아픈 관사&lt;/h2&gt;
+
+&lt;p&gt;명사 앞에 붙는 관사는 크게 부정관사 a(an), 정관사 the 가 있다.
+&lt;br /&gt; 영문 작성을 하다보면 여러 종류의 명사를 쓰기 마련인데, 명사 앞에 a(an)를 써야 할지, the를 써야 할지, 아예 쓰지 말아야 할지 헷갈릴 때가 있다.
+우선 기본적인 관사의 사용 규칙을 익힌 후, 실제 문서 작성에서 자주 쓰이는 사용법을 알아보기로 한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;기본적인-관사-사용의-규칙&quot;&gt;기본적인 관사 사용의 규칙&lt;/h2&gt;
+
+&lt;h3 id=&quot;부정관사-aan&quot;&gt;부정관사 a(an)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사(가산 명사 단수형)
+&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; interface, &lt;strong&gt;a&lt;/strong&gt; book&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해지지 않는 명사(불특정 명사)
+&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; boy&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 대표성을 띄는 명사
+&lt;br /&gt; Ex) &lt;strong&gt;a&lt;/strong&gt; good jpb&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;기간 부사(every, once, per) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; a
+&lt;br /&gt; Ex) once &lt;strong&gt;a&lt;/strong&gt; week&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;독자를-명시하기&quot;&gt;독자를 명시하기&lt;/h4&gt;
+&lt;h3 id=&quot;정관사-the&quot;&gt;정관사 The&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;좋은 문서는 독자를 명시적으로 정의한다.&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ex) I wrote this document for the test engineers supporting Project Frambus.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 셀 수 있는 명사 or 셀 수 없는 명사&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;독자의 정의는 사전 조건 지식이나 경험을 지정할 수 있다.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 정해진 범위의 명사
+&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; economic development of Korea&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 유일무이한 존재의 명사 
+&lt;br /&gt; Ex) in &lt;strong&gt;the&lt;/strong&gt; air, in &lt;strong&gt;the&lt;/strong&gt; world&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 특정 고유 명사&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;특정 바다, 강, 산맥 이름 
+&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; Han river, &lt;strong&gt;the&lt;/strong&gt; Rockey&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;(정부 관련) 공공 건물 이름&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;’s’로 끝나는 나라명
+&lt;br /&gt; the U.S, the Philipines&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ex) This document assumes that you understand matrix multiplication and how to brew a really good cup of tea.
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;관사가-필요-없는-명사&quot;&gt;관사가 필요 없는 명사&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;질병, 일반적 목적지
+&lt;br /&gt; Ex) go to school&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;고유 명사 중 역 이름, 지역 이름, 공원 이름, 공항 이름, 민간 건물명&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ℹ️&lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;일반적으로 고유 명사 앞에는 관사가 올 수 없다.
+  &lt;br /&gt; 고유 명사 중 하나인 사람 이름, 회사 이름 앞에는 a/an/the 가 오지 않는다. 다만 회사 이름, 브랜드인 경우 세상에 유일하다는 의미로 그의 가치를 높이기 위해 쓰기도 한다.
+  &lt;br /&gt; Ex) The Times, The bank of America&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;자주-쓰이는-관사-사용법&quot;&gt;자주 쓰이는 관사 사용법&lt;/h2&gt;
+
+&lt;p&gt;부정관사 a(an)은 정관사 the 보다 사용하기 수월하다. 우리가 흔히 아는 셀수 있는 일반 명사 앞에는 무조건 부정 관사가 오기 때문이다.
+&lt;br /&gt; 정관사 the 경우, 뒤에 오는 명사에 따라 쓰이기도, 쓰이지 않기도 해서, 그에 관한 사용법 위주로 알아보기로 한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;작성자, 독자 모두 이미 인지하고 있는 명사를 가리킬 때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;로 사용한다.
+&lt;br /&gt; (바로 직전에 해당 명사를 소개해서 그 명사를 알 수 있는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt; 이후 해당 명사에 대한 내용이 오는 경우)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;뒤에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Of&lt;/code&gt;가 오는 한정형 명사 앞에는 99% the를 사용한다.
+&lt;br /&gt; Ex) &lt;strong&gt;the&lt;/strong&gt; modeling of ~, &lt;strong&gt;the&lt;/strong&gt; OOO of &lt;strong&gt;the&lt;/strong&gt; N(앞에 내용에서 N에 대해 언급했을 경우)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;복수 명사 앞에는 일반적으로 the를 쓰지 않는다. Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The services ~ &lt;/code&gt;는 틀린 표현이나, 예외적으로 복수 일반 명사 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services&lt;/code&gt;를 앞에서 언급했고, 이를 다시 지칭할 때는 한시적으로 사용.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;º&lt;/code&gt; 으로 시작하는 List-up에 포함되는 명사 앞에는 the를 사용한다. (스타일 가이드)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;제목에 포함되는 명사는 복수명사라 할지라도 앞에 the를 사용한다. (스타일 가이드)
+&lt;br /&gt; Ex) &lt;strong&gt;The&lt;/strong&gt; roles of ABC&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;문장에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the + 명사&lt;/code&gt;가 열거형으로 이어지는 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the&lt;/code&gt;를 첫번째 명사 앞에만 사용하고 쉼표로 구분 후 마지막 명사 앞에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;, and&lt;/code&gt;를 사용한다.
+&lt;br /&gt; Ex) the A, B, C, and D&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="English Writing" /><category term="Article" /><summary type="html">기본적인 관사의 규칙 및 자주 쓰이는 사용법에 관하여</summary></entry><entry><title type="html">[EN] 장소 앞 전치사</title><link href="http://localhost:4000/english%20writing/Eg-pre" rel="alternate" type="text/html" title="[EN] 장소 앞 전치사" /><published>2021-08-27T00:00:00+09:00</published><updated>2021-08-27T00:00:00+09:00</updated><id>http://localhost:4000/english%20writing/Eg-pre</id><content type="html" xml:base="http://localhost:4000/english%20writing/Eg-pre">&lt;h2 id=&quot;장소에-따라-구분&quot;&gt;장소에 따라 구분&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;At&lt;/strong&gt; + 비교적 작은 장소
+&lt;br /&gt; Ex) I arrived &lt;strong&gt;at&lt;/strong&gt; my office.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;In&lt;/strong&gt; + 비교적 넓은 장소
+&lt;br /&gt; Ex) My cousin is living &lt;strong&gt;in&lt;/strong&gt; Hanoi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;의미에-따라-구분&quot;&gt;의미에 따라 구분&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I have been &lt;strong&gt;to&lt;/strong&gt; Vetnam serveral times.
+  &lt;br /&gt; (=) I visited Vetnam.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I go &lt;strong&gt;on&lt;/strong&gt; a business trip.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Many expert &lt;strong&gt;from&lt;/strong&gt; diverse fields.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;I go &lt;strong&gt;to&lt;/strong&gt; a company.
+&lt;br /&gt; (=) I enter a company.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="English Writing" /><category term="Preposition" /><summary type="html">헷갈리는 전치사 쓰임에 관하여</summary></entry><entry><title type="html">[TW] Technical Writing 기본</title><link href="http://localhost:4000/technical%20writing/tw-base" rel="alternate" type="text/html" title="[TW] Technical Writing 기본" /><published>2021-08-23T00:00:00+09:00</published><updated>2021-08-23T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-base</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-base">&lt;h2 id=&quot;기술-내용-종류&quot;&gt;기술 내용 종류&lt;/h2&gt;
+
+&lt;h3 id=&quot;정의definition&quot;&gt;정의(Definition)&lt;/h3&gt;
+
+&lt;p&gt;작성하려는 기술이 무엇인지 그 개념에 대하여 반드시 정의해야 한다. 보통 해당 문서의 목차 중 개요(Introduction)에 작성한다&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기본 정의: 특징 + 카테고리 &lt;br /&gt;
+Ex) ABC는 &lt;u&gt;A 사양에 맞추어 애플리케이션 모델링을 지원하는&lt;/u&gt; &lt;strong&gt;[특징]&lt;/strong&gt; &lt;u&gt;도구&lt;/u&gt; &lt;strong&gt;[카테고리]&lt;/strong&gt; 입니다.&lt;/li&gt;
+  &lt;li&gt;확장 정의: 기본 정의 + 해당 기술의 기능 / 동작 원리 / 사용 목적 / 강점 / 제약사항&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;프로시저-vs-프로세스&quot;&gt;프로시저 vs. 프로세스&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;프로시저(Procedure)&lt;/strong&gt;:
+&lt;br /&gt; 해당 기술과 관련하여 독자가 어떠한 행위를 하도록 설명하는 지침으로써, 특정 순서 혹은 플로우에 따라 동작을 하여 관련 이벤트가 발생하도록 하는 것이 목적이다.
+    &lt;ul&gt;
+      &lt;li&gt;동작을 수행하기에 앞서 사전 조건을 반드시 작성한다.
+        &lt;ul&gt;
+          &lt;li&gt;누가, 언제, 왜, 이 동작을 수행해야 하는가&lt;/li&gt;
+          &lt;li&gt;동작을 수행하는 독자가 고려해야 할 사항이 있는가 (가정 및 제약사항)&lt;/li&gt;
+          &lt;li&gt;독자가 이 동작을 수행하기 전에 반드시 수행하거나 필요한 환경이 있는가 (요구사항)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;독자가 동작을 완료하기 위한 지침 및 지시 사항을 작성한다.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;명령형&lt;/span&gt;으로 작성한다.&lt;/li&gt;
+          &lt;li&gt;글머리 기호가 아닌 &lt;span style=&quot;color:red&quot;&gt;번호를 사용&lt;/span&gt;하여 동작의 특정 순서대로 작성한다.&lt;/li&gt;
+          &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;각 번호에는 하나의 동작만 작성&lt;/span&gt;한다.&lt;/li&gt;
+          &lt;li&gt;행동을 하는 주체가 누구인지 명확하게 작성한다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;프로세스(Process)&lt;/strong&gt;:
+&lt;br /&gt; 어떤 일이 일어나는 일련의 단계를 설명하는 것이 목적으로, 독자에게 그 단계를 수행하도록 하는 지침이 아님.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;설명형&lt;/span&gt;으로 ‘누가’, ‘언제’, ‘무엇을’, ‘어디에’ 해당하는 내용을 작성한다.&lt;/li&gt;
+      &lt;li&gt;어떤 일이 발생한 순서대로 설명하고, 그 결과를 작성한다.&lt;/li&gt;
+      &lt;li&gt;어떤 일이 발생한 하나의 단계가 다른 단계의 결과라면, 그 두 단계간의 인과 관계를 설명한다.&lt;/li&gt;
+      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;현재시제&lt;/span&gt;를 사용한다.&lt;/li&gt;
+      &lt;li&gt;부가적으로 표, 목록, 다이어그램을 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;end-to-end-절차-&quot;&gt;End-to-End 절차 ⭐&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;End-to-End 절차는 사용자가 특정 절차를 완료하기 위해 필요한 정의, 요구사항, 절차 등과 같은 모든 기술 정보를 포함한다.&lt;/li&gt;
+  &lt;li&gt;End-to-End 절차를 정확하고 명확하게 작성하기 위해서는 어떤 종류의 기술 정보가 있으며, 그러한 정보가 어디에 기술되어야 하는지 인지해야 한다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;End-to-End 절차를 작성하기에 앞서, 독자가 해당 기술 정보를 필요로 하는지에 대한 조사거 선행되어야 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;End-to-End 절차 예시
+    &lt;ol&gt;
+      &lt;li&gt;정의&lt;/li&gt;
+      &lt;li&gt;시스템 요구사항(Requirements) or 사전 조건(Prequisite)&lt;/li&gt;
+      &lt;li&gt;소프트웨어 구성&lt;/li&gt;
+      &lt;li&gt;소트웨어 설치 방법&lt;/li&gt;
+      &lt;li&gt;소프트웨어 사용 방법&lt;/li&gt;
+      &lt;li&gt;소프트웨어 기능&lt;/li&gt;
+      &lt;li&gt;사용 예시&lt;/li&gt;
+      &lt;li&gt;문제 해결 방법&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;기술-정보-다루기&quot;&gt;기술 정보 다루기&lt;/h2&gt;
+
+&lt;h3 id=&quot;분류classification&quot;&gt;분류(Classification)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;각 항목을 공통되는 성질에 따라 종류별로 나눈다.
+&lt;br /&gt; -&amp;gt; 표, 목록, 다이어그램 등을 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;구조structure&quot;&gt;구조(Structure)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;각 항목의 전체가 어떻게 구성되어 있는지 설명한다.
+&lt;br /&gt; -&amp;gt; 다이어그램 또는 테이블을 사용하여 각 파트 간의 관계를 설명한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;기술-정보-작성-가이드라인-&quot;&gt;기술 정보 작성 가이드라인 ⭐&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;기술 정보에 해당하는 글을 중심으로 작성하되, 글로 설명하기 힘들 경우 그림, 표, 그래프를 작성하여 보완한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;글이 없이 그림, 표, 그래프만 단독으로 작성하지 않는다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;글은 아래 사항을 고려하여 그림, 표, 그래프 위에 작성한다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;그림, 표, 그래프는 무엇에 대해서 설명하는가&lt;/li&gt;
+      &lt;li&gt;그림, 표, 그래프에서 독자에게 알려주고 싶은 내용은 어떤 부분인가&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;논리적인-기술-정보-작성-가이드라인-&quot;&gt;논리적인 기술 정보 작성 가이드라인 ⭐&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;단락 작성
+    &lt;ul&gt;
+      &lt;li&gt;단락 주제와 관련한 내용, 독자 관점에서 필요한 단어, 용어, 문장만을 작성한다.&lt;/li&gt;
+      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;하나의 단락에는 하나의 주제만 작성&lt;/span&gt;한다.&lt;/li&gt;
+      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;주제문을 단락의 맨 처음에 작성&lt;/span&gt;한다.&lt;/li&gt;
+      &lt;li&gt;주제문을 뒷받침해주는 보충 문장을 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;문장 작성
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;하나의 문장에는 하나의 주제만 작성&lt;/span&gt;한다.&lt;/li&gt;
+      &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;육하원칙(누가, 언제, 어디서, 무엇을, 어떻게, 왜)에 맞게 작성&lt;/span&gt;한다.&lt;/li&gt;
+      &lt;li&gt;미사어구 및 불필요한 단어를 사용하여 문장을 장황하게 작성하지 않는다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;테크니컬-커뮤니케이션-&quot;&gt;테크니컬 커뮤니케이션 ⭐&lt;/h2&gt;
+
+&lt;h3 id=&quot;개발자엔지니어와의-기술-인터뷰&quot;&gt;개발자(엔지니어)와의 기술 인터뷰&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;인터뷰 전 개발자의 특성(성향, 업무 스타일, 소속 팀 분위기 등)을 파악한다.&lt;/li&gt;
+  &lt;li&gt;관련 기술에 대한 사전 조사를 하여 기본 배경, 지식, 이론 등을 숙지한다.&lt;/li&gt;
+  &lt;li&gt;필요한 질문 리스트를 준비하여 인터뷰 시 구체적으로 질문한다. (질문 수준이 반영할 기술 내용을 결정)&lt;/li&gt;
+  &lt;li&gt;상대방의 얘기에 경청하고 모두 들은 후 필요한 질문을 한다.&lt;/li&gt;
+  &lt;li&gt;인터뷰 동안 상대방의 질문에 모두 답하지 않아도 된다. -&amp;gt; 조사가 더 필요하거나, 다른 TWer와의 합일이 필요한 부분은 확인 후 알려주겠다고 답변한다.&lt;/li&gt;
+  &lt;li&gt;상대방와 반대되는 의견에 절대 반박하거나 논쟁하지 않되, 조건 및 방안을 제시하여 우회적으로 협의해나간다.&lt;/li&gt;
+  &lt;li&gt;본인의 경험과 경력에 입각해서 함부로 발설하지 않는다. 전문 분야가 아니라면 세부적으로 파고들기 보단 넓은 범주에서 말한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;개발자엔지니어와-협업하기&quot;&gt;개발자(엔지니어)와 협업하기&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;업무 시작 전 각자의 R&amp;amp;R을 명확하게 정한다. 서로의 업무 영역을 침범하여 벌어지는 업무 혼선을 막을 수 있고, 본인 업무의 주도권을 잡을 수 있다.&lt;/li&gt;
+  &lt;li&gt;상대방의 문제점 및 요구사항을 파악 후 해결 방안, 무엇을 줄 수 있는지 제시하여 상대방이 확신과 신뢰를 갖도록 한다.&lt;/li&gt;
+  &lt;li&gt;목표에 맞는 일정을 정하고 일정 별 진행 사항을 공유하고 공유되었는지 반드시 확인하고 진행한다.&lt;/li&gt;
+  &lt;li&gt;개발자가 작성한 초안을 수정하는 단계에서
+    &lt;ul&gt;
+      &lt;li&gt;상대방의 오점보단 칭찬할 점을 부각하여 원활하게 진행한다.&lt;/li&gt;
+      &lt;li&gt;수정해야할 경우 절대 초안 본문을 상대방의 컨펌없이 수정하지 않는다. 반드시 주석 기능(e.g. MS 메모장 기능)을 사용하여 수정할 내용과 그에 대한 논리적인 이유를 적는다.&lt;/li&gt;
+      &lt;li&gt;주석 작성 시에도 공손하고 존중하는 형태의 어법을 사용한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이메일로 소통하는 경우
+    &lt;ul&gt;
+      &lt;li&gt;수신인, 참조인을 구분하여 정확하게 발송하도록 한다.&lt;/li&gt;
+      &lt;li&gt;메일 내용도 기승전결에 맞추어 목적, 일정, 할 일 등을 명확하게 작성한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Technical Writing Base" /><summary type="html">Technical Writing (기술 문서 작성) 시 기본적으로 알아야 할 주요 이론 및 규칙 등에 관하여</summary></entry><entry><title type="html">[TW] Technical Writer 개념 및 역할</title><link href="http://localhost:4000/technical%20writing/tw-definition_role" rel="alternate" type="text/html" title="[TW] Technical Writer 개념 및 역할" /><published>2021-08-20T00:00:00+09:00</published><updated>2021-08-20T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-definition_role</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-definition_role">&lt;h1 id=&quot;technical-writertwer란&quot;&gt;Technical Writer(TWer)란&lt;/h1&gt;
+
+&lt;h3 id=&quot;정의&quot;&gt;정의&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;‘기술과 기술, 사람과 기술을 잇는 사람’&lt;/li&gt;
+  &lt;li&gt;‘개발자와 개발자 간 혹은 개발자와 사용자 간의 정보를 연결해주는 역할을 하는 사람’&lt;/li&gt;
+  &lt;li&gt;TWer는 소설 같은 창작 글쓰기를 제외한 모든 기술 유형의 글쓰기에서 그 뜻을 분명하고 쉽게 전달하는 것을 목표로 함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;저자는 쓰기 편의를 위해 &lt;strong&gt;Technical Writing&lt;/strong&gt;을 &lt;strong&gt;TW&lt;/strong&gt;, &lt;strong&gt;Technical Writer&lt;/strong&gt;를 &lt;strong&gt;TWer&lt;/strong&gt;로 간략 표기하였다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;역할&quot;&gt;역할&lt;/h3&gt;
+&lt;p&gt;예전에 TWer는 휴대폰, TV, 자동차 등의 제품 소비자를 위한 설명서 혹은 가이드를 작성하는데 머물렀지만, 제4차 산업혁명 이래 TWer 역할의 범주와 위상이 달라졌다.&lt;/p&gt;
+
+&lt;p&gt;제4 차 산업 혁명이 도래하면서, 새로운 기술이 빠르게 생겨나고 있으며, 기술이 접목되거나 융합되는 사례가 빈번해졌다. 이러한 가운데 사람들의 지식 수준과 관점의 차이가 커지면서, 각 분야 간의 연결과 효과적인 정보의 전달이 중요해지고 있다. &lt;br /&gt;
+TWer는 글이라는 매체로, 새롭고 생소한 정보을 전달함으로써  다른 분야 간의 기술이나 관점을 효율적으로 연결하는 역할을 한다. &lt;br /&gt;
+즉, 제 4차 산업 혁명의 핵심은 각 분야 간의 연결이며, TWer는 이를 효과적으로 하여 산업적 기술적 생태계를 형성하는데 반드시 필요한 인력이다.  따라서 기술이 발전할수록 TWer 수요는 계속 증가할 것이며, TW의 범위는 소비자(엔드 유저)를 위한 제품 사용 설명서에만 국한되지 않고, 새로운 기술을 접해서 적용하려는 개발, 엔지니어, 기획, 디자인 영역으로 확대될 것이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;주요-하는-일&quot;&gt;주요 하는 일&lt;/h3&gt;
+&lt;p&gt;사실 업무와 관련된 대부분의 글쓰기는 TW(기술 문서 작성)라고 볼수 있다. &lt;br /&gt;
+기승전결로 잘 짜여진 이메일, 부서 내/외간 오고가는 각종 보고서, 파급력 있는 공고문, 공유 형태의 게시글 등 업무에서는 대부분 문서로 소통하기 때문에 TWer가 아니더라도, 해당 업무 담당자라면 기술 문서 작성을 한다. &lt;br /&gt;
+하지만 기술 문서의 내용 및 수준, 포맷은 부서/팀/담당자의 관점, 성격, 취향 등에 따라 다르기 때문에, 기술 문서가 유관 부서와 같은 사내에서 쓰이는 것이 아닌 사외로 배포되는 공식 문서인 경우, 
+특정 독자 수준에 맞춘 목차 구성 및 내용, 일관된 언어 및 포맷으로 작성될 필요가 있다. &lt;br /&gt;
+이 때 TWer는 TW 프로세스와 규칙에 맞추어 문서화 기획부터 목차 구성, 개발자와 커뮤니케이션을 통한 초안 재작성, 편집, 검수, 용어집 작성, 퍼블리싱까지의 일정 스케줄에 맞추어 문서 산출물을 책임지고 완성해나가는 역할을 담당한다. &lt;br /&gt;
+근래에는 보다 편리하고 파급력 있는 방법으로 웹 사이트를 통해 콘텐츠를 배포하는 사례가 늘고 있기 때문에 TWer는 여러가지 저작 도구나 프로그램 등을 통해 기술 내용을 효율적으로 작성 및 변환하여 웹 사이트에 게시하고 관리하는 문서화 엔지니어링 프로젝트를 담당하기도 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;업무-요약&quot;&gt;업무 요약&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;사전 기술 조사(해당 기술에 대한 스터디, 자료 수집 등)&lt;/li&gt;
+  &lt;li&gt;개발자 및 담당 엔지니어와의 기술 인터뷰&lt;/li&gt;
+  &lt;li&gt;기술 문서 작성(매뉴얼/가이드/사양서/설계서 등의 개발 산출물, 절차서 품질 보고서, 제안서, 화이퍼 등) 및 검토&lt;/li&gt;
+  &lt;li&gt;기술 문서 개선을 위한 사용성 평가&lt;/li&gt;
+  &lt;li&gt;스타일 가이드, 용어집 작성 및 배포&lt;/li&gt;
+  &lt;li&gt;템플릿 작성 및 배포&lt;/li&gt;
+  &lt;li&gt;기술 문서 편집 및 교정/교열&lt;/li&gt;
+  &lt;li&gt;다국어 번역(주로 영문) 및 번역문 검토&lt;/li&gt;
+  &lt;li&gt;품질 향상을 위한 사용성 체크 리스트 작성 및 테스트 주관&lt;/li&gt;
+  &lt;li&gt;다양한 저작 도구(Frame Maker, Help&amp;amp;Manual 등), 프로그램(Confluence, Git, Sphinx, JavaDoc, Doxygen), 언어(MarkDown, reSt, XML, HTML) 등을 사용한 기술 정보 변경 관리&lt;/li&gt;
+  &lt;li&gt;TW 교육 및 세미나 주최&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;나아가야-할-방향&quot;&gt;나아가야 할 방향&lt;/h3&gt;
+&lt;p&gt;기술문서 작성가, TWer는 앞으로 ‘Technical Communicator(TC)’로 그의 역할이 확대되고 성장할 것이다. &lt;br /&gt;
+TW는 말 그대로 글을 쓰는 작업이지만, 그에 앞서 기획, 관련 기술 조사와 연구 등을 비롯하여 개발자와의 인터뷰까지 글을 쓰기 위한 선작업이 많은 부분을 차지한다. 특히 개발자 및 관련 분야 전문가들과 긴밀하게 소통하고 협업하는 일은 해당 기술 내용을 정확하고 명확하게 작성하여 결과적으로 독자에게 이해하기 쉽게 전달하는데 있어 매우 중요하다. &lt;br /&gt;
+따라서 앞으로는 Technical Communicator로써, 빠르게 변화하는 기술 환경에 맞추어, 개발자 및 유관 부서와 커뮤니케이션하며 콘텐츠를 기획, 작성, 편집, 검수하는 것과 더불어 디자인, 퍼블리싱, 산출물 관리에서부터 TW 교육까지 다양한 분야의 주체가 되어 역할을 해야 할 것이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;technical-writertwer가-되려면&quot;&gt;Technical Writer(TWer)가 되려면&lt;/h2&gt;
+
+&lt;p&gt;앞서 설명한 것처럼 TWer는 기술 문서 작성에 대한 기획부터 공식 배포하기까지 다양한 역할을 한다. 그러한 역할을 모두 소화하는데 있어 TWer로써 가장 필요한 역량은 개인적으로 커뮤니케이션(소통) 능력이라고 생각한다. &lt;br /&gt; 
+커뮤니케이션 방법은 크게 듣기, 말하기, 쓰기로 나뉘는데 TWer는 
+말을 잘 하는 것보다 잘 듣고, 그에 대한 필요한 질문을 해서 중요한 정보를 포착할 수 있어야 한다. &lt;br /&gt;
+TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 문서의 주요 내용이면서 TW의 정확성 원칙과 매우 밀접하게  연관되기 때문이다. &lt;br /&gt;
+이어서 해당 기술에 대한 관심과 이해가 선행되어야 상대방이 말하는 내용 중 핵심은 무엇이고 더 자세하게 알기 위해서는 무엇을 질문해야 하는지 보다 수월하게 파악할 수 있다. 즉 개발자 및 제품 담당자와의 기술 인터뷰가 보다 원활하게 이루어질 수 있다. &lt;br /&gt; 
+관련 개발자 및 엔지니어와의 호흡도 중요하다.&lt;br /&gt;
+호흡을 잘 맞춘다는 것은 커뮤니케이션과 상충되는 부분이기도 하지만 보다 넓은 관점에서 개발자와 협업하기 위한 자세 혹은 마인드를 갖춘다는 의미로 보면 되겠다. &lt;br /&gt; 
+예를 들어, 개발자가 작성한 초안을 검토하고 개선하는데 있어, 내용 수정에 관한 것이라면 상대방의 입장과 견해를 존중하여 보다 신중하게 접근해야 할 것이다. 결과적으로 개발자와의 호흡을 잘 맞춰야 기술적 측면에서 필요한 정보를 문서에 정확하게 반영할 수 있다. &lt;br /&gt;
+또한 TWer는 독자의 입장의 수준을 파악해서 문서에 반영해야하므로 개발자가 초안 작성 중 놓쳤거나 독자의 입장에서 미처 예상하지 못한 부분까지 고려해서 문서에 담으려는 노력도 따라야 하겠다. &lt;br /&gt;
+실제 글쓰기에 있어서는 기술에 대한 정확한 내용과 동작 과정을 쉽고 명확하게, 논리적으로 전달해야 한다. TW는 예술적인 창작 글쓰기가 아니기 때문에 화려하고 멋있게 글을 쓴다는 개념과는 거리가 있다. &lt;br /&gt;
+기술 문서는 글 외에도 그림이나 도식화를 포함하기도 하며, 웹을 비롯한 다양한 포맷으로 배포될 수 있기 때문에 TWer는 기본적인 OA 외 저작 도구나 편집기, 그래픽 도구 등 다양한 프로그램 및 환경에 적응하여 결과를 산출해낼 수 있는 능력이 필요하다.
+또한 IT 및 SW 회사의 경우 SDK 및 API 등의 코드 라이브러리를 그에 대한 가이드와 함께 배포할 수 있기 때문에 가이드에 담기는 소스 코드를 이해할 수 있는 프로그래밍/언어 지식이 필요할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tw/0820_tw_def_01.png&quot; alt=&quot;참고&quot; /&gt;
+&lt;img src=&quot;/img/tw/0820_tw_def_02.png&quot; alt=&quot;참고&quot; /&gt;
+&lt;em&gt;참고- 저자가 참여한 한국고용정보원 인터뷰 중에서&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;필요-역량경험-jd-발췌&quot;&gt;필요 역량/경험 (JD 발췌)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;명확하고 논리적인 글쓰기&lt;/li&gt;
+  &lt;li&gt;능동적/원활한 커뮤니케이션&lt;/li&gt;
+  &lt;li&gt;영어 Writing/Speaking&lt;/li&gt;
+  &lt;li&gt;다양한 IT/개발 분야 경험, 기술 지식 보유&lt;/li&gt;
+  &lt;li&gt;다양한 툴, 저작 도구 사용에 능숙&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;마인드-셋자세&quot;&gt;마인드 셋/자세&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다양한 변화와 의견을 수용하고 아우를 수 있는 유연성/추진력있고 적극적인 자세&lt;/li&gt;
+  &lt;li&gt;스케쥴 관리 능력&lt;/li&gt;
+  &lt;li&gt;꼼꼼하고 섬세함&lt;/li&gt;
+  &lt;li&gt;겸손함, 항상 배우려는 자세&lt;/li&gt;
+  &lt;li&gt;책임감 및 성실함, 지속력&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Technical Writer" /><summary type="html">Technical Writer의 정의 및 주요 역할, 현재 그리고 향후 산업에 있어 Technical Writer로써 나아가야할 방향, 갖추어야 할 역량에 관하여</summary></entry><entry><title type="html">[TW] 마크다운 사용법</title><link href="http://localhost:4000/docs%20as%20code/markdown-usage" rel="alternate" type="text/html" title="[TW] 마크다운 사용법" /><published>2021-08-14T00:00:00+09:00</published><updated>2021-08-14T00:00:00+09:00</updated><id>http://localhost:4000/docs%20as%20code/markdown-usage</id><content type="html" xml:base="http://localhost:4000/docs%20as%20code/markdown-usage">&lt;p&gt;&lt;strong&gt;&amp;lt;Table of Contents&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#markdown-사용법&quot; id=&quot;markdown-toc-markdown-사용법&quot;&gt;Markdown 사용법&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#callout--연습&quot; id=&quot;markdown-toc-callout--연습&quot;&gt;Callout  연습&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#강조-블록-표기-규칙&quot; id=&quot;markdown-toc-강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#단락형-강조-구문-alert외-별도로&quot; id=&quot;markdown-toc-단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#문장형-강조-구문&quot; id=&quot;markdown-toc-문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#코드-블록&quot; id=&quot;markdown-toc-코드-블록&quot;&gt;코드 블록&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#인용구-및-블락&quot; id=&quot;markdown-toc-인용구-및-블락&quot;&gt;인용구 및 블락&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#리스트&quot; id=&quot;markdown-toc-리스트&quot;&gt;리스트&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#링크&quot; id=&quot;markdown-toc-링크&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#이미지-삽입&quot; id=&quot;markdown-toc-이미지-삽입&quot;&gt;이미지 삽입&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#테이블&quot; id=&quot;markdown-toc-테이블&quot;&gt;테이블&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#컨벤션-규칙&quot; id=&quot;markdown-toc-컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;markdown-사용법&quot;&gt;Markdown 사용법&lt;/h2&gt;
+
+&lt;p&gt;웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;callout--연습&quot;&gt;Callout  연습&lt;/h2&gt;
+
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;
+        &lt;b&gt;Note:&lt;/b&gt;This is my note. All the content I type here is treated as a single  paragraph.&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-primary&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Note&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-success&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-success&quot;&gt;&lt;i class=&quot;fa fa-check-square-o&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Tip&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type.&lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Warning&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type callout&lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type callout&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/h2&gt;
+
+&lt;h3 id=&quot;단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;div style=&quot;background-color:#ededed; padding:10px&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;
+이건 어때요? &lt;br /&gt;
+색상태그를 적용했습니다. &lt;/span&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이건 어때요? 문장을 backquote로 감싼 my code입니다.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;코드-블록&quot;&gt;코드 블록&lt;/h2&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ```C 적용함  &lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-curl&quot;&gt;  $ git clone https://github.com/swagger-api/swagger-ui.git 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;background-color:#444; padding:10px&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ```C 안에 &amp;lt;div&amp;gt; 블랙 바탕 색상 태크 적용 안됨  &lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;단어-표현&quot;&gt;단어 표현&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;How to use&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;How to look&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;_기울임_ or &lt;br /&gt; *기울임*&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;기울임&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;**굵게**&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;굵게&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;***굵고기울임***&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;&lt;em&gt;굵고기울임&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;~~취소선~~&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;del&gt;취소선&lt;/del&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&amp;lt;U&amp;gt;밑줄&amp;lt;/U&amp;gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;u&gt;밑줄&lt;/u&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;`인라인코드`&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;인라인코드&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+테이블 칸 안에서 줄바꿈을 할 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/br&amp;gt;&lt;/code&gt;을 줄바꿈할 단어 앞에 기입하여 한 줄로 
+작성한다. &lt;br /&gt;
+  Ex) b를 a 다음줄에 오도록 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a &amp;lt;/br&amp;gt; b&lt;/code&gt; 를 한 칸에 한 줄로 작성한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;인용구-및-블락&quot;&gt;인용구 및 블락&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;인용구: 작성할 텍스트 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;을 기입하면 해당 텍스트가 구분되는 인용구가 된다.&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;&amp;gt; 안녕하세요&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;안녕하세요&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; 다음줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;, 그 다음 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;를 기입하면 여러 계층의 인용구로 작성할 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드 블락: 코드를 일반 문장과 구분하기 위해 블락으로 표현. 예시나 구분이 필요한 내용을 블락으로 묶을 때도 사용한다.&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;해당 문장의 앞 줄과 다음 줄에 ``` 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~~~&lt;/code&gt;을 기입한다.
+&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;```
+&lt;br /&gt; 안녕하세요.&lt;/p&gt;
+
+    &lt;p&gt;```&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;안녕하세요.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
     &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;핵심-포인트를-미리-설정하기&quot;&gt;핵심 포인트를 미리 설정하기&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+코드 문법을 적용하기 위해 첫 줄에 ```와 해당 언어 종류를 같이 기입한다.&lt;br /&gt;
+Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.&lt;/p&gt;
+
+  &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// C문법 적용함&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;제목-수준&quot;&gt;제목 수준&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;문서를 검토할 때 시작 부분에서 독자의 필수 질문에 답하는지 확인해라.&lt;/li&gt;
-  &lt;li&gt;전문 작가는 독자가 2 페이지를 읽을 확률을 높이기 위해 1 페이지에 상당한 에너지를 쏳는다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;큰제목: 텍스트 밑에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=====&lt;/code&gt; 기입&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;큰제목
+======
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;h1 class=&quot;no_toc&quot; id=&quot;큰제목&quot;&gt;큰제목&lt;/h1&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;독자를-위해-작성하기&quot;&gt;독자를 위해 작성하기&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;작은 제목: 텍스트 밑에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-----&lt;/code&gt; 기입 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;문서를 구성하기 위한 방법으로 독자를 정의한다.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   작은제목
+   -------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;h2 class=&quot;no_toc&quot; id=&quot;작은-제목&quot;&gt;작은 제목&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;독자를 정의하기: 다음의 질문은 문서에서 포함해야 할 것이 무엇인지 결정하도록 돕는다.
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;을 사용하여 다양한 수준으로 표현: 1단계부터 6단계까지 지원&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  # 1단계 //가장 큰제목
+  ##### 5단계 //5번째로 큰제목
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;# 1단계
+  ##### 5단계&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;리스트&quot;&gt;리스트&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unordered &lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -	Item 1
+  -	Item 2
+    -	Item 2a
+    -	Item 2b
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
     &lt;ul&gt;
-      &lt;li&gt;대상 독자는 누구인지&lt;/li&gt;
-      &lt;li&gt;문서를 읽기 전 독자가 알고 있어야 할 것은 무엇인지&lt;/li&gt;
-      &lt;li&gt;문서를 읽은 후 독자가 알아야 할 것 혹은 할 수 있는 것은 무엇인지&lt;/li&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2
+        &lt;ul&gt;
+          &lt;li&gt;Item 2a&lt;/li&gt;
+          &lt;li&gt;Item 2b&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;독자의 필요 사항에 대하여 구성하기: 독자가 문서를 읽고 알아야 할 것, 할 수 있는 것을 문서에서 제공할 수 있도록 구성&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;주제를-섹션으로-쪼개기&quot;&gt;주제를 섹션으로 쪼개기&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ordered &lt;br /&gt;
+&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;모듈식 코드가 읽기, 이해, 유지 관리 및 재사용에 더 쉽듯이 문서를 모듈식으로 만드는 것도 동일한 이점을 제공한다.&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1. Item 1 //첫 줄은 무조건 1부터 시작
+  2. Item 2 //번호를 순서대로 안써도 2로 인식함
+  3. Item 3 //번호를 순서대로 안써도 3으로 인식함
+      1. Item 3a //앞 줄 대비 세 칸 띄우고 1부터 시작
+      2. Item 3b //번호를 순서대로 안써도 2로 인식함
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3
+        &lt;ol&gt;
+          &lt;li&gt;Item 3a&lt;/li&gt;
+          &lt;li&gt;Item 3b&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;markdown--&quot;&gt;Markdown  👍&lt;/h3&gt;
+&lt;h3 id=&quot;링크&quot;&gt;링크&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;은 많은 기술 전문가가 기술 문서를 만들고 편집하는 데 사용하는 가벼운 마크업 언어이다. Markdown을 사용하면 일반 텍스트 편집기(Vi 또는 Emacs 등)에서 텍스트를 작성하고 헤더, 볼드체, 글머리 기호 등을 생성하기 위해 특수 문자를 삽입한다. 
-&lt;br /&gt;자세한 Markdown 문법은 이 블로그에서 별도로 정리한 &lt;a href=&quot;https://dora-author.github.io/markdown-usage&quot;&gt;[TW] 마크다운 사용법&lt;/a&gt;를 참조한다.&lt;/p&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="Google Technical Writing" /><summary type="html">Google Developers의 [Technical Writing Course for Engineers] 스터디 내용</summary></entry></feed>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;How to use&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;How to look&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;url 링크&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&amp;lt;http://github.com&amp;gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;http://github.com&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;참조 링크&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;검색엔진은 [Google][1] 이 있다. &amp;lt;/br&amp;gt; [1]: http://google.com “구글”&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;검색엔진은 google이 있다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;인라인 링크&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;url 주소&quot;&gt;url 대신 표현 단어&lt;/a&gt; &amp;lt;/br&amp;gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Google](http://google.com&quot;구글&quot;)&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;내부 링크&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;#작성한 본문 내 제목&quot;&gt;표현할 단어&lt;/a&gt; &amp;lt;/br&amp;gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[리스트로 가기](#리스트)&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;#리스트&quot;&gt;리스트로 가기&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;이미지-삽입&quot;&gt;이미지 삽입&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;![이미지 이름](이미지 주소)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png&quot; alt=&quot;markdown_logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;테이블&quot;&gt;테이블&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt; 
+    | First Header | Second Header  |       Third Header |
+    | :----------- | :------------: | -----------------: |
+    | 왼쪽맞춤     |   가운데맞춤   |         오른쪽맞춤 |
+    | Second row   |    **Cell**    |             *Cell* |
+    | Third row    | Cell that span | across two columns |
+    
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;First Header&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Second Header&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Third Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;왼쪽맞춤&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;가운데맞춤&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;오른쪽맞춤&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Cell&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;em&gt;Cell&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Third row&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Cell that span&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;across two columns&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;단락-구분&quot;&gt;단락 구분&lt;/h3&gt;
+
+&lt;p&gt;같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;***&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;___&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; 를 사용하여 수평선을 표현&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+
+  ***
+  이 단락의 내용을 앞 내용과 구분
+
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;이 단락의 내용을 앞 내용과 구분&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;접어두기-표시&quot;&gt;접어두기 표시&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+  &amp;lt;summary\&amp;gt;상세 내용 확인&amp;lt;/summary&amp;gt;
+    &amp;lt;details markdown=&quot;1&quot;
+      div 에 markdown attribute를 1 로
+      하는 이유는 div 안에서 markdown 을 사용하기 위해서입니다.
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+&lt;summary&gt;상세 내용 확인&lt;/summary&gt;
+&lt;details&gt;
+  &lt;pre&gt; div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 사용하기 위해서입니다.&lt;/pre&gt;
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;작업-목록&quot;&gt;작업 목록&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+  - [x] #739
+  - [ ] Add delight to the experience when all tasks are complete
+  - [ ] Open a followup issue
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;#739&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Add delight to the experience when all tasks are complete&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Open a followup issue&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/h3&gt;
+&lt;p&gt;작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+  &amp;gt; ℹ️ `&lt;span style=&quot;color:#247CFF&quot;&gt;` ***NOTE*** `&lt;/span&gt;`
+  &amp;gt; This is note content.
+&lt;/pre&gt;</content><author><name></name></author><category term="Docs as Code" /><category term="Markdown" /><summary type="html">마크다운 문법과 사용법에 관하여</summary></entry></feed>

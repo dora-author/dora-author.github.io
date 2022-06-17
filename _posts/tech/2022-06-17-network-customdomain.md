@@ -1,12 +1,49 @@
 ---
 layout: post
-title: "[TW] 마크다운 사용법"
-excerpt: 마크다운 문법과 사용법에 관하여
+title: "[Network] 커스텀 도메인 적용기"
+excerpt: 커스텀 도메인 적용을 위한 기술 스터디
 tags:
-  - Markdown
-category: Docs as Code
-date: 2021-08-14
+  - network
+  - domain
+category: Tech Journey
+date: 2022-06-17
 comments: true
+---
+
+
+<h2 style="color: #308cbc">  | 기술 용어 |  </h2>
+
+<div>
+ <table class>
+      <thead>
+        <tr>
+          <th width="200">용어</th>
+          <th>설명</th>
+          <th width="150">연관 콘텐츠</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>도메인(Domain)</th>
+          <td>인터넷에서 특정 사이트를 찾아가기 위한 의미있는 문자열로 구성된 주소. 숫자로 구성된 IP 주소 대신하여 사람이 인식하고 기억하기 쉬워 도메인 주소를 이용함.</td>
+          <td><a href="#링크">Label</a></td>
+        </tr>
+        <tr>
+          <th>TLD (Top-Level Domain)</th>
+          <td>도메인 계층 정보 중 루트 다음의 최상위 도메인으로 IANA(Internet Assigned Numbers Authority)에서 정의한 6가지 유형이 있다.</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <th>TLD (Top-Level Domain)</th>
+          <td>도메인 계층 정보 중 루트 다음의 최상위 도메인으로 IANA(Internet Assigned Numbers Authority)에서 정의한 6가지 유형이 있다.</td>
+          <td></td>
+        </tr>
+      </tbody>
+ </table>
+</div>
+
+<br>
+
 ---
 
 **<Table of Contents>**  
@@ -14,6 +51,7 @@ comments: true
 {:toc}
 
 <Br>
+
 
 ## Markdown 사용법
 
@@ -74,7 +112,7 @@ comments: true
 ### 단어 표현
 
 
-| How to use                    | How to look  |
+| How to use                    | How to look      |
 | :---------------------------- | :--------------- |
 | \_기울임\_ or <br> \*기울임\* | _기울임_         |
 | \*\*굵게\*\*                  | **굵게**         |
