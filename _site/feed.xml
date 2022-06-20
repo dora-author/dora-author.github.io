@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-17T20:09:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Network] 커스텀 도메인 적용기</title><link href="http://localhost:4000/tech%20journey/network-customdomain" rel="alternate" type="text/html" title="[Network] 커스텀 도메인 적용기" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/network-customdomain</id><content type="html" xml:base="http://localhost:4000/tech%20journey/network-customdomain">&lt;h2 style=&quot;color: #308cbc&quot;&gt;  | 기술 용어 |  &lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-20T18:35:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Network] 커스텀 도메인 적용기</title><link href="http://localhost:4000/tech%20journey/network-customdomain" rel="alternate" type="text/html" title="[Network] 커스텀 도메인 적용기" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/network-customdomain</id><content type="html" xml:base="http://localhost:4000/tech%20journey/network-customdomain">&lt;h2 style=&quot;color: #308cbc&quot;&gt;  | 기술 용어 |  &lt;/h2&gt;
 
 &lt;div&gt;
  &lt;table class=&quot;&quot;&gt;
@@ -35,38 +35,87 @@
 
 &lt;p&gt;&lt;strong&gt;&amp;lt;Table of Contents&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#markdown-사용법&quot; id=&quot;markdown-toc-markdown-사용법&quot;&gt;Markdown 사용법&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#callout--연습&quot; id=&quot;markdown-toc-callout--연습&quot;&gt;Callout  연습&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#강조-블록-표기-규칙&quot; id=&quot;markdown-toc-강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#단락형-강조-구문-alert외-별도로&quot; id=&quot;markdown-toc-단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#문장형-강조-구문&quot; id=&quot;markdown-toc-문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#코드-블록&quot; id=&quot;markdown-toc-코드-블록&quot;&gt;코드 블록&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#인용구-및-블락&quot; id=&quot;markdown-toc-인용구-및-블락&quot;&gt;인용구 및 블락&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#리스트&quot; id=&quot;markdown-toc-리스트&quot;&gt;리스트&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#링크&quot; id=&quot;markdown-toc-링크&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#이미지-삽입&quot; id=&quot;markdown-toc-이미지-삽입&quot;&gt;이미지 삽입&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#테이블&quot; id=&quot;markdown-toc-테이블&quot;&gt;테이블&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#컨벤션-규칙&quot; id=&quot;markdown-toc-컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#본론&quot; id=&quot;markdown-toc-본론&quot;&gt;본론&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#도메인-주소-구조&quot; id=&quot;markdown-toc-도메인-주소-구조&quot;&gt;도메인 주소 구조&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#https&quot; id=&quot;markdown-toc-https&quot;&gt;HTTPS&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#본론-1&quot; id=&quot;markdown-toc-본론-1&quot;&gt;본론&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#도메인-구매하기&quot; id=&quot;markdown-toc-도메인-구매하기&quot;&gt;도메인 구매하기&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#callout--연습&quot; id=&quot;markdown-toc-callout--연습&quot;&gt;Callout  연습&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#강조-블록-표기-규칙&quot; id=&quot;markdown-toc-강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#단락형-강조-구문-alert외-별도로&quot; id=&quot;markdown-toc-단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#문장형-강조-구문&quot; id=&quot;markdown-toc-문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#코드-블록&quot; id=&quot;markdown-toc-코드-블록&quot;&gt;코드 블록&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#인용구-및-블락&quot; id=&quot;markdown-toc-인용구-및-블락&quot;&gt;인용구 및 블락&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#리스트&quot; id=&quot;markdown-toc-리스트&quot;&gt;리스트&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#링크&quot; id=&quot;markdown-toc-링크&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#이미지-삽입&quot; id=&quot;markdown-toc-이미지-삽입&quot;&gt;이미지 삽입&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#테이블&quot; id=&quot;markdown-toc-테이블&quot;&gt;테이블&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#컨벤션-규칙&quot; id=&quot;markdown-toc-컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;markdown-사용법&quot;&gt;Markdown 사용법&lt;/h2&gt;
-
-&lt;p&gt;웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;hr /&gt;
+&lt;h1 id=&quot;본론&quot;&gt;본론&lt;/h1&gt;
+&lt;p&gt;ㅁㅇㄹ&lt;/p&gt;
+
+&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;많은 분들이 깃허브페이지의 웹 호스팅 서비스를 통해 개인 블로그를 운영하고 있.다. 
+깃허브 페이지 호스팅 시 기본적으로 제공되는 도메인 주소는 &amp;lt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt;.github.io&amp;gt;가 된다. 이번 포스트에서는 이러한 도메인 주소에 사용자가 원하는 커스텀 도메인과 HTTPS 프로토콜을 적용하는 방법을 알아보겠다.&lt;/p&gt;
+
+&lt;h3 id=&quot;도메인-주소-구조&quot;&gt;도메인 주소 구조&lt;/h3&gt;
+&lt;p&gt;도메인 주소는 root, top-level, second-level, third-level 순서의 계층 구조를 가지며, 각 계층 간의 경계를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;으로 표시한다. DNS는 이를 맨 뒤의 .root부터 시작하여 최하위 레벨 계층까지 역으로 해석한다. 참고로 root는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;으로 표시하며 주소로 표현 시 생략한다.
+예를 들어 &amp;lt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt;.github.io&amp;gt; 도메인 주소의 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io&lt;/code&gt;가 TLD(Top-level Domain)에 해당하며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt;이 각 Second-Level, Third Level Domain이 된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;https&quot;&gt;HTTPS&lt;/h3&gt;
+&lt;p&gt;HTTPS(HyperText Transfer Protocol over Secure Socket Laye)는 HTTP에 SSL/TLS(Secure Socket Layer and Transport Layer Security) 기술이 적용된 프로토콜로 기본적인 인터넷 전송 프로토콜인 HTTP의 보안이 강화된 버전이라고 할 수 있다. 따라서 사용자 컴퓨터와 방문한 사이트 간에 전송되는 사용자 데이터의 무결성과 기밀성을 유지할 수 있어 전자 상거래와 같은 웹사이트를 안전한 비공개 온라인 환경에서 이용할 수 있다. 
+현재 대부분의 기업 웹사이트에서는 HTTPS를 의무적으로 사용하기 때문에 HTTP로 접속은 더 이상 지원하지 않는다.
+참고로 구글에서는 2014년부터 HTTPS를 쓰도록 권고했고 2017년 1월 크롬 56버전부터 HTTP로 접속하는 사이트에 대해서는 ‘안전하지 않음’이라는 경고를 띄우기 시작했다.&lt;/p&gt;
+
+&lt;p&gt;이러한 이유로 새로 생성한 커스텀 도메인에 대해서도 HTTPS로 접속이 가능해야 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;본론-1&quot;&gt;본론&lt;/h2&gt;
+&lt;p&gt;기본 깃허브페이지 주소를 커스텀 도메인 주소로 바꾸기 위해 도메인 구입 및 DNS 서버 선택에 대한 과정과 최종 생성한 커스텀 도메인에 HTTS 접속이 가능하도록 SSL/TLS 인증을 적용하는 과정에 대하여 설명한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;도메인-구매하기&quot;&gt;도메인 구매하기&lt;/h3&gt;
+&lt;p&gt;커스텀 도메인을 생성하려면 우선 고유의 도메인이 필요하다. 본인이 원하는 고유의 도메인을 구매하여 커스텀 도메인 주소로 사용할 수 있다.
+도메인은 DNS 서비스를 제공하는 도메인 업체를 통하여 구매할 수 있다. 업체마다 원하는 TLD에 따른 구매 비용이 다르고, DNS 관리 외에 웹사이트 호스팅, 마케팅 등 추가적으로 제공하는 유료형 서비스가 다르므로 메이저급 이상의 안정적인 업체 위주로 비교하여 선정해야 한다.
+필자는 같은 TLD 기준으로 구매 비용이 저렴하면서도 안정적인 호스팅 환경을 제공하는 규모가 있는 업체를 조사한 결과 &lt;a href=&quot;https://kr.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt;를 선택하게 되었다.&lt;/p&gt;
+
+&lt;p&gt;아래와 같은 단계로 원하는 도메인을 검색해 구매한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt;  &lt;a href=&quot;https://kr.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt;에서 원하는 도메인의 Second-Level, Top-Level 순서로 입력하여 검색한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; 선택한 도메인을 최소 1년 계약 단위로 구매한다. 구매 시 계정 로그인이 필요하다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⚠️ &lt;span style=&quot;color: red&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+구매 후 1년 후 동일 도메인을 유지할지 확신이 없다면 &lt;strong&gt;요금 청구서 관리&lt;/strong&gt;에서 자동 갱신 옵션을 끄길 바란다. 그 외 구매와 함께 유료 서비스가 자동 선택되었을 수도 있으니 아예 결제 방법으로 등록된 본인의 카드 정보도 삭제하길 바란다. 필자는 도메인에 대한 자동 갱신 옵션은 꺼두었으나 구매 시 자동으로 설정된 유료 서비스가 30일 이후 자동 결제 및 유료로 전환되는 것을 확인하지 못해 번거로운 환불 과정을 거쳐야 했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; 내 제품 &amp;gt; DNS 관리에서 기존 깃허브페이지 주소를 구매한 도메인 주소로 매핑하기 위한 레코드를 등록한다.
+크게 도메인 주소를 IP주소로 매핑하는 A 레코드와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;www&lt;/code&gt;없이도 해당 도메인 주소로 매핑되도록 CNAME 레코드를 등록한다.&lt;/p&gt;
+
+&lt;p&gt;실제 깃허브페이지 IP 주소 4개로 매핑하도록 A 레코드를 아래와 같이 등록한다.&lt;/p&gt;
+
+&lt;p&gt;DNS 서버 선택하기
+TLS/SSL 적용하기&lt;/p&gt;
 
 &lt;h2 id=&quot;callout--연습&quot;&gt;Callout  연습&lt;/h2&gt;
 
