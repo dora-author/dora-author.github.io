@@ -186,6 +186,17 @@ li .highlight pre {
     border: 0;
 }
 
+
+.highlight2 {
+    border-width: 0px 0px 0px 6px;
+	border-color: #e96060;
+	border-style: solid;
+    background-color: #edededac;
+    padding: 10px;
+    clear: left;
+}
+
+
 //add 220520
 /*code {
     padding: 0.25rem;
@@ -320,4 +331,8 @@ tbody {
 // description title
 dt {
     font-weight: bolder;
+}
+
+p {
+ clear: left; //2206
 }

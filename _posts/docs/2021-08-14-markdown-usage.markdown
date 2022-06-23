@@ -16,7 +16,6 @@ comments: true
 <Br>
 
 ## Markdown 사용법
-
 웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.
 
 <br>
@@ -40,15 +39,14 @@ comments: true
 ## 강조 블록 표기 규칙
 
 ### 단락형 강조 구문 (alert외 별도로)
-
 > <div style= "background-color:#ededed; padding:10px"><span class="highlight">
 > 이건 어때요? <br>
 > 색상태그를 적용했습니다. </span></div>
 
 
 ### 문장형 강조 구문
-
 `이건 어때요? 문장을 backquote로 감싼 my code입니다.`
+<br>
 
 ## 코드 블록
 
@@ -165,11 +163,11 @@ comments: true
 
     큰제목
     ======
-    {:.no_toc}
 
 <Br>
 
 - 작은 제목: 텍스트 밑에 `-----` 기입 <Br>
+    {:.no_toc}
 
     **- How to use**
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-20T18:35:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Network] 커스텀 도메인 적용기</title><link href="http://localhost:4000/tech%20journey/network-customdomain" rel="alternate" type="text/html" title="[Network] 커스텀 도메인 적용기" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/network-customdomain</id><content type="html" xml:base="http://localhost:4000/tech%20journey/network-customdomain">&lt;h2 style=&quot;color: #308cbc&quot;&gt;  | 기술 용어 |  &lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-23T19:04:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dora’s Technical Writing</title><subtitle>It is clear, concise, and beautiful</subtitle><entry><title type="html">[Network] 커스텀 도메인 적용기</title><link href="http://localhost:4000/tech%20journey/network-customdomain" rel="alternate" type="text/html" title="[Network] 커스텀 도메인 적용기" /><published>2022-06-17T00:00:00+09:00</published><updated>2022-06-17T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/network-customdomain</id><content type="html" xml:base="http://localhost:4000/tech%20journey/network-customdomain">&lt;h2 style=&quot;color: #308cbc&quot;&gt; | 기술 용어 | &lt;/h2&gt;
 
 &lt;div&gt;
  &lt;table class=&quot;&quot;&gt;
@@ -13,572 +13,117 @@
         &lt;tr&gt;
           &lt;th&gt;도메인(Domain)&lt;/th&gt;
           &lt;td&gt;인터넷에서 특정 사이트를 찾아가기 위한 의미있는 문자열로 구성된 주소. 숫자로 구성된 IP 주소 대신하여 사람이 인식하고 기억하기 쉬워 도메인 주소를 이용함.&lt;/td&gt;
-          &lt;td&gt;&lt;a href=&quot;#링크&quot;&gt;Label&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;#도메인 구매하기&quot;&gt;도메인 구매하기&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-          &lt;th&gt;TLD (Top-Level Domain)&lt;/th&gt;
-          &lt;td&gt;도메인 계층 정보 중 루트 다음의 최상위 도메인으로 IANA(Internet Assigned Numbers Authority)에서 정의한 6가지 유형이 있다.&lt;/td&gt;
+          &lt;th&gt;DNS(Domain Name System or Server)&lt;/th&gt;
+          &lt;td&gt; TCP/IP 프로토콜 체계를 유지하기 위한 컨트롤 프로토콜. 도메인 주소를 IP 주소로 변환하는 역할을 한다.&lt;/td&gt;
           &lt;td&gt; &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
           &lt;th&gt;TLD (Top-Level Domain)&lt;/th&gt;
-          &lt;td&gt;도메인 계층 정보 중 루트 다음의 최상위 도메인으로 IANA(Internet Assigned Numbers Authority)에서 정의한 6가지 유형이 있다.&lt;/td&gt;
+          &lt;td&gt;도메인 계층 정보 중 루트 다음의 최상위 도메인으로  인터넷할당번호관리기관(Internet Assigned Numbers Authority, IANA) 산하의 국제인터넷주소관리기구(Internet Corporation for Assigned Names and Numbers, ICANN)에서 관리한다. 일반 최상위 도메인(gTLD)으로 com, net, org, gov, mil, edu을 인터넷 초장기부터 사용해왔다.&lt;/td&gt;
           &lt;td&gt;&lt;/td&gt;
         &lt;/tr&gt;
       &lt;/tbody&gt;
  &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 class=&quot;no_toc&quot; id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;lt;Table of Contents&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#도메인-주소-구조&quot; id=&quot;markdown-toc-도메인-주소-구조&quot;&gt;도메인 주소 구조&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#https&quot; id=&quot;markdown-toc-https&quot;&gt;HTTPS&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#본론&quot; id=&quot;markdown-toc-본론&quot;&gt;본론&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#도메인-주소-구조&quot; id=&quot;markdown-toc-도메인-주소-구조&quot;&gt;도메인 주소 구조&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#https&quot; id=&quot;markdown-toc-https&quot;&gt;HTTPS&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#본론-1&quot; id=&quot;markdown-toc-본론-1&quot;&gt;본론&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#도메인-구매하기&quot; id=&quot;markdown-toc-도메인-구매하기&quot;&gt;도메인 구매하기&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#callout--연습&quot; id=&quot;markdown-toc-callout--연습&quot;&gt;Callout  연습&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#강조-블록-표기-규칙&quot; id=&quot;markdown-toc-강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#단락형-강조-구문-alert외-별도로&quot; id=&quot;markdown-toc-단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#문장형-강조-구문&quot; id=&quot;markdown-toc-문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#코드-블록&quot; id=&quot;markdown-toc-코드-블록&quot;&gt;코드 블록&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#인용구-및-블락&quot; id=&quot;markdown-toc-인용구-및-블락&quot;&gt;인용구 및 블락&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#리스트&quot; id=&quot;markdown-toc-리스트&quot;&gt;리스트&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#링크&quot; id=&quot;markdown-toc-링크&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#이미지-삽입&quot; id=&quot;markdown-toc-이미지-삽입&quot;&gt;이미지 삽입&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#테이블&quot; id=&quot;markdown-toc-테이블&quot;&gt;테이블&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#컨벤션-규칙&quot; id=&quot;markdown-toc-컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#도메인-구매하기&quot; id=&quot;markdown-toc-도메인-구매하기&quot;&gt;도메인 구매하기&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#도메인-네임서버-선택하기&quot; id=&quot;markdown-toc-도메인-네임서버-선택하기&quot;&gt;도메인 네임서버 선택하기&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#github-pages에-커스텀-도메인-설정하기&quot; id=&quot;markdown-toc-github-pages에-커스텀-도메인-설정하기&quot;&gt;GitHub Pages에 커스텀 도메인 설정하기&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#적용-결과-주의-요함&quot; id=&quot;markdown-toc-적용-결과-주의-요함&quot;&gt;적용 결과 ‘주의 요함’&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-&lt;h1 id=&quot;본론&quot;&gt;본론&lt;/h1&gt;
-&lt;p&gt;ㅁㅇㄹ&lt;/p&gt;
 
 &lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
-&lt;p&gt;많은 분들이 깃허브페이지의 웹 호스팅 서비스를 통해 개인 블로그를 운영하고 있.다. 
-깃허브 페이지 호스팅 시 기본적으로 제공되는 도메인 주소는 &amp;lt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt;.github.io&amp;gt;가 된다. 이번 포스트에서는 이러한 도메인 주소에 사용자가 원하는 커스텀 도메인과 HTTPS 프로토콜을 적용하는 방법을 알아보겠다.&lt;/p&gt;
+&lt;p&gt;많은 분들이 GitHub에서 제공하는 GitHub Pages 웹 호스팅 서비스를 통해 개인 블로그를 운영하고 있다. 
+GitHub Pages에서 기본으로 제공하는 도메인 주소는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;가 된다. 이번 포스트에서는 이러한 도메인 주소에 사용자가 원하는 커스텀 도메인과 HTTPS 프로토콜을 적용하는 방법을 알아보겠다.&lt;/p&gt;
 
 &lt;h3 id=&quot;도메인-주소-구조&quot;&gt;도메인 주소 구조&lt;/h3&gt;
-&lt;p&gt;도메인 주소는 root, top-level, second-level, third-level 순서의 계층 구조를 가지며, 각 계층 간의 경계를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;으로 표시한다. DNS는 이를 맨 뒤의 .root부터 시작하여 최하위 레벨 계층까지 역으로 해석한다. 참고로 root는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;으로 표시하며 주소로 표현 시 생략한다.
-예를 들어 &amp;lt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt;.github.io&amp;gt; 도메인 주소의 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io&lt;/code&gt;가 TLD(Top-level Domain)에 해당하며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt;이 각 Second-Level, Third Level Domain이 된다.&lt;/p&gt;
+&lt;p&gt;도메인 주소는 root, top-level, second-level, third-level 순서의 계층 구조를 가지며, 각 계층 간의 경계를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;으로 표시한다. DNS는 이를 맨 뒤의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;(root)부터 시작하여 최하위 레벨까지 역으로 해석한다. 참고로 root는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;으로 표시하며 주소로 표현 시 생략한다.
+예를 들어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; 도메인 주소의 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io&lt;/code&gt;가 TLD(Top Level Domain)에 해당하며 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt; 순서로 Second Level, Third Level Domain이 된다.&lt;/p&gt;
 
 &lt;h3 id=&quot;https&quot;&gt;HTTPS&lt;/h3&gt;
 &lt;p&gt;HTTPS(HyperText Transfer Protocol over Secure Socket Laye)는 HTTP에 SSL/TLS(Secure Socket Layer and Transport Layer Security) 기술이 적용된 프로토콜로 기본적인 인터넷 전송 프로토콜인 HTTP의 보안이 강화된 버전이라고 할 수 있다. 따라서 사용자 컴퓨터와 방문한 사이트 간에 전송되는 사용자 데이터의 무결성과 기밀성을 유지할 수 있어 전자 상거래와 같은 웹사이트를 안전한 비공개 온라인 환경에서 이용할 수 있다. 
-현재 대부분의 기업 웹사이트에서는 HTTPS를 의무적으로 사용하기 때문에 HTTP로 접속은 더 이상 지원하지 않는다.
+현재 대부분의 기업의 웹사이트에서는 HTTPS를 의무적으로 사용하기 때문에 HTTP로 접속은 더 이상 지원하지 않는다.
 참고로 구글에서는 2014년부터 HTTPS를 쓰도록 권고했고 2017년 1월 크롬 56버전부터 HTTP로 접속하는 사이트에 대해서는 ‘안전하지 않음’이라는 경고를 띄우기 시작했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.econovill.com/news/articleView.html?idxno=309031&quot;&gt;관련 기사 #파리사 타브리즈&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cdn.econovill.com/news/photo/201702/309031_141789_1952.jpg&quot; title=&quot;파리사 타브리즈&quot;&gt;&lt;img src=&quot;https://cdn.econovill.com/news/photo/201702/309031_141789_1952.jpg&quot; alt=&quot;파리사 타브리즈&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;이러한 이유로 새로 생성한 커스텀 도메인에 대해서도 HTTPS로 접속이 가능해야 한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;본론-1&quot;&gt;본론&lt;/h2&gt;
+&lt;h2 id=&quot;본론&quot;&gt;본론&lt;/h2&gt;
 &lt;p&gt;기본 깃허브페이지 주소를 커스텀 도메인 주소로 바꾸기 위해 도메인 구입 및 DNS 서버 선택에 대한 과정과 최종 생성한 커스텀 도메인에 HTTS 접속이 가능하도록 SSL/TLS 인증을 적용하는 과정에 대하여 설명한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;도메인-구매하기&quot;&gt;도메인 구매하기&lt;/h3&gt;
 &lt;p&gt;커스텀 도메인을 생성하려면 우선 고유의 도메인이 필요하다. 본인이 원하는 고유의 도메인을 구매하여 커스텀 도메인 주소로 사용할 수 있다.
 도메인은 DNS 서비스를 제공하는 도메인 업체를 통하여 구매할 수 있다. 업체마다 원하는 TLD에 따른 구매 비용이 다르고, DNS 관리 외에 웹사이트 호스팅, 마케팅 등 추가적으로 제공하는 유료형 서비스가 다르므로 메이저급 이상의 안정적인 업체 위주로 비교하여 선정해야 한다.
-필자는 같은 TLD 기준으로 구매 비용이 저렴하면서도 안정적인 호스팅 환경을 제공하는 규모가 있는 업체를 조사한 결과 &lt;a href=&quot;https://kr.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt;를 선택하게 되었다.&lt;/p&gt;
+필자는 같은 TLD 기준으로 비용이 저렴하면서도 안정적으로 도메인을 관리할 수 있는 규모가 있는 업체를 조사한 결과 &lt;a href=&quot;https://kr.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt;를 선택하게 되었다.&lt;/p&gt;
 
-&lt;p&gt;아래와 같은 단계로 원하는 도메인을 검색해 구매한다.&lt;/p&gt;
+&lt;p&gt;아래와 같은 단계로 원하는 도메인을 구매하여 설정한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt;  &lt;a href=&quot;https://kr.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt;에서 원하는 도메인의 Second-Level, Top-Level 순서로 입력하여 검색한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; 선택한 도메인을 최소 1년 계약 단위로 구매한다. 구매 시 계정 로그인이 필요하다.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;⚠️ &lt;span style=&quot;color: red&quot;&gt; &lt;strong&gt;&lt;em&gt;Warning&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
-구매 후 1년 후 동일 도메인을 유지할지 확신이 없다면 &lt;strong&gt;요금 청구서 관리&lt;/strong&gt;에서 자동 갱신 옵션을 끄길 바란다. 그 외 구매와 함께 유료 서비스가 자동 선택되었을 수도 있으니 아예 결제 방법으로 등록된 본인의 카드 정보도 삭제하길 바란다. 필자는 도메인에 대한 자동 갱신 옵션은 꺼두었으나 구매 시 자동으로 설정된 유료 서비스가 30일 이후 자동 결제 및 유료로 전환되는 것을 확인하지 못해 번거로운 환불 과정을 거쳐야 했다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; 내 제품 &amp;gt; DNS 관리에서 기존 깃허브페이지 주소를 구매한 도메인 주소로 매핑하기 위한 레코드를 등록한다.
-크게 도메인 주소를 IP주소로 매핑하는 A 레코드와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;www&lt;/code&gt;없이도 해당 도메인 주소로 매핑되도록 CNAME 레코드를 등록한다.&lt;/p&gt;
-
-&lt;p&gt;실제 깃허브페이지 IP 주소 4개로 매핑하도록 A 레코드를 아래와 같이 등록한다.&lt;/p&gt;
-
-&lt;p&gt;DNS 서버 선택하기
-TLS/SSL 적용하기&lt;/p&gt;
-
-&lt;h2 id=&quot;callout--연습&quot;&gt;Callout  연습&lt;/h2&gt;
-
-&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;
-        &lt;b&gt;Note:&lt;/b&gt;This is my note. All the content I type here is treated as a single  paragraph.&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
-&lt;div class=&quot;bs-callout bs-callout-primary&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Note&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
+&lt;div class=&quot;highlight2&quot;&gt;⚠️&lt;span style=&quot;color:red&quot;&gt; &lt;i&gt;&lt;b&gt;Warning&lt;/b&gt;&lt;/i&gt;&lt;/span&gt; &lt;br /&gt;
+구매 후 1년 후 동일 도메인을 유지할지 확신이 없다면 &lt;b&gt;요금 청구서 관리&lt;/b&gt;에서 자동 갱신 옵션을 끄길 바란다. 그 외 구매와 함께 유료 서비스가 자동 선택되었을 수도 있으니 결제 방법으로 등록된 본인의 카드 정보도 삭제하길 바란다. 필자는 도메인에 대한 자동 갱신 옵션은 꺼두었으나 구매 시 자동으로 설정된 유료 서비스가 30일 이후 자동 결제 및 유료로 전환되는 것을 확인하지 못해 번거로운 환불 과정을 거쳐야 했다.
 &lt;/div&gt;
 
-&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-success&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
-&lt;div class=&quot;bs-callout bs-callout-success&quot;&gt;&lt;i class=&quot;fa fa-check-square-o&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Tip&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; &lt;strong&gt;내 제품 &amp;gt; DNS 관리 &amp;gt; DNS 레코드&lt;/strong&gt;에서 기존 깃허브페이지 주소를 구매한 도메인 주소로 매핑하기 위한 레코드를 등록한다.
+크게 도메인 주소를 IP 주소로 매핑하는 A 레코드와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;www&lt;/code&gt; 없이 해당 도메인 주소로 매핑되도록 CNAME 레코드를 등록한다.&lt;/p&gt;
+
+&lt;p&gt;실제 깃허브페이지의 서버 IP 주소 4개를 아래와 같이 A 레코드로 등록한다.
+&lt;img src=&quot;/img/tech/a_record1.png&quot; alt=&quot;godaddy arecord&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이어서 내 깃허브페이지 주소에 대한 CNAME 레코드를 아래와 같이 등록한다.
+&lt;img src=&quot;/img/tech/cname_record.png&quot; alt=&quot;godaddy crecord&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight2&quot;&gt;ℹ️&lt;span style=&quot;color:#247CFF&quot;&gt; &lt;i&gt;&lt;b&gt;NOTE&lt;/b&gt;&lt;/i&gt; &lt;/span&gt; &lt;br /&gt;
+현재 GitHub Pages 주소를 구매한 도메인 주소로 바꾸기 위한 CNAME 레코드 등록은 해당 깃허브 저장소에서 진행해야 한다.
 &lt;/div&gt;
 
-&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type.&lt;/div&gt;--&gt;
-&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Warning&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type.&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type callout&lt;/div&gt;--&gt;
-&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type callout&lt;/span&gt;
-&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/h2&gt;
+&lt;h3 id=&quot;도메인-네임서버-선택하기&quot;&gt;도메인 네임서버 선택하기&lt;/h3&gt;
+&lt;p&gt;도메인을 구매하고 관련 레코드를 등록하였으면 내 도메인 정보를 저장하고 관리할 도메인 네임서버(DNS)를 연결해야 한다. 도메인 네임서버는 내 도메인에 접속하려고 하는 사용자에게 도메인에 매핑된 실제 IP 주소를 전달해주며, 도메인을 구매한 사이트에서 제공해준다.&lt;/p&gt;
 
-&lt;h3 id=&quot;단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/h3&gt;
+&lt;p&gt;구매한 GoDaddy 사이트의 &lt;strong&gt;내 제품 &amp;gt; DNS 관리 &amp;gt; 네임서버&lt;/strong&gt;에서 기본으로 제공된 네임서버를 확인할 수 있으며, &lt;strong&gt;사용자 지정 네임 서버 사용&lt;/strong&gt;에서 변경할 수 있다.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;div style=&quot;background-color:#ededed; padding:10px&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;
-이건 어때요? &lt;br /&gt;
-색상태그를 적용했습니다. &lt;/span&gt;&lt;/div&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;github-pages에-커스텀-도메인-설정하기&quot;&gt;GitHub Pages에 커스텀 도메인 설정하기&lt;/h3&gt;
+&lt;p&gt;현재 블로그의 배포 환경은 GitHub 저장소의 GitHub Pages 에서 관리되고 있다. 
+기존 GitHub Pages 주소 대신 새로운 도메인 주소로 바꾸려면 배포되고 있는 저장소의 브랜치에 CNAME 레코드를 등록해야 한다.
+이 과정은 아래와 같이 해당 저장소의 &lt;strong&gt;GitHub Pages &amp;gt; Custom domain&lt;/strong&gt;에서 구매한 도메인 주소를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;SLD&amp;gt;.&amp;lt;TLD&amp;gt;&lt;/code&gt; 형태로 저장하여 진행할 수 있다.&lt;/p&gt;
 
-&lt;h3 id=&quot;문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/img/tech/github_customdoamin.png&quot; alt=&quot;githubcustomdomain&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이건 어때요? 문장을 backquote로 감싼 my code입니다.&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;적용-결과-주의-요함&quot;&gt;적용 결과 ‘주의 요함’&lt;/h3&gt;
+&lt;p&gt;여기까지 진행했으면 커스텀 도메인이 적용된 블로그 주소를 생성할 수 있을 줄 알았으나, 몇 시간 뒤 새로운 도메인 주소로 접속했을 때 크롬 브라우저 주소표시창에 ‘HTTPS가 사용되지 않았다’ 는 상세 메시지와 함께 ‘주위 요함’ 경고가 표시되었다.&lt;/p&gt;
 
-&lt;h2 id=&quot;코드-블록&quot;&gt;코드 블록&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/tech/nossl.png&quot; alt=&quot;안전하지 않음&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ```C 적용함  &lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-curl&quot;&gt;  $ git clone https://github.com/swagger-api/swagger-ui.git 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;background-color:#444; padding:10px&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ```C 안에 &amp;lt;div&amp;gt; 블랙 바탕 색상 태크 적용 안됨  &lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;단어-표현&quot;&gt;단어 표현&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;How to use&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;How to look&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;_기울임_ or &lt;br /&gt; *기울임*&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;기울임&lt;/em&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;**굵게**&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;굵게&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;***굵고기울임***&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;&lt;em&gt;굵고기울임&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;~~취소선~~&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;del&gt;취소선&lt;/del&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&amp;lt;U&amp;gt;밑줄&amp;lt;/U&amp;gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;u&gt;밑줄&lt;/u&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;`인라인코드`&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;인라인코드&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
-테이블 칸 안에서 줄바꿈을 할 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;/br&amp;gt;&lt;/code&gt;을 줄바꿈할 단어 앞에 기입하여 한 줄로 
-작성한다. &lt;br /&gt;
-  Ex) b를 a 다음줄에 오도록 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a &amp;lt;/br&amp;gt; b&lt;/code&gt; 를 한 칸에 한 줄로 작성한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;인용구-및-블락&quot;&gt;인용구 및 블락&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;인용구: 작성할 텍스트 앞에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;을 기입하면 해당 텍스트가 구분되는 인용구가 된다.&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;&amp;gt; 안녕하세요&lt;/p&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;안녕하세요&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; 다음줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;, 그 다음 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;를 기입하면 여러 계층의 인용구로 작성할 수 있다.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드 블락: 코드를 일반 문장과 구분하기 위해 블락으로 표현. 예시나 구분이 필요한 내용을 블락으로 묶을 때도 사용한다.&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;해당 문장의 앞 줄과 다음 줄에 ``` 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~~~&lt;/code&gt;을 기입한다.
-&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;```
-&lt;br /&gt; 안녕하세요.&lt;/p&gt;
-
-    &lt;p&gt;```&lt;/p&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;안녕하세요.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ℹ️ &lt;span style=&quot;color:#247CFF&quot;&gt; &lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
-코드 문법을 적용하기 위해 첫 줄에 ```와 해당 언어 종류를 같이 기입한다.&lt;br /&gt;
-Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적용된다.&lt;/p&gt;
-
-  &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// C문법 적용함&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;제목-수준&quot;&gt;제목 수준&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;큰제목: 텍스트 밑에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=====&lt;/code&gt; 기입&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;큰제목
-======
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;h1 class=&quot;no_toc&quot; id=&quot;큰제목&quot;&gt;큰제목&lt;/h1&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;작은 제목: 텍스트 밑에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-----&lt;/code&gt; 기입 &lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   작은제목
-   -------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;h2 class=&quot;no_toc&quot; id=&quot;작은-제목&quot;&gt;작은 제목&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;을 사용하여 다양한 수준으로 표현: 1단계부터 6단계까지 지원&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  # 1단계 //가장 큰제목
-  ##### 5단계 //5번째로 큰제목
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;# 1단계
-  ##### 5단계&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;리스트&quot;&gt;리스트&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Unordered &lt;br /&gt;&lt;br /&gt;
-&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -	Item 1
-  -	Item 2
-    -	Item 2a
-    -	Item 2b
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Item 1&lt;/li&gt;
-      &lt;li&gt;Item 2
-        &lt;ul&gt;
-          &lt;li&gt;Item 2a&lt;/li&gt;
-          &lt;li&gt;Item 2b&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Ordered &lt;br /&gt;
-&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1. Item 1 //첫 줄은 무조건 1부터 시작
-  2. Item 2 //번호를 순서대로 안써도 2로 인식함
-  3. Item 3 //번호를 순서대로 안써도 3으로 인식함
-      1. Item 3a //앞 줄 대비 세 칸 띄우고 1부터 시작
-      2. Item 3b //번호를 순서대로 안써도 2로 인식함
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Item 1&lt;/li&gt;
-      &lt;li&gt;Item 2&lt;/li&gt;
-      &lt;li&gt;Item 3
-        &lt;ol&gt;
-          &lt;li&gt;Item 3a&lt;/li&gt;
-          &lt;li&gt;Item 3b&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;링크&quot;&gt;링크&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;How to use&lt;/strong&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;How to look&lt;/strong&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;url 링크&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&amp;lt;http://github.com&amp;gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;http://github.com&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;참조 링크&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;검색엔진은 [Google][1] 이 있다. &amp;lt;/br&amp;gt; [1]: http://google.com “구글”&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;검색엔진은 google이 있다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;인라인 링크&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;url 주소&quot;&gt;url 대신 표현 단어&lt;/a&gt; &amp;lt;/br&amp;gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Google](http://google.com&quot;구글&quot;)&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;내부 링크&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;#작성한 본문 내 제목&quot;&gt;표현할 단어&lt;/a&gt; &amp;lt;/br&amp;gt; Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[리스트로 가기](#리스트)&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;#리스트&quot;&gt;리스트로 가기&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;이미지-삽입&quot;&gt;이미지 삽입&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;![이미지 이름](이미지 주소)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.github.com/dcurtis/markdown-mark/master/png/208x128.png&quot; alt=&quot;markdown_logo&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;테이블&quot;&gt;테이블&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt; 
-    | First Header | Second Header  |       Third Header |
-    | :----------- | :------------: | -----------------: |
-    | 왼쪽맞춤     |   가운데맞춤   |         오른쪽맞춤 |
-    | Second row   |    **Cell**    |             *Cell* |
-    | Third row    | Cell that span | across two columns |
-    
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;First Header&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Second Header&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Third Header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;왼쪽맞춤&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;가운데맞춤&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;오른쪽맞춤&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Second row&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Cell&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;em&gt;Cell&lt;/em&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Third row&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Cell that span&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;across two columns&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;단락-구분&quot;&gt;단락 구분&lt;/h3&gt;
-
-&lt;p&gt;같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;***&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;___&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; 를 사용하여 수평선을 표현&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;
-
-  ***
-  이 단락의 내용을 앞 내용과 구분
-
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;이 단락의 내용을 앞 내용과 구분&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;접어두기-표시&quot;&gt;접어두기 표시&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;
-  &amp;lt;summary\&amp;gt;상세 내용 확인&amp;lt;/summary&amp;gt;
-    &amp;lt;details markdown=&quot;1&quot;
-      div 에 markdown attribute를 1 로
-      하는 이유는 div 안에서 markdown 을 사용하기 위해서입니다.
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-&lt;summary&gt;상세 내용 확인&lt;/summary&gt;
-&lt;details&gt;
-  &lt;pre&gt; div 에 markdown attribute를 1 로 하는 이유는 div 안에서 markdown을 사용하기 위해서입니다.&lt;/pre&gt;
-&lt;/details&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;작업-목록&quot;&gt;작업 목록&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;
-  - [x] #739
-  - [ ] Add delight to the experience when all tasks are complete
-  - [ ] Open a followup issue
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;#739&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Add delight to the experience when all tasks are complete&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Open a followup issue&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/h3&gt;
-&lt;p&gt;작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;
-  &amp;gt; ℹ️ `&lt;span style=&quot;color:#247CFF&quot;&gt;` ***NOTE*** `&lt;/span&gt;`
-  &amp;gt; This is note content.
-&lt;/pre&gt;</content><author><name></name></author><category term="Tech Journey" /><category term="network" /><category term="domain" /><summary type="html">커스텀 도메인 적용을 위한 기술 스터디</summary></entry><entry><title type="html">[Tech] 사양서와 유즈케이스</title><link href="http://localhost:4000/technical%20writing/tw-srs" rel="alternate" type="text/html" title="[Tech] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-srs</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-srs">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
+&lt;div class=&quot;highlight2&quot;&gt;
+이러한 경고는 내 사이트에 접속할 적마다 신뢰감이 없어보여 상당히 거슬리는게 마련이다.
+다음 섹션에서는 이 부분을 해결하고자 
+내 도메인 주소에 HTTPS 적용하는 방법에 대해 알아보겠다.
+&lt;/div&gt;</content><author><name></name></author><category term="Tech Journey" /><category term="network" /><category term="domain" /><summary type="html">커스텀 도메인 적용을 위한 기술 스터디</summary></entry><entry><title type="html">[SRS] 사양서와 유즈케이스</title><link href="http://localhost:4000/technical%20writing/tw-srs" rel="alternate" type="text/html" title="[SRS] 사양서와 유즈케이스" /><published>2021-10-11T00:00:00+09:00</published><updated>2021-10-11T00:00:00+09:00</updated><id>http://localhost:4000/technical%20writing/tw-srs</id><content type="html" xml:base="http://localhost:4000/technical%20writing/tw-srs">&lt;h2 id=&quot;요구사양서란&quot;&gt;요구사양서란&lt;/h2&gt;
 
 &lt;p&gt;요구사양서는 시스템이나 소프트웨어에서 구현되어야 할 것에 대하여 공식적인 문장으로 명세화*한 산출물로 요구사항 명세서(Requirements Specification)와 같은 의미이다.
 &lt;br /&gt; 요구사항 명세서는 일반적으로 소프트웨어 요구사항 명세서(SRS; Software Requirements  Specification Document)를 말하며 하드웨어까지 다룬다면 시스템 사양서(System Specification)가 된다.&lt;/p&gt;
@@ -853,7 +398,7 @@ E.g. 카테고리 변경 시 날씨 어떻게 업데이트 하는지에 대한 �
 
 &lt;ul&gt;
   &lt;li&gt;SRS에는 요구 사항(고객과의 협의 사항)만 작성, 코드 관련 내용 없음&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="국제 표준" /><category term="UseCase" /><category term="SRS" /><summary type="html">요구사양서 국제 표준 및 유즈케이스(UseCase) 적용에 관하여</summary></entry><entry><title type="html">[Tech] UML과 다이어그램</title><link href="http://localhost:4000/tech%20journey/tech-uml" rel="alternate" type="text/html" title="[Tech] UML과 다이어그램" /><published>2021-09-10T00:00:00+09:00</published><updated>2021-09-10T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/tech-uml</id><content type="html" xml:base="http://localhost:4000/tech%20journey/tech-uml">&lt;h2 id=&quot;uml이란&quot;&gt;UML이란&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Technical Writing" /><category term="국제표준" /><category term="UseCase" /><category term="SRS" /><summary type="html">요구사양서 국제 표준 및 유즈케이스(UseCase) 적용에 관하여</summary></entry><entry><title type="html">[Tech] UML과 다이어그램</title><link href="http://localhost:4000/tech%20journey/tech-uml" rel="alternate" type="text/html" title="[Tech] UML과 다이어그램" /><published>2021-09-10T00:00:00+09:00</published><updated>2021-09-10T00:00:00+09:00</updated><id>http://localhost:4000/tech%20journey/tech-uml</id><content type="html" xml:base="http://localhost:4000/tech%20journey/tech-uml">&lt;h2 id=&quot;uml이란&quot;&gt;UML이란&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;UML&lt;/strong&gt;(Unified Modeling Language)은 시스템을 모델로 표현해주는 대표적인 모델링 언어이다.
 &lt;br /&gt;UML의 여러가지 그래픽 요소는 하나의 큰 그림, 즉 다이어그램을 그리는데 사용된다. UML은 언어이기 때문에, 이들 그래픽 요소들을 맞추는 데에는 규칙이 필요하다.
 &lt;br /&gt; 
@@ -1745,6 +1290,9 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
       &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#인용구-및-블락&quot; id=&quot;markdown-toc-인용구-및-블락&quot;&gt;인용구 및 블락&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#큰제목&quot; id=&quot;markdown-toc-큰제목&quot;&gt;큰제목&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#리스트&quot; id=&quot;markdown-toc-리스트&quot;&gt;리스트&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#링크&quot; id=&quot;markdown-toc-링크&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#이미지-삽입&quot; id=&quot;markdown-toc-이미지-삽입&quot;&gt;이미지 삽입&lt;/a&gt;&lt;/li&gt;
@@ -1760,7 +1308,6 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;markdown-사용법&quot;&gt;Markdown 사용법&lt;/h2&gt;
-
 &lt;p&gt;웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1794,7 +1341,6 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;h2 id=&quot;강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/h2&gt;
 
 &lt;h3 id=&quot;단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/h3&gt;
-
 &lt;blockquote&gt;
   &lt;div style=&quot;background-color:#ededed; padding:10px&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;
 이건 어때요? &lt;br /&gt;
@@ -1802,8 +1348,8 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이건 어때요? 문장을 backquote로 감싼 my code입니다.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이건 어때요? 문장을 backquote로 감싼 my code입니다.&lt;/code&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;코드-블록&quot;&gt;코드 블록&lt;/h2&gt;
 
@@ -1952,7 +1498,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
     &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
 
-    &lt;h1 class=&quot;no_toc&quot; id=&quot;큰제목&quot;&gt;큰제목&lt;/h1&gt;
+    &lt;h1 id=&quot;큰제목&quot;&gt;큰제목&lt;/h1&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1960,7 +1506,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;작은 제목: 텍스트 밑에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-----&lt;/code&gt; 기입 &lt;br /&gt;&lt;/p&gt;
+    &lt;p class=&quot;no_toc&quot;&gt;작은 제목: 텍스트 밑에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-----&lt;/code&gt; 기입 &lt;br /&gt;&lt;/p&gt;
 
     &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 

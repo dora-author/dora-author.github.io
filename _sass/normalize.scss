@@ -92,13 +92,14 @@ h1 {
 
 /*add 220620*/
 h2 {
-  margin: 1.5em 0 0;
+  margin: 1.5em 0 1em;
   line-height: 0.5em;
 }
 
 h3 {
-  margin: 1.5em 0 0;
-  line-height: 0.3em;
+  padding: 0.3em 0;
+  margin: 1.5em 0 1em;
+  line-height: 0.5em;
 }
 
 
@@ -131,7 +132,9 @@ sup {
    ========================================================================== */
 
 img {
+  margin: 1em;
   border-style: none;
+  float: left;
 }
 
 svg:not(:root) {
