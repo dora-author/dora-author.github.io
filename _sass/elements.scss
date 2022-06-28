@@ -137,13 +137,14 @@ hr {
 
 // images and figures
 img {
-    display: block;
+    // display: block;
     max-width: 100%;
     width: auto;
     height: auto;
-    vertical-align: middle;
-    margin-left: auto;
-    margin-right: auto;
+    // vertical-align: middle;
+    // margin-left: auto;
+    // margin-right: auto;
+    // align: left;
     border: 0;
     -ms-interpolation-mode: bicubic;
     image-rendering: optimizeQuality;
@@ -154,6 +155,10 @@ img {
     border: 3px solid $white;
     height: 150px;
     width: 150px;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align: middle;
 }
 
 .author-photo {
