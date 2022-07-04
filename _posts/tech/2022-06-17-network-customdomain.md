@@ -25,7 +25,7 @@ comments: true
         <tr>
           <th>도메인(Domain)</th>
           <td>인터넷에서 특정 사이트를 찾아가기 위한 의미있는 문자열로 구성된 주소. 숫자로 구성된 IP 주소 대신하여 사람이 인식하고 기억하기 쉬워 도메인 주소를 이용함.</td>
-          <td><a href="#도메인 구매하기">도메인 구매하기</a></td>
+          <td><a href="#도메인-주소-구조">도메인 주소 구조</a></td>
         </tr>
         <tr>
           <th>DNS(Domain Name System or Server)</th>

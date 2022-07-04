@@ -194,6 +194,8 @@ li .highlight pre {
     background-color: #edededac;
     padding: 10px;
     clear: left;
+    font-family: $font2;
+    @include font(15);
 }
 
 
