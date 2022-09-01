@@ -58,7 +58,7 @@ GitHub Pages에서 기본으로 제공하는 도메인 주소는 `<username>.git
 예를 들어 `<username>.github.io` 도메인 주소의 경우, `io`가 TLD(Top Level Domain)에 해당하며 `github`, `username` 순서로 Second Level, Third Level Domain이 된다. 
 
 ### HTTPS
-HTTPS(HyperText Transfer Protocol over Secure Socket Laye)는 HTTP에 SSL/TLS(Secure Socket Layer and Transport Layer Security) 기술이 적용된 프로토콜로 기본적인 인터넷 전송 프로토콜인 HTTP의 보안이 강화된 버전이라고 할 수 있다. 따라서 사용자 컴퓨터와 방문한 사이트 간에 전송되는 사용자 데이터의 무결성과 기밀성을 유지할 수 있어 전자 상거래와 같은 웹사이트를 안전한 비공개 온라인 환경에서 이용할 수 있다. 
+HTTPS(HyperText Transfer Protocol over Secure Socket Layer)는 HTTP에 SSL/TLS(Secure Socket Layer and Transport Layer Security) 기술이 적용된 프로토콜로 기본적인 인터넷 전송 프로토콜인 HTTP의 보안이 강화된 버전이라고 할 수 있다. 따라서 사용자 컴퓨터와 방문한 사이트 간에 전송되는 사용자 데이터의 무결성과 기밀성을 유지할 수 있어 전자 상거래와 같은 웹사이트를 안전한 비공개 온라인 환경에서 이용할 수 있다. 
 현재 대부분의 기업의 웹사이트에서는 HTTPS를 의무적으로 사용하기 때문에 HTTP로 접속은 더 이상 지원하지 않는다.
 참고로 구글에서는 2014년부터 HTTPS를 쓰도록 권고했고 2017년 1월 크롬 56버전부터 HTTP로 접속하는 사이트에 대해서는 '안전하지 않음'이라는 경고를 띄우기 시작했다. 
 
