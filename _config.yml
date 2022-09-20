@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Dora's Technical Writing
 email: dora.author1004@gmail.com
-bio: "For Technical Writing and Knowledge Base"
+bio: "for Technical Writing and Knowledge Base"
 description: "It is clear, concise, and beautiful"
 reading_time: true
 words_per_minute: 200

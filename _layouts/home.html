@@ -27,20 +27,20 @@ layout: compress
                 <h3 class="title">
                     <a class="zoombtn" href="{{ site.url }}">
                         <p style="font-size:1.3rem;font-weight:400"><span style="color: #e63737;">{{ site.title
-                                }}</span< /p>
+                                }}</span</p>
                     </a>
                 </h3>
                 <hr class="hr-line">
                 <h3 class="title">
-                    <a href="{{ site.url }}">
-                        <p style="font-size:1rem;font-weight:300">{{ site.bio }}</p>
+                    <a href="{{ site.url }}/about/">
+                        <p style="font-size:1rem;font-weight:400">About | {{ site.bio }}</p>
                     </a>
                 </h3>
-                {% include social-links.html %}
+                <!-- {% include social-links.html %} -->
                 <hr class="hr-line">
                 <h3 class="title">
-                    <a class="btn zoombtn" href="{{ site.url }}/about/">
-                        About
+                    <a class="btn zoombtn" href="{{ site.url }}/tags/">
+                        All Tags
                     </a>
                     <a class="btn zoombtn" href="{{ site.url }}/posts/">
                         All Posts
@@ -61,6 +61,30 @@ layout: compress
                         Projects
                     </a> -->
                 </h3>
+                <div class="home">
+                    <h3 class="post-list-heading">
+                            <span style="color: #e63737;">What's New</span>                         
+                    </h3>
+                    <ul class="post-list">
+                        {% for post in site.posts %}
+                        <li>
+                            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                            {% if post.tags %} 
+                            <i class="material-icons svg-icon">local_offer</i>
+                            {% for tag in post.tags %}
+                            <a class="label" style="font-size:1rem;font-weight:400" href="{{ site.url }}/tags/#{{ tag }}"> #{{ tag }}
+                            </a>
+                            &nbsp;
+                            {% endfor %} 
+                            {% endif %}
+                            <h3>
+                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                                {{ post.title }}</a>
+                            </h3>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
             <div>
             <p align="center"; style="font-size:14px">

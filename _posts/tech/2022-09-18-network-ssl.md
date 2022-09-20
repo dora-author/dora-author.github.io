@@ -55,7 +55,7 @@ comments: true
 
 ## Intro
 지난 블로그, [커스텀 도메인 적용기](https://dora-author.me/tech%20journey/network-customdomain)에 이어, 도메인에 HTTPS 프로토콜을 적용하는 방법에 관하여 설명하고자 한다. <br>
-조사 결과, DNS 서비스 업체인 [CloudFlare](https://www.cloudflare.com/ko-kr/)에서 제공하는 [무료 SSL/TLS](https://www.cloudflare.com/ko-kr/) 기능을 사용하여 내 도메인에 HTTPS 프로토콜을 적용해볼 수 있었다. <br>
+조사 결과, DNS 서비스 업체인 [CloudFlare](https://www.cloudflare.com/ko-kr/)에서 제공하는 [무료 SSL/TLS](https://www.cloudflare.com/ko-kr/ssl/) 기능을 사용하여 내 도메인에 HTTPS 프로토콜을 적용해볼 수 있었다. <br>
 CloudFlare에서 SSL 인증서 적용 및 HTTPS 연결 설정 결과, 이전에 내 웹사이트 URL 주소창 좌측 나타나던 보안 연결 경고 대신 안전한 자물쇠 표시를 확인할 수 있었다.
 
   ![https](/img/tech/ssl-https.png)
@@ -117,7 +117,7 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. <br>
   즉, 클라언트에서 A로 암호화된 메시지는 서버에서는 B로만 해독이 가능하고, 서버에서 C로 암호화된 메시지는 클라이언트에서는 D로만 해독이 가능하므로 종단 간 암호화(End to End Encryption) 통신이 성립된 것이다. 
 
   <div class="highlight2">
-    종단 간 암호화(End to End Encryption)는 메시지를 보내는 곳부터 받는 곳까지의 모든 과정에서 암호화된 상태로 전송하는 방식으로, 메시지 전송 중에는 해독키가 없어 메시지 해석이 불가하므로, 중간 패킷 감청으로터 안전하다.
+    <a href="https://namu.wiki/w/%EC%A2%85%EB%8B%A8%EA%B0%84%20%EC%95%94%ED%98%B8%ED%99%94">종단 간 암호화(End to End Encryption)</a>는 메시지를 보내는 곳부터 받는 곳까지의 모든 과정에서 암호화된 상태로 전송하는 방식으로, 메시지 전송 중에는 해독키가 없어 메시지 해석이 불가하므로, 중간 패킷 감청으로터 안전하다.
   </div>
 <br>
 

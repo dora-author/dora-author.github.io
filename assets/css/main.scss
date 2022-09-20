@@ -59,6 +59,55 @@ footer {
   }
 }
 
+.label { font-weight: initial; }
+
+// 최신글 추가하기 220920
+#aside .box-recent .list-recent li {
+    margin-bottom: 5px;
+}
+
+#aside .box-recent .list-recent li:last-child {
+    margin-bottom: 0;
+}
+
+#aside .box-recent .list-recent .link-recent {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    text-decoration: none;
+}
+
+#aside .box-recent .list-recent .thumbnail {
+    width: 120px;
+    height: 80px;
+    margin: 0 12px 0 0;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#aside .box-recent .list-recent .thumbnail+.box-recent{
+	width: 60%;
+}
+
+#aside .box-recent .list-recent .box-recent {
+		width: 100%;
+    margin-top: 2px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: #333;
+}
+
+#aside .box-recent .list-recent .box-recent strong {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 400;
+	 font-size: 15px;
+}
+
+#aside .box-recent .list-recent .box-recent span {
+    color: #999;
+}
+
 
 @import "variables";
 @import "mixins";
