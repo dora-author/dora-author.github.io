@@ -77,10 +77,10 @@ layout: compress
                             &nbsp;
                             {% endfor %} 
                             {% endif %}
-                            <h3>
-                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                                {{ post.title }}</a>
-                            </h3>
+                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                                <p style="font-size:1.2rem;font-weight:400">{{ post.title }}</p>
+                            </a>
+                            
                         </li>
                         {% endfor %}
                     </ul>
