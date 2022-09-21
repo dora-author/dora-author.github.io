@@ -5,8 +5,8 @@
     <description>It is clear, concise, and beautiful</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Sep 2022 11:24:42 +0900</pubDate>
-    <lastBuildDate>Wed, 21 Sep 2022 11:24:42 +0900</lastBuildDate>
+    <pubDate>Wed, 21 Sep 2022 17:37:10 +0900</pubDate>
+    <lastBuildDate>Wed, 21 Sep 2022 17:37:10 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -176,22 +176,67 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. &lt;br /&gt
       </item>
     
       <item>
-        <title>[To부정사]명사로써 to부정사 쓰임 </title>
-        <description>&lt;h2 id=&quot;to부정사를-명사로-쓰기&quot;&gt;To부정사를 명사로 쓰기&lt;/h2&gt;
+        <title>[To 부정사] To 부정사로 시작하여 명사형으로 종결하기</title>
+        <description>&lt;h2 id=&quot;to-부정사로-시작하는-문장&quot;&gt;To 부정사로 시작하는 문장&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;주어 + 동사&lt;/code&gt; 형태로 시작하지 않고 ‘to + 동사’인 to 부정사 형태로 시작하고 문장 중간에도 일반 주어 및 동사가 없는 문장은 ‘~하기’ 또는 ‘~하는 것’으로 해석한다.&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;일반문장: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;He  shall collect&lt;/code&gt;  ~  &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;To 부정사형 문장: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;To collect&lt;/code&gt; data for operation of resource which are componenet of Infor System&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;주어가 없이 to부정사로 시작하고 중간의 동사가 없는 문장은 ‘~하는 것’으로 해석한다.&lt;br /&gt;
-리스트와 같이 명사구로 끝나는 일관된 형식의 문장을 작성할 때 사용한다.&lt;/p&gt;
+&lt;p&gt;위와 같이 To 부정사로 시작하여 명사형으로 종결하는 문장은 간결하고 일관된 형식의 리스트나 표 안의 내용을 작성할 때 주로 사용한다.&lt;/p&gt;
 
-&lt;h2 id=&quot;예문&quot;&gt;예문&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;가이드라인 작성 시, 사용자가 준수해야 하는 지침 사항을 일관성 있는 명사구의 리스트 형식으로 작성할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;적용-예시&quot;&gt;적용 예시&lt;/h2&gt;
+&lt;p&gt;To 부정사를 사용한 명사형의 간결한 문장은 가이드라인(guidelines)과 같이 사용자가 준수해야 하는 지침 사항을 일관성 있는 리스트 형태로 정렬하고자 할 때 사용하면 적절하다. &lt;br /&gt;
+적용 예시로, ‘정보 시스템의 성능 관리 지침 사항’에 관한 아래 내용을 참고한다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;내용의 이해를 돕기 위해, 사용된 명사형 To 부정사는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;강조 표시&lt;/code&gt;하였다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;예시에 사용된 가이드라인은 2019년에도 저자가 참여한 &lt;a href=&quot;https://www.youtube.com/watch?v=TKdDoBPOIPE&quot;&gt;영문 테크니컬 라이팅 과정&lt;/a&gt;에서 실제 교수님께 첨삭 받은 내용을 바탕으로 작성하였다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;guielines-for-performace-management-of-information-system&quot;&gt;Guielines for Performace Management of Information System&lt;/h3&gt;
+&lt;p&gt;Each concerned party shall observe each of the followings in managing the performance of information system:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;To collect&lt;/code&gt; data for operation of resources which are the components of information system, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to totally analyze&lt;/code&gt; the operational condition of components such as application, database, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;To make&lt;/code&gt; a detailed plan to meet the target workload if such operation condition is needed to be improved.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;To carefully review&lt;/code&gt; the requirements of the system and organization.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;To make&lt;/code&gt; a plane for HW and SW extension if it is expected to have overload for a long time.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;해석하기&quot;&gt;해석하기&lt;/h3&gt;
+&lt;p&gt;위 예시에서는 정보 시스템의 성능 관리를 위한 지침사항 네 가지를 리스트 형식으로 일관적으로 배열하였다. 그리고 각 지침사항은 모두 to 부정사로 시작하여 명사형으로 종결하였다. &lt;br /&gt;
+이와 같은 쓰임에서 주목해야 할 것은 해당 가이드라인의 국문 지침 사항은 ‘~하기’가 아닌 ‘~해야 한다’로 작성되어 있다는 점이다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그 예로 첫 번째 지침 사항의 국문 내용은 아래와 같다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;정보시스템을 구성하는 자원의 운영에 대한 데이터를 수집하고, 애플리케이션, 데이터베이스 등과 같은 구성 요소의 운영 조건을 종합적으로 분석해야 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;일반적으로 영문 테크니컬 라이팅은 국문 내용을 그 분야에 맞는 전문적인 영어 형식과 표현을 사용하여 번역하는 과정이다. &lt;br /&gt;
+위와 같은 국문 내용을 ‘should’나 ‘have to’를 써서 일반 문장으로 직역하는 것보단 ‘to 부정사’를 명사으로 사용하고 종결 어미를 명사형으로 끝나도록 간결하게 번역하는 것이 올바른 영문 테크니컬 라이팅이라고 할 수 있다.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 08 Sep 2022 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/english%20writing/Eg-tov-2</link>
         <guid isPermaLink="true">http://localhost:4000/english%20writing/Eg-tov-2</guid>
         
-        <category>ToV</category>
+        <category>To 부정사</category>
         
         
         <category>English Writing</category>
@@ -277,9 +322,9 @@ MSP 서비스 영역에서 보자면 컨설팅, 인프라 설계 및 구축, 운
         <link>http://localhost:4000/tech%20journey/cloud-tw</link>
         <guid isPermaLink="true">http://localhost:4000/tech%20journey/cloud-tw</guid>
         
-        <category>cloud</category>
+        <category>Cloud</category>
         
-        <category>web</category>
+        <category>Web</category>
         
         <category>B2B TW</category>
         
@@ -350,9 +395,9 @@ MSP 서비스 영역에서 보자면 컨설팅, 인프라 설계 및 구축, 운
         <link>http://localhost:4000/technical%20writing/tw-agile</link>
         <guid isPermaLink="true">http://localhost:4000/technical%20writing/tw-agile</guid>
         
-        <category>agile</category>
+        <category>Agile</category>
         
-        <category>scrum</category>
+        <category>Scrum</category>
         
         <category>Developer Relations</category>
         
@@ -497,9 +542,9 @@ GitHub Pages에서 기본으로 제공하는 도메인 주소는 &lt;code class=
         <link>http://localhost:4000/tech%20journey/network-customdomain</link>
         <guid isPermaLink="true">http://localhost:4000/tech%20journey/network-customdomain</guid>
         
-        <category>network</category>
+        <category>Network</category>
         
-        <category>domain</category>
+        <category>Domain</category>
         
         
         <category>Tech Journey</category>

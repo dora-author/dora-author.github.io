@@ -3,8 +3,8 @@ layout: post
 title: "[Network] 커스텀 도메인 적용기"
 excerpt: 커스텀 도메인 적용을 위한 기술 스터디
 tags:
-  - network
-  - domain
+  - Network
+  - Domain
 category: Tech Journey
 date: 2022-06-17
 comments: true
