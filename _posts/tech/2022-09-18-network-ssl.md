@@ -55,8 +55,9 @@ comments: true
 
 ## Intro
 지난 블로그, [커스텀 도메인 적용기](https://dora-author.me/tech%20journey/network-customdomain)에 이어, 도메인에 HTTPS 프로토콜을 적용하는 방법에 관하여 설명하고자 한다. <br>
-조사 결과, DNS 서비스 업체인 [CloudFlare](https://www.cloudflare.com/ko-kr/)에서 제공하는 [무료 SSL/TLS](https://www.cloudflare.com/ko-kr/ssl/) 기능을 사용하여 내 도메인에 HTTPS 프로토콜을 적용해볼 수 있었다. <br>
-CloudFlare에서 SSL 인증서 적용 및 HTTPS 연결 설정 결과, 이전에 내 웹사이트 URL 주소창 좌측 나타나던 보안 연결 경고 대신 안전한 자물쇠 표시를 확인할 수 있었다.
+
+커스텀 도메인을 적용 후 발생하였던 HTTPS 연결 문제를 해결하고자 조사 결과, DNS 서비스 업체인 [CloudFlare](https://www.cloudflare.com/ko-kr/)에서 제공하는 [무료 SSL/TLS](https://www.cloudflare.com/ko-kr/ssl/) 기능을 사용하여 내 커스텀 도메인에 HTTPS 프로토콜을 적용해볼 수 있었다. <br>
+HTTPS 적용 전, 내 웹사이트 URL 주소창에는 `⚠️주의 요함`이 나타났지만, HTTPS 적용 성공 이후에는 안전한 자물쇠 표시를 확인할 수 있었다.
 
   ![https](/img/tech/ssl-https.png)
   <p align="left">
