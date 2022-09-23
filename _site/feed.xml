@@ -5,8 +5,8 @@
     <description>It is clear, concise, and beautiful</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Sep 2022 13:45:44 +0900</pubDate>
-    <lastBuildDate>Fri, 23 Sep 2022 13:45:44 +0900</lastBuildDate>
+    <pubDate>Fri, 23 Sep 2022 20:14:16 +0900</pubDate>
+    <lastBuildDate>Fri, 23 Sep 2022 20:14:16 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -18,7 +18,10 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#sphinx-소개&quot; id=&quot;markdown-toc-sphinx-소개&quot;&gt;Sphinx 소개&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#sphinx-사용하기-quick-start-guide&quot; id=&quot;markdown-toc-sphinx-사용하기-quick-start-guide&quot;&gt;Sphinx 사용하기 “Quick Start Guide”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sphinx-사용하기-quick-start-guide&quot; id=&quot;markdown-toc-sphinx-사용하기-quick-start-guide&quot;&gt;Sphinx 사용하기 “Quick Start Guide”&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#sphinx-설치----windows-기준&quot; id=&quot;markdown-toc-sphinx-설치----windows-기준&quot;&gt;Sphinx 설치 -  Windows 기준&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#sphinx-활용-사례-코드-문서-자동화&quot; id=&quot;markdown-toc-sphinx-활용-사례-코드-문서-자동화&quot;&gt;Sphinx 활용 사례 “코드 문서 자동화”&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -38,13 +41,13 @@
 
 &lt;p&gt;저작 도구는 그 조직의 문서화 환경, 배포하는 방식에 맞추어 아래와 같이 다양한 형태로 사용할 수 있다. &lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;서버용 문서 생성기: Sphinx, AsciDoc,JavaDoc&lt;/li&gt;
+  &lt;li&gt;서버용 문서 생성기: Sphinx, AsciiDoc, JavaDoc&lt;/li&gt;
   &lt;li&gt;웹 호스팅용 정적 사이트 생성기(Static Site Generator):
 Jekyll, Hugo, Gatsby&lt;/li&gt;
   &lt;li&gt;웹 기반 문서화 플랫폼: GitBook, ReadMe&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;문서 자동화를 위한 저작 도구는 대표적인 워드 프로세싱 프로그램인 MS Word와 비교하여, 문서에서 반복해야 하는 목차, 표, 리스트, 그림과 같은 서식들을 ‘마크다운’과 같은 스크립트 언어로 간단하게 구현할 수 있고, 웹 기반의 문서 배포를 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html&lt;/code&gt; 파일 형식으로 자동 생성할 수 있다는 점에서 큰 장점이 있다. &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;문서 자동화를 위한 저작 도구는 대표적인 워드 프로세서 프로그램인 MS Word와 비교하여, 문서에서 반복해야 하는 목차, 표, 리스트, 그림과 같은 서식들을 ‘마크다운’과 같은 스크립트 언어로 간단하게 구현할 수 있고, 웹 기반의 문서 배포를 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html&lt;/code&gt; 파일 형식으로 자동 생성할 수 있다는 점에서 큰 장점이 있다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;다음 섹션부터는 위에서 언급한 저작 도구 중 하나인 ‘Sphinx’에 대한 소개부터 사용 방법 및 활용 사례에 대하여 설명하겠다.&lt;/p&gt;
 
@@ -53,13 +56,16 @@ Jekyll, Hugo, Gatsby&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;sphinx-소개&quot;&gt;Sphinx 소개&lt;/h2&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Sphinx는 Python
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;sphinx-사용하기-quick-start-guide&quot;&gt;Sphinx 사용하기 “Quick Start Guide”&lt;/h2&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sphinx-설치----windows-기준&quot;&gt;Sphinx 설치 -  Windows 기준&lt;/h3&gt;
 
+&lt;p&gt;Step 1. &lt;a href=&quot;https://www.python.org/downloads/windows/&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python 3&lt;/code&gt;&lt;/a&gt; 을 설치한다.&lt;/p&gt;
+
+&lt;p&gt;Step 2.&lt;/p&gt;
 &lt;h2 id=&quot;sphinx-활용-사례-코드-문서-자동화&quot;&gt;Sphinx 활용 사례 “코드 문서 자동화”&lt;/h2&gt;
 
 </description>
@@ -256,7 +262,8 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. &lt;br /&gt
 &lt;p&gt;To부정사로 시작하되, 일반동사 또는 조동사를 포함하지 않는 문장은 ‘~하기’ 또는 ‘~하는 것’과 같이 해석한다. &lt;br /&gt;
   예: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;To collect&lt;/code&gt; data for operation of resource which are componenet of Infor System.&lt;/p&gt;
 
-&lt;p&gt;위 예문과 같이 To부정사로 시작하여 명사형으로 종결하는 문장은 술어로 종결하는 문장보다 정보를 간결하고 일관된 형식으로 표현할 수 있어, 리스트나 표 안의 내용을 작성할 때 주로 사용한다. &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;위 예문과 같이 To부정사로 시작하여 명사형으로 종결하는 문장은 술어로 종결하는 문장보다 정보를 간결하고 일관된 형식으로 표현할 수 있어,
+리스트나 표의 내용을 작성할 때 주로 사용한다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;적용-예시&quot;&gt;적용 예시&lt;/h2&gt;
 &lt;p&gt;To부정사로 시작하고 명사형으로 종결하는 문장은 사용자가 준수해야 하는 지침 사항을 일관성 있는 리스트 형태로 정렬하고자 할 때 적용할 수 있다. &lt;br /&gt;
@@ -267,7 +274,7 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. &lt;br /&gt
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;예시에 사용된 가이드라인은 2019년에도 저자가 참여한 &lt;a href=&quot;https://www.youtube.com/watch?v=TKdDoBPOIPE&quot;&gt;영문 테크니컬 라이팅 과정&lt;/a&gt;에서 실제 교수님께 첨삭 받은 내용을 바탕으로 작성하였다.&lt;/p&gt;
+  &lt;p&gt;예시에 사용된 가이드라인은 2019년도 저자가 참여한 &lt;a href=&quot;https://www.youtube.com/watch?v=TKdDoBPOIPE&quot; target=&quot;_blank&quot;&gt;영문 테크니컬 라이팅 과정&lt;/a&gt;에서 실제 교수님께 첨삭 받은 내용을 바탕으로 작성하였다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;guielines-for-performace-management-of-information-system&quot;&gt;Guielines for Performace Management of Information System&lt;/h3&gt;
@@ -289,8 +296,8 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. &lt;br /&gt
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;해석하기&quot;&gt;해석하기&lt;/h3&gt;
-&lt;p&gt;위 예시에서는 정보 시스템의 성능 관리를 위한 지침 사항 네 가지를 리스트 형식으로 일관성 있게 배열하였다. 그리고 각 지침 사항은 모두 to부정사로 시작하여 명사형으로 종결하였다. &lt;br /&gt;
-이와 같은 쓰임에서 주목해야 할 것은 해당 가이드라인의 국문 지침 사항은 ‘~하기’가 아닌 ‘~해야 한다’로 작성되어 있다는 점이다.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;위 예시에서는 정보 시스템의 성능 관리를 위한 지침 사항 네 가지를 리스트 형식으로 일관성 있게 정렬하였다. 그리고 각 지침 사항은 모두 to부정사로 시작하여 명사형으로 종결하였다. &lt;br /&gt;
+이와 같은 쓰임에서 주목해야 할 점은 국문 가이드라인의 지침 사항에서는 종결 어미가 ‘~하기’가 아닌 ‘~한다’로 작성되어 있다는 것이다.&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;그 예로 첫 번째 지침 사항의 국문 내용은 아래와 같다.&lt;/p&gt;
 
@@ -1914,77 +1921,115 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
         <title>[TW] 마크다운 사용법</title>
         <description>&lt;p&gt;&lt;strong&gt;&amp;lt;Table of Contents&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#markdown-사용법&quot; id=&quot;markdown-toc-markdown-사용법&quot;&gt;Markdown 사용법&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#callout--연습&quot; id=&quot;markdown-toc-callout--연습&quot;&gt;Callout  연습&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#callout-convention-규칙&quot; id=&quot;markdown-toc-callout-convention-규칙&quot;&gt;Callout Convention 규칙&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#html-링크-적용하기&quot; id=&quot;markdown-toc-html-링크-적용하기&quot;&gt;Html 링크 적용하기&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#--how-to-look&quot; id=&quot;markdown-toc---how-to-look&quot;&gt;- How to look&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#간략형-컨벤션-규칙&quot; id=&quot;markdown-toc-간략형-컨벤션-규칙&quot;&gt;간략형 컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#강조-블록-표기-규칙&quot; id=&quot;markdown-toc-강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#단락형-강조-구문-alert외-별도로&quot; id=&quot;markdown-toc-단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#단락형-강조-구문&quot; id=&quot;markdown-toc-단락형-강조-구문&quot;&gt;단락형 강조 구문&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#문장형-강조-구문&quot; id=&quot;markdown-toc-문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#코드-블록&quot; id=&quot;markdown-toc-코드-블록&quot;&gt;코드 블록&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#인용구-및-블락&quot; id=&quot;markdown-toc-인용구-및-블락&quot;&gt;인용구 및 블락&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#큰제목&quot; id=&quot;markdown-toc-큰제목&quot;&gt;큰제목&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#리스트&quot; id=&quot;markdown-toc-리스트&quot;&gt;리스트&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#링크&quot; id=&quot;markdown-toc-링크&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#이미지-삽입&quot; id=&quot;markdown-toc-이미지-삽입&quot;&gt;이미지 삽입&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#테이블&quot; id=&quot;markdown-toc-테이블&quot;&gt;테이블&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#컨벤션-규칙&quot; id=&quot;markdown-toc-컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#코드-블록&quot; id=&quot;markdown-toc-코드-블록&quot;&gt;코드 블록&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#단어-표현&quot; id=&quot;markdown-toc-단어-표현&quot;&gt;단어 표현&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#인용구-블록&quot; id=&quot;markdown-toc-인용구-블록&quot;&gt;인용구 블록&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#제목-수준&quot; id=&quot;markdown-toc-제목-수준&quot;&gt;제목 수준&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#리스트&quot; id=&quot;markdown-toc-리스트&quot;&gt;리스트&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#링크&quot; id=&quot;markdown-toc-링크&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#이미지-삽입&quot; id=&quot;markdown-toc-이미지-삽입&quot;&gt;이미지 삽입&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#테이블&quot; id=&quot;markdown-toc-테이블&quot;&gt;테이블&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#단락-구분&quot; id=&quot;markdown-toc-단락-구분&quot;&gt;단락 구분&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#접어두기-표시&quot; id=&quot;markdown-toc-접어두기-표시&quot;&gt;접어두기 표시&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#작업-목록&quot; id=&quot;markdown-toc-작업-목록&quot;&gt;작업 목록&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;markdown-사용법&quot;&gt;Markdown 사용법&lt;/h2&gt;
+&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 &lt;p&gt;웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;callout--연습&quot;&gt;Callout  연습&lt;/h2&gt;
-
-&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;
-        &lt;b&gt;Note:&lt;/b&gt;This is my note. All the content I type here is treated as a single  paragraph.&lt;/span&gt;
-&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;callout-convention-규칙&quot;&gt;Callout Convention 규칙&lt;/h2&gt;
+&lt;p&gt;작성 내용 중 독자가 참고해야 할 노트(혹은 정보), 설정 팁, 주의사항 에 대하여 아래와 같이 표기한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;html-링크-적용하기&quot;&gt;Html 링크 적용하기&lt;/h3&gt;
+&lt;p&gt;각 callout용 html 파일을 블로그 프로젝트 내 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes&lt;/code&gt; 폴더에 넣고 링크하는 방식으로 적용한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;--how-to-look&quot;&gt;- How to look&lt;/h4&gt;
 
 &lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
 &lt;div class=&quot;bs-callout bs-callout-primary&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Note&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
 &lt;/div&gt;
 
 &lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-success&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
-&lt;div class=&quot;bs-callout bs-callout-success&quot;&gt;&lt;i class=&quot;fa fa-check-square-o&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Tip&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
+&lt;div class=&quot;bs-callout bs-callout-success&quot;&gt;
+  &lt;span style=&quot;color:#5cb85c&quot;&gt;
+    &lt;i class=&quot;fa fa-check-square-o&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Tip&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;
+  &lt;/span&gt;  &lt;br /&gt;
+  &lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
 &lt;/div&gt;
+
+&lt;!-- 
+                
+
+
+ --&gt;
 
 &lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type.&lt;/div&gt;--&gt;
-&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Warning&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type.&lt;/span&gt;
+&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;
+  &lt;span style=&quot;color:#d9534f&quot;&gt;
+    &lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Warning&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;
+  &lt;/span&gt;&lt;br /&gt;
+  &lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type.&lt;/span&gt;
 &lt;/div&gt;
 
-&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-danger&quot;&gt;This is my **danger** type callout&lt;/div&gt;--&gt;
-&lt;div class=&quot;bs-callout bs-callout-danger&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my &lt;strong&gt;danger&lt;/strong&gt; type callout&lt;/span&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;간략형-컨벤션-규칙&quot;&gt;간략형 컨벤션 규칙&lt;/h3&gt;
+&lt;p&gt;미리 정의한 callout용 html 파일 대신 마크다운 및 간략한 style tag만 적용해서도 컨벤션 규칙을 만들 수 있다. &lt;br /&gt;
+먼저 마크다운에서 규칙 아이콘(ℹ️, ⚠️, ✅)으로 사용하기 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:emojisense:&lt;/code&gt; 확장자를 설치한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;
+  &amp;gt; ℹ️&lt;span style=&quot;color:#247CFF&quot;&gt;***NOTE*** &lt;/span&gt; &lt;br /&gt;
+  &amp;gt; This is note content.
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️&lt;span style=&quot;color:#247CFF&quot;&gt;&lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; &lt;/span&gt; &lt;br /&gt;
+This is note content.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/h2&gt;
 
-&lt;h3 id=&quot;단락형-강조-구문-alert외-별도로&quot;&gt;단락형 강조 구문 (alert외 별도로)&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;div style=&quot;background-color:#ededed; padding:10px&quot;&gt;&lt;span class=&quot;highlight&quot;&gt;
-이건 어때요? &lt;br /&gt;
-색상태그를 적용했습니다. &lt;/span&gt;&lt;/div&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;단락형-강조-구문&quot;&gt;단락형 강조 구문&lt;/h3&gt;
+
+&lt;div class=&quot;highlight2&quot;&gt;
+  이건 어때요? &lt;br /&gt;
+  색상태그를 적용했습니다.
+  &lt;/div&gt;
 
 &lt;h3 id=&quot;문장형-강조-구문&quot;&gt;문장형 강조 구문&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이건 어때요? 문장을 backquote로 감싼 my code입니다.&lt;/code&gt;
-&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;이건 어때요? 문장을 backquote로 감싼 my code입니다.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;코드-블록&quot;&gt;코드 블록&lt;/h2&gt;
 
@@ -2000,10 +2045,9 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
     &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
   &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;단어-표현&quot;&gt;단어 표현&lt;/h3&gt;
+&lt;h2 id=&quot;단어-표현&quot;&gt;단어 표현&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -2051,7 +2095,7 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;인용구-및-블락&quot;&gt;인용구 및 블락&lt;/h3&gt;
+&lt;h2 id=&quot;인용구-블록&quot;&gt;인용구 블록&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -2092,9 +2136,8 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
     &lt;p&gt;```
 &lt;br /&gt; 안녕하세요.&lt;/p&gt;
 
-    &lt;p&gt;```&lt;/p&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;```
+&lt;br /&gt;&lt;/p&gt;
 
     &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
 
@@ -2117,7 +2160,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;제목-수준&quot;&gt;제목 수준&lt;/h3&gt;
+&lt;h2 id=&quot;제목-수준&quot;&gt;제목 수준&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -2133,7 +2176,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
     &lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
 
-    &lt;h1 id=&quot;큰제목&quot;&gt;큰제목&lt;/h1&gt;
+    &lt;h1 class=&quot;no_toc&quot; id=&quot;큰제목&quot;&gt;큰제목&lt;/h1&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2178,7 +2221,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;리스트&quot;&gt;리스트&lt;/h3&gt;
+&lt;h2 id=&quot;리스트&quot;&gt;리스트&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -2238,7 +2281,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;링크&quot;&gt;링크&lt;/h3&gt;
+&lt;h2 id=&quot;링크&quot;&gt;링크&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -2274,7 +2317,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;이미지-삽입&quot;&gt;이미지 삽입&lt;/h3&gt;
+&lt;h2 id=&quot;이미지-삽입&quot;&gt;이미지 삽입&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
@@ -2290,7 +2333,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;테이블&quot;&gt;테이블&lt;/h3&gt;
+&lt;h2 id=&quot;테이블&quot;&gt;테이블&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt; 
@@ -2335,7 +2378,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;단락-구분&quot;&gt;단락 구분&lt;/h3&gt;
+&lt;h2 id=&quot;단락-구분&quot;&gt;단락 구분&lt;/h2&gt;
 
 &lt;p&gt;같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;***&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;___&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt; 를 사용하여 수평선을 표현&lt;/p&gt;
 
@@ -2357,7 +2400,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;접어두기-표시&quot;&gt;접어두기 표시&lt;/h3&gt;
+&lt;h2 id=&quot;접어두기-표시&quot;&gt;접어두기 표시&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
@@ -2379,7 +2422,7 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;작업-목록&quot;&gt;작업 목록&lt;/h3&gt;
+&lt;h2 id=&quot;작업-목록&quot;&gt;작업 목록&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 
@@ -2401,15 +2444,6 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;컨벤션-규칙&quot;&gt;컨벤션 규칙&lt;/h3&gt;
-&lt;p&gt;작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;
-  &amp;gt; ℹ️ `&lt;span style=&quot;color:#247CFF&quot;&gt;` ***NOTE*** `&lt;/span&gt;`
-  &amp;gt; This is note content.
-&lt;/pre&gt;
 </description>
         <pubDate>Sat, 14 Aug 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/docs%20as%20code/markdown-usage</link>

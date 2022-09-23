@@ -15,17 +15,20 @@ comments: true
 
 <Br>
 
-## Markdown 사용법
-웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다.
-
-<br>
+## Intro
+웹 콘텐츠에서 주로 쓰이는 Markdown을 사용하기 위한 문법 및 예시에 관한 내용이다. 
 
 ***
 
-## Callout  연습
-
-{% include note.html content="This is my note. All the content I type here is treated as a single  paragraph." %}
 <br>
+
+## Callout Convention 규칙
+작성 내용 중 독자가 참고해야 할 노트(혹은 정보), 설정 팁, 주의사항 에 대하여 아래와 같이 표기한다.
+
+### Html 링크 적용하기
+각 callout용 html 파일을 블로그 프로젝트 내 `_includes` 폴더에 넣고 링크하는 방식으로 적용한다.
+
+**- How to look**
 
 {% include callout.html title=" **Note**" content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. " type="primary" %}
 
@@ -33,19 +36,40 @@ comments: true
 
 {% include callout_warning.html title= " **Warning**" content="This is my **danger** type." type="danger" level=3 %}
 
-{% include callout.html type="danger" content="This is my **danger** type callout" %}
+<br>
+
+### 간략형 컨벤션 규칙
+미리 정의한 callout용 html 파일 대신 마크다운 및 간략한 style tag만 적용해서도 컨벤션 규칙을 만들 수 있다. <Br>
+먼저 마크다운에서 규칙 아이콘(ℹ️, ⚠️, ✅)으로 사용하기 위한 `:emojisense:` 확장자를 설치한다.
+
+**- How to use**
+<pre>
+  > ℹ️<span style="color:#247CFF">***NOTE*** </span> <br>
+  > This is note content.
+</pre>
+
+<br>
+
+**- How to look**
+
+  > ℹ️<span style="color:#247CFF">***NOTE*** </span> <br>
+  > This is note content.
+
 <br>
 
 ## 강조 블록 표기 규칙
 
-### 단락형 강조 구문 (alert외 별도로)
-> <div style= "background-color:#ededed; padding:10px"><span class="highlight">
-> 이건 어때요? <br>
-> 색상태그를 적용했습니다. </span></div>
+### 단락형 강조 구문
 
+  <div class="highlight2">
+  이건 어때요? <br>
+  색상태그를 적용했습니다.
+  </div>
 
 ### 문장형 강조 구문
-`이건 어때요? 문장을 backquote로 감싼 my code입니다.`
+
+  `이건 어때요? 문장을 backquote로 감싼 my code입니다.`
+
 <br>
 
 ## 코드 블록
@@ -65,12 +89,9 @@ comments: true
     printf(%s,"Hello, World!"); 
   </div>
 ```
+<br>
 
-
-***
-
-### 단어 표현
-
+## 단어 표현
 
 | How to use                    | How to look  |
 | :---------------------------- | :--------------- |
@@ -92,7 +113,7 @@ comments: true
 
 <br>
 
-### 인용구 및 블락
+## 인용구 블록
 
 -	인용구: 작성할 텍스트 앞에 `>`을 기입하면 해당 텍스트가 구분되는 인용구가 된다.<br>
 
@@ -124,7 +145,6 @@ comments: true
     <br> 안녕하세요.
 
     \`\`\`
-
     <br>
 
     **- How to look**
@@ -146,7 +166,7 @@ comments: true
 
 <br>
 
-### 제목 수준
+## 제목 수준
 
 -	큰제목: 텍스트 밑에 `=====` 기입<br>
 
@@ -163,6 +183,7 @@ comments: true
 
     큰제목
     ======
+    {:.no_toc}
 
 <Br>
 
@@ -202,7 +223,7 @@ comments: true
 
 <br>
 
-### 리스트
+## 리스트
 
 -	Unordered <br>  
     **- How to use**
@@ -246,7 +267,7 @@ comments: true
 
 <br>
 
-### 링크
+## 링크
 
 |             | **How to use**                                                               | **How to look**             |
 | :---------- | :--------------------------------------------------------------------------- | :-------------------------- |
@@ -257,7 +278,7 @@ comments: true
 
 <br>
 
-### 이미지 삽입
+## 이미지 삽입
 
 **- How to use**
 
@@ -273,7 +294,7 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 <br>
 
-### 테이블
+## 테이블
 
 **- How to use**
 <pre> 
@@ -298,7 +319,7 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 <br>
 
-### 단락 구분
+## 단락 구분
 
 같은 제목 내에서도 구분할 내용에 대하여 내용 앞줄 혹은 뒷 줄에 `***` or `---` or `___` or `---` 를 사용하여 수평선을 표현
 
@@ -320,7 +341,7 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 <br>
 
-### 접어두기 표시
+## 접어두기 표시
 
 **- How to use**
 
@@ -341,7 +362,7 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 <br>
 
-### 작업 목록
+## 작업 목록
 
 **- How to use**
 
@@ -361,12 +382,3 @@ Ex) `![markdown_logo](https://raw.github.com/dcurtis/markdown-mark/master/png/20
 
 <br>
 
-### 컨벤션 규칙
-작성 내용 중 독자가 참고해야할 메모, 주의 사항, 팁스에 대하여 다음과 같이 표기한다.
-
-**- How to use**
-
-<pre>
-  > ℹ️ `<span style="color:#247CFF">` ***NOTE*** `</span>`
-  > This is note content.
-</pre>
