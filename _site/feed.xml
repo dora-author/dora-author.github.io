@@ -5,16 +5,16 @@
     <description>It is clear, concise, and beautiful</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Sep 2022 20:14:16 +0900</pubDate>
-    <lastBuildDate>Fri, 23 Sep 2022 20:14:16 +0900</lastBuildDate>
+    <pubDate>Sun, 25 Sep 2022 08:09:38 +0900</pubDate>
+    <lastBuildDate>Sun, 25 Sep 2022 08:09:38 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>[저작 도구] Sphinx를 이용한 문서 자동화</title>
+        <title>[저작 도구] Sphinx를 이용한 문서 생성</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#문서-자동화는-무엇인가&quot; id=&quot;markdown-toc-문서-자동화는-무엇인가&quot;&gt;“문서 자동화는 무엇인가”&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#문서-자동화-왜-필요한가&quot; id=&quot;markdown-toc-문서-자동화-왜-필요한가&quot;&gt;“문서 자동화, 왜 필요한가”&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#문서-생성은-무엇인가&quot; id=&quot;markdown-toc-문서-생성은-무엇인가&quot;&gt;“문서 생성은 무엇인가”&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#문서-생성-왜-필요한가&quot; id=&quot;markdown-toc-문서-생성-왜-필요한가&quot;&gt;“문서 생성, 왜 필요한가”&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#sphinx-소개&quot; id=&quot;markdown-toc-sphinx-소개&quot;&gt;Sphinx 소개&lt;/a&gt;&lt;/li&gt;
@@ -28,26 +28,26 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
-&lt;p&gt;내용을 시작하기 앞서, 문서 자동화의 정의와 범위, 그리고 목적부터 짚어보겠다.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;내용을 시작하기 앞서, ‘문서 생성’의 정의와 범위, 그리고 목적부터 짚어보겠다.&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;문서-자동화는-무엇인가&quot;&gt;“문서 자동화는 무엇인가”&lt;/h3&gt;
-&lt;p&gt;본 블로그에서 정의하는 ‘문서 자동화’는 특정 프로그래밍 언어에 맞추어 작성한 내용을 일관성 있는 서식이 적용된 템플릿과 파일 형식(예: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.html&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.markdown&lt;/code&gt;)으로 자동 생성하는 방법을 말한다. &lt;br /&gt;
-‘저작 도구(Authoring Tool)’ 또는 ‘문서화 플랫폼’에서는 이러한 방법을 일련의 워크플로우(Workflow)로 지원한다. &lt;br /&gt;
-따라서 도구에서 지원하는 언어에 맞추어 작성하면, 빌드를 통해 일관성 있는 템플릿의 특정 파일 형식으로 생성해주는 것으로 엄밀히 말하자면 완전한 ‘문서 자동화’는 아니다. &lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;문서-생성은-무엇인가&quot;&gt;“문서 생성은 무엇인가”&lt;/h3&gt;
+&lt;p&gt;‘문서 생성’은 특정 프로그래밍 언어에 맞추어 작성한 내용을 일관성 있는 서식이 적용된 템플릿과 파일 형식(예: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.html&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.markdown&lt;/code&gt;)의 문서로 생성하는 방법이다. &lt;br /&gt;
+‘문서 저작 도구(Documentation Authoring Tool)’ 또는 ‘문서화 플랫폼’에서는 이러한 방법을 ‘작성 - 빌드 - 생성’과 같은 일련의 워크플로우(Workflow)로 지원한다. &lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;문서-자동화-왜-필요한가&quot;&gt;“문서 자동화, 왜 필요한가”&lt;/h3&gt;
-&lt;p&gt;문서 자동화는 빠르게 발전하고 변화하는 제품 및 서비스에 대한 다양한 기능과 변경 사항을 보다 효율적으로 작성하고 관리하는 데에 필요하다. &lt;br /&gt;
-따라서 출시하는 제품 및 서비스에 맞추어 지속적으로 문서를 배포해야 하는 조직에서는 저작 도구와 ‘git’과 같은 버전 관리 도구를 연동하여 협업하는 형태로 문서화 프로젝트를 진행한다.&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;문서-생성-왜-필요한가&quot;&gt;“문서 생성, 왜 필요한가”&lt;/h3&gt;
+&lt;p&gt;문서 생성은 지속적이고 빠르게 변화하는 제품 및 서비스의 다양한 기능과 변경 사항을 효율적으로 작성하고 관리하는 데에 필요하다. &lt;br /&gt;
+출시하는 제품 및 서비스에 맞추어 지속적으로 문서를 배포해야 하는 조직에서는 저작 도구와 ‘git’과 같은 버전 관리 도구를 연동하여 협업하는 형태로 문서화 프로젝트를 진행한다.&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;저작 도구는 그 조직의 문서화 환경, 배포하는 방식에 맞추어 아래와 같이 다양한 형태로 사용할 수 있다. &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;문서 생성를 위한 저작 도구는 대표적인 워드 프로세서 프로그램인 MS Word와 비교하여, 문서에서 반복해야 하는 목차, 표, 리스트, 그림과 같은 서식들을 ‘마크다운’과 같은 스크립트 형식을 통해 간단하게 구현하면서 버전 관리를 통해 협업할 수 있다.&lt;br /&gt;
+무엇보다 웹 기반의 문서 형식인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html&lt;/code&gt; 파일로 바로 생성하므로, 사용자들에게 효과적으고 확산성 있는 웹 콘텐츠를 제공하는데 쉽고 빠르다는 점에서 큰 장점이 있다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;문서 생성에 쓰이는 저작 도구는 그 조직의 문서화 환경, 배포하는 방식에 맞추어 다양한 형태로 사용할 수 있다. &lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;서버용 문서 생성기: Sphinx, AsciiDoc, JavaDoc&lt;/li&gt;
   &lt;li&gt;웹 호스팅용 정적 사이트 생성기(Static Site Generator):
 Jekyll, Hugo, Gatsby&lt;/li&gt;
   &lt;li&gt;웹 기반 문서화 플랫폼: GitBook, ReadMe&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;문서 자동화를 위한 저작 도구는 대표적인 워드 프로세서 프로그램인 MS Word와 비교하여, 문서에서 반복해야 하는 목차, 표, 리스트, 그림과 같은 서식들을 ‘마크다운’과 같은 스크립트 언어로 간단하게 구현할 수 있고, 웹 기반의 문서 배포를 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html&lt;/code&gt; 파일 형식으로 자동 생성할 수 있다는 점에서 큰 장점이 있다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;다음 섹션부터는 위에서 언급한 저작 도구 중 하나인 ‘Sphinx’에 대한 소개부터 사용 방법 및 활용 사례에 대하여 설명하겠다.&lt;/p&gt;
 
@@ -56,8 +56,21 @@ Jekyll, Hugo, Gatsby&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;sphinx-소개&quot;&gt;Sphinx 소개&lt;/h2&gt;
-&lt;p&gt;Sphinx는 Python
-&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.sphinx-doc.org/en/master/index.html&quot; target=&quot;_blank&quot;&gt;Sphinx&lt;/a&gt;는 인터프리터 방식으로 실행하는 스크립트 언어인 ‘Python’으로 개발된 문서 생성기(Documentation Generator)이다.
+&lt;br /&gt;
+저자가 처음 웹 콘텐츠를 개발하기 위해 사용해 본 문서화 생성기도 ReadtheDocs에서 지원하는 Sphinx이다.&lt;/p&gt;
+
+&lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt; [ReadtheDocs](https://readthedocs.org/)는 오픈소스 문서화 호스팅 플랫폼으로 Sphinx, MkDocs와 같은 문서 생성기 기반의 문서화 워크플로우를 통해 문서 자동 빌드, 버전 관리 및 웹 호스팅 기능을 제공한다. &lt;/div&gt;--&gt;
+&lt;div class=&quot;bs-callout bs-callout-primary&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Note&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt; &lt;a href=&quot;https://readthedocs.org/&quot;&gt;ReadtheDocs&lt;/a&gt;는 오픈소스 문서화 호스팅 플랫폼으로 Sphinx, MkDocs와 같은 문서 생성기 기반의 문서화 워크플로우를 통해 문서 자동 빌드, 버전 관리 및 웹 호스팅 기능을 제공한다. &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sphinx는 아래와 같은 특징이 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;동일한 소스에서 웹 페이지(HTML), 인쇄 가능한 PDF, e-리더(ePub)용 문서 생성&lt;/li&gt;
+  &lt;li&gt;reStructuredText 또는 Markdown와 같은 스크립트 형식의 문서 작성 및 관리&lt;/li&gt;
+  &lt;li&gt;광범위한 상호 참조(cross-refernces)를 통한 클래스, 인용, 용어집, 마크업 및 자동 링크&lt;/li&gt;
+  &lt;li&gt;Python 모듈(API)의 내장 확장(built-in extensions) 및 third-party에서 제공하는 다양한 확장(third-party extensions)을 Python Package Index(PyPI)를 통해 설치 및 사용 가능&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;sphinx-사용하기-quick-start-guide&quot;&gt;Sphinx 사용하기 “Quick Start Guide”&lt;/h2&gt;
 
@@ -66,6 +79,7 @@ Jekyll, Hugo, Gatsby&lt;/li&gt;
 &lt;p&gt;Step 1. &lt;a href=&quot;https://www.python.org/downloads/windows/&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python 3&lt;/code&gt;&lt;/a&gt; 을 설치한다.&lt;/p&gt;
 
 &lt;p&gt;Step 2.&lt;/p&gt;
+
 &lt;h2 id=&quot;sphinx-활용-사례-코드-문서-자동화&quot;&gt;Sphinx 활용 사례 “코드 문서 자동화”&lt;/h2&gt;
 
 </description>
@@ -1923,11 +1937,8 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#callout-convention-규칙&quot; id=&quot;markdown-toc-callout-convention-규칙&quot;&gt;Callout Convention 규칙&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#html-링크-적용하기&quot; id=&quot;markdown-toc-html-링크-적용하기&quot;&gt;Html 링크 적용하기&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#--how-to-look&quot; id=&quot;markdown-toc---how-to-look&quot;&gt;- How to look&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#간략형-컨벤션-규칙&quot; id=&quot;markdown-toc-간략형-컨벤션-규칙&quot;&gt;간략형 컨벤션 규칙&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#html-링크-적용한-convention-규칙-생성&quot; id=&quot;markdown-toc-html-링크-적용한-convention-규칙-생성&quot;&gt;Html 링크 적용한 Convention 규칙 생성&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#markdown을-통한-convention-규칙-생성&quot; id=&quot;markdown-toc-markdown을-통한-convention-규칙-생성&quot;&gt;Markdown을 통한 Convention 규칙 생성&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#강조-블록-표기-규칙&quot; id=&quot;markdown-toc-강조-블록-표기-규칙&quot;&gt;강조 블록 표기 규칙&lt;/a&gt;    &lt;ul&gt;
@@ -1960,10 +1971,10 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;h2 id=&quot;callout-convention-규칙&quot;&gt;Callout Convention 규칙&lt;/h2&gt;
 &lt;p&gt;작성 내용 중 독자가 참고해야 할 노트(혹은 정보), 설정 팁, 주의사항 에 대하여 아래와 같이 표기한다.&lt;/p&gt;
 
-&lt;h3 id=&quot;html-링크-적용하기&quot;&gt;Html 링크 적용하기&lt;/h3&gt;
+&lt;h3 id=&quot;html-링크-적용한-convention-규칙-생성&quot;&gt;Html 링크 적용한 Convention 규칙 생성&lt;/h3&gt;
 &lt;p&gt;각 callout용 html 파일을 블로그 프로젝트 내 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes&lt;/code&gt; 폴더에 넣고 링크하는 방식으로 적용한다.&lt;/p&gt;
 
-&lt;h4 id=&quot;--how-to-look&quot;&gt;- How to look&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;- How to look&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--&lt;div markdown=&quot;span&quot; class=&quot;bs-callout bs-callout-primary&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/div&gt;--&gt;
 &lt;div class=&quot;bs-callout bs-callout-primary&quot;&gt;&lt;span style=&quot;color:#1d5dbd&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt;&lt;span class=&quot;calloutTitle&quot;&gt; &lt;strong&gt;Note&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/span&gt;&lt;span class=&quot;calloutText&quot;&gt;This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. &lt;/span&gt;
@@ -1995,9 +2006,9 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;간략형-컨벤션-규칙&quot;&gt;간략형 컨벤션 규칙&lt;/h3&gt;
-&lt;p&gt;미리 정의한 callout용 html 파일 대신 마크다운 및 간략한 style tag만 적용해서도 컨벤션 규칙을 만들 수 있다. &lt;br /&gt;
-먼저 마크다운에서 규칙 아이콘(ℹ️, ⚠️, ✅)으로 사용하기 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:emojisense:&lt;/code&gt; 확장자를 설치한다.&lt;/p&gt;
+&lt;h3 id=&quot;markdown을-통한-convention-규칙-생성&quot;&gt;Markdown을 통한 Convention 규칙 생성&lt;/h3&gt;
+&lt;p&gt;미리 정의한 callout용 html 파일 대신 마크다운 문법과 간략한 style tag를 적용해서 Convention 규칙을 만들 수 있다. &lt;br /&gt;
+먼저 마크다운용 컨벤션 아이콘(ℹ️, ⚠️, ✅)을 사용하기 위한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:emojisense:&lt;/code&gt; 확장자를 설치한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;- How to use&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;

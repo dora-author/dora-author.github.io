@@ -25,7 +25,7 @@ comments: true
 ## Callout Convention 규칙
 작성 내용 중 독자가 참고해야 할 노트(혹은 정보), 설정 팁, 주의사항 에 대하여 아래와 같이 표기한다.
 
-### Html 링크 적용하기
+### Html 링크 적용한 Convention 규칙 생성
 각 callout용 html 파일을 블로그 프로젝트 내 `_includes` 폴더에 넣고 링크하는 방식으로 적용한다.
 
 **- How to look**
@@ -38,9 +38,9 @@ comments: true
 
 <br>
 
-### 간략형 컨벤션 규칙
-미리 정의한 callout용 html 파일 대신 마크다운 및 간략한 style tag만 적용해서도 컨벤션 규칙을 만들 수 있다. <Br>
-먼저 마크다운에서 규칙 아이콘(ℹ️, ⚠️, ✅)으로 사용하기 위한 `:emojisense:` 확장자를 설치한다.
+### Markdown을 통한 Convention 규칙 생성
+미리 정의한 callout용 html 파일 대신 마크다운 문법과 간략한 style tag를 적용해서 Convention 규칙을 만들 수 있다. <Br>
+먼저 마크다운용 컨벤션 아이콘(ℹ️, ⚠️, ✅)을 사용하기 위한 `:emojisense:` 확장자를 설치한다.
 
 **- How to use**
 <pre>
