@@ -1,7 +1,7 @@
 // content area
 .content {
     @include font-size(16); //edit
-    font-family: $font1; //edit
+    font-family: $font1; //edit    
     padding: 0 2rem;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased !important;
