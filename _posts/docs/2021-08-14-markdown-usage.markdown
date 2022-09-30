@@ -4,7 +4,7 @@ title: "[TW] 마크다운 사용법"
 excerpt: 마크다운 문법과 사용법에 관하여
 tags:
   - Markdown
-category: Docs as Code
+category: DocsasCode
 date: 2021-08-14
 comments: true
 ---

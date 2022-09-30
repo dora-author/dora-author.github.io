@@ -7,7 +7,7 @@ tags:
   - Domain
   - HTTPS
   - SSL
-category: Tech Journey
+category: TechJourney
 date: 2022-09-18
 comments: true
 ---

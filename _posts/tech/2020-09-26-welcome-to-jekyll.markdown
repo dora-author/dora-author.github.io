@@ -3,7 +3,7 @@ layout: post
 title: "Welcome to Jekyll!"
 tags:
   - Jekyll
-category: Tech Journey
+category: TechJourney
 date: 2020-09-26 22:11:49 +0900
 ---
 

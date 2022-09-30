@@ -5,8 +5,8 @@
     <description>It is clear, concise, and beautiful</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Sep 2022 12:44:05 +0900</pubDate>
-    <lastBuildDate>Mon, 26 Sep 2022 12:44:05 +0900</lastBuildDate>
+    <pubDate>Fri, 30 Sep 2022 15:42:19 +0900</pubDate>
+    <lastBuildDate>Fri, 30 Sep 2022 15:42:19 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -84,8 +84,8 @@ Jekyll, Hugo, Gatsby&lt;/li&gt;
 
 </description>
         <pubDate>Thu, 22 Sep 2022 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/docs%20as%20code/sphinx</link>
-        <guid isPermaLink="true">http://localhost:4000/docs%20as%20code/sphinx</guid>
+        <link>http://localhost:4000/docsascode/sphinx</link>
+        <guid isPermaLink="true">http://localhost:4000/docsascode/sphinx</guid>
         
         <category>Authoring Tool</category>
         
@@ -94,7 +94,7 @@ Jekyll, Hugo, Gatsby&lt;/li&gt;
         <category>ReadtheDocs</category>
         
         
-        <category>Docs as Code</category>
+        <category>DocsasCode</category>
         
       </item>
     
@@ -249,8 +249,8 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. &lt;br /&gt
 
 </description>
         <pubDate>Sun, 18 Sep 2022 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/tech%20journey/network-ssl</link>
-        <guid isPermaLink="true">http://localhost:4000/tech%20journey/network-ssl</guid>
+        <link>http://localhost:4000/techjourney/network-ssl</link>
+        <guid isPermaLink="true">http://localhost:4000/techjourney/network-ssl</guid>
         
         <category>Network</category>
         
@@ -261,7 +261,7 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. &lt;br /&gt
         <category>SSL</category>
         
         
-        <category>Tech Journey</category>
+        <category>TechJourney</category>
         
       </item>
     
@@ -324,13 +324,13 @@ SSL 인증서를 통한 암호화 통신 과정은 아래와 같다. &lt;br /&gt
 
 </description>
         <pubDate>Thu, 08 Sep 2022 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/english%20writing/Eg-tov-2</link>
-        <guid isPermaLink="true">http://localhost:4000/english%20writing/Eg-tov-2</guid>
+        <link>http://localhost:4000/englishwriting/Eg-tov-2</link>
+        <guid isPermaLink="true">http://localhost:4000/englishwriting/Eg-tov-2</guid>
         
         <category>To부정사</category>
         
         
-        <category>English Writing</category>
+        <category>EnglishWriting</category>
         
       </item>
     
@@ -410,8 +410,8 @@ MSP는 클라우드 기술이 생소한 고객의 수준과 환경에 맞추어 
 MSP 서비스 영역에서 보자면 컨설팅, 인프라 설계 및 구축, 운영 및 기술 지원을 각 담당히는 컨설턴트, 아키텍트, 엔지니어 모두 고객과의 접점에 있는 것이다. 이들이 B2B 테크니컬 라이팅을 통해 고객에게 쉽고 명확한 기술 문서를 제공한다면, MSP가 전체 클라우드 시장을 선도해가는 데에 크게 기여할 수 있으리라 본다.&lt;/p&gt;
 </description>
         <pubDate>Thu, 01 Sep 2022 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/tech%20journey/cloud-tw</link>
-        <guid isPermaLink="true">http://localhost:4000/tech%20journey/cloud-tw</guid>
+        <link>http://localhost:4000/techjourney/cloud-tw</link>
+        <guid isPermaLink="true">http://localhost:4000/techjourney/cloud-tw</guid>
         
         <category>Cloud</category>
         
@@ -420,7 +420,7 @@ MSP 서비스 영역에서 보자면 컨설팅, 인프라 설계 및 구축, 운
         <category>B2B TW</category>
         
         
-        <category>Tech Journey</category>
+        <category>TechJourney</category>
         
       </item>
     
@@ -483,8 +483,8 @@ MSP 서비스 영역에서 보자면 컨설팅, 인프라 설계 및 구축, 운
 &lt;p&gt;&lt;a href=&quot;https://hrbulletin.net/organizational-culture/%ec%95%a0%ec%9e%90%ec%9d%bc-%eb%b0%a9%eb%b2%95%eb%a1%a0%e2%91%a0-%ec%8a%a4%ed%81%ac%eb%9f%bcscrum/&quot;&gt;애자일-방법론①-스크럼scrum&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 15 Aug 2022 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/technical%20writing/tw-agile</link>
-        <guid isPermaLink="true">http://localhost:4000/technical%20writing/tw-agile</guid>
+        <link>http://localhost:4000/technicalwriting/tw-agile</link>
+        <guid isPermaLink="true">http://localhost:4000/technicalwriting/tw-agile</guid>
         
         <category>Agile</category>
         
@@ -495,7 +495,7 @@ MSP 서비스 영역에서 보자면 컨설팅, 인프라 설계 및 구축, 운
         <category>Customer Relations</category>
         
         
-        <category>Technical Writing</category>
+        <category>TechnicalWriting</category>
         
       </item>
     
@@ -630,15 +630,15 @@ GitHub Pages에서 기본으로 제공하는 도메인 주소는 &lt;code class=
 
 </description>
         <pubDate>Fri, 17 Jun 2022 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/tech%20journey/network-customdomain</link>
-        <guid isPermaLink="true">http://localhost:4000/tech%20journey/network-customdomain</guid>
+        <link>http://localhost:4000/techjourney/network-customdomain</link>
+        <guid isPermaLink="true">http://localhost:4000/techjourney/network-customdomain</guid>
         
         <category>Network</category>
         
         <category>Domain</category>
         
         
-        <category>Tech Journey</category>
+        <category>TechJourney</category>
         
       </item>
     
@@ -922,8 +922,8 @@ E.g. 카테고리 변경 시 날씨 어떻게 업데이트 하는지에 대한 �
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 11 Oct 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/technical%20writing/tw-srs</link>
-        <guid isPermaLink="true">http://localhost:4000/technical%20writing/tw-srs</guid>
+        <link>http://localhost:4000/technicalwriting/tw-srs</link>
+        <guid isPermaLink="true">http://localhost:4000/technicalwriting/tw-srs</guid>
         
         <category>국제표준</category>
         
@@ -932,7 +932,7 @@ E.g. 카테고리 변경 시 날씨 어떻게 업데이트 하는지에 대한 �
         <category>SRS</category>
         
         
-        <category>Technical Writing</category>
+        <category>TechnicalWriting</category>
         
       </item>
     
@@ -1009,11 +1009,11 @@ E.g. 카테고리 변경 시 날씨 어떻게 업데이트 하는지에 대한 �
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;UseCase가 주로 적용된 문서로 요구사양서가 있으며 관련하여 &lt;a href=&quot;/technical%20writing/tw-srs&quot;&gt;[TW] 사양서와 유즈케이스&lt;/a&gt;에서 자세히 다루겠다.&lt;/p&gt;
+&lt;p&gt;UseCase가 주로 적용된 문서로 요구사양서가 있으며 관련하여 &lt;a href=&quot;/technicalwriting/tw-srs&quot;&gt;[TW] 사양서와 유즈케이스&lt;/a&gt;에서 자세히 다루겠다.&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Sep 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/tech%20journey/tech-uml</link>
-        <guid isPermaLink="true">http://localhost:4000/tech%20journey/tech-uml</guid>
+        <link>http://localhost:4000/techjourney/tech-uml</link>
+        <guid isPermaLink="true">http://localhost:4000/techjourney/tech-uml</guid>
         
         <category>UML</category>
         
@@ -1022,7 +1022,7 @@ E.g. 카테고리 변경 시 날씨 어떻게 업데이트 하는지에 대한 �
         <category>SRS</category>
         
         
-        <category>Tech Journey</category>
+        <category>TechJourney</category>
         
       </item>
     
@@ -1312,15 +1312,15 @@ Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot
 
 </description>
         <pubDate>Tue, 31 Aug 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/docs%20as%20code/tech-gh_jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/docs%20as%20code/tech-gh_jekyll</guid>
+        <link>http://localhost:4000/docsascode/tech-gh_jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/docsascode/tech-gh_jekyll</guid>
         
         <category>Github Pages</category>
         
         <category>Jekyll</category>
         
         
-        <category>Docs as Code</category>
+        <category>DocsasCode</category>
         
       </item>
     
@@ -1451,13 +1451,13 @@ Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot
 
 </description>
         <pubDate>Sat, 28 Aug 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/english%20writing/Eg-noun</link>
-        <guid isPermaLink="true">http://localhost:4000/english%20writing/Eg-noun</guid>
+        <link>http://localhost:4000/englishwriting/Eg-noun</link>
+        <guid isPermaLink="true">http://localhost:4000/englishwriting/Eg-noun</guid>
         
         <category>noun</category>
         
         
-        <category>English Writing</category>
+        <category>EnglishWriting</category>
         
       </item>
     
@@ -1583,13 +1583,13 @@ Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot
 
 </description>
         <pubDate>Sat, 28 Aug 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/english%20writing/Eg-art</link>
-        <guid isPermaLink="true">http://localhost:4000/english%20writing/Eg-art</guid>
+        <link>http://localhost:4000/englishwriting/Eg-art</link>
+        <guid isPermaLink="true">http://localhost:4000/englishwriting/Eg-art</guid>
         
         <category>Article</category>
         
         
-        <category>English Writing</category>
+        <category>EnglishWriting</category>
         
       </item>
     
@@ -1623,13 +1623,13 @@ Gems 정보는 &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gemfile&quot
 
 </description>
         <pubDate>Fri, 27 Aug 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/english%20writing/Eg-pre</link>
-        <guid isPermaLink="true">http://localhost:4000/english%20writing/Eg-pre</guid>
+        <link>http://localhost:4000/englishwriting/Eg-pre</link>
+        <guid isPermaLink="true">http://localhost:4000/englishwriting/Eg-pre</guid>
         
         <category>Preposition</category>
         
         
-        <category>English Writing</category>
+        <category>EnglishWriting</category>
         
       </item>
     
@@ -1805,13 +1805,13 @@ Ex) ABC는 &lt;u&gt;A 사양에 맞추어 애플리케이션 모델링을 지원
 
 </description>
         <pubDate>Mon, 23 Aug 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/technical%20writing/tw-base</link>
-        <guid isPermaLink="true">http://localhost:4000/technical%20writing/tw-base</guid>
+        <link>http://localhost:4000/technicalwriting/tw-base</link>
+        <guid isPermaLink="true">http://localhost:4000/technicalwriting/tw-base</guid>
         
         <category>Technical Writing Base</category>
         
         
-        <category>Technical Writing</category>
+        <category>TechnicalWriting</category>
         
       </item>
     
@@ -1921,13 +1921,13 @@ TWer가 상대로부터 주로 듣고 질문하는 정보가 곧 해당 기술 �
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 20 Aug 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/technical%20writing/tw-definition_role</link>
-        <guid isPermaLink="true">http://localhost:4000/technical%20writing/tw-definition_role</guid>
+        <link>http://localhost:4000/technicalwriting/tw-definition_role</link>
+        <guid isPermaLink="true">http://localhost:4000/technicalwriting/tw-definition_role</guid>
         
         <category>Technical Writer</category>
         
         
-        <category>Technical Writing</category>
+        <category>TechnicalWriting</category>
         
       </item>
     
@@ -2457,13 +2457,13 @@ Ex) 첫줄을 ```c 와 같이 기입하면 해당 문법에 대한 색상이 적
 
 </description>
         <pubDate>Sat, 14 Aug 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/docs%20as%20code/markdown-usage</link>
-        <guid isPermaLink="true">http://localhost:4000/docs%20as%20code/markdown-usage</guid>
+        <link>http://localhost:4000/docsascode/markdown-usage</link>
+        <guid isPermaLink="true">http://localhost:4000/docsascode/markdown-usage</guid>
         
         <category>Markdown</category>
         
         
-        <category>Docs as Code</category>
+        <category>DocsasCode</category>
         
       </item>
     
@@ -2926,13 +2926,13 @@ Ex) The llamacatcher API enables callers to &lt;strong&gt;create and query llama
 
 </description>
         <pubDate>Thu, 24 Jun 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/technical%20writing/google-tw-one-preclass</link>
-        <guid isPermaLink="true">http://localhost:4000/technical%20writing/google-tw-one-preclass</guid>
+        <link>http://localhost:4000/technicalwriting/google-tw-one-preclass</link>
+        <guid isPermaLink="true">http://localhost:4000/technicalwriting/google-tw-one-preclass</guid>
         
         <category>Google Technical Writing</category>
         
         
-        <category>Technical Writing</category>
+        <category>TechnicalWriting</category>
         
       </item>
     
@@ -2991,13 +2991,13 @@ It should introduce the problem that you are trying to learn more about and the 
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 25 Apr 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/technical%20writing/technical-report-writing-week2</link>
-        <guid isPermaLink="true">http://localhost:4000/technical%20writing/technical-report-writing-week2</guid>
+        <link>http://localhost:4000/technicalwriting/technical-report-writing-week2</link>
+        <guid isPermaLink="true">http://localhost:4000/technicalwriting/technical-report-writing-week2</guid>
         
         <category>Technical Report Writing</category>
         
         
-        <category>Technical Writing</category>
+        <category>TechnicalWriting</category>
         
       </item>
     
@@ -3079,13 +3079,13 @@ Readers will quite often skip to the conclusion section of a report to quickly d
 &lt;p&gt;&lt;a href=&quot;https://www.futurelearn.com/courses/technical-report-writing-for-engineers/10/steps/833609&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Apr 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/technical%20writing/technical-report-writing-week1</link>
-        <guid isPermaLink="true">http://localhost:4000/technical%20writing/technical-report-writing-week1</guid>
+        <link>http://localhost:4000/technicalwriting/technical-report-writing-week1</link>
+        <guid isPermaLink="true">http://localhost:4000/technicalwriting/technical-report-writing-week1</guid>
         
         <category>Training</category>
         
         
-        <category>Technical Writing</category>
+        <category>TechnicalWriting</category>
         
       </item>
     
@@ -3107,13 +3107,13 @@ Readers will quite often skip to the conclusion section of a report to quickly d
 
 </description>
         <pubDate>Sat, 26 Sep 2020 22:11:49 +0900</pubDate>
-        <link>http://localhost:4000/tech%20journey/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/tech%20journey/welcome-to-jekyll</guid>
+        <link>http://localhost:4000/techjourney/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/techjourney/welcome-to-jekyll</guid>
         
         <category>Jekyll</category>
         
         
-        <category>Tech Journey</category>
+        <category>TechJourney</category>
         
       </item>
     

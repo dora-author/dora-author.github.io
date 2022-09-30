@@ -4,7 +4,7 @@ title: "Technical Report Writing for Engineer - Week 2"
 excerpt: Technical Report Writing for Engineers - The Introduction section
 tags:
   - Technical Report Writing
-category: Technical Writing
+category: TechnicalWriting
 date: 2021-04-25
 comments: true
 ---

@@ -4,7 +4,7 @@ title: "Google Technical Writing Pe-Class One"
 excerpt: Google Developers의 [Technical Writing Course for Engineers] 스터디 내용
 tags:
   - Google Technical Writing
-category: Technical Writing
+category: TechnicalWriting
 date: 2021-06-24
 comments: true
 ---

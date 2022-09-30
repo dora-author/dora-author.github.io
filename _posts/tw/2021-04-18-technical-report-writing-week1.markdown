@@ -4,7 +4,7 @@ title: "Technical Report Writing for Engineer - Week 1"
 excerpt: Technical Report Writing for Engineers - The Executive summary
 tags:
   - Training
-category: Technical Writing
+category: TechnicalWriting
 date: 2021-04-18
 comments: true
 ---

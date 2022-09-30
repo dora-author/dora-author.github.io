@@ -4,7 +4,7 @@ title: "[TW] Technical Writer 개념 및 역할"
 excerpt: Technical Writer의 정의 및 주요 역할, 현재 그리고 향후 산업에 있어 Technical Writer로써 나아가야할 방향, 갖추어야 할 역량에 관하여
 tags:
   - Technical Writer
-category: Technical Writing
+category: TechnicalWriting
 date: 2021-08-20
 comments: true
 ---

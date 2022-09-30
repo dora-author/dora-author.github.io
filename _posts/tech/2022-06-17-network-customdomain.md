@@ -5,7 +5,7 @@ excerpt: 커스텀 도메인 적용을 위한 기술 스터디
 tags:
   - Network
   - Domain
-category: Tech Journey
+category: TechJourney
 date: 2022-06-17
 comments: true
 ---

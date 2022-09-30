@@ -5,7 +5,7 @@ excerpt: Github Pages, Jekyll를 활용한 정적 사이트 개설에 관하여
 tags:
   - Github Pages
   - Jekyll
-category: Docs as Code
+category: DocsasCode
 date: 2021-08-31
 comments: true
 ---

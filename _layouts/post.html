@@ -24,7 +24,8 @@
                     <i class="material-icons svg-icon">local_offer</i>
                     {% if page.tags %} 
                     {% for tag in page.tags %}
-                    <a class="label">#{{ tag }}</a> &nbsp;
+                    <a class="label" href="{{ site.url }}/tags/#{{ tag }}"> #{{ tag }} 
+                    </a> &nbsp;
                     {% endfor %}
                     {% endif %}
                     </p>
@@ -36,16 +37,16 @@
                     {% endif %} {% if page.project %}
                     <a class="btn zoombtn" href="{{site.url}}/projects/">
                     {% else %}
-                        {% if page.category == "Technical Writing" %}
+                        {% if page.category == "TechnicalWriting" %}
                         <a class="btn zoombtn" href="{{site.url}}/posts/tw/">
                         {% endif %}
-                        {% if page.category == "Docs as Code" %}
+                        {% if page.category == "DocsasCode" %}
                         <a class="btn zoombtn" href="{{site.url}}/posts/docs/">
                         {% endif %}
-                        {% if page.category == "English Writing" %}
+                        {% if page.category == "EnglishWriting" %}
                         <a class="btn zoombtn" href="{{site.url}}/posts/eng/">
                         {% endif %}
-                        {% if page.category == "Tech Journey" %}
+                        {% if page.category == "TechJourney" %}
                         <a class="btn zoombtn" href="{{site.url}}/posts/tech/">
                         {% endif %}
                     {% endif %}
